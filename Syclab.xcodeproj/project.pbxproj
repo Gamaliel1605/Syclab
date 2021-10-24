@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA0C37892723EECC0038BF88 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C37872723EECC0038BF88 /* HomeCell.swift */; };
+		EA0C378A2723EECC0038BF88 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0C37882723EECC0038BF88 /* HomeCell.xib */; };
+		EA0C378C2723F3970038BF88 /* RegisterNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C378B2723F3970038BF88 /* RegisterNib.swift */; };
+		EA0C378E2723F6DC0038BF88 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C378D2723F6DC0038BF88 /* HomeData.swift */; };
 		EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5A271EED1B00CA2677 /* AppDelegate.swift */; };
 		EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5C271EED1B00CA2677 /* SceneDelegate.swift */; };
 		EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5E271EED1B00CA2677 /* ViewController.swift */; };
@@ -33,6 +37,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA0C37872723EECC0038BF88 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		EA0C37882723EECC0038BF88 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		EA0C378B2723F3970038BF88 /* RegisterNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNib.swift; sourceTree = "<group>"; };
+		EA0C378D2723F6DC0038BF88 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		EABCDE57271EED1B00CA2677 /* Syclab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Syclab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABCDE5A271EED1B00CA2677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EABCDE5C271EED1B00CA2677 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA0C37862723EEAD0038BF88 /* Home Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EA0C37872723EECC0038BF88 /* HomeCell.swift */,
+				EA0C37882723EECC0038BF88 /* HomeCell.xib */,
+			);
+			path = "Home Cell";
+			sourceTree = "<group>";
+		};
 		EABCDE4E271EED1B00CA2677 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				EABCDE6F271EED4700CA2677 /* Core.swift */,
+				EA0C378D2723F6DC0038BF88 /* HomeData.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -123,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				EABCDE73271EED8900CA2677 /* Helpers.swift */,
+				EA0C378B2723F3970038BF88 /* RegisterNib.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -191,6 +210,7 @@
 		EABCDE93271EEF9400CA2677 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EA0C37862723EEAD0038BF88 /* Home Cell */,
 				EABCDE94271EEF9F00CA2677 /* Home.storyboard */,
 				EABCDE96271EEFBC00CA2677 /* HomeController.swift */,
 				EABCDE98271EEFC700CA2677 /* HomeViewModel.swift */,
@@ -257,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EABCDE67271EED1C00CA2677 /* LaunchScreen.storyboard in Resources */,
+				EA0C378A2723EECC0038BF88 /* HomeCell.xib in Resources */,
 				EABCDE8E271EEF4700CA2677 /* ModeOption.storyboard in Resources */,
 				EABCDE80271EEE8200CA2677 /* VirtualLab.storyboard in Resources */,
 				EABCDE64271EED1C00CA2677 /* Assets.xcassets in Resources */,
@@ -275,7 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */,
+				EA0C378C2723F3970038BF88 /* RegisterNib.swift in Sources */,
 				EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */,
+				EA0C37892723EECC0038BF88 /* HomeCell.swift in Sources */,
 				EABCDE97271EEFBC00CA2677 /* HomeController.swift in Sources */,
 				EABCDE92271EEF6700CA2677 /* ModeOptionViewModel.swift in Sources */,
 				EABCDE89271EEEFB00CA2677 /* ExperimentDetailController.swift in Sources */,
@@ -286,6 +309,7 @@
 				EABCDE74271EED8900CA2677 /* Helpers.swift in Sources */,
 				EABCDE8B271EEF0B00CA2677 /* ExperimentDetailViewModel.swift in Sources */,
 				EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */,
+				EA0C378E2723F6DC0038BF88 /* HomeData.swift in Sources */,
 				EABCDE84271EEE9C00CA2677 /* VirtualLabViewModel.swift in Sources */,
 				EABCDE99271EEFC700CA2677 /* HomeViewModel.swift in Sources */,
 				EABCDE82271EEE9000CA2677 /* VirtualLabController.swift in Sources */,
