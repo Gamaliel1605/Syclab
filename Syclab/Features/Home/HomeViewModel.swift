@@ -10,4 +10,9 @@ import UIKit
 
 class HomeViewModel {
     
+    let homeData: [HomeData] = [
+        HomeData(expName: "Gerak Parabola", expImage: "placeholder"),
+        HomeData(expName: "Hukum Newton", expImage: "placeholder")
+    ]
+    
 }
