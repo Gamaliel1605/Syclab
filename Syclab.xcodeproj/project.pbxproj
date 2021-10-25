@@ -11,6 +11,9 @@
 		EA0C378A2723EECC0038BF88 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0C37882723EECC0038BF88 /* HomeCell.xib */; };
 		EA0C378C2723F3970038BF88 /* RegisterNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C378B2723F3970038BF88 /* RegisterNib.swift */; };
 		EA0C378E2723F6DC0038BF88 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C378D2723F6DC0038BF88 /* HomeData.swift */; };
+		EA0C37922725D3430038BF88 /* ModeOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C37902725D3430038BF88 /* ModeOptionCell.swift */; };
+		EA0C37932725D3430038BF88 /* ModeOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0C37912725D3430038BF88 /* ModeOptionCell.xib */; };
+		EA0C37952725D7700038BF88 /* ModeOptionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C37942725D7700038BF88 /* ModeOptionData.swift */; };
 		EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5A271EED1B00CA2677 /* AppDelegate.swift */; };
 		EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5C271EED1B00CA2677 /* SceneDelegate.swift */; };
 		EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5E271EED1B00CA2677 /* ViewController.swift */; };
@@ -41,6 +44,9 @@
 		EA0C37882723EECC0038BF88 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		EA0C378B2723F3970038BF88 /* RegisterNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNib.swift; sourceTree = "<group>"; };
 		EA0C378D2723F6DC0038BF88 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
+		EA0C37902725D3430038BF88 /* ModeOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeOptionCell.swift; sourceTree = "<group>"; };
+		EA0C37912725D3430038BF88 /* ModeOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModeOptionCell.xib; sourceTree = "<group>"; };
+		EA0C37942725D7700038BF88 /* ModeOptionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeOptionData.swift; sourceTree = "<group>"; };
 		EABCDE57271EED1B00CA2677 /* Syclab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Syclab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABCDE5A271EED1B00CA2677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EABCDE5C271EED1B00CA2677 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +94,15 @@
 			path = "Home Cell";
 			sourceTree = "<group>";
 		};
+		EA0C378F2725D3230038BF88 /* Mode Option Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EA0C37902725D3430038BF88 /* ModeOptionCell.swift */,
+				EA0C37912725D3430038BF88 /* ModeOptionCell.xib */,
+			);
+			path = "Mode Option Cell";
+			sourceTree = "<group>";
+		};
 		EABCDE4E271EED1B00CA2677 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +139,7 @@
 			children = (
 				EABCDE6F271EED4700CA2677 /* Core.swift */,
 				EA0C378D2723F6DC0038BF88 /* HomeData.swift */,
+				EA0C37942725D7700038BF88 /* ModeOptionData.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -200,6 +216,7 @@
 		EABCDE8C271EEF3900CA2677 /* Mode Option */ = {
 			isa = PBXGroup;
 			children = (
+				EA0C378F2725D3230038BF88 /* Mode Option Cell */,
 				EABCDE8D271EEF4700CA2677 /* ModeOption.storyboard */,
 				EABCDE8F271EEF5C00CA2677 /* ModeOptionController.swift */,
 				EABCDE91271EEF6700CA2677 /* ModeOptionViewModel.swift */,
@@ -283,6 +300,7 @@
 				EABCDE64271EED1C00CA2677 /* Assets.xcassets in Resources */,
 				EABCDE62271EED1B00CA2677 /* Main.storyboard in Resources */,
 				EABCDE87271EEEE100CA2677 /* ExperimentDetail.storyboard in Resources */,
+				EA0C37932725D3430038BF88 /* ModeOptionCell.xib in Resources */,
 				EABCDE79271EEDB500CA2677 /* Quiz.storyboard in Resources */,
 				EABCDE95271EEF9F00CA2677 /* Home.storyboard in Resources */,
 			);
@@ -305,6 +323,8 @@
 				EABCDE90271EEF5C00CA2677 /* ModeOptionController.swift in Sources */,
 				EABCDE7D271EEDF600CA2677 /* QuizViewModel.swift in Sources */,
 				EABCDE7B271EEDE700CA2677 /* QuizController.swift in Sources */,
+				EA0C37922725D3430038BF88 /* ModeOptionCell.swift in Sources */,
+				EA0C37952725D7700038BF88 /* ModeOptionData.swift in Sources */,
 				EABCDE70271EED4700CA2677 /* Core.swift in Sources */,
 				EABCDE74271EED8900CA2677 /* Helpers.swift in Sources */,
 				EABCDE8B271EEF0B00CA2677 /* ExperimentDetailViewModel.swift in Sources */,

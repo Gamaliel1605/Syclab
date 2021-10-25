@@ -10,4 +10,10 @@ import UIKit
 
 class ModeOptionViewModel {
     
+    let modeData: [ModeOptionData] = [
+        ModeOptionData(modeImage: "modeplaceholder", modeLabel: "Eksplorasi"),
+        ModeOptionData(modeImage: "modeplaceholder", modeLabel: "Misi"),
+        ModeOptionData(modeImage: "modeplaceholder", modeLabel: "Kuis")
+    ]
+    
 }

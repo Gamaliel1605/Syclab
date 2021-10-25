@@ -9,12 +9,33 @@ import UIKit
 
 class ModeOptionController: UIViewController {
 
+    @IBOutlet weak var modeCollection: UICollectionView!
+    
+    let getData = ModeOptionViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupView()
+    }
+
+}
+
+extension ModeOptionController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func setupView(){
+        RegisterNib.registerCollectionViewNib(nibName: "ModeOptionCell", collectionView: modeCollection, cellId: "modeCell")
     }
     
-
-
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return getData.modeData.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = modeCollection.dequeueReusableCell(withReuseIdentifier: "modeCell", for: indexPath) as! ModeOptionCell
+        cell.modeLabel.text = getData.modeData[indexPath.row].modeLabel
+        cell.modeImage.image = UIImage(named: "\(getData.modeData[indexPath.row].modeImage)")
+        
+        return cell
+    }
 }
