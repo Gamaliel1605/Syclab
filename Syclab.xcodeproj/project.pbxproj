@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD8C6427281A55006ECB8A /* GravityPopoverViewController.swift */; };
+		98FD8C6727281A55006ECB8A /* GravityPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */; };
 		EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5A271EED1B00CA2677 /* AppDelegate.swift */; };
 		EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5C271EED1B00CA2677 /* SceneDelegate.swift */; };
 		EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5E271EED1B00CA2677 /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		98FD8C6427281A55006ECB8A /* GravityPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityPopoverViewController.swift; sourceTree = "<group>"; };
+		98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GravityPopoverViewController.xib; sourceTree = "<group>"; };
 		EABCDE57271EED1B00CA2677 /* Syclab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Syclab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABCDE5A271EED1B00CA2677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EABCDE5C271EED1B00CA2677 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9819C4642726E008004AF659 /* Control Panel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Control Panel";
+			sourceTree = "<group>";
+		};
 		EABCDE4E271EED1B00CA2677 = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +172,10 @@
 		EABCDE7E271EEE4100CA2677 /* Virtual Lab */ = {
 			isa = PBXGroup;
 			children = (
+				9819C4642726E008004AF659 /* Control Panel */,
 				EABCDE7F271EEE8200CA2677 /* VirtualLab.storyboard */,
+				98FD8C6427281A55006ECB8A /* GravityPopoverViewController.swift */,
+				98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */,
 				EABCDE81271EEE9000CA2677 /* VirtualLabController.swift */,
 				EABCDE83271EEE9C00CA2677 /* VirtualLabViewModel.swift */,
 			);
@@ -259,6 +273,7 @@
 				EABCDE67271EED1C00CA2677 /* LaunchScreen.storyboard in Resources */,
 				EABCDE8E271EEF4700CA2677 /* ModeOption.storyboard in Resources */,
 				EABCDE80271EEE8200CA2677 /* VirtualLab.storyboard in Resources */,
+				98FD8C6727281A55006ECB8A /* GravityPopoverViewController.xib in Resources */,
 				EABCDE64271EED1C00CA2677 /* Assets.xcassets in Resources */,
 				EABCDE62271EED1B00CA2677 /* Main.storyboard in Resources */,
 				EABCDE87271EEEE100CA2677 /* ExperimentDetail.storyboard in Resources */,
@@ -275,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */,
+				98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */,
 				EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */,
 				EABCDE97271EEFBC00CA2677 /* HomeController.swift in Sources */,
 				EABCDE92271EEF6700CA2677 /* ModeOptionViewModel.swift in Sources */,
@@ -437,7 +453,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2Q6YC83UDR;
+				DEVELOPMENT_TEAM = HMMWHN78KV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Syclab/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -466,7 +482,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2Q6YC83UDR;
+				DEVELOPMENT_TEAM = HMMWHN78KV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Syclab/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
