@@ -22,10 +22,10 @@
                                 <rect key="frame" x="0.0" y="597" width="1194" height="237"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="C6t-UO-qdX">
-                                        <rect key="frame" x="262" y="45.5" width="480" height="146"/>
+                                        <rect key="frame" x="262" y="52.5" width="487" height="132"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="n2a-tn-CZ7">
-                                                <rect key="frame" x="0.0" y="0.0" width="460" height="66"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="461.5" height="59"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sudut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0j-b0-MCe">
                                                         <rect key="frame" x="0.0" y="0.0" width="52.5" height="24"/>
@@ -34,25 +34,26 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JHc-UV-Lvj">
-                                                        <rect key="frame" x="0.0" y="32" width="460" height="34"/>
+                                                        <rect key="frame" x="0.0" y="32" width="461.5" height="27"/>
                                                         <subviews>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IX1-Cp-ler">
-                                                                <rect key="frame" x="-2" y="0.0" width="379" height="35"/>
+                                                                <rect key="frame" x="-2" y="0.0" width="379" height="28"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="375" id="azA-1A-Ui5"/>
                                                                 </constraints>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DAc-U6-FrW">
-                                                                <rect key="frame" x="383" y="0.0" width="61" height="34"/>
+                                                                <rect key="frame" x="383" y="0.0" width="61" height="27"/>
                                                                 <constraints>
+                                                                    <constraint firstAttribute="height" constant="27" id="uIU-1q-r6R"/>
                                                                     <constraint firstAttribute="width" constant="61" id="zhf-fP-D50"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbZ-Nf-ifN">
-                                                                <rect key="frame" x="452" y="0.0" width="8" height="34"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="452" y="0.0" width="9.5" height="27"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -61,7 +62,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8jG-fj-JNH">
-                                                <rect key="frame" x="0.0" y="80" width="480" height="66"/>
+                                                <rect key="frame" x="0.0" y="73" width="487" height="59"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kecepatan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kML-Me-bXa">
                                                         <rect key="frame" x="0.0" y="0.0" width="93.5" height="24"/>
@@ -70,25 +71,26 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W2x-sl-6P8">
-                                                        <rect key="frame" x="0.0" y="32" width="480" height="34"/>
+                                                        <rect key="frame" x="0.0" y="32" width="487" height="27"/>
                                                         <subviews>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hFt-J2-WGU">
-                                                                <rect key="frame" x="-2" y="0.0" width="379" height="35"/>
+                                                                <rect key="frame" x="-2" y="0.0" width="379" height="28"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="375" id="oxG-X5-juG"/>
                                                                 </constraints>
                                                             </slider>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xBQ-CS-uuY">
-                                                                <rect key="frame" x="383" y="0.0" width="61" height="34"/>
+                                                                <rect key="frame" x="383" y="0.0" width="61" height="27"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="61" id="66H-Yz-Stz"/>
+                                                                    <constraint firstAttribute="height" constant="27" id="Ajr-wy-HH0"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRz-Br-Qsk">
-                                                                <rect key="frame" x="452" y="0.0" width="28" height="34"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <rect key="frame" x="452" y="0.0" width="35" height="27"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -98,34 +100,42 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Percepatan Gravitasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jC6-Nw-3yK">
-                                        <rect key="frame" x="877" y="78" width="181" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Ob-Bs-Vwl">
+                                        <rect key="frame" x="841" y="78" width="181" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percepatan Gravitasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jC6-Nw-3yK">
+                                                <rect key="frame" x="0.0" y="0.0" width="181" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0d-qv-4me">
+                                                <rect key="frame" x="0.0" y="32" width="181" height="31"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Bumi 10 m/s²">
+                                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="gravitationBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Jwe-o3-rTa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="W0d-qv-4me" firstAttribute="top" secondItem="jC6-Nw-3yK" secondAttribute="bottom" constant="8" id="82r-1n-24Z"/>
+                                        </constraints>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0k-sy-Uer">
                                         <rect key="frame" x="83" y="59" width="109" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="XTI-gh-roK"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Jalankan"/>
-                                        <connections>
-                                            <action selector="jalankanBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LIS-BN-vI4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0d-qv-4me">
-                                        <rect key="frame" x="885" y="110" width="164" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Bumi 10 m/s²">
-                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Jalankan">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="gravitationBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Jwe-o3-rTa"/>
+                                            <action selector="jalankanBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LIS-BN-vI4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -134,37 +144,78 @@
                                     <constraint firstItem="q0k-sy-Uer" firstAttribute="top" secondItem="X1o-YA-fBh" secondAttribute="top" constant="59" id="3Lz-98-6Mv"/>
                                     <constraint firstItem="C6t-UO-qdX" firstAttribute="leading" secondItem="X1o-YA-fBh" secondAttribute="leading" constant="262" id="7En-qt-Mw2"/>
                                     <constraint firstItem="C6t-UO-qdX" firstAttribute="leading" secondItem="q0k-sy-Uer" secondAttribute="trailing" constant="70" id="OJd-DK-u2v"/>
+                                    <constraint firstItem="9Ob-Bs-Vwl" firstAttribute="leading" secondItem="C6t-UO-qdX" secondAttribute="trailing" constant="92" id="uc1-MZ-ekB"/>
                                     <constraint firstItem="q0k-sy-Uer" firstAttribute="leading" secondItem="X1o-YA-fBh" secondAttribute="leading" constant="83" id="unT-lG-j8k"/>
                                     <constraint firstItem="C6t-UO-qdX" firstAttribute="centerY" secondItem="X1o-YA-fBh" secondAttribute="centerY" id="x7g-fV-P9v"/>
                                 </constraints>
                             </view>
                             <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTe-Yl-lgM">
                                 <rect key="frame" x="0.0" y="0.0" width="1194" height="597"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </skView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yW6-yU-TZN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yW6-yU-TZN" customClass="DesignableButton" customModule="Syclab" customModuleProvider="target">
                                 <rect key="frame" x="1084" y="60" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="J7N-04-1Kb"/>
                                     <constraint firstAttribute="width" constant="50" id="jT7-hy-cN3"/>
                                 </constraints>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large" buttonSize="large">
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="-1" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSC-vk-jx2">
-                                <rect key="frame" x="1084" y="120" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSC-vk-jx2" customClass="DesignableButton" customModule="Syclab" customModuleProvider="target">
+                                <rect key="frame" x="1084" y="110" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Gg8-Zo-iyc"/>
                                     <constraint firstAttribute="height" constant="50" id="bFJ-mu-RhV"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <imageReference key="image" image="text.badge.checkmark" catalog="system" symbolScale="large"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="-1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -180,7 +231,7 @@
                             <constraint firstItem="X1o-YA-fBh" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.284173" id="fVz-Ab-SJR"/>
                             <constraint firstItem="QTe-Yl-lgM" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="llP-ZR-aak"/>
                             <constraint firstItem="X1o-YA-fBh" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="lz0-Yv-9so"/>
-                            <constraint firstItem="JSC-vk-jx2" firstAttribute="top" secondItem="yW6-yU-TZN" secondAttribute="bottom" constant="10" id="qFU-3w-sH9"/>
+                            <constraint firstItem="JSC-vk-jx2" firstAttribute="top" secondItem="yW6-yU-TZN" secondAttribute="bottom" id="qFU-3w-sH9"/>
                             <constraint firstItem="QTe-Yl-lgM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="tqU-jm-IRT"/>
                             <constraint firstItem="yW6-yU-TZN" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="60" id="xhz-uE-cg0"/>
                         </constraints>
@@ -207,6 +258,14 @@
             <point key="canvasLocation" x="138.69346733668343" y="134.53237410071944"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="JSC-vk-jx2">
+            <size key="intrinsicContentSize" width="21" height="18.5"/>
+        </designable>
+        <designable name="yW6-yU-TZN">
+            <size key="intrinsicContentSize" width="25" height="24"/>
+        </designable>
+    </designables>
     <resources>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="text.badge.checkmark" catalog="system" width="128" height="109"/>

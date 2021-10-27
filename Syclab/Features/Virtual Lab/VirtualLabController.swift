@@ -23,10 +23,27 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     @IBOutlet weak var unitLbl2: UILabel!
     @IBOutlet weak var spriteView: SKView!
     let button:UIButton = UIButton(type: UIButton.ButtonType.custom)
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationController?.navigationBar.topItem?.title = "Eksperimen Gerak Parabola"
+        
         setupControlPanel()
+        
+        
+        instructionButton.layer.cornerRadius = 15
+        instructionButton.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        
+        infoButton.layer.cornerRadius = 15
+        infoButton.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+//
+//        instructionButton.roundCorners(corners:[.bottomLeft, .bottomRight], radius: 15)
+//
+//
+//        infoButton.roundCorners(corners: [.topLeft, .topRight], radius: 15)
+//
     }
     
     // MARK: - Pressed Button Function
@@ -59,7 +76,7 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     }
     
     func setupTheoryButton() {
-        let imageSize:CGSize = CGSize(width: 50, height: 50)
+        let imageSize:CGSize = CGSize(width: 30, height: 30)
         button.frame = CGRect(x: (jalankanButton.layer.position.x) - 35, y: (jalankanButton.layer.position.y + (1-0.284173) * view.bounds.height) + 35 + 15, width: 70, height: 70)
         button.setImage(UIImage(systemName: "book.closed.fill"), for: UIControl.State.normal)
         button.contentVerticalAlignment = .fill
@@ -70,6 +87,7 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
             bottom: (button.frame.size.height - imageSize.height) / 4,
             right: (button.frame.size.width - imageSize.width) / 4)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button.backgroundColor = .yellow
         self.view.addSubview(button)
     }
     
@@ -102,5 +120,14 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     func chooseGravity(chosenValue planet: Planet) {
         gravitationButton.setTitle(planet.rawValue + " \(planet.getGravityValue()) m/s²", for: .normal)
         print("juancog")
+    }
+}
+
+extension UIView {
+   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
     }
 }
