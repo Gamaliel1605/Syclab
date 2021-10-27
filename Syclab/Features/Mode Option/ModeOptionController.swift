@@ -11,12 +11,14 @@ class ModeOptionController: UIViewController {
 
     @IBOutlet weak var modeCollection: UICollectionView!
     
+    var getTitle: String!
     let getData = ModeOptionViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
+        self.navigationItem.title = getTitle
     }
 
 }
