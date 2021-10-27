@@ -49,7 +49,7 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = getData.homeData[indexPath.row]
         let storyborad = UIStoryboard(name: "ModeOption", bundle: nil)
         let viewController = storyborad.instantiateViewController(withIdentifier: "modeOption") as! ModeOptionController
-        viewController.getTitle = cell.expName
+        viewController.getTitleMode = cell.expName
         self.navigationController?.pushViewController(viewController, animated: true)
         print(getData.homeData[indexPath.row].expName)
     }

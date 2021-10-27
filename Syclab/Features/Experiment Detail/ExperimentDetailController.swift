@@ -17,9 +17,12 @@ class ExperimentDetailController: UIViewController {
     @IBOutlet weak var experimentDetailSecondView: UIView!
     @IBOutlet weak var experimentDetailSecondImageView: UIImageView!
     
+    var getTitleExp: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = getTitleExp
+        
         let gerakParabola = ExperimentDetailRepository.shared.gerakParabola
         experimentDetailTitle.text = gerakParabola.title
         
