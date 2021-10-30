@@ -10,6 +10,18 @@
 		98BADE4727291304009EE9D1 /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BADE4627291304009EE9D1 /* Extension+UIButton.swift */; };
 		98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD8C6427281A55006ECB8A /* GravityPopoverViewController.swift */; };
 		98FD8C6727281A55006ECB8A /* GravityPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */; };
+		142498F227276DBD0050F18D /* ExperimentDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F127276DBD0050F18D /* ExperimentDetailModel.swift */; };
+		142498F42727703F0050F18D /* ExperimentDetailDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F32727703F0050F18D /* ExperimentDetailDataStore.swift */; };
+		142498F62727716E0050F18D /* ExperimentDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F52727716E0050F18D /* ExperimentDetailRepository.swift */; };
+		142498FA272776760050F18D /* ColorHexConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F9272776760050F18D /* ColorHexConversion.swift */; };
+		142498FC272793C60050F18D /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498FB272793C60050F18D /* AttributedString.swift */; };
+		EA0C37892723EECC0038BF88 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C37872723EECC0038BF88 /* HomeCell.swift */; };
+		EA0C378A2723EECC0038BF88 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0C37882723EECC0038BF88 /* HomeCell.xib */; };
+		EA0C378C2723F3970038BF88 /* RegisterNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C378B2723F3970038BF88 /* RegisterNib.swift */; };
+		EA0C378E2723F6DC0038BF88 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C378D2723F6DC0038BF88 /* HomeData.swift */; };
+		EA0C37922725D3430038BF88 /* ModeOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C37902725D3430038BF88 /* ModeOptionCell.swift */; };
+		EA0C37932725D3430038BF88 /* ModeOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0C37912725D3430038BF88 /* ModeOptionCell.xib */; };
+		EA0C37952725D7700038BF88 /* ModeOptionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C37942725D7700038BF88 /* ModeOptionData.swift */; };
 		EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5A271EED1B00CA2677 /* AppDelegate.swift */; };
 		EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5C271EED1B00CA2677 /* SceneDelegate.swift */; };
 		EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5E271EED1B00CA2677 /* ViewController.swift */; };
@@ -33,9 +45,27 @@
 		EABCDE95271EEF9F00CA2677 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABCDE94271EEF9F00CA2677 /* Home.storyboard */; };
 		EABCDE97271EEFBC00CA2677 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE96271EEFBC00CA2677 /* HomeController.swift */; };
 		EABCDE99271EEFC700CA2677 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE98271EEFC700CA2677 /* HomeViewModel.swift */; };
+		EAD9272D272C517800B1635B /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9272C272C517800B1635B /* Experiment.swift */; };
+		EAD9272F272C52EF00B1635B /* ExperimentOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9272E272C52EF00B1635B /* ExperimentOption.swift */; };
+		EAD92731272C542800B1635B /* ExperimentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD92730272C542800B1635B /* ExperimentDetails.swift */; };
+		EAD92733272C550B00B1635B /* ExperimentConcept.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD92732272C550B00B1635B /* ExperimentConcept.swift */; };
+		EAD92735272C559B00B1635B /* ExperimentLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD92734272C559B00B1635B /* ExperimentLab.swift */; };
+		EAD92737272C55F800B1635B /* ExperimentQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD92736272C55F800B1635B /* ExperimentQuiz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142498F127276DBD0050F18D /* ExperimentDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetailModel.swift; sourceTree = "<group>"; };
+		142498F32727703F0050F18D /* ExperimentDetailDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetailDataStore.swift; sourceTree = "<group>"; };
+		142498F52727716E0050F18D /* ExperimentDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetailRepository.swift; sourceTree = "<group>"; };
+		142498F9272776760050F18D /* ColorHexConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexConversion.swift; sourceTree = "<group>"; };
+		142498FB272793C60050F18D /* AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
+		EA0C37872723EECC0038BF88 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		EA0C37882723EECC0038BF88 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		EA0C378B2723F3970038BF88 /* RegisterNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNib.swift; sourceTree = "<group>"; };
+		EA0C378D2723F6DC0038BF88 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
+		EA0C37902725D3430038BF88 /* ModeOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeOptionCell.swift; sourceTree = "<group>"; };
+		EA0C37912725D3430038BF88 /* ModeOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModeOptionCell.xib; sourceTree = "<group>"; };
+		EA0C37942725D7700038BF88 /* ModeOptionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeOptionData.swift; sourceTree = "<group>"; };
 		98BADE4627291304009EE9D1 /* Extension+UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
 		98FD8C6427281A55006ECB8A /* GravityPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityPopoverViewController.swift; sourceTree = "<group>"; };
 		98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GravityPopoverViewController.xib; sourceTree = "<group>"; };
@@ -64,6 +94,12 @@
 		EABCDE94271EEF9F00CA2677 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		EABCDE96271EEFBC00CA2677 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		EABCDE98271EEFC700CA2677 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EAD9272C272C517800B1635B /* Experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
+		EAD9272E272C52EF00B1635B /* ExperimentOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentOption.swift; sourceTree = "<group>"; };
+		EAD92730272C542800B1635B /* ExperimentDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetails.swift; sourceTree = "<group>"; };
+		EAD92732272C550B00B1635B /* ExperimentConcept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentConcept.swift; sourceTree = "<group>"; };
+		EAD92734272C559B00B1635B /* ExperimentLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentLab.swift; sourceTree = "<group>"; };
+		EAD92736272C55F800B1635B /* ExperimentQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentQuiz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +120,34 @@
 				98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		142498F027276D9D0050F18D /* Experiment Detail Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				142498F127276DBD0050F18D /* ExperimentDetailModel.swift */,
+				142498F32727703F0050F18D /* ExperimentDetailDataStore.swift */,
+				142498F52727716E0050F18D /* ExperimentDetailRepository.swift */,
+			);
+			path = "Experiment Detail Data Store";
+			sourceTree = "<group>";
+		};
+		EA0C37862723EEAD0038BF88 /* Home Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EA0C37872723EECC0038BF88 /* HomeCell.swift */,
+				EA0C37882723EECC0038BF88 /* HomeCell.xib */,
+			);
+			path = "Home Cell";
+			sourceTree = "<group>";
+		};
+		EA0C378F2725D3230038BF88 /* Mode Option Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EA0C37902725D3430038BF88 /* ModeOptionCell.swift */,
+				EA0C37912725D3430038BF88 /* ModeOptionCell.xib */,
+			);
+			path = "Mode Option Cell";
 			sourceTree = "<group>";
 		};
 		EABCDE4E271EED1B00CA2677 = {
@@ -121,6 +185,14 @@
 			isa = PBXGroup;
 			children = (
 				EABCDE6F271EED4700CA2677 /* Core.swift */,
+				EA0C378D2723F6DC0038BF88 /* HomeData.swift */,
+				EA0C37942725D7700038BF88 /* ModeOptionData.swift */,
+				EAD9272C272C517800B1635B /* Experiment.swift */,
+				EAD9272E272C52EF00B1635B /* ExperimentOption.swift */,
+				EAD92730272C542800B1635B /* ExperimentDetails.swift */,
+				EAD92732272C550B00B1635B /* ExperimentConcept.swift */,
+				EAD92734272C559B00B1635B /* ExperimentLab.swift */,
+				EAD92736272C55F800B1635B /* ExperimentQuiz.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -139,6 +211,9 @@
 			children = (
 				98BADE4627291304009EE9D1 /* Extension+UIButton.swift */,
 				EABCDE73271EED8900CA2677 /* Helpers.swift */,
+				EA0C378B2723F3970038BF88 /* RegisterNib.swift */,
+				142498FB272793C60050F18D /* AttributedString.swift */,
+				142498F9272776760050F18D /* ColorHexConversion.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -188,6 +263,7 @@
 		EABCDE85271EEEC600CA2677 /* Experiment Detail */ = {
 			isa = PBXGroup;
 			children = (
+				142498F027276D9D0050F18D /* Experiment Detail Data Store */,
 				EABCDE86271EEEE100CA2677 /* ExperimentDetail.storyboard */,
 				EABCDE88271EEEFB00CA2677 /* ExperimentDetailController.swift */,
 				EABCDE8A271EEF0B00CA2677 /* ExperimentDetailViewModel.swift */,
@@ -198,6 +274,7 @@
 		EABCDE8C271EEF3900CA2677 /* Mode Option */ = {
 			isa = PBXGroup;
 			children = (
+				EA0C378F2725D3230038BF88 /* Mode Option Cell */,
 				EABCDE8D271EEF4700CA2677 /* ModeOption.storyboard */,
 				EABCDE8F271EEF5C00CA2677 /* ModeOptionController.swift */,
 				EABCDE91271EEF6700CA2677 /* ModeOptionViewModel.swift */,
@@ -208,6 +285,7 @@
 		EABCDE93271EEF9400CA2677 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EA0C37862723EEAD0038BF88 /* Home Cell */,
 				EABCDE94271EEF9F00CA2677 /* Home.storyboard */,
 				EABCDE96271EEFBC00CA2677 /* HomeController.swift */,
 				EABCDE98271EEFC700CA2677 /* HomeViewModel.swift */,
@@ -274,12 +352,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EABCDE67271EED1C00CA2677 /* LaunchScreen.storyboard in Resources */,
+				EA0C378A2723EECC0038BF88 /* HomeCell.xib in Resources */,
 				EABCDE8E271EEF4700CA2677 /* ModeOption.storyboard in Resources */,
 				EABCDE80271EEE8200CA2677 /* VirtualLab.storyboard in Resources */,
 				98FD8C6727281A55006ECB8A /* GravityPopoverViewController.xib in Resources */,
 				EABCDE64271EED1C00CA2677 /* Assets.xcassets in Resources */,
 				EABCDE62271EED1B00CA2677 /* Main.storyboard in Resources */,
 				EABCDE87271EEEE100CA2677 /* ExperimentDetail.storyboard in Resources */,
+				EA0C37932725D3430038BF88 /* ModeOptionCell.xib in Resources */,
 				EABCDE79271EEDB500CA2677 /* Quiz.storyboard in Resources */,
 				EABCDE95271EEF9F00CA2677 /* Home.storyboard in Resources */,
 			);
@@ -294,17 +374,33 @@
 			files = (
 				EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */,
 				98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */,
+				EA0C378C2723F3970038BF88 /* RegisterNib.swift in Sources */,
+				142498FA272776760050F18D /* ColorHexConversion.swift in Sources */,
 				EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */,
+				EA0C37892723EECC0038BF88 /* HomeCell.swift in Sources */,
 				EABCDE97271EEFBC00CA2677 /* HomeController.swift in Sources */,
 				EABCDE92271EEF6700CA2677 /* ModeOptionViewModel.swift in Sources */,
+				142498F62727716E0050F18D /* ExperimentDetailRepository.swift in Sources */,
 				EABCDE89271EEEFB00CA2677 /* ExperimentDetailController.swift in Sources */,
+				EAD92731272C542800B1635B /* ExperimentDetails.swift in Sources */,
 				EABCDE90271EEF5C00CA2677 /* ModeOptionController.swift in Sources */,
 				EABCDE7D271EEDF600CA2677 /* QuizViewModel.swift in Sources */,
 				EABCDE7B271EEDE700CA2677 /* QuizController.swift in Sources */,
+				EA0C37922725D3430038BF88 /* ModeOptionCell.swift in Sources */,
+				EA0C37952725D7700038BF88 /* ModeOptionData.swift in Sources */,
 				EABCDE70271EED4700CA2677 /* Core.swift in Sources */,
+				142498FC272793C60050F18D /* AttributedString.swift in Sources */,
 				EABCDE74271EED8900CA2677 /* Helpers.swift in Sources */,
 				EABCDE8B271EEF0B00CA2677 /* ExperimentDetailViewModel.swift in Sources */,
+				142498F227276DBD0050F18D /* ExperimentDetailModel.swift in Sources */,
 				EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */,
+				EA0C378E2723F6DC0038BF88 /* HomeData.swift in Sources */,
+				EAD9272F272C52EF00B1635B /* ExperimentOption.swift in Sources */,
+				EAD92737272C55F800B1635B /* ExperimentQuiz.swift in Sources */,
+				142498F42727703F0050F18D /* ExperimentDetailDataStore.swift in Sources */,
+				EAD92735272C559B00B1635B /* ExperimentLab.swift in Sources */,
+				EAD9272D272C517800B1635B /* Experiment.swift in Sources */,
+				EAD92733272C550B00B1635B /* ExperimentConcept.swift in Sources */,
 				EABCDE84271EEE9C00CA2677 /* VirtualLabViewModel.swift in Sources */,
 				EABCDE99271EEFC700CA2677 /* HomeViewModel.swift in Sources */,
 				98BADE4727291304009EE9D1 /* Extension+UIButton.swift in Sources */,

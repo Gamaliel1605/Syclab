@@ -9,12 +9,53 @@ import UIKit
 
 class ModeOptionController: UIViewController {
 
+    @IBOutlet weak var modeCollection: UICollectionView!
+    
+    var getTitleMode: String!
+    let getDataMode = ModeOptionViewModel()
+    let getDataHome = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupView()
+        self.navigationItem.title = getTitleMode
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+
+}
+
+extension ModeOptionController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func setupView(){
+        RegisterNib.registerCollectionViewNib(nibName: "ModeOptionCell", collectionView: modeCollection, cellId: "modeCell")
     }
     
-
-
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return getDataMode.modeData.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = modeCollection.dequeueReusableCell(withReuseIdentifier: "modeCell", for: indexPath) as! ModeOptionCell
+        cell.modeLabel.text = getDataMode.modeData[indexPath.row].modeLabel
+        cell.modeImage.image = UIImage(named: "\(getDataMode.modeData[indexPath.row].modeImage)")
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = getTitleMode
+        
+        if indexPath.row == 0 || indexPath.row == 1 {
+            let storyboard = UIStoryboard(name: "ExperimentDetail", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "expDetail") as! ExperimentDetailController
+            viewController.getTitleExp = cell
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+//        else {
+//            let storyboard = UIStoryboard(name: "Quiz", bundle: nil)
+//            let viewController = storyboard.instantiateViewController(withIdentifier: "quiz") as! QuizController
+//            self.navigationController?.pushViewController(viewController, animated: true)
+//        }
+    }
 }
