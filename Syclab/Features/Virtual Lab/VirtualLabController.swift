@@ -9,7 +9,6 @@ import UIKit
 import SpriteKit
 class VirtualLabController: UIViewController, GravityPopoverDelegate {
    
-    @IBOutlet weak var instructionButton: UIButton!
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var jalankanButton: UIButton!
     @IBOutlet weak var gravitationButton: UIButton!
@@ -22,6 +21,9 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     @IBOutlet weak var unitLbl1: UILabel!
     @IBOutlet weak var unitLbl2: UILabel!
     @IBOutlet weak var spriteView: SKView!
+    @IBOutlet weak var missionBox: UIView!
+    @IBOutlet weak var titleMissionLabel: UILabel!
+    @IBOutlet weak var descMissionLabel: UILabel!
     let button:UIButton = UIButton(type: UIButton.ButtonType.custom)
    
     
@@ -31,19 +33,6 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
         navigationController?.navigationBar.topItem?.title = "Eksperimen Gerak Parabola"
         
         setupControlPanel()
-        
-        
-        instructionButton.layer.cornerRadius = 15
-        instructionButton.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
-        
-        infoButton.layer.cornerRadius = 15
-        infoButton.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-//
-//        instructionButton.roundCorners(corners:[.bottomLeft, .bottomRight], radius: 15)
-//
-//
-//        infoButton.roundCorners(corners: [.topLeft, .topRight], radius: 15)
-//
     }
     
     // MARK: - Pressed Button Function
@@ -67,17 +56,28 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     
     // MARK: - SETUP UI
     
+    func setupControlPanel() {
+        setupGravitationButton()
+        setupTheoryButton()
+        setupJalankanButton()
+        setupMissionBox()
+    }
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
+    func setupMissionBox() {
+        missionBox.layer.cornerRadius = 8
+    }
+    
     func setupGravitationButton() {
-        
     }
     
     func setupTheoryButton() {
-        let imageSize:CGSize = CGSize(width: 30, height: 30)
-        button.frame = CGRect(x: (jalankanButton.layer.position.x) - 35, y: (jalankanButton.layer.position.y + (1-0.284173) * view.bounds.height) + 35 + 15, width: 70, height: 70)
+        let imageSize:CGSize = CGSize(width: 15, height: 15)
+        button.frame = CGRect(x: (jalankanButton.layer.position.x) - 130, y: ((1-0.284173) * view.bounds.height) + 28, width: 65, height: 65)
+        print(view.bounds.width)
         button.setImage(UIImage(systemName: "book.closed.fill"), for: UIControl.State.normal)
         button.contentVerticalAlignment = .fill
         button.contentHorizontalAlignment = .fill
@@ -86,20 +86,13 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
             left: (button.frame.size.width - imageSize.width) / 4,
             bottom: (button.frame.size.height - imageSize.height) / 4,
             right: (button.frame.size.width - imageSize.width) / 4)
+        button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         button.backgroundColor = .yellow
         self.view.addSubview(button)
     }
     
-    func setupControlPanel() {
-        setupGravitationButton()
-        setupTheoryButton()
-        setupIntrucButton()
-    }
     
-    func setupIntrucButton() {
-        instructionButton.setTitle("", for: .normal)
-    }
     
     func setupInfoButon() {
 //        let imageSize:CGSize = CGSize(width: 100, height: 100)
@@ -114,6 +107,10 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
 //            right: (infoButton.frame.size.width - imageSize.width) / 4)
 //        infoButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
+    
+    func setupJalankanButton () {
+        jalankanButton.layer.cornerRadius = 8
+    }
 
     
     // MARK: - PROTOCOL
@@ -123,11 +120,11 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     }
 }
 
-extension UIView {
-   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        layer.mask = mask
-    }
-}
+//extension UIView {
+//   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+//        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+//        let mask = CAShapeLayer()
+//        mask.path = path.cgPath
+//        layer.mask = mask
+//    }
+//}

@@ -77,11 +77,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9819C4642726E008004AF659 /* Control Panel */ = {
+		98B1BAF8272D419600B37CB4 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				98FD8C6427281A55006ECB8A /* GravityPopoverViewController.swift */,
+				98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */,
 			);
-			path = "Control Panel";
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		EABCDE4E271EED1B00CA2677 = {
@@ -175,12 +177,10 @@
 		EABCDE7E271EEE4100CA2677 /* Virtual Lab */ = {
 			isa = PBXGroup;
 			children = (
-				9819C4642726E008004AF659 /* Control Panel */,
 				EABCDE7F271EEE8200CA2677 /* VirtualLab.storyboard */,
-				98FD8C6427281A55006ECB8A /* GravityPopoverViewController.swift */,
-				98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */,
 				EABCDE81271EEE9000CA2677 /* VirtualLabController.swift */,
 				EABCDE83271EEE9C00CA2677 /* VirtualLabViewModel.swift */,
+				98B1BAF8272D419600B37CB4 /* TableView */,
 			);
 			path = "Virtual Lab";
 			sourceTree = "<group>";
