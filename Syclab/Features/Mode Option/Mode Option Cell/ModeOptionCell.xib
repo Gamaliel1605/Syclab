@@ -23,20 +23,29 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modeplaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="QwM-QS-IXN">
                                 <rect key="frame" x="8" y="10" width="279" height="486"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2m-pL-NPf">
-                                <rect key="frame" x="22" y="488" width="251" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2m-pL-NPf">
+                                <rect key="frame" x="22" y="480" width="251" height="37"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX8-9B-icO">
+                                <rect key="frame" x="22" y="527" width="251" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.41176470590000003" green="0.60784313729999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="SX8-9B-icO" firstAttribute="leading" secondItem="noP-IM-Sio" secondAttribute="leading" constant="22" id="1Sf-tP-ml2"/>
                             <constraint firstAttribute="trailing" secondItem="QwM-QS-IXN" secondAttribute="trailing" constant="8" id="Bbq-ss-My4"/>
                             <constraint firstItem="QwM-QS-IXN" firstAttribute="top" secondItem="noP-IM-Sio" secondAttribute="top" constant="10" id="Fkc-uL-6y4"/>
-                            <constraint firstAttribute="bottom" secondItem="C2m-pL-NPf" secondAttribute="bottom" constant="35" id="IeQ-0E-hXt"/>
+                            <constraint firstAttribute="trailing" secondItem="SX8-9B-icO" secondAttribute="trailing" constant="22" id="IdL-3G-tMn"/>
                             <constraint firstAttribute="trailing" secondItem="C2m-pL-NPf" secondAttribute="trailing" constant="22" id="Z0H-9L-Wd3"/>
                             <constraint firstItem="C2m-pL-NPf" firstAttribute="leading" secondItem="noP-IM-Sio" secondAttribute="leading" constant="22" id="n5l-YY-7rg"/>
+                            <constraint firstAttribute="bottom" secondItem="SX8-9B-icO" secondAttribute="bottom" constant="15" id="oeF-CU-dsH"/>
+                            <constraint firstItem="SX8-9B-icO" firstAttribute="top" secondItem="C2m-pL-NPf" secondAttribute="bottom" constant="10" id="vUM-di-iiP"/>
                             <constraint firstItem="QwM-QS-IXN" firstAttribute="leading" secondItem="noP-IM-Sio" secondAttribute="leading" constant="8" id="z6g-Dv-Uho"/>
                         </constraints>
                     </view>
@@ -51,6 +60,7 @@
             </constraints>
             <connections>
                 <outlet property="cardView" destination="noP-IM-Sio" id="axQ-qb-ehW"/>
+                <outlet property="descLabel" destination="SX8-9B-icO" id="ZGU-Vp-o7A"/>
                 <outlet property="modeImage" destination="QwM-QS-IXN" id="kfb-jz-S87"/>
                 <outlet property="modeLabel" destination="C2m-pL-NPf" id="fnM-en-t5a"/>
             </connections>
