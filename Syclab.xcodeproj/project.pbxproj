@@ -12,6 +12,10 @@
 		142498F62727716E0050F18D /* ExperimentDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F52727716E0050F18D /* ExperimentDetailRepository.swift */; };
 		142498FA272776760050F18D /* ColorHexConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F9272776760050F18D /* ColorHexConversion.swift */; };
 		142498FC272793C60050F18D /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498FB272793C60050F18D /* AttributedString.swift */; };
+		988B9972272E37040024DAA6 /* Experiments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9971272E37040024DAA6 /* Experiments.swift */; };
+		988B9976272E39120024DAA6 /* E1_GerakParabolaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9975272E39120024DAA6 /* E1_GerakParabolaData.swift */; };
+		988B9978272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9977272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift */; };
+		988B997A272E43E70024DAA6 /* ExperimentOptionA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9979272E43E70024DAA6 /* ExperimentOptionA.swift */; };
 		98BADE4727291304009EE9D1 /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BADE4627291304009EE9D1 /* Extension+UIButton.swift */; };
 		98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD8C6427281A55006ECB8A /* GravityPopoverViewController.swift */; };
 		98FD8C6727281A55006ECB8A /* GravityPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */; };
@@ -66,6 +70,10 @@
 		142498F52727716E0050F18D /* ExperimentDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetailRepository.swift; sourceTree = "<group>"; };
 		142498F9272776760050F18D /* ColorHexConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexConversion.swift; sourceTree = "<group>"; };
 		142498FB272793C60050F18D /* AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
+		988B9971272E37040024DAA6 /* Experiments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiments.swift; sourceTree = "<group>"; };
+		988B9975272E39120024DAA6 /* E1_GerakParabolaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E1_GerakParabolaData.swift; sourceTree = "<group>"; };
+		988B9977272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E2_HukumGravitasiNewtonData.swift; sourceTree = "<group>"; };
+		988B9979272E43E70024DAA6 /* ExperimentOptionA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentOptionA.swift; sourceTree = "<group>"; };
 		98BADE4627291304009EE9D1 /* Extension+UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
 		98FD8C6427281A55006ECB8A /* GravityPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityPopoverViewController.swift; sourceTree = "<group>"; };
 		98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GravityPopoverViewController.xib; sourceTree = "<group>"; };
@@ -321,7 +329,9 @@
 			isa = PBXGroup;
 			children = (
 				EAD9272C272C517800B1635B /* Experiment.swift */,
+				988B9971272E37040024DAA6 /* Experiments.swift */,
 				EAD9272E272C52EF00B1635B /* ExperimentOption.swift */,
+				988B9979272E43E70024DAA6 /* ExperimentOptionA.swift */,
 				EAD92730272C542800B1635B /* ExperimentDetails.swift */,
 				EAD92732272C550B00B1635B /* ExperimentConcept.swift */,
 				EAD92734272C559B00B1635B /* ExperimentLab.swift */,
@@ -334,6 +344,8 @@
 			isa = PBXGroup;
 			children = (
 				EADBE4A4272D82A100E8607D /* ExperimentDummy.swift */,
+				988B9975272E39120024DAA6 /* E1_GerakParabolaData.swift */,
+				988B9977272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -430,8 +442,10 @@
 				EABCDE92271EEF6700CA2677 /* ModeOptionViewModel.swift in Sources */,
 				142498F62727716E0050F18D /* ExperimentDetailRepository.swift in Sources */,
 				EABCDE89271EEEFB00CA2677 /* ExperimentDetailController.swift in Sources */,
+				988B997A272E43E70024DAA6 /* ExperimentOptionA.swift in Sources */,
 				EAD92731272C542800B1635B /* ExperimentDetails.swift in Sources */,
 				EABCDE90271EEF5C00CA2677 /* ModeOptionController.swift in Sources */,
+				988B9978272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift in Sources */,
 				EADBE4A1272D80E900E8607D /* LabelExtension.swift in Sources */,
 				EABCDE7D271EEDF600CA2677 /* QuizViewModel.swift in Sources */,
 				EABCDE7B271EEDE700CA2677 /* QuizController.swift in Sources */,
@@ -439,6 +453,7 @@
 				EA0C37952725D7700038BF88 /* ModeOptionData.swift in Sources */,
 				EABCDE70271EED4700CA2677 /* Core.swift in Sources */,
 				EADBE4A5272D82A100E8607D /* ExperimentDummy.swift in Sources */,
+				988B9976272E39120024DAA6 /* E1_GerakParabolaData.swift in Sources */,
 				142498FC272793C60050F18D /* AttributedString.swift in Sources */,
 				EABCDE74271EED8900CA2677 /* Helpers.swift in Sources */,
 				EABCDE8B271EEF0B00CA2677 /* ExperimentDetailViewModel.swift in Sources */,
@@ -451,6 +466,7 @@
 				EAD92735272C559B00B1635B /* ExperimentLab.swift in Sources */,
 				EAD9272D272C517800B1635B /* Experiment.swift in Sources */,
 				EAD92733272C550B00B1635B /* ExperimentConcept.swift in Sources */,
+				988B9972272E37040024DAA6 /* Experiments.swift in Sources */,
 				EABCDE84271EEE9C00CA2677 /* VirtualLabViewModel.swift in Sources */,
 				EABCDE99271EEFC700CA2677 /* HomeViewModel.swift in Sources */,
 				EADBE49F272D808600E8607D /* ViewExtension.swift in Sources */,

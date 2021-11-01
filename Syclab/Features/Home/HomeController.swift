@@ -10,7 +10,7 @@ import UIKit
 class HomeController: UIViewController {
 
     @IBOutlet weak var homeCollection: UICollectionView!
-    let getData = HomeViewModel()
+    let homeVM = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,24 +34,26 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return getData.homeData.count
+        return homeVM.expDatas.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = homeCollection.dequeueReusableCell(withReuseIdentifier: "homeCell", for: indexPath) as! HomeCell
-        cell.expLabel.text = getData.homeData[indexPath.row].expName
-        cell.expImageHome.image = UIImage(named: "\(getData.homeData[indexPath.row].expImage)")
+        cell.expLabel.text = homeVM.expDatas[indexPath.row].expTitle
+        cell.expImageHome.image = UIImage(named: homeVM.expDatas[indexPath.row].expImage)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = getData.homeData[indexPath.row]
+//        let cell = homeVM.homeData[indexPath.row]
         let storyborad = UIStoryboard(name: "ModeOption", bundle: nil)
         let viewController = storyborad.instantiateViewController(withIdentifier: "modeOption") as! ModeOptionController
-        viewController.getTitleMode = cell.expName
+        viewController.modeOptionVM = ModeOptionViewModel(experiment: homeVM.expDatas[indexPath.row].id)
+        
+//        viewController.getTitleMode = cell.expName
         self.navigationController?.pushViewController(viewController, animated: true)
-        print(getData.homeData[indexPath.row].expName)
+        print(homeVM.homeData[indexPath.row].expName)
     }
     
 }

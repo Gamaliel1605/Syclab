@@ -12,6 +12,8 @@ class ModeOptionCell: UICollectionViewCell {
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var modeImage: UIImageView!
     @IBOutlet weak var modeLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
+    var selectedExperiment: Experiments?
     
     override func awakeFromNib() {
         super.awakeFromNib()
