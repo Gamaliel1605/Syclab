@@ -10,6 +10,7 @@ import UIKit
 
 protocol FinishAlertProtocol: AnyObject {
     func onTapKeluarFinish()
+    func onTapToQuiz()
 }
 
 class FinishMission: UIViewController {
@@ -31,6 +32,7 @@ class FinishMission: UIViewController {
     
     @IBAction func quizTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+        delegate?.onTapToQuiz()
     }
     
     @IBAction func keluarTapped(_ sender: Any) {
