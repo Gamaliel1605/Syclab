@@ -12,6 +12,9 @@
 		142498F62727716E0050F18D /* ExperimentDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F52727716E0050F18D /* ExperimentDetailRepository.swift */; };
 		142498FA272776760050F18D /* ColorHexConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F9272776760050F18D /* ColorHexConversion.swift */; };
 		142498FC272793C60050F18D /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498FB272793C60050F18D /* AttributedString.swift */; };
+		98562DEE2730FF0400D1C619 /* EngineGerakParabola.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98562DED2730FF0400D1C619 /* EngineGerakParabola.swift */; };
+		98562DF02730FFCA00D1C619 /* MathFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98562DEF2730FFCA00D1C619 /* MathFunctions.swift */; };
+		98562DF2273101D500D1C619 /* GerakParabolaScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98562DF1273101D500D1C619 /* GerakParabolaScene.swift */; };
 		988B9972272E37040024DAA6 /* Experiments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9971272E37040024DAA6 /* Experiments.swift */; };
 		988B9976272E39120024DAA6 /* E1_GerakParabolaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9975272E39120024DAA6 /* E1_GerakParabolaData.swift */; };
 		988B9978272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9977272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift */; };
@@ -70,6 +73,9 @@
 		142498F52727716E0050F18D /* ExperimentDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetailRepository.swift; sourceTree = "<group>"; };
 		142498F9272776760050F18D /* ColorHexConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexConversion.swift; sourceTree = "<group>"; };
 		142498FB272793C60050F18D /* AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
+		98562DED2730FF0400D1C619 /* EngineGerakParabola.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineGerakParabola.swift; sourceTree = "<group>"; };
+		98562DEF2730FFCA00D1C619 /* MathFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFunctions.swift; sourceTree = "<group>"; };
+		98562DF1273101D500D1C619 /* GerakParabolaScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerakParabolaScene.swift; sourceTree = "<group>"; };
 		988B9971272E37040024DAA6 /* Experiments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiments.swift; sourceTree = "<group>"; };
 		988B9975272E39120024DAA6 /* E1_GerakParabolaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E1_GerakParabolaData.swift; sourceTree = "<group>"; };
 		988B9977272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E2_HukumGravitasiNewtonData.swift; sourceTree = "<group>"; };
@@ -143,6 +149,15 @@
 				142498F52727716E0050F18D /* ExperimentDetailRepository.swift */,
 			);
 			path = "Experiment Detail Data Store";
+			sourceTree = "<group>";
+		};
+		98562DEC2730FEEF00D1C619 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				98562DED2730FF0400D1C619 /* EngineGerakParabola.swift */,
+				98562DF1273101D500D1C619 /* GerakParabolaScene.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		98B1BAF8272D419600B37CB4 /* TableView */ = {
@@ -235,6 +250,7 @@
 				142498F9272776760050F18D /* ColorHexConversion.swift */,
 				EADBE49E272D808600E8607D /* ViewExtension.swift */,
 				EADBE4A0272D80E900E8607D /* LabelExtension.swift */,
+				98562DEF2730FFCA00D1C619 /* MathFunctions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -273,6 +289,7 @@
 		EABCDE7E271EEE4100CA2677 /* Virtual Lab */ = {
 			isa = PBXGroup;
 			children = (
+				98562DEC2730FEEF00D1C619 /* Model */,
 				EABCDE7F271EEE8200CA2677 /* VirtualLab.storyboard */,
 				EABCDE81271EEE9000CA2677 /* VirtualLabController.swift */,
 				EABCDE83271EEE9C00CA2677 /* VirtualLabViewModel.swift */,
@@ -430,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EADBE49B272D800D00E8607D /* CustomConstraint.swift in Sources */,
+				98562DF2273101D500D1C619 /* GerakParabolaScene.swift in Sources */,
 				EADBE49A272D800D00E8607D /* LabelType.swift in Sources */,
 				EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */,
 				98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */,
@@ -447,6 +465,7 @@
 				EABCDE90271EEF5C00CA2677 /* ModeOptionController.swift in Sources */,
 				988B9978272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift in Sources */,
 				EADBE4A1272D80E900E8607D /* LabelExtension.swift in Sources */,
+				98562DEE2730FF0400D1C619 /* EngineGerakParabola.swift in Sources */,
 				EABCDE7D271EEDF600CA2677 /* QuizViewModel.swift in Sources */,
 				EABCDE7B271EEDE700CA2677 /* QuizController.swift in Sources */,
 				EA0C37922725D3430038BF88 /* ModeOptionCell.swift in Sources */,
@@ -457,6 +476,7 @@
 				142498FC272793C60050F18D /* AttributedString.swift in Sources */,
 				EABCDE74271EED8900CA2677 /* Helpers.swift in Sources */,
 				EABCDE8B271EEF0B00CA2677 /* ExperimentDetailViewModel.swift in Sources */,
+				98562DF02730FFCA00D1C619 /* MathFunctions.swift in Sources */,
 				142498F227276DBD0050F18D /* ExperimentDetailModel.swift in Sources */,
 				EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */,
 				EA0C378E2723F6DC0038BF88 /* HomeData.swift in Sources */,

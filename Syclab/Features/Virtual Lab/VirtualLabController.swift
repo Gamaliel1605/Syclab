@@ -7,17 +7,17 @@
 
 import UIKit
 import SpriteKit
-class VirtualLabController: UIViewController, GravityPopoverDelegate {
+class VirtualLabController: UIViewController, GravityPopoverDelegate, SKSceneDelegate,SKViewDelegate {
    
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var jalankanButton: UIButton!
     @IBOutlet weak var gravitationButton: UIButton!
-    @IBOutlet weak var varLbl1: UILabel!
-    @IBOutlet weak var varSlider1: UISlider!
-    @IBOutlet weak var varLbl2: UILabel!
-    @IBOutlet weak var varSlider2: UISlider!
-    @IBOutlet weak var varTextField2: UITextField!
-    @IBOutlet weak var varTextField1: UITextField!
+    @IBOutlet weak var sudutLbl: UILabel!
+    @IBOutlet weak var sudutSlider: UISlider!
+    @IBOutlet weak var kecepatanLbl: UILabel!
+    @IBOutlet weak var kecepatanSlider: UISlider!
+    @IBOutlet weak var kecepatanTxtField: UITextField!
+    @IBOutlet weak var sudutTxtField: UITextField!
     @IBOutlet weak var unitLbl1: UILabel!
     @IBOutlet weak var unitLbl2: UILabel!
     @IBOutlet weak var spriteView: SKView!
@@ -25,13 +25,14 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     @IBOutlet weak var titleMissionLabel: UILabel!
     @IBOutlet weak var descMissionLabel: UILabel!
     let button:UIButton = UIButton(type: UIButton.ButtonType.custom)
+    var spriteScene: SKScene!
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.topItem?.title = "Eksperimen Gerak Parabola"
-        
+        setupSpriteView()
         setupControlPanel()
     }
     //test
@@ -41,6 +42,23 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
             print("oi asw")
     }
 
+    @IBAction func kecepatanSliderChanged(_ sender: UISlider) {
+        guard let scene = spriteScene as? GerakParabolaScene else {return}
+        scene.kecAwalScene = sender.value
+        kecepatanTxtField.text = String(round(sender.value * 10) / 10)
+    }
+    
+    @IBAction func sudutSliderChanged(_ sender: UISlider) {
+        guard let scene = spriteScene as? GerakParabolaScene else {return}
+        if Double(sender.value) < 90 {
+            scene.sudutTembakScene = Double(sender.value)
+        } else {
+            scene.sudutTembakScene = 89.99999
+        }
+        sudutTxtField.text = String(round(sender.value * 10) / 10)
+    }
+    
+    
     @IBAction func gravitationBtnPressed(_ sender: Any) {
         let gravityChoice = GravityPopoverViewController()
         gravityChoice.delegate = self
@@ -51,18 +69,46 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
         self.present(gravityChoice, animated: true, completion: nil)
         print("anjay")
     }
+    
     @IBAction func jalankanBtnPressed(_ sender: Any) {
+        guard let gameScene = spriteView.scene as? GerakParabolaScene else {return}
+        gameScene.shootStraight()
     }
     
     // MARK: - SETUP UI
     
+    func setupSpriteView() {
+        spriteScene = GerakParabolaScene(size: spriteView.bounds.size)
+        spriteScene.delegate = self
+        spriteView.delegate = self
+        spriteView.presentScene(spriteScene)
+    }
     func setupControlPanel() {
         setupGravitationButton()
         setupTheoryButton()
         setupJalankanButton()
         setupMissionBox()
+        setupSliders()
+        setupTextField()
     }
     
+    func setupTextField () {
+        kecepatanTxtField.text = "15"
+        kecepatanTxtField.isEnabled = false
+        
+        sudutTxtField.text = "30"
+        sudutTxtField.isEnabled = false
+    }
+    func setupSliders() {
+        sudutSlider.maximumValue = 90
+        sudutSlider.minimumValue = 0
+        sudutSlider.value = 30
+        
+        kecepatanSlider.maximumValue = 25
+        kecepatanSlider.minimumValue = 10
+        kecepatanSlider.value = 15
+        
+    }
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -126,5 +172,13 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
 //        let mask = CAShapeLayer()
 //        mask.path = path.cgPath
 //        layer.mask = mask
+//    }
+//}
+
+//
+//extension VirtualLabController: UITextFieldDelegate {
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
 //    }
 //}
