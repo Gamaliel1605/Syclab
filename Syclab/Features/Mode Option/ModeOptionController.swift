@@ -51,10 +51,10 @@ extension ModeOptionController: UICollectionViewDelegate, UICollectionViewDataSo
             viewController.getTitleExp = modeOptionVM.title
             self.navigationController?.pushViewController(viewController, animated: true)
         }
-//        else {
-//            let storyboard = UIStoryboard(name: "Quiz", bundle: nil)
-//            let viewController = storyboard.instantiateViewController(withIdentifier: "quiz") as! QuizController
-//            self.navigationController?.pushViewController(viewController, animated: true)
-//        }
+        else {
+            let storyboard = UIStoryboard(name: "Quiz", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "quiz") as! QuizController
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }
