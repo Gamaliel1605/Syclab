@@ -49,6 +49,8 @@
 		EABCDE95271EEF9F00CA2677 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABCDE94271EEF9F00CA2677 /* Home.storyboard */; };
 		EABCDE97271EEFBC00CA2677 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE96271EEFBC00CA2677 /* HomeController.swift */; };
 		EABCDE99271EEFC700CA2677 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE98271EEFC700CA2677 /* HomeViewModel.swift */; };
+		EAD5BB1027314C1900E4D651 /* ExitMission.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD5BB0F27314C1900E4D651 /* ExitMission.xib */; };
+		EAD5BB1227314C6300E4D651 /* ExitMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD5BB1127314C6300E4D651 /* ExitMission.swift */; };
 		EAD9272D272C517800B1635B /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9272C272C517800B1635B /* Experiment.swift */; };
 		EAD9272F272C52EF00B1635B /* ExperimentOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9272E272C52EF00B1635B /* ExperimentOption.swift */; };
 		EAD92731272C542800B1635B /* ExperimentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD92730272C542800B1635B /* ExperimentDetails.swift */; };
@@ -109,6 +111,8 @@
 		EABCDE94271EEF9F00CA2677 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		EABCDE96271EEFBC00CA2677 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		EABCDE98271EEFC700CA2677 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EAD5BB0F27314C1900E4D651 /* ExitMission.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExitMission.xib; sourceTree = "<group>"; };
+		EAD5BB1127314C6300E4D651 /* ExitMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitMission.swift; sourceTree = "<group>"; };
 		EAD9272C272C517800B1635B /* Experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
 		EAD9272E272C52EF00B1635B /* ExperimentOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentOption.swift; sourceTree = "<group>"; };
 		EAD92730272C542800B1635B /* ExperimentDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetails.swift; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 		EABCDE76271EED9D00CA2677 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EAD5BB0E27314BCA00E4D651 /* Alert */,
 				EABCDE93271EEF9400CA2677 /* Home */,
 				EABCDE8C271EEF3900CA2677 /* Mode Option */,
 				EABCDE85271EEEC600CA2677 /* Experiment Detail */,
@@ -312,6 +317,15 @@
 				EABCDE98271EEFC700CA2677 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		EAD5BB0E27314BCA00E4D651 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				EAD5BB1127314C6300E4D651 /* ExitMission.swift */,
+				EAD5BB0F27314C1900E4D651 /* ExitMission.xib */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		EADBE495272D7FAA00E8607D /* Custom Model */ = {
@@ -408,6 +422,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD5BB1027314C1900E4D651 /* ExitMission.xib in Resources */,
 				EABCDE67271EED1C00CA2677 /* LaunchScreen.storyboard in Resources */,
 				EA0C378A2723EECC0038BF88 /* HomeCell.xib in Resources */,
 				EABCDE8E271EEF4700CA2677 /* ModeOption.storyboard in Resources */,
@@ -433,6 +448,7 @@
 				EADBE49A272D800D00E8607D /* LabelType.swift in Sources */,
 				EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */,
 				98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */,
+				EAD5BB1227314C6300E4D651 /* ExitMission.swift in Sources */,
 				EA0C378C2723F3970038BF88 /* RegisterNib.swift in Sources */,
 				142498FA272776760050F18D /* ColorHexConversion.swift in Sources */,
 				EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */,
