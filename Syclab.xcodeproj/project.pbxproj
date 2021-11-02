@@ -26,6 +26,8 @@
 		EA0C37922725D3430038BF88 /* ModeOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C37902725D3430038BF88 /* ModeOptionCell.swift */; };
 		EA0C37932725D3430038BF88 /* ModeOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0C37912725D3430038BF88 /* ModeOptionCell.xib */; };
 		EA0C37952725D7700038BF88 /* ModeOptionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C37942725D7700038BF88 /* ModeOptionData.swift */; };
+		EA1BD2A72731575500B879A0 /* FinishMission.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1BD2A62731575500B879A0 /* FinishMission.xib */; };
+		EA1BD2A92731575F00B879A0 /* FinishMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1BD2A82731575F00B879A0 /* FinishMission.swift */; };
 		EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5A271EED1B00CA2677 /* AppDelegate.swift */; };
 		EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5C271EED1B00CA2677 /* SceneDelegate.swift */; };
 		EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5E271EED1B00CA2677 /* ViewController.swift */; };
@@ -86,6 +88,8 @@
 		EA0C37902725D3430038BF88 /* ModeOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeOptionCell.swift; sourceTree = "<group>"; };
 		EA0C37912725D3430038BF88 /* ModeOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModeOptionCell.xib; sourceTree = "<group>"; };
 		EA0C37942725D7700038BF88 /* ModeOptionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeOptionData.swift; sourceTree = "<group>"; };
+		EA1BD2A62731575500B879A0 /* FinishMission.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishMission.xib; sourceTree = "<group>"; };
+		EA1BD2A82731575F00B879A0 /* FinishMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishMission.swift; sourceTree = "<group>"; };
 		EABCDE57271EED1B00CA2677 /* Syclab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Syclab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABCDE5A271EED1B00CA2677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EABCDE5C271EED1B00CA2677 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -324,6 +328,8 @@
 			children = (
 				EAD5BB1127314C6300E4D651 /* ExitMission.swift */,
 				EAD5BB0F27314C1900E4D651 /* ExitMission.xib */,
+				EA1BD2A82731575F00B879A0 /* FinishMission.swift */,
+				EA1BD2A62731575500B879A0 /* FinishMission.xib */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -427,6 +433,7 @@
 				EA0C378A2723EECC0038BF88 /* HomeCell.xib in Resources */,
 				EABCDE8E271EEF4700CA2677 /* ModeOption.storyboard in Resources */,
 				EABCDE80271EEE8200CA2677 /* VirtualLab.storyboard in Resources */,
+				EA1BD2A72731575500B879A0 /* FinishMission.xib in Resources */,
 				98FD8C6727281A55006ECB8A /* GravityPopoverViewController.xib in Resources */,
 				EABCDE64271EED1C00CA2677 /* Assets.xcassets in Resources */,
 				EABCDE62271EED1B00CA2677 /* Main.storyboard in Resources */,
@@ -467,6 +474,7 @@
 				EABCDE7B271EEDE700CA2677 /* QuizController.swift in Sources */,
 				EA0C37922725D3430038BF88 /* ModeOptionCell.swift in Sources */,
 				EA0C37952725D7700038BF88 /* ModeOptionData.swift in Sources */,
+				EA1BD2A92731575F00B879A0 /* FinishMission.swift in Sources */,
 				EABCDE70271EED4700CA2677 /* Core.swift in Sources */,
 				EADBE4A5272D82A100E8607D /* ExperimentDummy.swift in Sources */,
 				988B9976272E39120024DAA6 /* E1_GerakParabolaData.swift in Sources */,
