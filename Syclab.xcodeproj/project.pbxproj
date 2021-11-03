@@ -29,6 +29,12 @@
 		EA0C37922725D3430038BF88 /* ModeOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C37902725D3430038BF88 /* ModeOptionCell.swift */; };
 		EA0C37932725D3430038BF88 /* ModeOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0C37912725D3430038BF88 /* ModeOptionCell.xib */; };
 		EA0C37952725D7700038BF88 /* ModeOptionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C37942725D7700038BF88 /* ModeOptionData.swift */; };
+		EA1BD2A72731575500B879A0 /* FinishMission.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1BD2A62731575500B879A0 /* FinishMission.xib */; };
+		EA1BD2A92731575F00B879A0 /* FinishMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1BD2A82731575F00B879A0 /* FinishMission.swift */; };
+		EA6E764D273160CF00FFC46C /* FinishQuiz.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6E764C273160CF00FFC46C /* FinishQuiz.xib */; };
+		EA6E764F273160ED00FFC46C /* FinishQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6E764E273160ED00FFC46C /* FinishQuiz.swift */; };
+		EAA2984D27316A6B00B5E303 /* EveryMission.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA2984C27316A6B00B5E303 /* EveryMission.xib */; };
+		EAA2984F27316A7F00B5E303 /* EveryMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2984E27316A7F00B5E303 /* EveryMission.swift */; };
 		EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5A271EED1B00CA2677 /* AppDelegate.swift */; };
 		EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5C271EED1B00CA2677 /* SceneDelegate.swift */; };
 		EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5E271EED1B00CA2677 /* ViewController.swift */; };
@@ -52,6 +58,8 @@
 		EABCDE95271EEF9F00CA2677 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABCDE94271EEF9F00CA2677 /* Home.storyboard */; };
 		EABCDE97271EEFBC00CA2677 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE96271EEFBC00CA2677 /* HomeController.swift */; };
 		EABCDE99271EEFC700CA2677 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE98271EEFC700CA2677 /* HomeViewModel.swift */; };
+		EAD5BB1027314C1900E4D651 /* ExitMission.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD5BB0F27314C1900E4D651 /* ExitMission.xib */; };
+		EAD5BB1227314C6300E4D651 /* ExitMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD5BB1127314C6300E4D651 /* ExitMission.swift */; };
 		EAD9272D272C517800B1635B /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9272C272C517800B1635B /* Experiment.swift */; };
 		EAD9272F272C52EF00B1635B /* ExperimentOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9272E272C52EF00B1635B /* ExperimentOption.swift */; };
 		EAD92731272C542800B1635B /* ExperimentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD92730272C542800B1635B /* ExperimentDetails.swift */; };
@@ -90,6 +98,12 @@
 		EA0C37902725D3430038BF88 /* ModeOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeOptionCell.swift; sourceTree = "<group>"; };
 		EA0C37912725D3430038BF88 /* ModeOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModeOptionCell.xib; sourceTree = "<group>"; };
 		EA0C37942725D7700038BF88 /* ModeOptionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeOptionData.swift; sourceTree = "<group>"; };
+		EA1BD2A62731575500B879A0 /* FinishMission.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishMission.xib; sourceTree = "<group>"; };
+		EA1BD2A82731575F00B879A0 /* FinishMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishMission.swift; sourceTree = "<group>"; };
+		EA6E764C273160CF00FFC46C /* FinishQuiz.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishQuiz.xib; sourceTree = "<group>"; };
+		EA6E764E273160ED00FFC46C /* FinishQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishQuiz.swift; sourceTree = "<group>"; };
+		EAA2984C27316A6B00B5E303 /* EveryMission.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EveryMission.xib; sourceTree = "<group>"; };
+		EAA2984E27316A7F00B5E303 /* EveryMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveryMission.swift; sourceTree = "<group>"; };
 		EABCDE57271EED1B00CA2677 /* Syclab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Syclab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABCDE5A271EED1B00CA2677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EABCDE5C271EED1B00CA2677 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +129,8 @@
 		EABCDE94271EEF9F00CA2677 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		EABCDE96271EEFBC00CA2677 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		EABCDE98271EEFC700CA2677 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EAD5BB0F27314C1900E4D651 /* ExitMission.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExitMission.xib; sourceTree = "<group>"; };
+		EAD5BB1127314C6300E4D651 /* ExitMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitMission.swift; sourceTree = "<group>"; };
 		EAD9272C272C517800B1635B /* Experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
 		EAD9272E272C52EF00B1635B /* ExperimentOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentOption.swift; sourceTree = "<group>"; };
 		EAD92730272C542800B1635B /* ExperimentDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetails.swift; sourceTree = "<group>"; };
@@ -267,6 +283,7 @@
 		EABCDE76271EED9D00CA2677 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EAD5BB0E27314BCA00E4D651 /* Alert */,
 				EABCDE93271EEF9400CA2677 /* Home */,
 				EABCDE8C271EEF3900CA2677 /* Mode Option */,
 				EABCDE85271EEEC600CA2677 /* Experiment Detail */,
@@ -329,6 +346,21 @@
 				EABCDE98271EEFC700CA2677 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		EAD5BB0E27314BCA00E4D651 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				EAD5BB1127314C6300E4D651 /* ExitMission.swift */,
+				EAD5BB0F27314C1900E4D651 /* ExitMission.xib */,
+				EA1BD2A82731575F00B879A0 /* FinishMission.swift */,
+				EA1BD2A62731575500B879A0 /* FinishMission.xib */,
+				EA6E764E273160ED00FFC46C /* FinishQuiz.swift */,
+				EA6E764C273160CF00FFC46C /* FinishQuiz.xib */,
+				EAA2984E27316A7F00B5E303 /* EveryMission.swift */,
+				EAA2984C27316A6B00B5E303 /* EveryMission.xib */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		EADBE495272D7FAA00E8607D /* Custom Model */ = {
@@ -425,17 +457,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD5BB1027314C1900E4D651 /* ExitMission.xib in Resources */,
 				EABCDE67271EED1C00CA2677 /* LaunchScreen.storyboard in Resources */,
 				EA0C378A2723EECC0038BF88 /* HomeCell.xib in Resources */,
 				EABCDE8E271EEF4700CA2677 /* ModeOption.storyboard in Resources */,
 				EABCDE80271EEE8200CA2677 /* VirtualLab.storyboard in Resources */,
+				EA1BD2A72731575500B879A0 /* FinishMission.xib in Resources */,
 				98FD8C6727281A55006ECB8A /* GravityPopoverViewController.xib in Resources */,
 				EABCDE64271EED1C00CA2677 /* Assets.xcassets in Resources */,
 				EABCDE62271EED1B00CA2677 /* Main.storyboard in Resources */,
 				EABCDE87271EEEE100CA2677 /* ExperimentDetail.storyboard in Resources */,
 				EA0C37932725D3430038BF88 /* ModeOptionCell.xib in Resources */,
 				EABCDE79271EEDB500CA2677 /* Quiz.storyboard in Resources */,
+				EAA2984D27316A6B00B5E303 /* EveryMission.xib in Resources */,
 				EABCDE95271EEF9F00CA2677 /* Home.storyboard in Resources */,
+				EA6E764D273160CF00FFC46C /* FinishQuiz.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +487,7 @@
 				EADBE49A272D800D00E8607D /* LabelType.swift in Sources */,
 				EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */,
 				98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */,
+				EAD5BB1227314C6300E4D651 /* ExitMission.swift in Sources */,
 				EA0C378C2723F3970038BF88 /* RegisterNib.swift in Sources */,
 				142498FA272776760050F18D /* ColorHexConversion.swift in Sources */,
 				EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */,
@@ -470,6 +507,7 @@
 				EABCDE7B271EEDE700CA2677 /* QuizController.swift in Sources */,
 				EA0C37922725D3430038BF88 /* ModeOptionCell.swift in Sources */,
 				EA0C37952725D7700038BF88 /* ModeOptionData.swift in Sources */,
+				EA1BD2A92731575F00B879A0 /* FinishMission.swift in Sources */,
 				EABCDE70271EED4700CA2677 /* Core.swift in Sources */,
 				EADBE4A5272D82A100E8607D /* ExperimentDummy.swift in Sources */,
 				988B9976272E39120024DAA6 /* E1_GerakParabolaData.swift in Sources */,
@@ -484,10 +522,12 @@
 				EAD92737272C55F800B1635B /* ExperimentQuiz.swift in Sources */,
 				142498F42727703F0050F18D /* ExperimentDetailDataStore.swift in Sources */,
 				EAD92735272C559B00B1635B /* ExperimentLab.swift in Sources */,
+				EA6E764F273160ED00FFC46C /* FinishQuiz.swift in Sources */,
 				EAD9272D272C517800B1635B /* Experiment.swift in Sources */,
 				EAD92733272C550B00B1635B /* ExperimentConcept.swift in Sources */,
 				988B9972272E37040024DAA6 /* Experiments.swift in Sources */,
 				EABCDE84271EEE9C00CA2677 /* VirtualLabViewModel.swift in Sources */,
+				EAA2984F27316A7F00B5E303 /* EveryMission.swift in Sources */,
 				EABCDE99271EEFC700CA2677 /* HomeViewModel.swift in Sources */,
 				EADBE49F272D808600E8607D /* ViewExtension.swift in Sources */,
 				98BADE4727291304009EE9D1 /* Extension+UIButton.swift in Sources */,
