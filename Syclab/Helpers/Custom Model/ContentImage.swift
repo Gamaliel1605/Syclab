@@ -26,13 +26,17 @@ class ContentImage: CustomConstraint {
 		
 		imageView.translatesAutoresizingMaskIntoConstraints = false
 		
-		if (elementIndex == 0) {
-			imageView.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: elementsContainer.bottomAnchor, trailing: elementsContainer.trailingAnchor, padding: padding, size: size)
-		} else {
-			let previousElement = elements[elementIndex-1]
-			imageView.setConstraint(top: previousElement.bottomAnchor, leading: elementsContainer.leadingAnchor, bottom: elementIndex == lastElementIndex ? elementsContainer.bottomAnchor : nil, trailing: elementsContainer.trailingAnchor, padding: padding, size: size)
-		}
-		
+        if (elementIndex == 0 && lastElementIndex == 0) {
+            imageView.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: elementsContainer.bottomAnchor, trailing: nil, padding: padding, size: size)
+        } else if (elementIndex == 0) {
+            imageView.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: nil, padding: padding, size: size)
+        } else if (elementIndex != 0 && elementIndex != lastElementIndex) {
+            let previousElement = elements[elementIndex-1]
+            imageView.setConstraint(top: previousElement.bottomAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: nil, padding: padding, size: size)
+        } else {
+            let previousElement = elements[elementIndex-1]
+            imageView.setConstraint(top: previousElement.bottomAnchor, leading: elementsContainer.leadingAnchor, bottom: elementsContainer.bottomAnchor, trailing: nil, padding: padding, size: size)
+        }
 		return imageView
 	}
 }

@@ -51,5 +51,14 @@ enum Experiments: String {
             return E2_HukumGravitasiNewtonData.misiDetail
         }
     }
+    
+    func getConceptTheory() -> ExperimentConcept {
+        switch self {
+        case .E1_GerakParabola:
+            return E1_GerakParabolaData.experimentConcept
+        case .E2_HukumGravitasiNewton:
+            return ExperimentConcept(conceptTheory: [])
+        }
+    }
 }
 
