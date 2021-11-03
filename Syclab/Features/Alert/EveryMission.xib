@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EveryMission" customModule="Syclab" customModuleProvider="target">
             <connections>
-                <outlet property="everyMissionImage" destination="D4a-Z7-h1B" id="PTB-VW-5Ja"/>
-                <outlet property="everyMissionLabel_1" destination="UA4-yi-ezf" id="wp8-76-grE"/>
-                <outlet property="everyMissionLabel_2" destination="1XS-QM-fh2" id="myz-N0-EqD"/>
-                <outlet property="everyMissionView" destination="puW-Fw-W28" id="IMe-j1-AYO"/>
+                <outlet property="everyMissionImage" destination="D4a-Z7-h1B" id="sAQ-aF-B4b"/>
+                <outlet property="everyMissionLabel_1" destination="UA4-yi-ezf" id="dcZ-7u-hLZ"/>
+                <outlet property="everyMissionLabel_2" destination="1XS-QM-fh2" id="G8O-Xt-v2o"/>
+                <outlet property="everyMissionView" destination="puW-Fw-W28" id="z9x-2B-nst"/>
+                <outlet property="view" destination="iN0-l3-epB" id="g6N-wf-WEe"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

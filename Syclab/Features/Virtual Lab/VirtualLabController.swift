@@ -7,7 +7,7 @@
 
 import UIKit
 import SpriteKit
-class VirtualLabController: UIViewController, GravityPopoverDelegate, SKSceneDelegate,SKViewDelegate {
+class VirtualLabController: UIViewController, GravityPopoverDelegate {
    
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var jalankanButton: UIButton!
@@ -92,6 +92,9 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate, SKSceneDel
         setupTextField()
     }
     
+    func setupXIB() {
+    }
+    
     func setupTextField () {
         kecepatanTxtField.text = "15"
         kecepatanTxtField.isEnabled = false
@@ -138,20 +141,7 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate, SKSceneDel
         self.view.addSubview(button)
     }
     
-    
-    
     func setupInfoButon() {
-//        let imageSize:CGSize = CGSize(width: 100, height: 100)
-//        infoButton.setImage(UIImage(systemName: "info.circle"), for: .normal)
-//        infoButton.contentVerticalAlignment = .fill
-//        infoButton.contentHorizontalAlignment = .fill
-//
-//        infoButton.imageEdgeInsets = UIEdgeInsets(
-//            top: (infoButton.frame.size.height - imageSize.height) / 4,
-//            left: (infoButton.frame.size.width - imageSize.width) / 4,
-//            bottom: (infoButton.frame.size.height - imageSize.height) / 4,
-//            right: (infoButton.frame.size.width - imageSize.width) / 4)
-//        infoButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
     
     func setupJalankanButton () {
@@ -166,19 +156,20 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate, SKSceneDel
     }
 }
 
-//extension UIView {
-//   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-//        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-//        let mask = CAShapeLayer()
-//        mask.path = path.cgPath
-//        layer.mask = mask
-//    }
-//}
 
-//
-//extension VirtualLabController: UITextFieldDelegate {
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        textField.resignFirstResponder()
-//        return true
-//    }
-//}
+extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
+    func update(_ currentTime: TimeInterval, for scene: SKScene) {
+        guard let scene = scene as? GerakParabolaScene else {return}
+        if scene.isFinish {
+            scene.isFinish = false
+            let finishAlert = EveryMission()
+//            finishAlert.everyMissionLabel_1.text = "hahahha"
+//            finishAlert.everyMissionLabel_2.text = "test 22
+            self.present(finishAlert, animated: true, completion: nil)
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                finishAlert.dismiss(animated: true, completion: nil)
+            }
+            
+        }
+    }
+}

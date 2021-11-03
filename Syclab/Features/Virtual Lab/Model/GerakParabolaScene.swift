@@ -26,7 +26,6 @@ class GerakParabolaScene: SKScene {
     let projectile10 = SKSpriteNode(imageNamed: "ivanKuyang")
     var projectileArray: [SKSpriteNode] = []
     var currentProjectile: SKSpriteNode?
-    var previousProjectile: SKSpriteNode?
     var scoreText = SKLabelNode()
     
     var vectorX = SKShapeNode(rectOf: CGSize(width: 0, height: 0))
@@ -34,18 +33,12 @@ class GerakParabolaScene: SKScene {
     
     var index: Int = 0
     
-    var monstersDestroyed = 0
     var engineSK = EngineGerakParabola()
-    var waktuArray : [Int] = []
-    var xArray : [CGFloat] = []
-    var yArray : [CGFloat] = []
     var kecAwalScene : Float = 15
     var gravitasiVektor : Float = -9.8
     var sudutTembakScene : Double = 30
-    var udaraDitembakCie = 0
     var indexBentol = 0
     var lineActive: Bool = true
-    var initialTime: TimeInterval = 0
     var nodeArrayDeletable: [SKNode] = []
     var janganDihapusArray: [SKNode] = []
     
@@ -69,8 +62,13 @@ class GerakParabolaScene: SKScene {
     var ketinggianReal : Float = 0
     var ketinggianEngine : Float = 0
     
+    //variable UI
     var initialX: CGFloat = 0
     var initialY: CGFloat = 0
+    
+    //variabel
+    var isFinish: Bool = false
+    
     
     override func didEvaluateActions() {
         super.didEvaluateActions()
@@ -168,6 +166,9 @@ class GerakParabolaScene: SKScene {
     
     override func didMove(to view: SKView) {
         physicsWorld.gravity = CGVector(dx: 0, dy: CGFloat(gravitasiVektor))
+        physicsWorld.contactDelegate = self
+        physicsWorld.speed = 0.3
+        
         initialX = size.width * 0.1
         initialY = size.height * 0.2
         player.position = CGPoint(x: initialX, y: initialY)
@@ -189,8 +190,7 @@ class GerakParabolaScene: SKScene {
         
         backgroundColor = SKColor.white // Set the background color
         
-        physicsWorld.contactDelegate = self
-        physicsWorld.speed = 0.3
+
         
         projectileArray = [projectile, projectile1, projectile2, projectile3, projectile4, projectile5, projectile6,
                            projectile7, projectile8, projectile9, projectile10]
@@ -203,28 +203,11 @@ class GerakParabolaScene: SKScene {
         totalWaktuEngine = engineSK.waktuUntukJarakTerjauhEngine(kecepatanAwal: kecAwalScene, sudutTembak: sudutTembakScene, gravitasi: gravitasiVektor, ketinggian: ketinggianEngine )
         totalWaktuReal = engineSK.waktuUntukJarakTerjauhReal(kecepatanAwal: kecAwalScene, sudutTembak: sudutTembakScene, gravitasi: gravitasiVektor, ketinggian: ketinggianReal)
         
-        let lantai = SKSpriteNode(color: SKColor.red, size: CGSize(width: 3000, height: 10))
-        lantai.position = CGPoint(x: initialX, y: initialY - 50)
-        lantai.zPosition = 0.3
-        lantai.physicsBody = SKPhysicsBody(rectangleOf: lantai.size)
-        lantai.physicsBody!.isDynamic = false
-        lantai.physicsBody?.allowsRotation = false
-        lantai.physicsBody?.linearDamping = 0
-        lantai.physicsBody?.angularDamping = 0
-        lantai.physicsBody?.friction = 1
-        lantai.physicsBody?.restitution = 0
-        lantai.physicsBody?.categoryBitMask = PhysicsCategory.tembok
-        lantai.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
-        lantai.physicsBody?.collisionBitMask = PhysicsCategory.projectile
-        lantai.physicsBody?.usesPreciseCollisionDetection = true
-        self.addChild(lantai)
-//
-        
-        
+       
 
-  
-        
     }
+    
+   
     
 //    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        for node in nodeArrayDeletable {
@@ -298,6 +281,7 @@ class GerakParabolaScene: SKScene {
     func setupUI() {
         setupRing()
         setupSensor()
+        setupLantai()
     }
     
     
@@ -316,10 +300,10 @@ class GerakParabolaScene: SKScene {
     
     func setupSensor() {
         let rad = ring.size.width
-        let sensor = SKShapeNode(circleOfRadius: rad/4)
+        let sensor = SKShapeNode(circleOfRadius: rad/6)
         sensor.position = CGPoint(x: frame.midX, y: frame.midY)
         sensor.strokeColor = .yellow
-        sensor.physicsBody = SKPhysicsBody(circleOfRadius: rad/4)
+        sensor.physicsBody = SKPhysicsBody(circleOfRadius: rad/6)
         sensor.physicsBody?.isDynamic = false
         sensor.physicsBody?.affectedByGravity = false
         sensor.physicsBody?.allowsRotation = false
@@ -341,6 +325,23 @@ class GerakParabolaScene: SKScene {
         addChild(scoreText)
     }
 
+    func setupLantai() {
+        let lantai = SKSpriteNode(color: SKColor.red, size: CGSize(width: 3000, height: 10))
+        lantai.position = CGPoint(x: initialX, y: initialY - 50)
+        lantai.zPosition = 0.3
+        lantai.physicsBody = SKPhysicsBody(rectangleOf: lantai.size)
+        lantai.physicsBody!.isDynamic = false
+        lantai.physicsBody?.allowsRotation = false
+        lantai.physicsBody?.linearDamping = 0
+        lantai.physicsBody?.angularDamping = 0
+        lantai.physicsBody?.friction = 1
+        lantai.physicsBody?.restitution = 0
+        lantai.physicsBody?.categoryBitMask = PhysicsCategory.tembok
+        lantai.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
+        lantai.physicsBody?.collisionBitMask = PhysicsCategory.projectile
+        lantai.physicsBody?.usesPreciseCollisionDetection = true
+        self.addChild(lantai)
+    }
 }
 
 
@@ -377,12 +378,7 @@ extension GerakParabolaScene: SKPhysicsContactDelegate {
         
         if ((firstBody.categoryBitMask & PhysicsCategory.sensor != 0) &&
             (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
-            
-            scoreText.text = "aaw"
-//            if let sensor = firstBody.node as? SKSpriteNode,
-//               let projectile = secondBody.node as? SKSpriteNode {
-//                print( "bisa anjeeeng")
-//            }
+                isFinish = true
         }
     }
     
