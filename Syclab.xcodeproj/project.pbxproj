@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1408134B27304B1D00C8A482 /* ConceptTheory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1408134A27304B1D00C8A482 /* ConceptTheory.xib */; };
+		1408134D27304B3B00C8A482 /* ConceptTheory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1408134C27304B3B00C8A482 /* ConceptTheory.swift */; };
+		140813502730C1E900C8A482 /* CobaConceptTheory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1408134F2730C1E900C8A482 /* CobaConceptTheory.storyboard */; };
+		140813522730C2F000C8A482 /* CobaConceptTheoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140813512730C2F000C8A482 /* CobaConceptTheoryViewController.swift */; };
 		142498F227276DBD0050F18D /* ExperimentDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F127276DBD0050F18D /* ExperimentDetailModel.swift */; };
 		142498F42727703F0050F18D /* ExperimentDetailDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F32727703F0050F18D /* ExperimentDetailDataStore.swift */; };
 		142498F62727716E0050F18D /* ExperimentDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F52727716E0050F18D /* ExperimentDetailRepository.swift */; };
@@ -76,6 +80,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1408134A27304B1D00C8A482 /* ConceptTheory.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConceptTheory.xib; sourceTree = "<group>"; };
+		1408134C27304B3B00C8A482 /* ConceptTheory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConceptTheory.swift; sourceTree = "<group>"; };
+		1408134F2730C1E900C8A482 /* CobaConceptTheory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CobaConceptTheory.storyboard; sourceTree = "<group>"; };
+		140813512730C2F000C8A482 /* CobaConceptTheoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobaConceptTheoryViewController.swift; sourceTree = "<group>"; };
 		142498F127276DBD0050F18D /* ExperimentDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetailModel.swift; sourceTree = "<group>"; };
 		142498F32727703F0050F18D /* ExperimentDetailDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetailDataStore.swift; sourceTree = "<group>"; };
 		142498F52727716E0050F18D /* ExperimentDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetailRepository.swift; sourceTree = "<group>"; };
@@ -157,6 +165,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1408134927304B0400C8A482 /* Concept Theory */ = {
+			isa = PBXGroup;
+			children = (
+				1408134E2730C1CF00C8A482 /* Coba Concept Theory */,
+				1408134A27304B1D00C8A482 /* ConceptTheory.xib */,
+				1408134C27304B3B00C8A482 /* ConceptTheory.swift */,
+			);
+			path = "Concept Theory";
+			sourceTree = "<group>";
+		};
+		1408134E2730C1CF00C8A482 /* Coba Concept Theory */ = {
+			isa = PBXGroup;
+			children = (
+				1408134F2730C1E900C8A482 /* CobaConceptTheory.storyboard */,
+				140813512730C2F000C8A482 /* CobaConceptTheoryViewController.swift */,
+			);
+			path = "Coba Concept Theory";
+			sourceTree = "<group>";
+		};
 		142498F027276D9D0050F18D /* Experiment Detail Data Store */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,7 +333,11 @@
 		EABCDE7E271EEE4100CA2677 /* Virtual Lab */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				98562DEC2730FEEF00D1C619 /* Model */,
+=======
+				1408134927304B0400C8A482 /* Concept Theory */,
+>>>>>>> develop
 				EABCDE7F271EEE8200CA2677 /* VirtualLab.storyboard */,
 				EABCDE81271EEE9000CA2677 /* VirtualLabController.swift */,
 				EABCDE83271EEE9C00CA2677 /* VirtualLabViewModel.swift */,
@@ -458,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAD5BB1027314C1900E4D651 /* ExitMission.xib in Resources */,
+				140813502730C1E900C8A482 /* CobaConceptTheory.storyboard in Resources */,
 				EABCDE67271EED1C00CA2677 /* LaunchScreen.storyboard in Resources */,
 				EA0C378A2723EECC0038BF88 /* HomeCell.xib in Resources */,
 				EABCDE8E271EEF4700CA2677 /* ModeOption.storyboard in Resources */,
@@ -468,6 +500,7 @@
 				EABCDE62271EED1B00CA2677 /* Main.storyboard in Resources */,
 				EABCDE87271EEEE100CA2677 /* ExperimentDetail.storyboard in Resources */,
 				EA0C37932725D3430038BF88 /* ModeOptionCell.xib in Resources */,
+				1408134B27304B1D00C8A482 /* ConceptTheory.xib in Resources */,
 				EABCDE79271EEDB500CA2677 /* Quiz.storyboard in Resources */,
 				EAA2984D27316A6B00B5E303 /* EveryMission.xib in Resources */,
 				EABCDE95271EEF9F00CA2677 /* Home.storyboard in Resources */,
@@ -523,9 +556,11 @@
 				142498F42727703F0050F18D /* ExperimentDetailDataStore.swift in Sources */,
 				EAD92735272C559B00B1635B /* ExperimentLab.swift in Sources */,
 				EA6E764F273160ED00FFC46C /* FinishQuiz.swift in Sources */,
+				1408134D27304B3B00C8A482 /* ConceptTheory.swift in Sources */,
 				EAD9272D272C517800B1635B /* Experiment.swift in Sources */,
 				EAD92733272C550B00B1635B /* ExperimentConcept.swift in Sources */,
 				988B9972272E37040024DAA6 /* Experiments.swift in Sources */,
+				140813522730C2F000C8A482 /* CobaConceptTheoryViewController.swift in Sources */,
 				EABCDE84271EEE9C00CA2677 /* VirtualLabViewModel.swift in Sources */,
 				EAA2984F27316A7F00B5E303 /* EveryMission.swift in Sources */,
 				EABCDE99271EEFC700CA2677 /* HomeViewModel.swift in Sources */,

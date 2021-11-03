@@ -10,9 +10,9 @@ import UIKit
 
 class ExperimentConcept {
     
-    var conceptTheory: [[Any]]
+    var conceptTheory: [Any]
     
-    init(conceptTheory: [[Any]]) {
+    init(conceptTheory: [Any]) {
         self.conceptTheory = conceptTheory
     }
 }
