@@ -334,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				98562DEC2730FEEF00D1C619 /* Model */,
+				1408134927304B0400C8A482 /* Concept Theory */,
 				EABCDE7F271EEE8200CA2677 /* VirtualLab.storyboard */,
 				EABCDE81271EEE9000CA2677 /* VirtualLabController.swift */,
 				EABCDE83271EEE9C00CA2677 /* VirtualLabViewModel.swift */,
