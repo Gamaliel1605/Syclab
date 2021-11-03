@@ -27,6 +27,7 @@ class GerakParabolaScene: SKScene {
     var projectileArray: [SKSpriteNode] = []
     var currentProjectile: SKSpriteNode?
     var previousProjectile: SKSpriteNode?
+    var scoreText = SKLabelNode()
     
     var vectorX = SKShapeNode(rectOf: CGSize(width: 0, height: 0))
     var vectorY = SKShapeNode(rectOf: CGSize(width: 0, height: 0))
@@ -98,7 +99,7 @@ class GerakParabolaScene: SKScene {
 //        currentProjectile?.addChild(vectorX)
 //        currentProjectile?.addChild(vectorY)
         
-//        player.zRotation = CGFloat(sudutTembakScene)/55 + 30.15
+        player.zRotation = CGFloat(sudutTembakScene)/55 + 30.15
         
         
         if lineActive == true {
@@ -171,28 +172,10 @@ class GerakParabolaScene: SKScene {
         initialY = size.height * 0.2
         player.position = CGPoint(x: initialX, y: initialY)
         
-        print(ring.size.height)
-        print(ring.size.width)
-        ring.setScale(0.1)
-        print(ring.size.height)
-        print(ring.size.width)
-        let h = 10
-        let rad = ring.size.width
-        ring.position = CGPoint(x: size.width * 0.8, y: size.height * 0.5)
-        let l = SKPhysicsBody(edgeFrom: CGPoint(x: Int(-rad)/2, y: 0), to: CGPoint(x: Int(-rad)/2 + h, y: 0))
-        let r = SKPhysicsBody(edgeFrom: CGPoint(x: Int(rad/2) - h, y: 0), to: CGPoint(x: Int(rad/2), y: 0))
-        ring.physicsBody = SKPhysicsBody(bodies: [l,r])
-        ring.physicsBody?.affectedByGravity = false
-        ring.physicsBody?.isDynamic = false
-//        ring.physicsBody?.categoryBitMask = PhysicsCategory.tembok
-//        ring.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
-        
-        addChild(ring)
-        
+        setupUI()
 //        bg.position = CGPoint(x: size.width * 0.5, y: size.height * 0.5)
 //        bg.zPosition = -1
 //        addChild(bg)
-        print("background cukces")
 
         
         player.anchorPoint = CGPoint(x: 0.45, y: 0.3)
@@ -220,9 +203,6 @@ class GerakParabolaScene: SKScene {
         totalWaktuEngine = engineSK.waktuUntukJarakTerjauhEngine(kecepatanAwal: kecAwalScene, sudutTembak: sudutTembakScene, gravitasi: gravitasiVektor, ketinggian: ketinggianEngine )
         totalWaktuReal = engineSK.waktuUntukJarakTerjauhReal(kecepatanAwal: kecAwalScene, sudutTembak: sudutTembakScene, gravitasi: gravitasiVektor, ketinggian: ketinggianReal)
         
-        
-        print("ini tinggi \(String(describing: scene?.size.height)), ini panjang \(String(describing: scene?.size.width))")
-        
         let lantai = SKSpriteNode(color: SKColor.red, size: CGSize(width: 3000, height: 10))
         lantai.position = CGPoint(x: initialX, y: initialY - 50)
         lantai.zPosition = 0.3
@@ -235,7 +215,7 @@ class GerakParabolaScene: SKScene {
         lantai.physicsBody?.restitution = 0
         lantai.physicsBody?.categoryBitMask = PhysicsCategory.tembok
         lantai.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
-//        lantai.physicsBody?.collisionBitMask = PhysicsCategory.none
+        lantai.physicsBody?.collisionBitMask = PhysicsCategory.projectile
         lantai.physicsBody?.usesPreciseCollisionDetection = true
         self.addChild(lantai)
 //
@@ -294,8 +274,8 @@ class GerakParabolaScene: SKScene {
         currentProjectile?.physicsBody?.restitution = 0
         currentProjectile?.physicsBody?.categoryBitMask = PhysicsCategory.projectile
         currentProjectile?.physicsBody?.contactTestBitMask = PhysicsCategory.tembok
-//                currentProjectile?.physicsBody?.collisionBitMask = PhysicsCategory.none
-                currentProjectile?.physicsBody?.usesPreciseCollisionDetection = true
+        currentProjectile?.physicsBody?.collisionBitMask = PhysicsCategory.tembok
+        currentProjectile?.physicsBody?.usesPreciseCollisionDetection = true
         //
         
         currentProjectile?.physicsBody?.velocity = CGVector(dx: engineSK.kecepatanXAwalEngine(sudutTembak: sudutTembakScene, kecepatanAwal: kecAwalScene), dy: engineSK.kecepatanYAwalEngine(sudutTembak: sudutTembakScene, kecepatanAwal: kecAwalScene))
@@ -314,19 +294,63 @@ class GerakParabolaScene: SKScene {
         index += 1
         
     }
-
-    
-    func projectileDidCollideWithTembox(projectile: SKSpriteNode, tembox: SKSpriteNode) {
-        print("Hit")
-        projectile.physicsBody?.velocity = .zero
-        projectile.removeAllChildren()
-        
-        //        if monstersDestroyed > 30 {
-        //            let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-        //            let gameOverScene = GameOverScene(size: self.size, won: true)
-        //            view?.presentScene(gameOverScene, transition: reveal)
-        //        }
+// MARK: - Setup UI Scene
+    func setupUI() {
+        setupRing()
+        setupSensor()
     }
+    
+    
+    func setupRing() {
+        ring.setScale(0.1)
+        let h = 10
+        let rad = ring.size.width
+        let l = SKPhysicsBody(edgeFrom: CGPoint(x: Int(-rad)/2, y: 0), to: CGPoint(x: Int(-rad)/2 + h, y: 0))
+        let r = SKPhysicsBody(edgeFrom: CGPoint(x: Int(rad/2) - 5, y: 0), to: CGPoint(x: Int(rad/2), y: 0))
+        ring.position = CGPoint(x: size.width * 0.8, y: size.height * 0.5)
+        ring.physicsBody = SKPhysicsBody(bodies: [l,r])
+        ring.physicsBody?.affectedByGravity = false
+        ring.physicsBody?.isDynamic = false
+        addChild(ring)
+    }
+    
+    func setupSensor() {
+        let rad = ring.size.width
+        let sensor = SKShapeNode(circleOfRadius: rad/4)
+        sensor.position = CGPoint(x: frame.midX, y: frame.midY)
+        sensor.strokeColor = .yellow
+        sensor.physicsBody = SKPhysicsBody(circleOfRadius: rad/4)
+        sensor.physicsBody?.isDynamic = false
+        sensor.physicsBody?.affectedByGravity = false
+        sensor.physicsBody?.allowsRotation = false
+        sensor.physicsBody?.categoryBitMask = PhysicsCategory.sensor
+        sensor.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
+        sensor.physicsBody?.collisionBitMask = PhysicsCategory.none
+        sensor.physicsBody?.usesPreciseCollisionDetection = true
+
+        addChild(sensor)
+    }
+    
+    func setupScoreText() {
+        scoreText.fontSize = 70
+        scoreText.fontName = "helvetica"
+        scoreText.fontColor = UIColor.black
+        scoreText.text = "Score: 0"
+        scoreText.zPosition = -2
+        scoreText.position = CGPoint(x: frame.midX, y: 500)
+        addChild(scoreText)
+    }
+
+}
+
+
+// MARK: - Tumbukan kawan~
+struct PhysicsCategory {
+    static let none         : UInt32 = 0b1 << 0
+    static let all          : UInt32 = UInt32.max
+    static let tembok       : UInt32 = 0b1 << 1      // 1
+    static let sensor       : UInt32 = 0b1 << 2//2
+    static let projectile   : UInt32 = 0b1 << 3 //3
 }
 
 extension GerakParabolaScene: SKPhysicsContactDelegate {
@@ -345,23 +369,34 @@ extension GerakParabolaScene: SKPhysicsContactDelegate {
         // 2
         if ((firstBody.categoryBitMask & PhysicsCategory.tembok != 0) &&
                 (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
-            print("yahooo1")
             if let tembox = firstBody.node as? SKSpriteNode,
                let projectile = secondBody.node as? SKSpriteNode {
-                print("yahooo2")
                 projectileDidCollideWithTembox(projectile: projectile, tembox: tembox)
             }
         }
+        
+        if ((firstBody.categoryBitMask & PhysicsCategory.sensor != 0) &&
+            (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
+            
+            scoreText.text = "aaw"
+//            if let sensor = firstBody.node as? SKSpriteNode,
+//               let projectile = secondBody.node as? SKSpriteNode {
+//                print( "bisa anjeeeng")
+//            }
+        }
     }
-}
-
-// MARK: - Tumbukan kawan~
-struct PhysicsCategory {
-    static let none      : UInt32 = 0
-    static let all       : UInt32 = UInt32.max
-    static let tembok   : UInt32 = 0b1      // 1
-    static let projectile: UInt32 = 0b10 //2
-    static let bentol: UInt32 = 0b11 //3
+    
+    func projectileDidCollideWithTembox(projectile: SKSpriteNode, tembox: SKSpriteNode) {
+        print("Hit")
+        projectile.physicsBody?.velocity = .zero
+        projectile.removeAllChildren()
+        
+        //        if monstersDestroyed > 30 {
+        //            let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+        //            let gameOverScene = GameOverScene(size: self.size, won: true)
+        //            view?.presentScene(gameOverScene, transition: reveal)
+        //        }
+    }
 }
 
 
