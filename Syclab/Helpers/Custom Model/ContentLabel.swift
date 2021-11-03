@@ -14,7 +14,7 @@ class ContentLabel : CustomConstraint {
 	var alignment: NSTextAlignment
 	var fontSize: CGFloat
 	
-	init(text: String, type:LabelType = .regular, targetText:[String] = [], alignment:NSTextAlignment = .justified, fontsize:CGFloat = 18, padding: UIEdgeInsets, size: CGSize) {
+    init(text: String, type:LabelType = .regular, targetText:[String] = [], alignment:NSTextAlignment = .justified, fontsize:CGFloat = 18, padding: UIEdgeInsets, size: CGSize = .zero) {
 		self.text = text
 		self.type = type
 		self.targetText = targetText
@@ -44,13 +44,16 @@ class ContentLabel : CustomConstraint {
 		label.translatesAutoresizingMaskIntoConstraints = false
 		
 		if (elementIndex == 0 && lastElementIndex == 0) {
-			label.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: elementsContainer.bottomAnchor, trailing: elementsContainer.trailingAnchor, padding: padding, size: size)
+            label.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: elementsContainer.bottomAnchor, trailing: elementsContainer.trailingAnchor, padding: padding, size: size)
 		} else if (elementIndex == 0) {
 			label.setConstraint(top: elementsContainer.topAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: elementsContainer.trailingAnchor, padding: padding, size: size)
-		} else {
+		} else if (elementIndex != 0 && elementIndex != lastElementIndex ){
 			let previousElement = elements[elementIndex-1]
-			label.setConstraint(top: previousElement.bottomAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: elementsContainer.trailingAnchor, padding: padding, size: size)
-		}
+            label.setConstraint(top: previousElement.bottomAnchor, leading: elementsContainer.leadingAnchor, bottom: nil, trailing: elementsContainer.trailingAnchor, padding: padding, size: size)
+        } else {
+            let previousElement = elements[elementIndex-1]
+            label.setConstraint(top: previousElement.bottomAnchor, leading: elementsContainer.leadingAnchor, bottom: elementsContainer.bottomAnchor, trailing: elementsContainer.trailingAnchor, padding: padding, size: size)
+        }
 		
 		return label
 	}
