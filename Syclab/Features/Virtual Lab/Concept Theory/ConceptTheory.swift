@@ -31,6 +31,8 @@ class ConceptTheory: UIView {
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: Bundle(for: type(of: self)))
         nib.instantiate(withOwner: self, options: nil)
         titleLabel.text = "Teori Konsep"
+        closeView.layer.cornerRadius = 15
+        containerView.layer.cornerRadius = 15
         addSubview(containerView)
         containerView.translatesAutoresizingMaskIntoConstraints = false
         self.addConstraints()
