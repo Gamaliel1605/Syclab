@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -95,6 +95,7 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="tiW-ky-Q6c" secondAttribute="trailing" constant="174" id="0OG-Bm-rjl"/>
                         <constraint firstAttribute="trailing" secondItem="RYl-Zd-lkv" secondAttribute="trailing" constant="143" id="3EC-pN-X9b"/>
+                        <constraint firstAttribute="width" constant="540" id="5dZ-XB-1iH"/>
                         <constraint firstAttribute="trailing" secondItem="03U-TJ-H56" secondAttribute="trailing" constant="86" id="Atx-xG-NXY"/>
                         <constraint firstItem="rGd-7L-oS0" firstAttribute="leading" secondItem="1Lg-gt-7sY" secondAttribute="leading" constant="174" id="DxF-fD-lru"/>
                         <constraint firstItem="RYl-Zd-lkv" firstAttribute="top" secondItem="rjr-iu-TmA" secondAttribute="bottom" constant="65" id="Ksu-Jh-Fcl"/>
@@ -103,6 +104,7 @@
                         <constraint firstItem="rjr-iu-TmA" firstAttribute="leading" secondItem="1Lg-gt-7sY" secondAttribute="leading" constant="205" id="Qw3-Sc-BuT"/>
                         <constraint firstItem="rGd-7L-oS0" firstAttribute="top" secondItem="tiW-ky-Q6c" secondAttribute="bottom" constant="20" id="Tcw-gB-lpa"/>
                         <constraint firstItem="tiW-ky-Q6c" firstAttribute="top" secondItem="03U-TJ-H56" secondAttribute="bottom" constant="40" id="XUF-7H-Dn2"/>
+                        <constraint firstAttribute="height" constant="620" id="iXA-h3-uDs"/>
                         <constraint firstItem="03U-TJ-H56" firstAttribute="top" secondItem="DIG-6G-bNa" secondAttribute="bottom" id="kgY-Ot-SHt"/>
                         <constraint firstItem="tiW-ky-Q6c" firstAttribute="leading" secondItem="1Lg-gt-7sY" secondAttribute="leading" constant="174" id="loe-AB-g9V"/>
                         <constraint firstItem="DIG-6G-bNa" firstAttribute="top" secondItem="RYl-Zd-lkv" secondAttribute="bottom" constant="23" id="n2V-b4-ei7"/>
@@ -117,10 +119,8 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1Lg-gt-7sY" secondAttribute="trailing" constant="327" id="M3s-an-25L"/>
-                <constraint firstItem="1Lg-gt-7sY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="327" id="bCq-fY-F2X"/>
-                <constraint firstItem="1Lg-gt-7sY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="83" id="ib7-Nm-OAw"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1Lg-gt-7sY" secondAttribute="bottom" constant="87" id="ngW-Rb-QWS"/>
+                <constraint firstItem="1Lg-gt-7sY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IYz-PX-tNJ"/>
+                <constraint firstItem="1Lg-gt-7sY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="x60-Eh-giZ"/>
             </constraints>
             <point key="canvasLocation" x="139" y="102"/>
         </view>

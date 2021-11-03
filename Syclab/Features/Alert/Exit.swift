@@ -12,7 +12,7 @@ protocol ExitAlertProtocol: AnyObject{
     func onTapKeluar()
 }
 
-class ExitMission: UIViewController {
+class Exit: UIViewController {
     
     @IBOutlet weak var exitView: UIView!
     @IBOutlet weak var exitLabel_1: UILabel!

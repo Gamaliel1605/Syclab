@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -97,10 +97,12 @@
                         <constraint firstItem="7rd-ss-oBX" firstAttribute="leading" secondItem="91U-BM-r67" secondAttribute="leading" constant="86" id="R19-uB-TRc"/>
                         <constraint firstAttribute="trailing" secondItem="FK7-VH-Bas" secondAttribute="trailing" constant="174" id="RYG-fQ-U83"/>
                         <constraint firstAttribute="trailing" secondItem="7rd-ss-oBX" secondAttribute="trailing" constant="86" id="SmK-Va-6Xe"/>
+                        <constraint firstAttribute="height" constant="620" id="WbI-Le-d7P"/>
                         <constraint firstItem="A6t-Ui-XEF" firstAttribute="top" secondItem="RGW-2V-gvZ" secondAttribute="bottom" constant="37" id="Wek-Nr-ah2"/>
                         <constraint firstItem="FyT-UQ-8iP" firstAttribute="top" secondItem="91U-BM-r67" secondAttribute="top" constant="88" id="ZVh-h7-RPF"/>
                         <constraint firstAttribute="trailing" secondItem="RGW-2V-gvZ" secondAttribute="trailing" constant="143" id="hRv-dh-52d"/>
                         <constraint firstAttribute="trailing" secondItem="bgd-vc-Qi6" secondAttribute="trailing" constant="86" id="n3s-0H-eT1"/>
+                        <constraint firstAttribute="width" constant="540" id="pch-D2-CaH"/>
                         <constraint firstItem="RGW-2V-gvZ" firstAttribute="top" secondItem="FyT-UQ-8iP" secondAttribute="bottom" constant="65" id="rqs-Uh-y4a"/>
                         <constraint firstItem="A6t-Ui-XEF" firstAttribute="leading" secondItem="91U-BM-r67" secondAttribute="leading" constant="178" id="vxX-x4-YdZ"/>
                         <constraint firstItem="FK7-VH-Bas" firstAttribute="top" secondItem="bgd-vc-Qi6" secondAttribute="bottom" constant="40" id="wMp-ch-bzo"/>
@@ -110,10 +112,8 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="91U-BM-r67" secondAttribute="trailing" constant="327" id="N8D-3u-njz"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="91U-BM-r67" secondAttribute="bottom" constant="87" id="aHm-yj-9AU"/>
-                <constraint firstItem="91U-BM-r67" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="327" id="bjJ-BH-f7v"/>
-                <constraint firstItem="91U-BM-r67" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="83" id="zzN-7L-Ib5"/>
+                <constraint firstItem="91U-BM-r67" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="66h-ZT-UUZ"/>
+                <constraint firstItem="91U-BM-r67" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="zop-Z1-YGS"/>
             </constraints>
             <point key="canvasLocation" x="139" y="87"/>
         </view>
