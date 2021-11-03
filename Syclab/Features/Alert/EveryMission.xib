@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -56,8 +56,10 @@
                         <constraint firstItem="UA4-yi-ezf" firstAttribute="top" secondItem="D4a-Z7-h1B" secondAttribute="bottom" constant="35" id="A6c-Vs-aK4"/>
                         <constraint firstAttribute="trailing" secondItem="UA4-yi-ezf" secondAttribute="trailing" constant="81" id="DVf-dD-5AT"/>
                         <constraint firstItem="D4a-Z7-h1B" firstAttribute="top" secondItem="puW-Fw-W28" secondAttribute="top" constant="45" id="F04-T0-Q6l"/>
+                        <constraint firstAttribute="width" constant="540" id="Ub2-7X-UzZ"/>
                         <constraint firstItem="UA4-yi-ezf" firstAttribute="leading" secondItem="puW-Fw-W28" secondAttribute="leading" constant="81" id="amg-1U-N1o"/>
                         <constraint firstItem="D4a-Z7-h1B" firstAttribute="leading" secondItem="puW-Fw-W28" secondAttribute="leading" constant="205" id="azE-mX-q0T"/>
+                        <constraint firstAttribute="height" constant="312" id="diy-v0-8il"/>
                         <constraint firstItem="1XS-QM-fh2" firstAttribute="leading" secondItem="puW-Fw-W28" secondAttribute="leading" constant="200" id="v12-Rb-jz9"/>
                         <constraint firstAttribute="trailing" secondItem="D4a-Z7-h1B" secondAttribute="trailing" constant="205" id="v9q-yk-lHr"/>
                         <constraint firstItem="1XS-QM-fh2" firstAttribute="top" secondItem="UA4-yi-ezf" secondAttribute="bottom" constant="8" id="wHo-5w-KNk"/>
@@ -67,10 +69,8 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="puW-Fw-W28" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="327" id="V2O-bo-gGB"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="puW-Fw-W28" secondAttribute="trailing" constant="327" id="cYQ-5k-MCc"/>
-                <constraint firstItem="puW-Fw-W28" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="237" id="oaP-Cs-5db"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="puW-Fw-W28" secondAttribute="bottom" constant="241" id="qjR-Du-5Cx"/>
+                <constraint firstItem="puW-Fw-W28" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NNQ-n7-KCB"/>
+                <constraint firstItem="puW-Fw-W28" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="O3l-Wb-dfR"/>
             </constraints>
             <point key="canvasLocation" x="139" y="87"/>
         </view>
