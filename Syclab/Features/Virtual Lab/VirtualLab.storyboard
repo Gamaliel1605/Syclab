@@ -41,14 +41,17 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="375" id="azA-1A-Ui5"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <action selector="sudutSliderChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="yfS-qe-ZSh"/>
+                                                                </connections>
                                                             </slider>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DAc-U6-FrW">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DAc-U6-FrW">
                                                                 <rect key="frame" x="383" y="0.0" width="61" height="27"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="27" id="uIU-1q-r6R"/>
                                                                     <constraint firstAttribute="width" constant="61" id="zhf-fP-D50"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbZ-Nf-ifN">
@@ -78,14 +81,17 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="375" id="oxG-X5-juG"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <action selector="kecepatanSliderChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="nE9-xR-OCK"/>
+                                                                </connections>
                                                             </slider>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xBQ-CS-uuY">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xBQ-CS-uuY">
                                                                 <rect key="frame" x="383" y="0.0" width="61" height="27"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="61" id="66H-Yz-Stz"/>
                                                                     <constraint firstAttribute="height" constant="27" id="Ajr-wy-HH0"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRz-Br-Qsk">
@@ -242,17 +248,17 @@
                         <outlet property="gravitationButton" destination="W0d-qv-4me" id="UQw-mG-ChZ"/>
                         <outlet property="infoButton" destination="yW6-yU-TZN" id="Kru-Xo-76E"/>
                         <outlet property="jalankanButton" destination="q0k-sy-Uer" id="AAN-83-De0"/>
+                        <outlet property="kecepatanLbl" destination="kML-Me-bXa" id="r9O-9k-6Qg"/>
+                        <outlet property="kecepatanSlider" destination="hFt-J2-WGU" id="OUQ-j5-7cN"/>
+                        <outlet property="kecepatanTxtField" destination="xBQ-CS-uuY" id="Lhs-hF-oaJ"/>
                         <outlet property="missionBox" destination="Qrk-Cp-iUR" id="z2p-uW-IZP"/>
                         <outlet property="spriteView" destination="QTe-Yl-lgM" id="UzO-93-0aB"/>
+                        <outlet property="sudutLbl" destination="S0j-b0-MCe" id="LSg-X2-EfW"/>
+                        <outlet property="sudutSlider" destination="IX1-Cp-ler" id="r2J-Ep-iUJ"/>
+                        <outlet property="sudutTxtField" destination="DAc-U6-FrW" id="QNt-Wm-87j"/>
                         <outlet property="titleMissionLabel" destination="zIm-eb-w0q" id="lj4-ol-Nr4"/>
                         <outlet property="unitLbl1" destination="RbZ-Nf-ifN" id="VZj-7a-wKQ"/>
                         <outlet property="unitLbl2" destination="fRz-Br-Qsk" id="8YI-O9-abj"/>
-                        <outlet property="varLbl1" destination="S0j-b0-MCe" id="LSg-X2-EfW"/>
-                        <outlet property="varLbl2" destination="kML-Me-bXa" id="r9O-9k-6Qg"/>
-                        <outlet property="varSlider1" destination="IX1-Cp-ler" id="r2J-Ep-iUJ"/>
-                        <outlet property="varSlider2" destination="hFt-J2-WGU" id="OUQ-j5-7cN"/>
-                        <outlet property="varTextField1" destination="DAc-U6-FrW" id="QNt-Wm-87j"/>
-                        <outlet property="varTextField2" destination="xBQ-CS-uuY" id="Lhs-hF-oaJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

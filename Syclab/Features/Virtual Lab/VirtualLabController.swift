@@ -12,12 +12,12 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var jalankanButton: UIButton!
     @IBOutlet weak var gravitationButton: UIButton!
-    @IBOutlet weak var varLbl1: UILabel!
-    @IBOutlet weak var varSlider1: UISlider!
-    @IBOutlet weak var varLbl2: UILabel!
-    @IBOutlet weak var varSlider2: UISlider!
-    @IBOutlet weak var varTextField2: UITextField!
-    @IBOutlet weak var varTextField1: UITextField!
+    @IBOutlet weak var sudutLbl: UILabel!
+    @IBOutlet weak var sudutSlider: UISlider!
+    @IBOutlet weak var kecepatanLbl: UILabel!
+    @IBOutlet weak var kecepatanSlider: UISlider!
+    @IBOutlet weak var kecepatanTxtField: UITextField!
+    @IBOutlet weak var sudutTxtField: UITextField!
     @IBOutlet weak var unitLbl1: UILabel!
     @IBOutlet weak var unitLbl2: UILabel!
     @IBOutlet weak var spriteView: SKView!
@@ -25,13 +25,14 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     @IBOutlet weak var titleMissionLabel: UILabel!
     @IBOutlet weak var descMissionLabel: UILabel!
     let button:UIButton = UIButton(type: UIButton.ButtonType.custom)
+    var spriteScene: SKScene!
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.topItem?.title = "Eksperimen Gerak Parabola"
-        
+        setupSpriteView()
         setupControlPanel()
     }
     //test
@@ -41,6 +42,23 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
             print("oi asw")
     }
 
+    @IBAction func kecepatanSliderChanged(_ sender: UISlider) {
+        guard let scene = spriteScene as? GerakParabolaScene else {return}
+        scene.kecAwalScene = sender.value
+        kecepatanTxtField.text = String(round(sender.value * 10) / 10)
+    }
+    
+    @IBAction func sudutSliderChanged(_ sender: UISlider) {
+        guard let scene = spriteScene as? GerakParabolaScene else {return}
+        if Double(sender.value) < 90 {
+            scene.sudutTembakScene = Double(sender.value)
+        } else {
+            scene.sudutTembakScene = 89.99999
+        }
+        sudutTxtField.text = String(round(sender.value * 10) / 10)
+    }
+    
+    
     @IBAction func gravitationBtnPressed(_ sender: Any) {
         let gravityChoice = GravityPopoverViewController()
         gravityChoice.delegate = self
@@ -51,18 +69,49 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
         self.present(gravityChoice, animated: true, completion: nil)
         print("anjay")
     }
+    
     @IBAction func jalankanBtnPressed(_ sender: Any) {
+        guard let gameScene = spriteView.scene as? GerakParabolaScene else {return}
+        gameScene.shootStraight()
     }
     
     // MARK: - SETUP UI
     
+    func setupSpriteView() {
+        spriteScene = GerakParabolaScene(size: spriteView.bounds.size)
+        spriteScene.delegate = self
+        spriteView.delegate = self
+        spriteView.presentScene(spriteScene)
+    }
     func setupControlPanel() {
         setupGravitationButton()
         setupTheoryButton()
         setupJalankanButton()
         setupMissionBox()
+        setupSliders()
+        setupTextField()
     }
     
+    func setupXIB() {
+    }
+    
+    func setupTextField () {
+        kecepatanTxtField.text = "15"
+        kecepatanTxtField.isEnabled = false
+        
+        sudutTxtField.text = "30"
+        sudutTxtField.isEnabled = false
+    }
+    func setupSliders() {
+        sudutSlider.maximumValue = 90
+        sudutSlider.minimumValue = 0
+        sudutSlider.value = 30
+        
+        kecepatanSlider.maximumValue = 25
+        kecepatanSlider.minimumValue = 10
+        kecepatanSlider.value = 15
+        
+    }
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -92,20 +141,7 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
         self.view.addSubview(button)
     }
     
-    
-    
     func setupInfoButon() {
-//        let imageSize:CGSize = CGSize(width: 100, height: 100)
-//        infoButton.setImage(UIImage(systemName: "info.circle"), for: .normal)
-//        infoButton.contentVerticalAlignment = .fill
-//        infoButton.contentHorizontalAlignment = .fill
-//
-//        infoButton.imageEdgeInsets = UIEdgeInsets(
-//            top: (infoButton.frame.size.height - imageSize.height) / 4,
-//            left: (infoButton.frame.size.width - imageSize.width) / 4,
-//            bottom: (infoButton.frame.size.height - imageSize.height) / 4,
-//            right: (infoButton.frame.size.width - imageSize.width) / 4)
-//        infoButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
     
     func setupJalankanButton () {
@@ -120,11 +156,20 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     }
 }
 
-//extension UIView {
-//   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-//        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-//        let mask = CAShapeLayer()
-//        mask.path = path.cgPath
-//        layer.mask = mask
-//    }
-//}
+
+extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
+    func update(_ currentTime: TimeInterval, for scene: SKScene) {
+        guard let scene = scene as? GerakParabolaScene else {return}
+        if scene.isFinish {
+            scene.isFinish = false
+            let finishAlert = EveryMission()
+//            finishAlert.everyMissionLabel_1.text = "hahahha"
+//            finishAlert.everyMissionLabel_2.text = "test 22
+            self.present(finishAlert, animated: true, completion: nil)
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                finishAlert.dismiss(animated: true, completion: nil)
+            }
+            
+        }
+    }
+}
