@@ -1,33 +1,21 @@
 //
-//  ExperimentOption.swift
+//  ExperimentOptionA.swift
 //  Syclab
 //
-//  Created by Carlos Gamaliel Manurung on 29/10/21.
+//  Created by Jehnsen Hirena Kane on 31/10/21.
 //
 
-import UIKit
+import Foundation
 
 class ExperimentOption {
     
-    var expPlaygroundTitle: String
-    var expPlaygroundImage: String
-    var expPlaygroundDesc: String
-    var expMissionTitle: String
-    var expMissionImage: String
-    var expMissionDesc: String
-    var expQuizTitle: String
-    var expQuizImage: String
-    var expQuizDesc: String
+    var optionTitle: modeOption
+    var optionDesc: String
+    var optionImgStr: String
     
-    init(expPlaygroundTitle: String, expPlaygroundImage:String, expPlaygroundDesc:String, expMissionTitle: String, expMissionImage: String, expMissionDesc: String, expQuizTitle: String, expQuizImage: String, expQuizDesc: String) {
-        self.expPlaygroundTitle = expPlaygroundTitle
-        self.expPlaygroundImage = expPlaygroundImage
-        self.expPlaygroundDesc = expPlaygroundDesc
-        self.expMissionTitle = expMissionTitle
-        self.expMissionImage = expMissionImage
-        self.expMissionDesc = expMissionDesc
-        self.expQuizTitle = expQuizTitle
-        self.expQuizImage = expQuizImage
-        self.expQuizDesc = expQuizDesc
+    init(title: modeOption, desc: String, imgName: String) {
+        self.optionTitle = title
+        self.optionDesc = desc
+        self.optionImgStr = imgName
     }
 }

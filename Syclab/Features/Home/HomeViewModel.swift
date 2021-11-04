@@ -10,9 +10,5 @@ import UIKit
 
 class HomeViewModel {
     let expDatas = Experiments.getExpData()
-    let homeData: [HomeData] = [
-        HomeData(expName: "Gerak Parabola", expImage: "placeholder"),
-        HomeData(expName: "Hukum Newton", expImage: "placeholder")
-    ]
     
 }

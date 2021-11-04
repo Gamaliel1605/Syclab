@@ -25,7 +25,7 @@ enum Experiments: String {
     }
     
     
-    func getExpOptions() -> [ExperimentOptionA] {
+    func getExpOptions() -> [ExperimentOption] {
         switch self {
         case .E1_GerakParabola:
             return E1_GerakParabolaData.experimentOptions

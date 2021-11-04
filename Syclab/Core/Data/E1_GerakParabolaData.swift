@@ -12,16 +12,6 @@ struct E1_GerakParabolaData {
                                        expImage: "placeholder",
                                        id: .E1_GerakParabola)
     
-    static let experimentOption = ExperimentOption(expPlaygroundTitle: "Eksplorasi",
-                                             expPlaygroundImage: "placeholder",
-                                             expPlaygroundDesc: "Eksplor dan Coba Eksperimen",
-                                             expMissionTitle: "Misi",
-                                             expMissionImage: "placeholder",
-                                             expMissionDesc: "Selesaikan Misi yang diberikan",
-                                             expQuizTitle: "Kuis",
-                                             expQuizImage: "placeholder",
-                                             expQuizDesc: "Kerjakan kuis untuk uji pemahamanmu")
-    
     static let eksplorasiDetail = ExperimentDetails(expDesc: ["ini eksploras", "yowowo"],
                                                     expImage_1: "GerakParabola_description_1",
                                                     expImage_2: "GerakParabola_description_2")
@@ -30,13 +20,13 @@ struct E1_GerakParabolaData {
                                                     expImage_1: "GerakParabola_description_1",
                                                     expImage_2: "GerakParabola_description_2")
     
-    static let experimentOptions = [ExperimentOptionA(title: "Eksplorasi",
+    static let experimentOptions = [ExperimentOption(title: .Eksplorasi,
                                                       desc: "Eksplor dan Coba Eksperimen",
                                                       imgName: "modeplaceholder"),
-                                    ExperimentOptionA(title: "Misi",
+                                    ExperimentOption(title: .Misi,
                                                       desc: "Selesaikan misi yang diberikan",
                                                       imgName: "modeplaceholder"),
-                                    ExperimentOptionA(title: "Kuis",
+                                    ExperimentOption(title: .Kuis,
                                                       desc: "Kerjakan kuis untuk uji pemahanamu",
                                                       imgName: "modeplaceholder")]
     
@@ -52,27 +42,27 @@ struct E1_GerakParabolaData {
                 ContentLabel(
                     text: "Sebuah objek yang ditembakkan/dilempar (proyektil) dengan sudut elevasi  dan kecepatan awal v0 akan bergerak dengan lintasan berbentuk parabola yang disebabkan oleh adanya percepatan gravitasi g.",
                     fontsize: 17,
-                    padding: UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+                    padding: UIEdgeInsets(top: 30, left: 30, bottom: 0, right: 30)
                 ),
                 ContentImage(
                     imageDetails: ["GerakParabola_TeoriKonsep_ilustrasi", "Ilustrasi Gerak Parabola"],
-                    padding: UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 45, left: 30, bottom: 0, right: 30),
                     size: CGSize(width: 355, height: 153)
                 ),
                 ContentLabel(
                     text: "Gerak parabola terhadap sumbu X",
                     alignment: .natural,
                     fontsize: 24,
-                    padding: UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+                    padding: UIEdgeInsets(top: 40, left: 30, bottom: 0, right: 30)
                 ),
                 ContentLabel(
                     text: "Gerak parabola terhadap sumbu X merupakan gerak lurus beraturan (GLB) karena proyektil tidak dipengaruhi gaya apapun ketika sedang bergerak. Ingat bahwa di dunia nyata setiap proyektil mengalami gaya gesek dengan udara, tapi supaya kamu tidak bingung kita kan menghilangkan gaya gesek udaranya ya!",
                     fontsize: 17,
-                    padding: UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+                    padding: UIEdgeInsets(top: 30, left: 30, bottom: 0, right: 30)
                 ),
                 ContentImage(
                     imageDetails: ["GerakParabola_TeoriKonsep_Rumus_1", "Rumus Gerak Parabola 1"],
-                    padding: UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 45, left: 30, bottom: 0, right: 30),
                     size: CGSize(width: 340.62, height: 79.65)
                 ),
                 ContentLabel(
@@ -83,21 +73,21 @@ struct E1_GerakParabolaData {
                     """,
                     alignment: .natural,
                     fontsize: 17,
-                    padding: UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+                    padding: UIEdgeInsets(top: 5, left: 30, bottom: 0, right: 30)
                 ),
                 ContentLabel(
                     text: "Rumus menyatakan bahwa besar vx akan selalu berbanding lurus dengan besar v0 dan cos, artinya semakin besar nilai v0 dan cos maka akan semakin besar pula nilai dari vx",
                     fontsize: 17,
-                    padding: UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+                    padding: UIEdgeInsets(top: 40, left: 30, bottom: 0, right: 30)
                 ),
                 ContentLabel(
                     text: "Posisi proyektil terhadap sumbu-X (x) dirumuskan sebagai berikut:",
                     fontsize: 17,
-                    padding: UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+                    padding: UIEdgeInsets(top: 30, left: 30, bottom: 0, right: 30)
                 ),
                 ContentImage(
                     imageDetails: ["GerakParabola_TeoriKonsep_Rumus_2", "Rumus Gerak Parabola 2"],
-                    padding: UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 5, left: 30, bottom: 0, right: 30),
                     size: CGSize(width: 340.62, height: 79.65)
                 ),
                 ContentLabel(
@@ -111,12 +101,12 @@ struct E1_GerakParabolaData {
                     """,
                     alignment: .natural,
                     fontsize: 17,
-                    padding: UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+                    padding: UIEdgeInsets(top: 5, left: 30, bottom: 0, right: 30)
                 ),
                 ContentLabel(
                     text: "Rumus ini menyatakan bahwa besar nilai x akan selalu berbanding lurus dengan besar v0, cos, dan t. Semakin besar nilai v0, cos, dan t maka akan semakin besar pula nilai x.",
                     fontsize: 17,
-                    padding: UIEdgeInsets(top: 0, left: 30, bottom: 20, right: 30)
+                    padding: UIEdgeInsets(top: 5, left: 30, bottom: 20, right: 30)
                 ),
             ]
         )

@@ -11,12 +11,7 @@ import UIKit
 class ModeOptionViewModel {
     let experiment: Experiments
     let title: String
-    let experimentOptions: [ExperimentOptionA]
-    let modeData: [ModeOptionData] = [
-        ModeOptionData(modeImage: "modeplaceholder", modeLabel: "Eksplorasi"),
-        ModeOptionData(modeImage: "modeplaceholder", modeLabel: "Misi"),
-        ModeOptionData(modeImage: "modeplaceholder", modeLabel: "Kuis")
-    ]
+    let experimentOptions: [ExperimentOption]
     
     init(experiment: Experiments) {
         self.experiment = experiment

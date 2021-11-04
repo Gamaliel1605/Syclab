@@ -19,11 +19,6 @@ class HomeController: UIViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        self.centerTitle(animated: true)
-//    }
-    
 }
 
 
@@ -46,29 +41,10 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let cell = homeVM.homeData[indexPath.row]
         let storyborad = UIStoryboard(name: "ModeOption", bundle: nil)
         let viewController = storyborad.instantiateViewController(withIdentifier: "modeOption") as! ModeOptionController
         viewController.modeOptionVM = ModeOptionViewModel(experiment: homeVM.expDatas[indexPath.row].id)
-        
-//        viewController.getTitleMode = cell.expName
         self.navigationController?.pushViewController(viewController, animated: true)
-        print(homeVM.homeData[indexPath.row].expName)
     }
     
 }
-
-//extension UIViewController{
-//    func centerTitle(){
-//        for navItem in(self.navigationController?.navigationBar.subviews)! {
-//             for itemSubView in navItem.subviews {
-//                 if let largeLabel = itemSubView as? UILabel {
-//                    largeLabel.center = CGPoint(x: navItem.bounds.width/2, y: navItem.bounds.height/2)
-//                    
-//                    return;
-//                 }
-//             }
-//        }
-//    }
-//}
-
