@@ -12,12 +12,18 @@ class ExperimentDetailViewModel {
     
     let experiments: Experiments
     let navTitle: String
-    let check: String
+    let check: modeOption
     
-    init(experiments: Experiments, check: String) {
+    init(experiments: Experiments, check: modeOption) {
         self.experiments = experiments
         self.navTitle = experiments.getExpTitle()
         self.check = check
     }
     
+}
+
+enum modeOption: String {
+    case Eksplorasi = "Eksplorasi",
+         Misi = "Misi",
+         Kuis = "Kuis"
 }

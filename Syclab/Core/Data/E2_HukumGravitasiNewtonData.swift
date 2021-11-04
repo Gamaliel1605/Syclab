@@ -15,16 +15,6 @@ struct E2_HukumGravitasiNewtonData {
         id: .E2_HukumGravitasiNewton
     )
     
-    static let experimentOption = ExperimentOption(expPlaygroundTitle: "Eksplorasi",
-                                             expPlaygroundImage: "placeholder",
-                                             expPlaygroundDesc: "Eksplor dan Coba Eksperimen",
-                                             expMissionTitle: "Misi",
-                                             expMissionImage: "placeholder",
-                                             expMissionDesc: "Selesaikan Misi yang diberikan",
-                                             expQuizTitle: "Kuis",
-                                             expQuizImage: "placeholder",
-                                             expQuizDesc: "Kerjakan kuis untuk uji pemahamanmu")
-    
     static let eksplorasiDetail = ExperimentDetails(expDesc: ["ini eksploras", "yowowo"],
                                                     expImage_1: "GerakParabola_description_1",
                                                     expImage_2: "GerakParabola_description_2")
@@ -33,13 +23,13 @@ struct E2_HukumGravitasiNewtonData {
                                                     expImage_1: "GerakParabola_description_1",
                                                     expImage_2: "GerakParabola_description_2")
     
-    static let experimentOptions = [ExperimentOptionA(title: "Eksplorasi",
+    static let experimentOptions = [ExperimentOption(title: .Eksplorasi,
                                                       desc: "Eksplor dan Coba Eksperimen",
                                                       imgName: "modeplaceholder"),
-                                    ExperimentOptionA(title: "Misi",
+                                    ExperimentOption(title: .Misi,
                                                       desc: "Selesaikan misi yang diberikan",
                                                       imgName: "modeplaceholder"),
-                                    ExperimentOptionA(title: "Kuis",
+                                    ExperimentOption(title: .Kuis,
                                                       desc: "Kerjakan kuis untuk uji pemahanamu",
                                                       imgName: "modeplaceholder")]
 }

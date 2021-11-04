@@ -27,7 +27,7 @@
 		988B9972272E37040024DAA6 /* Experiments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9971272E37040024DAA6 /* Experiments.swift */; };
 		988B9976272E39120024DAA6 /* E1_GerakParabolaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9975272E39120024DAA6 /* E1_GerakParabolaData.swift */; };
 		988B9978272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9977272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift */; };
-		988B997A272E43E70024DAA6 /* ExperimentOptionA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9979272E43E70024DAA6 /* ExperimentOptionA.swift */; };
+		988B997A272E43E70024DAA6 /* ExperimentOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9979272E43E70024DAA6 /* ExperimentOption.swift */; };
 		98BADE4727291304009EE9D1 /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BADE4627291304009EE9D1 /* Extension+UIButton.swift */; };
 		98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD8C6427281A55006ECB8A /* GravityPopoverViewController.swift */; };
 		98FD8C6727281A55006ECB8A /* GravityPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */; };
@@ -70,7 +70,6 @@
 		EAD5BB1027314C1900E4D651 /* Exit.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD5BB0F27314C1900E4D651 /* Exit.xib */; };
 		EAD5BB1227314C6300E4D651 /* Exit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD5BB1127314C6300E4D651 /* Exit.swift */; };
 		EAD9272D272C517800B1635B /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9272C272C517800B1635B /* Experiment.swift */; };
-		EAD9272F272C52EF00B1635B /* ExperimentOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD9272E272C52EF00B1635B /* ExperimentOption.swift */; };
 		EAD92731272C542800B1635B /* ExperimentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD92730272C542800B1635B /* ExperimentDetails.swift */; };
 		EAD92733272C550B00B1635B /* ExperimentConcept.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD92732272C550B00B1635B /* ExperimentConcept.swift */; };
 		EAD92735272C559B00B1635B /* ExperimentLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD92734272C559B00B1635B /* ExperimentLab.swift */; };
@@ -105,7 +104,7 @@
 		988B9971272E37040024DAA6 /* Experiments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiments.swift; sourceTree = "<group>"; };
 		988B9975272E39120024DAA6 /* E1_GerakParabolaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E1_GerakParabolaData.swift; sourceTree = "<group>"; };
 		988B9977272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E2_HukumGravitasiNewtonData.swift; sourceTree = "<group>"; };
-		988B9979272E43E70024DAA6 /* ExperimentOptionA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentOptionA.swift; sourceTree = "<group>"; };
+		988B9979272E43E70024DAA6 /* ExperimentOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentOption.swift; sourceTree = "<group>"; };
 		98BADE4627291304009EE9D1 /* Extension+UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
 		98FD8C6427281A55006ECB8A /* GravityPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityPopoverViewController.swift; sourceTree = "<group>"; };
 		98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GravityPopoverViewController.xib; sourceTree = "<group>"; };
@@ -150,7 +149,6 @@
 		EAD5BB0F27314C1900E4D651 /* Exit.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Exit.xib; sourceTree = "<group>"; };
 		EAD5BB1127314C6300E4D651 /* Exit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exit.swift; sourceTree = "<group>"; };
 		EAD9272C272C517800B1635B /* Experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
-		EAD9272E272C52EF00B1635B /* ExperimentOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentOption.swift; sourceTree = "<group>"; };
 		EAD92730272C542800B1635B /* ExperimentDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetails.swift; sourceTree = "<group>"; };
 		EAD92732272C550B00B1635B /* ExperimentConcept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentConcept.swift; sourceTree = "<group>"; };
 		EAD92734272C559B00B1635B /* ExperimentLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentLab.swift; sourceTree = "<group>"; };
@@ -438,8 +436,7 @@
 			children = (
 				EAD9272C272C517800B1635B /* Experiment.swift */,
 				988B9971272E37040024DAA6 /* Experiments.swift */,
-				EAD9272E272C52EF00B1635B /* ExperimentOption.swift */,
-				988B9979272E43E70024DAA6 /* ExperimentOptionA.swift */,
+				988B9979272E43E70024DAA6 /* ExperimentOption.swift */,
 				EAD92730272C542800B1635B /* ExperimentDetails.swift */,
 				EAD92732272C550B00B1635B /* ExperimentConcept.swift */,
 				EAD92734272C559B00B1635B /* ExperimentLab.swift */,
@@ -561,7 +558,7 @@
 				EABCDE92271EEF6700CA2677 /* ModeOptionViewModel.swift in Sources */,
 				142498F62727716E0050F18D /* ExperimentDetailRepository.swift in Sources */,
 				EABCDE89271EEEFB00CA2677 /* ExperimentDetailController.swift in Sources */,
-				988B997A272E43E70024DAA6 /* ExperimentOptionA.swift in Sources */,
+				988B997A272E43E70024DAA6 /* ExperimentOption.swift in Sources */,
 				EAD92731272C542800B1635B /* ExperimentDetails.swift in Sources */,
 				EABCDE90271EEF5C00CA2677 /* ModeOptionController.swift in Sources */,
 				988B9978272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift in Sources */,
@@ -583,7 +580,6 @@
 				142498F227276DBD0050F18D /* ExperimentDetailModel.swift in Sources */,
 				EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */,
 				EA0C378E2723F6DC0038BF88 /* HomeData.swift in Sources */,
-				EAD9272F272C52EF00B1635B /* ExperimentOption.swift in Sources */,
 				EAD92737272C55F800B1635B /* ExperimentQuiz.swift in Sources */,
 				142498F42727703F0050F18D /* ExperimentDetailDataStore.swift in Sources */,
 				EAD92735272C559B00B1635B /* ExperimentLab.swift in Sources */,
