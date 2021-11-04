@@ -67,7 +67,6 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
         let popover: UIPopoverPresentationController = gravityChoice.popoverPresentationController!
         popover.sourceView = gravitationButton
         self.present(gravityChoice, animated: true, completion: nil)
-        print("anjay")
     }
     
     @IBAction func jalankanBtnPressed(_ sender: Any) {
@@ -126,7 +125,6 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     func setupTheoryButton() {
         let imageSize:CGSize = CGSize(width: 15, height: 15)
         button.frame = CGRect(x: (jalankanButton.layer.position.x) - 130, y: ((1-0.284173) * view.bounds.height) + 28, width: 65, height: 65)
-        print(view.bounds.width)
         button.setImage(UIImage(systemName: "book.closed.fill"), for: UIControl.State.normal)
         button.contentVerticalAlignment = .fill
         button.contentHorizontalAlignment = .fill
@@ -168,7 +166,9 @@ extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
             self.present(finishAlert, animated: true, completion: nil)
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
                 finishAlert.dismiss(animated: true, completion: nil)
+                scene.goToNextScene()
             }
+            
             
         }
     }

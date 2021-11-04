@@ -24,6 +24,8 @@
 		988B9978272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9977272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift */; };
 		988B997A272E43E70024DAA6 /* ExperimentOptionA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9979272E43E70024DAA6 /* ExperimentOptionA.swift */; };
 		98BADE4727291304009EE9D1 /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BADE4627291304009EE9D1 /* Extension+UIButton.swift */; };
+		98DF1B942733F9B600D7BB2E /* GerakParabolaScene_M1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DF1B932733F9B600D7BB2E /* GerakParabolaScene_M1.swift */; };
+		98DF1B962733FA9A00D7BB2E /* PhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DF1B952733FA9A00D7BB2E /* PhysicsCategory.swift */; };
 		98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FD8C6427281A55006ECB8A /* GravityPopoverViewController.swift */; };
 		98FD8C6727281A55006ECB8A /* GravityPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */; };
 		EA0C37892723EECC0038BF88 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C37872723EECC0038BF88 /* HomeCell.swift */; };
@@ -97,6 +99,8 @@
 		988B9977272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E2_HukumGravitasiNewtonData.swift; sourceTree = "<group>"; };
 		988B9979272E43E70024DAA6 /* ExperimentOptionA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentOptionA.swift; sourceTree = "<group>"; };
 		98BADE4627291304009EE9D1 /* Extension+UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
+		98DF1B932733F9B600D7BB2E /* GerakParabolaScene_M1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerakParabolaScene_M1.swift; sourceTree = "<group>"; };
+		98DF1B952733FA9A00D7BB2E /* PhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsCategory.swift; sourceTree = "<group>"; };
 		98FD8C6427281A55006ECB8A /* GravityPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityPopoverViewController.swift; sourceTree = "<group>"; };
 		98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GravityPopoverViewController.xib; sourceTree = "<group>"; };
 		EA0C37872723EECC0038BF88 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
@@ -197,8 +201,8 @@
 		98562DEC2730FEEF00D1C619 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				98562DED2730FF0400D1C619 /* EngineGerakParabola.swift */,
-				98562DF1273101D500D1C619 /* GerakParabolaScene.swift */,
+				98DF1B952733FA9A00D7BB2E /* PhysicsCategory.swift */,
+				98DF1B922733F8CE00D7BB2E /* GerakParabola */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,6 +214,16 @@
 				98FD8C6527281A55006ECB8A /* GravityPopoverViewController.xib */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		98DF1B922733F8CE00D7BB2E /* GerakParabola */ = {
+			isa = PBXGroup;
+			children = (
+				98562DED2730FF0400D1C619 /* EngineGerakParabola.swift */,
+				98562DF1273101D500D1C619 /* GerakParabolaScene.swift */,
+				98DF1B932733F9B600D7BB2E /* GerakParabolaScene_M1.swift */,
+			);
+			path = GerakParabola;
 			sourceTree = "<group>";
 		};
 		EA0C37862723EEAD0038BF88 /* Home Cell */ = {
@@ -539,6 +553,7 @@
 				EA0C37952725D7700038BF88 /* ModeOptionData.swift in Sources */,
 				EA1BD2A92731575F00B879A0 /* FinishMission.swift in Sources */,
 				EABCDE70271EED4700CA2677 /* Core.swift in Sources */,
+				98DF1B962733FA9A00D7BB2E /* PhysicsCategory.swift in Sources */,
 				EADBE4A5272D82A100E8607D /* ExperimentDummy.swift in Sources */,
 				988B9976272E39120024DAA6 /* E1_GerakParabolaData.swift in Sources */,
 				142498FC272793C60050F18D /* AttributedString.swift in Sources */,
@@ -555,6 +570,7 @@
 				EA6E764F273160ED00FFC46C /* FinishQuiz.swift in Sources */,
 				1408134D27304B3B00C8A482 /* ConceptTheory.swift in Sources */,
 				EAD9272D272C517800B1635B /* Experiment.swift in Sources */,
+				98DF1B942733F9B600D7BB2E /* GerakParabolaScene_M1.swift in Sources */,
 				EAD92733272C550B00B1635B /* ExperimentConcept.swift in Sources */,
 				988B9972272E37040024DAA6 /* Experiments.swift in Sources */,
 				140813522730C2F000C8A482 /* CobaConceptTheoryViewController.swift in Sources */,

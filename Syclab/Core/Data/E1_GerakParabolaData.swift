@@ -12,16 +12,16 @@ struct E1_GerakParabolaData {
                                        expImage: "placeholder",
                                        id: .E1_GerakParabola)
     
-    static let experimentOption = ExperimentOption(expPlaygroundTitle: "Eksplorasi",
-                                             expPlaygroundImage: "placeholder",
-                                             expPlaygroundDesc: "Eksplor dan Coba Eksperimen",
-                                             expMissionTitle: "Misi",
-                                             expMissionImage: "placeholder",
-                                             expMissionDesc: "Selesaikan Misi yang diberikan",
-                                             expQuizTitle: "Kuis",
-                                             expQuizImage: "placeholder",
-                                             expQuizDesc: "Kerjakan kuis untuk uji pemahamanmu")
-    
+//    static let experimentOption = ExperimentOption(expPlaygroundTitle: "Eksplorasi",
+//                                             expPlaygroundImage: "placeholder",
+//                                             expPlaygroundDesc: "Eksplor dan Coba Eksperimen",
+//                                             expMissionTitle: "Misi",
+//                                             expMissionImage: "placeholder",
+//                                             expMissionDesc: "Selesaikan Misi yang diberikan",
+//                                             expQuizTitle: "Kuis",
+//                                             expQuizImage: "placeholder",
+//                                             expQuizDesc: "Kerjakan kuis untuk uji pemahamanmu")
+//
     static let eksplorasiDetail = ExperimentDetails(expDesc: ["ini eksploras", "yowowo"],
                                                     expImage_1: "GerakParabola_description_1",
                                                     expImage_2: "GerakParabola_description_2")
@@ -39,6 +39,9 @@ struct E1_GerakParabolaData {
                                     ExperimentOptionA(title: "Kuis",
                                                       desc: "Kerjakan kuis untuk uji pemahanamu",
                                                       imgName: "modeplaceholder")]
+    
+    
+    
     
     static let experimentConcept = ExperimentConcept(
         conceptTheory:

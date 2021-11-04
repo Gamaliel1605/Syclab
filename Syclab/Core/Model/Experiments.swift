@@ -60,5 +60,11 @@ enum Experiments: String {
             return ExperimentConcept(conceptTheory: [])
         }
     }
+    
+//    func getQuizzes() -> ExperimentQuiz{
+//        switch self {
+//
+//        }
+//    }
 }
 
