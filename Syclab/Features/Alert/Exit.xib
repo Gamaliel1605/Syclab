@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExitMission" customModule="Syclab" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Exit" customModule="Syclab" customModuleProvider="target">
             <connections>
                 <outlet property="buttonBatal" destination="Ame-8L-LTx" id="YbM-CD-uzB"/>
                 <outlet property="buttonKeluar" destination="bH2-rm-uS0" id="Yhn-gN-ds8"/>
@@ -82,6 +82,7 @@
                     <color key="backgroundColor" red="0.90196078431372551" green="0.90980392156862744" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="zKO-NE-Sey" firstAttribute="top" secondItem="9Q2-Kv-IDO" secondAttribute="bottom" id="76G-PT-oEe"/>
+                        <constraint firstAttribute="height" constant="210" id="Oim-T2-xPB"/>
                         <constraint firstItem="9Q2-Kv-IDO" firstAttribute="leading" secondItem="ll6-HL-hmW" secondAttribute="leading" constant="26" id="TOP-KW-bfX"/>
                         <constraint firstItem="Ame-8L-LTx" firstAttribute="leading" secondItem="ll6-HL-hmW" secondAttribute="leading" constant="15" id="WtT-hI-ds6"/>
                         <constraint firstAttribute="trailing" secondItem="9Q2-Kv-IDO" secondAttribute="trailing" constant="26" id="cpW-du-vsW"/>
@@ -91,16 +92,15 @@
                         <constraint firstItem="Ame-8L-LTx" firstAttribute="top" secondItem="zKO-NE-Sey" secondAttribute="bottom" constant="30" id="o1W-5X-8Hl"/>
                         <constraint firstAttribute="trailing" secondItem="bH2-rm-uS0" secondAttribute="trailing" constant="15" id="sm0-aF-fGd"/>
                         <constraint firstAttribute="trailing" secondItem="zKO-NE-Sey" secondAttribute="trailing" constant="26" id="thW-uS-ETD"/>
+                        <constraint firstAttribute="width" constant="420" id="zuy-Fq-rec"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="ll6-HL-hmW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="387" id="92n-v4-uSd"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ll6-HL-hmW" secondAttribute="bottom" constant="292" id="AZ5-dN-8kV"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ll6-HL-hmW" secondAttribute="trailing" constant="387" id="KIu-35-o89"/>
-                <constraint firstItem="ll6-HL-hmW" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="288" id="kUG-3b-DOM"/>
+                <constraint firstItem="ll6-HL-hmW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YdK-aP-itf"/>
+                <constraint firstItem="ll6-HL-hmW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="kZQ-n7-sP1"/>
             </constraints>
             <point key="canvasLocation" x="139" y="87"/>
         </view>

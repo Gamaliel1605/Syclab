@@ -48,7 +48,7 @@ extension ModeOptionController: UICollectionViewDelegate, UICollectionViewDataSo
         if indexPath.row == 0 || indexPath.row == 1 {
             let storyboard = UIStoryboard(name: "ExperimentDetail", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "expDetail") as! ExperimentDetailController
-            viewController.getTitleExp = modeOptionVM.title
+            viewController.experimentVM = ExperimentDetailViewModel(experiments: modeOptionVM.experiment, check: modeOptionVM.experimentOptions[indexPath.row].optionTitle)
             self.navigationController?.pushViewController(viewController, animated: true)
         }
         else {

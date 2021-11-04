@@ -17,12 +17,19 @@ class CobaConceptTheoryViewController: UIViewController {
     
     
     @IBAction func conceptTheoryButton(_ sender: UIButton) {
+        let backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
+        backgroundView.backgroundColor = .black.withAlphaComponent(0.3)
+        backgroundView.tag = 100
+        self.view.addSubview(backgroundView)
+        
         let conceptTheoryView = ConceptTheory(frame: CGRect(x: self.view.center.x - (843/2),
                                                             y: self.view.center.y - (620/2),
                                                             width: 843,
                                                             height: 620)
         )
-        self.view.addSubview(conceptTheoryView)
+        conceptTheoryView.delegate = self
+        
+        backgroundView.addSubview(conceptTheoryView)
         
         let conceptTheoryContentView = UIView()
         conceptTheoryView.scrollView.addSubview(conceptTheoryContentView)
@@ -58,20 +65,10 @@ class CobaConceptTheoryViewController: UIViewController {
     }
 }
 
-//        let label = UILabel()
-//        label.text = ""
-//        label.numberOfLines = 0
-//        conceptTheoryContentView.addSubview(label)
-//
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        label.topAnchor.constraint(equalTo: conceptTheoryContentView.topAnchor).isActive = true
-//        label.leadingAnchor.constraint(equalTo: conceptTheoryContentView.leadingAnchor).isActive = true
-//        label.trailingAnchor.constraint(equalTo: conceptTheoryContentView.trailingAnchor).isActive = true
-//        label.bottomAnchor.constraint(equalTo: conceptTheoryContentView.bottomAnchor).isActive = true
-
-//conceptTheoryView.scrollView.contentSize = CGSize(
-//            width: conceptTheoryContentView.frame.width,
-//            height: 1024
-//        )
-//
-
+extension CobaConceptTheoryViewController: DismissProtocol {
+    func dismissView() {
+        if let viewWithTag = self.view.viewWithTag(100) {
+            viewWithTag.removeFromSuperview()
+        }
+    }
+}
