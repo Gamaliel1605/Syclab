@@ -124,7 +124,7 @@ struct E1_GerakParabolaData {
             ]
         )
     
-    static let labInstructions = ExperimentLab(
+    static let labInstructions = ExperimentLab (
         labInstructions: [
             ContentImage(
                 imageDetails: ["GerakParabola_LabInstructions_1", "GerakParabola_LabInstructions_1"],

@@ -10,8 +10,10 @@ import SpriteKit
 class VirtualLabController: UIViewController, GravityPopoverDelegate {
    
     @IBOutlet weak var infoButton: UIButton!
-    @IBOutlet weak var jalankanButton: UIButton!
+    @IBOutlet weak var theoryButton: UIButton!
     @IBOutlet weak var gravitationButton: UIButton!
+    @IBOutlet weak var playButton: DesignableButton!
+    @IBOutlet weak var resetButton: DesignableButton!
     @IBOutlet weak var sudutLbl: UILabel!
     @IBOutlet weak var sudutSlider: UISlider!
     @IBOutlet weak var kecepatanLbl: UILabel!
@@ -26,8 +28,9 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     @IBOutlet weak var descMissionLabel: UILabel!
     let button:UIButton = UIButton(type: UIButton.ButtonType.custom)
     var spriteScene: SKScene!
-   
-    
+    var indexMission = 0
+    var isMission: Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,13 +38,17 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
         setupSpriteView()
         setupControlPanel()
     }
-    //test
     // MARK: - Pressed Button Function
     
-    @objc func buttonAction(sender: UIButton!) {
-            print("oi asw")
-    }
+//    @objc func playButtonPressed(sender: UIButton!) {
+//        guard let gameScene = spriteView.scene as? GerakParabolaScene else {return}
+//        gameScene.shootStraight()
+//    }
 
+    @IBAction func resetButtonPressed(_ sender: Any) {
+        guard let scene = spriteScene as? GerakParabolaScene else {return}
+        scene.resetLab()
+    }
     @IBAction func kecepatanSliderChanged(_ sender: UISlider) {
         guard let scene = spriteScene as? GerakParabolaScene else {return}
         scene.kecAwalScene = sender.value
@@ -69,29 +76,31 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
         self.present(gravityChoice, animated: true, completion: nil)
     }
     
-    @IBAction func jalankanBtnPressed(_ sender: Any) {
-        guard let gameScene = spriteView.scene as? GerakParabolaScene else {return}
-        gameScene.shootStraight()
+    @IBAction func playButtonPressed(_ sender: Any) {
+                guard let gameScene = spriteView.scene as? GerakParabolaScene else {return}
+                gameScene.shootStraight()
+    }
+    @IBAction func theoryButtonPressed(_ sender: Any) {
+        
     }
     
     // MARK: - SETUP UI
     
     func setupSpriteView() {
-        spriteScene = GerakParabolaScene(size: spriteView.bounds.size)
+        spriteScene = GerakParabolaScene(isMission: isMission, size: spriteView.bounds.size)
         spriteScene.delegate = self
         spriteView.delegate = self
         spriteView.presentScene(spriteScene)
-    }
-    func setupControlPanel() {
-        setupGravitationButton()
-        setupTheoryButton()
-        setupJalankanButton()
-        setupMissionBox()
-        setupSliders()
-        setupTextField()
+       
     }
     
-    func setupXIB() {
+    func setupControlPanel() {
+        setupMissionBox()
+        setupGravitationButton()
+//        setupPlayButton()
+        setupTheoryButton()
+        setupSliders()
+        setupTextField()
     }
     
     func setupTextField () {
@@ -116,15 +125,18 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     }
     
     func setupMissionBox() {
+        if !isMission {
+            missionBox.isHidden = true
+        }
         missionBox.layer.cornerRadius = 8
     }
     
     func setupGravitationButton() {
     }
     
-    func setupTheoryButton() {
+    func setupPlayButton() {
         let imageSize:CGSize = CGSize(width: 15, height: 15)
-        button.frame = CGRect(x: (jalankanButton.layer.position.x) - 130, y: ((1-0.284173) * view.bounds.height) + 28, width: 65, height: 65)
+        button.frame = CGRect(x: (theoryButton.layer.position.x) - 130, y: ((1-0.284173) * view.bounds.height) + 28, width: 65, height: 65)
         button.setImage(UIImage(systemName: "book.closed.fill"), for: UIControl.State.normal)
         button.contentVerticalAlignment = .fill
         button.contentHorizontalAlignment = .fill
@@ -134,7 +146,7 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
             bottom: (button.frame.size.height - imageSize.height) / 4,
             right: (button.frame.size.width - imageSize.width) / 4)
         button.layer.cornerRadius = 8
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+//        button.addTarget(self, action: #selector(playButtonPressed), for: .touchUpInside)
         button.backgroundColor = .yellow
         self.view.addSubview(button)
     }
@@ -142,8 +154,8 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     func setupInfoButon() {
     }
     
-    func setupJalankanButton () {
-        jalankanButton.layer.cornerRadius = 8
+    func setupTheoryButton () {
+//        theoryButton.layer.cornerRadius = 8
     }
 
     
@@ -166,7 +178,7 @@ extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
             self.present(finishAlert, animated: true, completion: nil)
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
                 finishAlert.dismiss(animated: true, completion: nil)
-                scene.goToNextScene()
+                scene.repositioningRing(xRelatif: 0.5, yRelatif: 0.5)
             }
             
             

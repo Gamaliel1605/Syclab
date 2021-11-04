@@ -20,6 +20,7 @@ class GerakParabolaScene: SKScene {
     let jaringKiri      = SKSpriteNode(imageNamed: "ring_jaring_kiri")
     let jaringTengah    = SKSpriteNode(imageNamed: "ring_jaring")
     let tiang           = SKSpriteNode(imageNamed: "tiang")
+    let sensor = SKShapeNode(circleOfRadius: 10)
 //    let bg = SKSpriteNode(imageNamed: "background")
 //    let roda = SKSpriteNode(imageNamed: "roda")
 //    Initializing the projectiles
@@ -78,8 +79,17 @@ class GerakParabolaScene: SKScene {
     
     //variabel
     var isFinish: Bool = false
+    var isMission: Bool = false
     
     
+    init(isMission: Bool, size: CGSize) {
+        self.isMission = isMission
+        super.init(size: size)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func didEvaluateActions() {
         super.didEvaluateActions()
         physicsWorld.gravity = CGVector(dx: 0, dy: CGFloat(gravitasiVektor))
@@ -257,29 +267,35 @@ class GerakParabolaScene: SKScene {
         
         index += 1
     }
-    
-    func goToNextScene() {
-        let reveal = SKTransition.reveal(with: .down, duration: 2)
-        let nextScene = GerakParabolaScene_M1(size: self.size)
-        view?.presentScene(nextScene, transition: reveal)
-    }
 // MARK: - Setup UI Scene
     func setupUI() {
-        setupRing()
-        setupSensor()
+        if isMission {
+            setupRing()
+        }
         setupLantai()
     }
     
-    
     func setupRing() {
+        scallingRing()
+        repositioningRing()
+        addRing()
+        setupSensorRing()
+    }
+    
+    func scallingRing() {
         let setRing = [lingkarKiri, lingkarBawah, lingkarAtas,
                        lingkarKanan, jaringKiri, jaringKanan, jaringTengah,tiang]
         for part in setRing {
             part.setScale(0.15)
         }
+    }
+    
+    func repositioningRing(xRelatif: CGFloat = 0.8, yRelatif: CGFloat = 0.5) {
+        let setRing = [lingkarKiri, lingkarBawah, lingkarAtas,
+                       lingkarKanan, jaringKiri, jaringKanan, jaringTengah,tiang]
         
         let rad = lingkarBawah.size.width
-        lingkarBawah.position = CGPoint(x: size.width * 0.8, y: size.height * 0.5)
+        lingkarBawah.position = CGPoint(x: size.width * xRelatif, y: size.height * yRelatif)
         lingkarBawah.zPosition = 1
        
         
@@ -325,18 +341,25 @@ class GerakParabolaScene: SKScene {
         for part in setRing {
             part.physicsBody?.isDynamic = false
             part.physicsBody?.affectedByGravity = false
+        }
+        
+        sensor.position = CGPoint(x: lingkarBawah.position.x, y: lingkarBawah.position.y - 5)
+        
+        
+    }
+    
+    func addRing() {
+        let setRing = [lingkarKiri, lingkarBawah, lingkarAtas,
+                       lingkarKanan, jaringKiri, jaringKanan, jaringTengah,tiang]
+        for part in setRing {
             addChild(part)
         }
     }
     
-    
-    
-    func setupSensor() {
-        let rad = lingkarBawah.size.width
-        let sensor = SKShapeNode(circleOfRadius: rad/8)
+    func setupSensorRing() {
         sensor.position = CGPoint(x: lingkarBawah.position.x, y: lingkarBawah.position.y - 5)
         sensor.strokeColor = .blue
-        sensor.physicsBody = SKPhysicsBody(circleOfRadius: rad/6)
+        sensor.physicsBody = SKPhysicsBody(circleOfRadius: 10)
         sensor.physicsBody?.isDynamic = false
         sensor.physicsBody?.affectedByGravity = false
         sensor.physicsBody?.allowsRotation = false
@@ -410,12 +433,6 @@ extension GerakParabolaScene: SKPhysicsContactDelegate {
         print("Hit")
         projectile.physicsBody?.velocity = .zero
         projectile.removeAllChildren()
-        
-        //        if monstersDestroyed > 30 {
-        //            let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-        //            let gameOverScene = GameOverScene(size: self.size, won: true)
-        //            view?.presentScene(gameOverScene, transition: reveal)
-        //        }
     }
 }
 
