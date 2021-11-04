@@ -1,14 +1,13 @@
 //
-//  ConceptTheory.swift
+//  LabInstructions.swift
 //  Syclab
 //
-//  Created by Ivan Kelvin Trisno on 01/11/21.
+//  Created by Ivan Kelvin Trisno on 03/11/21.
 //
 
 import UIKit
 
-class ConceptTheory: UIView {
-
+class LabInstructions: UIView {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var closeView: UIView!
@@ -26,7 +25,6 @@ class ConceptTheory: UIView {
         self.initSubviews()
     }
     
-
     @IBAction func closeButton(_ sender: UIButton) {
         delegate?.dismissView()
     }
@@ -34,7 +32,7 @@ class ConceptTheory: UIView {
     private func initSubviews() {
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: Bundle(for: type(of: self)))
         nib.instantiate(withOwner: self, options: nil)
-        titleLabel.text = "Teori Konsep"
+        titleLabel.text = "Petunjuk Lab"
         closeView.layer.cornerRadius = 15
         containerView.layer.cornerRadius = 15
         addSubview(containerView)

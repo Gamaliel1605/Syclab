@@ -10,9 +10,9 @@ import UIKit
 
 class ExperimentLab {
     
-    var labInstructions: [[Any]]
+    var labInstructions: [Any]
     
-    init(labInstructions: [[Any]]) {
+    init(labInstructions: [Any]) {
         self.labInstructions = labInstructions
     }
 }
