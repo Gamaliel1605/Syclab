@@ -11,6 +11,10 @@
 		1408134D27304B3B00C8A482 /* ConceptTheory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1408134C27304B3B00C8A482 /* ConceptTheory.swift */; };
 		140813502730C1E900C8A482 /* CobaConceptTheory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1408134F2730C1E900C8A482 /* CobaConceptTheory.storyboard */; };
 		140813522730C2F000C8A482 /* CobaConceptTheoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140813512730C2F000C8A482 /* CobaConceptTheoryViewController.swift */; };
+		141DA6482732C9B0007E8DAF /* LabInstructions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 141DA6472732C9B0007E8DAF /* LabInstructions.xib */; };
+		141DA64C2732C9F7007E8DAF /* LabInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141DA64B2732C9F7007E8DAF /* LabInstructions.swift */; };
+		141DA64F2732CF38007E8DAF /* CobaLabInstructions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141DA64E2732CF38007E8DAF /* CobaLabInstructions.storyboard */; };
+		141DA6512732CF4C007E8DAF /* CobaLabInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141DA6502732CF4C007E8DAF /* CobaLabInstructionsViewController.swift */; };
 		142498F227276DBD0050F18D /* ExperimentDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F127276DBD0050F18D /* ExperimentDetailModel.swift */; };
 		142498F42727703F0050F18D /* ExperimentDetailDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F32727703F0050F18D /* ExperimentDetailDataStore.swift */; };
 		142498F62727716E0050F18D /* ExperimentDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F52727716E0050F18D /* ExperimentDetailRepository.swift */; };
@@ -19,6 +23,7 @@
 		98562DEE2730FF0400D1C619 /* EngineGerakParabola.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98562DED2730FF0400D1C619 /* EngineGerakParabola.swift */; };
 		98562DF02730FFCA00D1C619 /* MathFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98562DEF2730FFCA00D1C619 /* MathFunctions.swift */; };
 		98562DF2273101D500D1C619 /* GerakParabolaScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98562DF1273101D500D1C619 /* GerakParabolaScene.swift */; };
+		14B4053527337EA300E17BDB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4053427337EA300E17BDB /* Protocols.swift */; };
 		988B9972272E37040024DAA6 /* Experiments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9971272E37040024DAA6 /* Experiments.swift */; };
 		988B9976272E39120024DAA6 /* E1_GerakParabolaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9975272E39120024DAA6 /* E1_GerakParabolaData.swift */; };
 		988B9978272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B9977272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift */; };
@@ -84,6 +89,10 @@
 		1408134C27304B3B00C8A482 /* ConceptTheory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConceptTheory.swift; sourceTree = "<group>"; };
 		1408134F2730C1E900C8A482 /* CobaConceptTheory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CobaConceptTheory.storyboard; sourceTree = "<group>"; };
 		140813512730C2F000C8A482 /* CobaConceptTheoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobaConceptTheoryViewController.swift; sourceTree = "<group>"; };
+		141DA6472732C9B0007E8DAF /* LabInstructions.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabInstructions.xib; sourceTree = "<group>"; };
+		141DA64B2732C9F7007E8DAF /* LabInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabInstructions.swift; sourceTree = "<group>"; };
+		141DA64E2732CF38007E8DAF /* CobaLabInstructions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CobaLabInstructions.storyboard; sourceTree = "<group>"; };
+		141DA6502732CF4C007E8DAF /* CobaLabInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobaLabInstructionsViewController.swift; sourceTree = "<group>"; };
 		142498F127276DBD0050F18D /* ExperimentDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetailModel.swift; sourceTree = "<group>"; };
 		142498F32727703F0050F18D /* ExperimentDetailDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetailDataStore.swift; sourceTree = "<group>"; };
 		142498F52727716E0050F18D /* ExperimentDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetailRepository.swift; sourceTree = "<group>"; };
@@ -92,6 +101,7 @@
 		98562DED2730FF0400D1C619 /* EngineGerakParabola.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineGerakParabola.swift; sourceTree = "<group>"; };
 		98562DEF2730FFCA00D1C619 /* MathFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFunctions.swift; sourceTree = "<group>"; };
 		98562DF1273101D500D1C619 /* GerakParabolaScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerakParabolaScene.swift; sourceTree = "<group>"; };
+		14B4053427337EA300E17BDB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		988B9971272E37040024DAA6 /* Experiments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiments.swift; sourceTree = "<group>"; };
 		988B9975272E39120024DAA6 /* E1_GerakParabolaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E1_GerakParabolaData.swift; sourceTree = "<group>"; };
 		988B9977272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E2_HukumGravitasiNewtonData.swift; sourceTree = "<group>"; };
@@ -182,6 +192,25 @@
 				140813512730C2F000C8A482 /* CobaConceptTheoryViewController.swift */,
 			);
 			path = "Coba Concept Theory";
+			sourceTree = "<group>";
+		};
+		141DA6462732C921007E8DAF /* Lab Instructions */ = {
+			isa = PBXGroup;
+			children = (
+				141DA64D2732CEE5007E8DAF /* Coba Lab Instructions */,
+				141DA6472732C9B0007E8DAF /* LabInstructions.xib */,
+				141DA64B2732C9F7007E8DAF /* LabInstructions.swift */,
+			);
+			path = "Lab Instructions";
+			sourceTree = "<group>";
+		};
+		141DA64D2732CEE5007E8DAF /* Coba Lab Instructions */ = {
+			isa = PBXGroup;
+			children = (
+				141DA64E2732CF38007E8DAF /* CobaLabInstructions.storyboard */,
+				141DA6502732CF4C007E8DAF /* CobaLabInstructionsViewController.swift */,
+			);
+			path = "Coba Lab Instructions";
 			sourceTree = "<group>";
 		};
 		142498F027276D9D0050F18D /* Experiment Detail Data Store */ = {
@@ -294,6 +323,7 @@
 				EADBE49E272D808600E8607D /* ViewExtension.swift */,
 				EADBE4A0272D80E900E8607D /* LabelExtension.swift */,
 				98562DEF2730FFCA00D1C619 /* MathFunctions.swift */,
+				14B4053427337EA300E17BDB /* Protocols.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -334,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				98562DEC2730FEEF00D1C619 /* Model */,
+				141DA6462732C921007E8DAF /* Lab Instructions */,
 				1408134927304B0400C8A482 /* Concept Theory */,
 				EABCDE7F271EEE8200CA2677 /* VirtualLab.storyboard */,
 				EABCDE81271EEE9000CA2677 /* VirtualLabController.swift */,
@@ -489,6 +520,7 @@
 				140813502730C1E900C8A482 /* CobaConceptTheory.storyboard in Resources */,
 				EABCDE67271EED1C00CA2677 /* LaunchScreen.storyboard in Resources */,
 				EA0C378A2723EECC0038BF88 /* HomeCell.xib in Resources */,
+				141DA64F2732CF38007E8DAF /* CobaLabInstructions.storyboard in Resources */,
 				EABCDE8E271EEF4700CA2677 /* ModeOption.storyboard in Resources */,
 				EABCDE80271EEE8200CA2677 /* VirtualLab.storyboard in Resources */,
 				EA1BD2A72731575500B879A0 /* FinishMission.xib in Resources */,
@@ -501,6 +533,7 @@
 				EABCDE79271EEDB500CA2677 /* Quiz.storyboard in Resources */,
 				EAA2984D27316A6B00B5E303 /* EveryMission.xib in Resources */,
 				EABCDE95271EEF9F00CA2677 /* Home.storyboard in Resources */,
+				141DA6482732C9B0007E8DAF /* LabInstructions.xib in Resources */,
 				EA6E764D273160CF00FFC46C /* FinishQuiz.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,6 +552,7 @@
 				98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */,
 				EAD5BB1227314C6300E4D651 /* Exit.swift in Sources */,
 				EA0C378C2723F3970038BF88 /* RegisterNib.swift in Sources */,
+				14B4053527337EA300E17BDB /* Protocols.swift in Sources */,
 				142498FA272776760050F18D /* ColorHexConversion.swift in Sources */,
 				EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */,
 				EADBE49D272D800D00E8607D /* ContentLabel.swift in Sources */,
@@ -533,6 +567,7 @@
 				988B9978272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift in Sources */,
 				EADBE4A1272D80E900E8607D /* LabelExtension.swift in Sources */,
 				98562DEE2730FF0400D1C619 /* EngineGerakParabola.swift in Sources */,
+				141DA64C2732C9F7007E8DAF /* LabInstructions.swift in Sources */,
 				EABCDE7D271EEDF600CA2677 /* QuizViewModel.swift in Sources */,
 				EABCDE7B271EEDE700CA2677 /* QuizController.swift in Sources */,
 				EA0C37922725D3430038BF88 /* ModeOptionCell.swift in Sources */,
@@ -556,6 +591,7 @@
 				1408134D27304B3B00C8A482 /* ConceptTheory.swift in Sources */,
 				EAD9272D272C517800B1635B /* Experiment.swift in Sources */,
 				EAD92733272C550B00B1635B /* ExperimentConcept.swift in Sources */,
+				141DA6512732CF4C007E8DAF /* CobaLabInstructionsViewController.swift in Sources */,
 				988B9972272E37040024DAA6 /* Experiments.swift in Sources */,
 				140813522730C2F000C8A482 /* CobaConceptTheoryViewController.swift in Sources */,
 				EABCDE84271EEE9C00CA2677 /* VirtualLabViewModel.swift in Sources */,

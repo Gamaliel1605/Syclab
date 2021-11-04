@@ -119,5 +119,40 @@ struct E1_GerakParabolaData {
                     padding: UIEdgeInsets(top: 0, left: 30, bottom: 20, right: 30)
                 ),
             ]
+        )
+    
+    static let labInstructions = ExperimentLab(
+        labInstructions: [
+            ContentImage(
+                imageDetails: ["GerakParabola_LabInstructions_1", "GerakParabola_LabInstructions_1"],
+                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                size: CGSize(width: 245.81, height: 92)
+            ),
+            ContentLabel(
+                text: "Kamu dapat mengubah besar sudut dan kecepatan lemparan bola basket",
+                fontsize: 17,
+                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+            ),
+            ContentImage(
+                imageDetails: ["GerakParabola_LabInstructions_2", "GerakParabola_LabInstructions_2"],
+                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                size: CGSize(width: 90.72, height: 71)
+            ),
+            ContentLabel(
+                text: "Semakin tinggi sudut, semakin  tinggi pula arah lemparan bola",
+                fontsize: 17,
+                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+            ),
+            ContentImage(
+                imageDetails: ["GerakParabola_LabInstructions_3", "GerakParabola_LabInstructions_3"],
+                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                size: CGSize(width: 69.59, height: 40)
+            ),
+            ContentLabel(
+                text: "Tekan tombol Jalankan untuk melempar bola.",
+                fontsize: 17,
+                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+            )
+        ]
     )
 }
