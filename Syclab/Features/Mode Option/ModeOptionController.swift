@@ -38,7 +38,7 @@ extension ModeOptionController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = modeCollection.dequeueReusableCell(withReuseIdentifier: "modeCell", for: indexPath) as! ModeOptionCell
         let option = modeOptionVM.experimentOptions[indexPath.row]
-        cell.modeLabel.text = option.optionTitle
+        cell.modeLabel.text = option.optionTitle.rawValue
         cell.descLabel.text = option.optionDesc
         cell.modeImage.image = UIImage(named: option.optionImgStr)
         return cell
