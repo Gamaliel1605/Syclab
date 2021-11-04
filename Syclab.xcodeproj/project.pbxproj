@@ -34,10 +34,8 @@
 		EA0C37892723EECC0038BF88 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C37872723EECC0038BF88 /* HomeCell.swift */; };
 		EA0C378A2723EECC0038BF88 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0C37882723EECC0038BF88 /* HomeCell.xib */; };
 		EA0C378C2723F3970038BF88 /* RegisterNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C378B2723F3970038BF88 /* RegisterNib.swift */; };
-		EA0C378E2723F6DC0038BF88 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C378D2723F6DC0038BF88 /* HomeData.swift */; };
 		EA0C37922725D3430038BF88 /* ModeOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C37902725D3430038BF88 /* ModeOptionCell.swift */; };
 		EA0C37932725D3430038BF88 /* ModeOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0C37912725D3430038BF88 /* ModeOptionCell.xib */; };
-		EA0C37952725D7700038BF88 /* ModeOptionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0C37942725D7700038BF88 /* ModeOptionData.swift */; };
 		EA1BD2A72731575500B879A0 /* FinishMission.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1BD2A62731575500B879A0 /* FinishMission.xib */; };
 		EA1BD2A92731575F00B879A0 /* FinishMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1BD2A82731575F00B879A0 /* FinishMission.swift */; };
 		EA6E764D273160CF00FFC46C /* FinishQuiz.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6E764C273160CF00FFC46C /* FinishQuiz.xib */; };
@@ -50,8 +48,6 @@
 		EABCDE62271EED1B00CA2677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABCDE60271EED1B00CA2677 /* Main.storyboard */; };
 		EABCDE64271EED1C00CA2677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EABCDE63271EED1C00CA2677 /* Assets.xcassets */; };
 		EABCDE67271EED1C00CA2677 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABCDE65271EED1C00CA2677 /* LaunchScreen.storyboard */; };
-		EABCDE70271EED4700CA2677 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE6F271EED4700CA2677 /* Core.swift */; };
-		EABCDE74271EED8900CA2677 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE73271EED8900CA2677 /* Helpers.swift */; };
 		EABCDE79271EEDB500CA2677 /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABCDE78271EEDB500CA2677 /* Quiz.storyboard */; };
 		EABCDE7B271EEDE700CA2677 /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE7A271EEDE700CA2677 /* QuizController.swift */; };
 		EABCDE7D271EEDF600CA2677 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE7C271EEDF600CA2677 /* QuizViewModel.swift */; };
@@ -111,10 +107,8 @@
 		EA0C37872723EECC0038BF88 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		EA0C37882723EECC0038BF88 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		EA0C378B2723F3970038BF88 /* RegisterNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNib.swift; sourceTree = "<group>"; };
-		EA0C378D2723F6DC0038BF88 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		EA0C37902725D3430038BF88 /* ModeOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeOptionCell.swift; sourceTree = "<group>"; };
 		EA0C37912725D3430038BF88 /* ModeOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModeOptionCell.xib; sourceTree = "<group>"; };
-		EA0C37942725D7700038BF88 /* ModeOptionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeOptionData.swift; sourceTree = "<group>"; };
 		EA1BD2A62731575500B879A0 /* FinishMission.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishMission.xib; sourceTree = "<group>"; };
 		EA1BD2A82731575F00B879A0 /* FinishMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishMission.swift; sourceTree = "<group>"; };
 		EA6E764C273160CF00FFC46C /* FinishQuiz.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishQuiz.xib; sourceTree = "<group>"; };
@@ -129,8 +123,6 @@
 		EABCDE63271EED1C00CA2677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EABCDE66271EED1C00CA2677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EABCDE68271EED1C00CA2677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EABCDE6F271EED4700CA2677 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
-		EABCDE73271EED8900CA2677 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		EABCDE78271EEDB500CA2677 /* Quiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quiz.storyboard; sourceTree = "<group>"; };
 		EABCDE7A271EEDE700CA2677 /* QuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
 		EABCDE7C271EEDF600CA2677 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
@@ -293,9 +285,6 @@
 			children = (
 				EADBE4A2272D821100E8607D /* Model */,
 				EADBE4A3272D828A00E8607D /* Data */,
-				EABCDE6F271EED4700CA2677 /* Core.swift */,
-				EA0C378D2723F6DC0038BF88 /* HomeData.swift */,
-				EA0C37942725D7700038BF88 /* ModeOptionData.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -312,14 +301,9 @@
 		EABCDE72271EED7C00CA2677 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EAEA72E22734105B00D5291B /* Extension */,
 				EADBE495272D7FAA00E8607D /* Custom Model */,
-				98BADE4627291304009EE9D1 /* Extension+UIButton.swift */,
-				EABCDE73271EED8900CA2677 /* Helpers.swift */,
 				EA0C378B2723F3970038BF88 /* RegisterNib.swift */,
-				142498FB272793C60050F18D /* AttributedString.swift */,
-				142498F9272776760050F18D /* ColorHexConversion.swift */,
-				EADBE49E272D808600E8607D /* ViewExtension.swift */,
-				EADBE4A0272D80E900E8607D /* LabelExtension.swift */,
 				98562DEF2730FFCA00D1C619 /* MathFunctions.swift */,
 				14B4053427337EA300E17BDB /* Protocols.swift */,
 			);
@@ -455,6 +439,18 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		EAEA72E22734105B00D5291B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				98BADE4627291304009EE9D1 /* Extension+UIButton.swift */,
+				142498FB272793C60050F18D /* AttributedString.swift */,
+				142498F9272776760050F18D /* ColorHexConversion.swift */,
+				EADBE49E272D808600E8607D /* ViewExtension.swift */,
+				EADBE4A0272D80E900E8607D /* LabelExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -568,18 +564,14 @@
 				EABCDE7D271EEDF600CA2677 /* QuizViewModel.swift in Sources */,
 				EABCDE7B271EEDE700CA2677 /* QuizController.swift in Sources */,
 				EA0C37922725D3430038BF88 /* ModeOptionCell.swift in Sources */,
-				EA0C37952725D7700038BF88 /* ModeOptionData.swift in Sources */,
 				EA1BD2A92731575F00B879A0 /* FinishMission.swift in Sources */,
-				EABCDE70271EED4700CA2677 /* Core.swift in Sources */,
 				EADBE4A5272D82A100E8607D /* ExperimentDummy.swift in Sources */,
 				988B9976272E39120024DAA6 /* E1_GerakParabolaData.swift in Sources */,
 				142498FC272793C60050F18D /* AttributedString.swift in Sources */,
-				EABCDE74271EED8900CA2677 /* Helpers.swift in Sources */,
 				EABCDE8B271EEF0B00CA2677 /* ExperimentDetailViewModel.swift in Sources */,
 				98562DF02730FFCA00D1C619 /* MathFunctions.swift in Sources */,
 				142498F227276DBD0050F18D /* ExperimentDetailModel.swift in Sources */,
 				EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */,
-				EA0C378E2723F6DC0038BF88 /* HomeData.swift in Sources */,
 				EAD92737272C55F800B1635B /* ExperimentQuiz.swift in Sources */,
 				142498F42727703F0050F18D /* ExperimentDetailDataStore.swift in Sources */,
 				EAD92735272C559B00B1635B /* ExperimentLab.swift in Sources */,
