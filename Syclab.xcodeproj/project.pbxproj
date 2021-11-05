@@ -21,6 +21,7 @@
 		142498FA272776760050F18D /* ColorHexConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F9272776760050F18D /* ColorHexConversion.swift */; };
 		142498FC272793C60050F18D /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498FB272793C60050F18D /* AttributedString.swift */; };
 		14B4053527337EA300E17BDB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4053427337EA300E17BDB /* Protocols.swift */; };
+		981D5BA9273528D800EB1BB5 /* GerakParabolaMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D5BA8273528D800EB1BB5 /* GerakParabolaMission.swift */; };
 		98562DEE2730FF0400D1C619 /* EngineGerakParabola.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98562DED2730FF0400D1C619 /* EngineGerakParabola.swift */; };
 		98562DF02730FFCA00D1C619 /* MathFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98562DEF2730FFCA00D1C619 /* MathFunctions.swift */; };
 		98562DF2273101D500D1C619 /* GerakParabolaScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98562DF1273101D500D1C619 /* GerakParabolaScene.swift */; };
@@ -95,6 +96,7 @@
 		142498F9272776760050F18D /* ColorHexConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexConversion.swift; sourceTree = "<group>"; };
 		142498FB272793C60050F18D /* AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
 		14B4053427337EA300E17BDB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		981D5BA8273528D800EB1BB5 /* GerakParabolaMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerakParabolaMission.swift; sourceTree = "<group>"; };
 		98562DED2730FF0400D1C619 /* EngineGerakParabola.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineGerakParabola.swift; sourceTree = "<group>"; };
 		98562DEF2730FFCA00D1C619 /* MathFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFunctions.swift; sourceTree = "<group>"; };
 		98562DF1273101D500D1C619 /* GerakParabolaScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerakParabolaScene.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			children = (
 				98562DED2730FF0400D1C619 /* EngineGerakParabola.swift */,
 				98562DF1273101D500D1C619 /* GerakParabolaScene.swift */,
+				981D5BA8273528D800EB1BB5 /* GerakParabolaMission.swift */,
 			);
 			path = GerakParabola;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */,
 				EAD5BB1227314C6300E4D651 /* Exit.swift in Sources */,
 				EA0C378C2723F3970038BF88 /* RegisterNib.swift in Sources */,
+				981D5BA9273528D800EB1BB5 /* GerakParabolaMission.swift in Sources */,
 				14B4053527337EA300E17BDB /* Protocols.swift in Sources */,
 				142498FA272776760050F18D /* ColorHexConversion.swift in Sources */,
 				EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */,
@@ -576,7 +580,6 @@
 				EABCDE7B271EEDE700CA2677 /* QuizController.swift in Sources */,
 				EA0C37922725D3430038BF88 /* ModeOptionCell.swift in Sources */,
 				EA1BD2A92731575F00B879A0 /* FinishMission.swift in Sources */,
-				EABCDE70271EED4700CA2677 /* Core.swift in Sources */,
 				98DF1B962733FA9A00D7BB2E /* PhysicsCategory.swift in Sources */,
 				EADBE4A5272D82A100E8607D /* ExperimentDummy.swift in Sources */,
 				988B9976272E39120024DAA6 /* E1_GerakParabolaData.swift in Sources */,

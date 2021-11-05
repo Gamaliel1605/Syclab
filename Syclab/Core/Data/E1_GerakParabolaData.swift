@@ -161,4 +161,23 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
             )
         ]
     )
+    
+    static let missions = [GerakParabolaMission(xRelatif: 0.5,
+                                                yRelatif: 0.5,
+                                                mission: "Atur sudut yang tepat agar bola masuk ke dalam ring 1",
+                                                enabledVariables: [.Sudut],
+                                                sudut: 30,
+                                                kecepatan: 25),
+                           GerakParabolaMission(xRelatif: 0.8,
+                                                yRelatif: 0.5,
+                                                mission: "Atur sudut yang tepat agar bola masuk ke dalam ring 2",
+                                                enabledVariables: [.Sudut],
+                                                sudut: 30,
+                                                kecepatan: 25),
+                           GerakParabolaMission(xRelatif: 0.6,
+                                                yRelatif: 0.5,
+                                                mission: "Atur sudut yang tepat agar bola masuk ke dalam ring 3",
+                                                enabledVariables: [.Kecepatan],
+                                                sudut: 50,
+                                                kecepatan: 15)]
 }
