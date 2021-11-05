@@ -10,11 +10,11 @@ import UIKit
 
 class ExperimentDetails {
     
-    var expDesc: [Any]
+    var expDesc: String
     var expImage_1: String
     var expImage_2: String
     
-    init(expDesc: [Any], expImage_1: String, expImage_2: String) {
+    init(expDesc: String, expImage_1: String, expImage_2: String) {
         self.expDesc = expDesc
         self.expImage_1 = expImage_1
         self.expImage_2 = expImage_2
