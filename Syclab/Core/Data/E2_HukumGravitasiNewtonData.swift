@@ -15,11 +15,11 @@ struct E2_HukumGravitasiNewtonData {
         id: .E2_HukumGravitasiNewton
     )
     
-    static let eksplorasiDetail = ExperimentDetails(expDesc: ["ini eksploras", "yowowo"],
+    static let eksplorasiDetail = ExperimentDetails(expDesc: "ini eksploras",
                                                     expImage_1: "GerakParabola_description_1",
                                                     expImage_2: "GerakParabola_description_2")
     
-    static let misiDetail = ExperimentDetails(expDesc: ["ini misi", "yowowo"],
+    static let misiDetail = ExperimentDetails(expDesc: "ini misi",
                                                     expImage_1: "GerakParabola_description_1",
                                                     expImage_2: "GerakParabola_description_2")
     

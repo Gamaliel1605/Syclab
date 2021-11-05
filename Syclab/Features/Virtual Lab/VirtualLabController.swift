@@ -27,11 +27,12 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     let button:UIButton = UIButton(type: UIButton.ButtonType.custom)
     var spriteScene: SKScene!
    
+    var experimentVM: ExperimentDetailViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationBar.topItem?.title = "Eksperimen Gerak Parabola"
+        print("\(experimentVM.check) dan \(experimentVM.experiments.rawValue)")
+//        navigationController?.navigationBar.topItem?.title = "Eksperimen Gerak Parabola"
         setupSpriteView()
         setupControlPanel()
     }
