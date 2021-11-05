@@ -12,11 +12,24 @@ struct E1_GerakParabolaData {
                                        expImage: "placeholder",
                                        id: .E1_GerakParabola)
     
-    static let eksplorasiDetail = ExperimentDetails(expDesc: ["ini eksploras", "yowowo"],
+    static let eksplorasiDetail = ExperimentDetails(expDesc: """
+Gerak parabola adalah suatu gerak dari objek yang membentuk lintasan melengkung karena pengaruh gravitasi.
+
+Pada mode ini, dapat secara bebas mengeksplor gerak parabola untuk memahami konsepnya.
+
+Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni melemparkan bola basketnya dengan berbagai macam cara!
+
+""".withBoldText(text: "suatu gerak dari objek yang membentuk lintasan melengkung karena pengaruh gravitasi.").string,
                                                     expImage_1: "GerakParabola_description_1",
                                                     expImage_2: "GerakParabola_description_2")
     
-    static let misiDetail = ExperimentDetails(expDesc: ["ini misi", "yowowo"],
+    static let misiDetail = ExperimentDetails(expDesc: """
+                    Gerak parabola adalah suatu gerak dari objek yang membentuk lintasan melengkung karena pengaruh gravitasi.
+
+                    Pada mode ini, kamu akan diberikan misi untuk diselesaikan.
+
+                    Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni melemparkan bola basketnya dengan menyelesaikan misi-misi yang diberikan!
+                    """,
                                                     expImage_1: "GerakParabola_description_1",
                                                     expImage_2: "GerakParabola_description_2")
     

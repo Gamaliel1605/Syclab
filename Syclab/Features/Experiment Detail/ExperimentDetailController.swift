@@ -22,16 +22,28 @@ class ExperimentDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = experimentVM.navTitle
-        print(experimentVM.check)
+        setUp()
+    }
+    
+    private func setUp() {
+        var experimentDetails: ExperimentDetails
+        var title: String
         
-        let gerakParabola = ExperimentDetailRepository.shared.gerakParabola
-        experimentDetailTitle.text = gerakParabola.title
+        if experimentVM.check == .Eksplorasi {
+            experimentDetails = experimentVM.experiments.getEksplorasiDetail()
+            title = "Mode Eksplorasi"
+        } else {
+            experimentDetails = experimentVM.experiments.getMisiDetail()
+            title = "Mode Misi"
+        }
+        
+        experimentDetailTitle.text = title
         
         experimentDetailLabel.numberOfLines = 0
-        experimentDetailLabel.attributedText = gerakParabola.description
+        experimentDetailLabel.text = experimentDetails.expDesc
         
         
-        experimentDetailFirstImageView.image = gerakParabola.firstImage
+        experimentDetailFirstImageView.image = UIImage(named: experimentDetails.expImage_1)
         experimentDetailFirstImageView.contentMode = .scaleToFill
         
         experimentDetailFirstView.backgroundColor = .clear
@@ -41,7 +53,7 @@ class ExperimentDetailController: UIViewController {
         experimentDetailFirstView.layer.shadowRadius = 2
         experimentDetailFirstView.layer.cornerRadius = 10
         
-        experimentDetailSecondImageView.image = gerakParabola.secondImage
+        experimentDetailSecondImageView.image = UIImage(named: experimentDetails.expImage_2)
         experimentDetailSecondImageView.contentMode = .scaleToFill
         
         experimentDetailSecondView.backgroundColor = .clear
@@ -57,5 +69,12 @@ class ExperimentDetailController: UIViewController {
         experimentDetailStartButton.layer.shadowOffset = CGSize(width: 2, height: 2)
         experimentDetailStartButton.layer.shadowRadius = 2
         experimentDetailStartButton.layer.masksToBounds = false
+    }
+    
+    
+    @IBAction func labButton(_ sender: UIButton) {
+        let vc = UIStoryboard.init(name: "VirtualLab", bundle: Bundle.main).instantiateViewController(withIdentifier: "virtualLab") as! VirtualLabController
+        vc.experimentVM = self.experimentVM
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
