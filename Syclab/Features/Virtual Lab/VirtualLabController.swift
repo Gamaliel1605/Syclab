@@ -269,9 +269,11 @@ extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
         guard let scene = scene as? GerakParabolaScene else {return}
         if scene.isFinish {
             scene.isFinish = false
-            let finishAlert = EveryMission()
+            
+            
             if virtualLabVM?.isMission ?? false {
                 if virtualLabVM!.indexMission < (virtualLabVM?.missions!.count)! - 1 {
+                    let finishAlert = EveryMission()
                     self.present(finishAlert, animated: true, completion: nil)
                     
                     switch virtualLabVM?.indexMission {
@@ -291,23 +293,41 @@ extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
                         print("offside")
                     }
                     finishAlert.everyMissionLabel_2.text = "Lanjut misi \(virtualLabVM!.indexMission + 2)"
-                }
-                
-            }
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [self] in
-                finishAlert.dismiss(animated: true, completion: nil)
-                switch virtualLabVM?.experiment {
-                case .E1_GerakParabola:
-                    virtualLabVM?.indexMission += 1
-                    setupMissionView()
-                    setupScene()
-                case .E2_HukumGravitasiNewton:
-                    print("belom jadi")
-                case .none:
-                    fatalError("mampus experimentnya ilang")
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [self] in
+                        finishAlert.dismiss(animated: true, completion: nil)
+                        switch virtualLabVM?.experiment {
+                        case .E1_GerakParabola:
+                            virtualLabVM?.indexMission += 1
+                            setupMissionView()
+                            setupScene()
+                        case .E2_HukumGravitasiNewton:
+                            print("belom jadi")
+                        case .none:
+                            fatalError("mampus experimentnya ilang")
+                        }
+                        
+                        scene.resetLab()
+                    }
+                } else {
+                    let finishAlert = FinishMission()
+                    self.present(finishAlert, animated: true, completion: nil)
+                    finishAlert.delegate = self
                 }
             }
         }
     }
+}
+
+
+extension VirtualLabController: FinishAlertProtocol {
+    func onTapKeluarFinish() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func onTapToQuiz() {
+        print("kuis belom jadi")
+    }
+    
+    
 }

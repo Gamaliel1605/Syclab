@@ -343,7 +343,7 @@ class GerakParabolaScene: SKScene {
             part.physicsBody?.affectedByGravity = false
         }
         
-        sensor.position = CGPoint(x: lingkarBawah.position.x, y: lingkarBawah.position.y - 5)
+        sensor.position = CGPoint(x: jaringTengah.position.x, y: jaringTengah.position.y - 15)
         
         
     }
@@ -357,7 +357,7 @@ class GerakParabolaScene: SKScene {
     }
     
     func setupSensorRing() {
-        sensor.position = CGPoint(x: lingkarBawah.position.x, y: lingkarBawah.position.y - 5)
+        sensor.position = CGPoint(x: jaringTengah.position.x, y: jaringTengah.position.y - 15)
         sensor.strokeColor = .blue
         sensor.physicsBody = SKPhysicsBody(circleOfRadius: 10)
         sensor.physicsBody?.isDynamic = false
