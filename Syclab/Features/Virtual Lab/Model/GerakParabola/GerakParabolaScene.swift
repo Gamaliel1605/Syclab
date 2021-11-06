@@ -2,28 +2,39 @@
 //  GerakParabolaScene.swift
 //  Syclab
 //
-//  Created by Nicholas on 06/06/21.
+//  Created by Jehnsen Hirena Kane on 01/11/21.
 //
 
 import UIKit
 import SpriteKit
 
 class GerakParabolaScene: SKScene {
-    let player = SKSpriteNode(imageNamed: "pocong") // Initializing the player node
+//    Initializing the player node
+    let player          = SKSpriteNode(imageNamed: "pocong")
+//    Initializing the ring nodes
+    let lingkarKanan    = SKSpriteNode(imageNamed: "ring_kanan")
+    let lingkarKiri     = SKSpriteNode(imageNamed: "ring_kiri")
+    let lingkarAtas     = SKSpriteNode(imageNamed: "ring_atas")
+    let lingkarBawah    = SKSpriteNode(imageNamed: "ring_bawah")
+    let jaringKanan     = SKSpriteNode(imageNamed: "ring_jaring_kanan")
+    let jaringKiri      = SKSpriteNode(imageNamed: "ring_jaring_kiri")
+    let jaringTengah    = SKSpriteNode(imageNamed: "ring_jaring")
+    let tiang           = SKSpriteNode(imageNamed: "tiang")
+    let sensor = SKShapeNode(circleOfRadius: 10)
 //    let bg = SKSpriteNode(imageNamed: "background")
 //    let roda = SKSpriteNode(imageNamed: "roda")
-    let ring = SKSpriteNode(imageNamed: "ring")
-    let projectile = SKSpriteNode(imageNamed: "ivanKuyang")
-    let projectile1 = SKSpriteNode(imageNamed: "ivanKuyang")
-    let projectile2 = SKSpriteNode(imageNamed: "ivanKuyang")
-    let projectile3 = SKSpriteNode(imageNamed: "ivanKuyang")
-    let projectile4 = SKSpriteNode(imageNamed: "ivanKuyang")
-    let projectile5 = SKSpriteNode(imageNamed: "ivanKuyang")
-    let projectile6 = SKSpriteNode(imageNamed: "ivanKuyang")
-    let projectile7 = SKSpriteNode(imageNamed: "ivanKuyang")
-    let projectile8 = SKSpriteNode(imageNamed: "ivanKuyang")
-    let projectile9 = SKSpriteNode(imageNamed: "ivanKuyang")
-    let projectile10 = SKSpriteNode(imageNamed: "ivanKuyang")
+//    Initializing the projectiles
+    let projectile = SKSpriteNode(imageNamed: "bola")
+    let projectile1 = SKSpriteNode(imageNamed: "bola")
+    let projectile2 = SKSpriteNode(imageNamed: "bola")
+    let projectile3 = SKSpriteNode(imageNamed: "bola")
+    let projectile4 = SKSpriteNode(imageNamed: "bola")
+    let projectile5 = SKSpriteNode(imageNamed: "bola")
+    let projectile6 = SKSpriteNode(imageNamed: "bola")
+    let projectile7 = SKSpriteNode(imageNamed: "bola")
+    let projectile8 = SKSpriteNode(imageNamed: "bola")
+    let projectile9 = SKSpriteNode(imageNamed: "bola")
+    let projectile10 = SKSpriteNode(imageNamed: "bola")
     var projectileArray: [SKSpriteNode] = []
     var currentProjectile: SKSpriteNode?
     var scoreText = SKLabelNode()
@@ -68,8 +79,17 @@ class GerakParabolaScene: SKScene {
     
     //variabel
     var isFinish: Bool = false
+    var isMission: Bool = false
     
     
+    init(isMission: Bool, size: CGSize) {
+        self.isMission = isMission
+        super.init(size: size)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func didEvaluateActions() {
         super.didEvaluateActions()
         physicsWorld.gravity = CGVector(dx: 0, dy: CGFloat(gravitasiVektor))
@@ -101,8 +121,6 @@ class GerakParabolaScene: SKScene {
         
         
         if lineActive == true {
-            
-            
             //        guard let positionBuled = currentProjectile?.position else {return}
             for projectileSekarang in projectileArray {
                 if projectileSekarang.physicsBody?.velocity != nil && projectileSekarang.physicsBody?.velocity != .zero {
@@ -158,12 +176,6 @@ class GerakParabolaScene: SKScene {
 //        player.size = CGSize(width: currentProjectile?.physicsBody?.velocity.dx ?? 100 , height: currentProjectile?.physicsBody?.velocity.dy ?? 100)
     }
     
-    
-    override func didFinishUpdate() {
-        super.didFinishUpdate()
-       
-    }
-    
     override func didMove(to view: SKView) {
         physicsWorld.gravity = CGVector(dx: 0, dy: CGFloat(gravitasiVektor))
         physicsWorld.contactDelegate = self
@@ -207,22 +219,6 @@ class GerakParabolaScene: SKScene {
 
     }
     
-   
-    
-//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        for node in nodeArrayDeletable {
-//            node.removeFromParent()
-//        }
-//        for projectileSekarang in projectileArray {
-//            projectileSekarang.position = CGPoint(x: initialX, y: initialY)
-//            projectileSekarang.physicsBody?.velocity = .zero
-//
-//        }
-//        index = 0
-//
-//        print("aw kepencet -----------------------------------------")
-//    }
-    
     func resetLab() {
         for node in nodeArrayDeletable {
             node.removeFromParent()
@@ -230,11 +226,8 @@ class GerakParabolaScene: SKScene {
         for projectileSekarang in projectileArray {
             projectileSekarang.position = CGPoint(x: initialX, y: initialY)
             projectileSekarang.physicsBody?.velocity = .zero
-            
         }
         index = 0
-        
-        print("aw kepencet -----------------------------------------")
     }
     
     func shootStraight() {
@@ -259,51 +252,114 @@ class GerakParabolaScene: SKScene {
         currentProjectile?.physicsBody?.contactTestBitMask = PhysicsCategory.tembok
         currentProjectile?.physicsBody?.collisionBitMask = PhysicsCategory.tembok
         currentProjectile?.physicsBody?.usesPreciseCollisionDetection = true
-        //
-        
         currentProjectile?.physicsBody?.velocity = CGVector(dx: engineSK.kecepatanXAwalEngine(sudutTembak: sudutTembakScene, kecepatanAwal: kecAwalScene), dy: engineSK.kecepatanYAwalEngine(sudutTembak: sudutTembakScene, kecepatanAwal: kecAwalScene))
         
         addChild(currentProjectile ?? projectile)
         
         nodeArrayDeletable.append(currentProjectile ?? projectile)
-        
-        if let emitter = SKEmitterNode(fileNamed: "MyParticle") {
-            currentProjectile?.addChild(emitter)
-//            emitter.physicsBody?.isDynamic = true
-            emitter.targetNode = scene
-            nodeArrayDeletable.append(emitter)
-        }
+//
+//        if let emitter = SKEmitterNode(fileNamed: "MyParticle") {
+//            currentProjectile?.addChild(emitter)
+////            emitter.physicsBody?.isDynamic = true
+//            emitter.targetNode = scene
+//            nodeArrayDeletable.append(emitter)
+//        }
         
         index += 1
-        
     }
 // MARK: - Setup UI Scene
     func setupUI() {
-        setupRing()
-        setupSensor()
+        if isMission {
+            setupRing()
+        }
         setupLantai()
     }
     
-    
     func setupRing() {
-        ring.setScale(0.1)
-        let h = 10
-        let rad = ring.size.width
-        let l = SKPhysicsBody(edgeFrom: CGPoint(x: Int(-rad)/2, y: 0), to: CGPoint(x: Int(-rad)/2 + h, y: 0))
-        let r = SKPhysicsBody(edgeFrom: CGPoint(x: Int(rad/2) - 5, y: 0), to: CGPoint(x: Int(rad/2), y: 0))
-        ring.position = CGPoint(x: size.width * 0.8, y: size.height * 0.5)
-        ring.physicsBody = SKPhysicsBody(bodies: [l,r])
-        ring.physicsBody?.affectedByGravity = false
-        ring.physicsBody?.isDynamic = false
-        addChild(ring)
+        scallingRing()
+        repositioningRing()
+        addRing()
+        setupSensorRing()
     }
     
-    func setupSensor() {
-        let rad = ring.size.width
-        let sensor = SKShapeNode(circleOfRadius: rad/6)
-        sensor.position = CGPoint(x: frame.midX, y: frame.midY)
-        sensor.strokeColor = .yellow
-        sensor.physicsBody = SKPhysicsBody(circleOfRadius: rad/6)
+    func scallingRing() {
+        let setRing = [lingkarKiri, lingkarBawah, lingkarAtas,
+                       lingkarKanan, jaringKiri, jaringKanan, jaringTengah,tiang]
+        for part in setRing {
+            part.setScale(0.15)
+        }
+    }
+    
+    func repositioningRing(xRelatif: CGFloat = 0.8, yRelatif: CGFloat = 0.5) {
+        let setRing = [lingkarKiri, lingkarBawah, lingkarAtas,
+                       lingkarKanan, jaringKiri, jaringKanan, jaringTengah,tiang]
+        
+        let rad = lingkarBawah.size.width
+        lingkarBawah.position = CGPoint(x: size.width * xRelatif, y: size.height * yRelatif)
+        lingkarBawah.zPosition = 1
+       
+        
+        let kiriTexture = SKTexture(imageNamed: "ring_kiri")
+        lingkarKiri.position = CGPoint(x: lingkarBawah.position.x - rad/2 - 5, y: lingkarBawah.position.y + 8)
+        let kiriSize = CGSize(width: lingkarKiri.size.width * 0.5, height: lingkarKiri.size.height * 0.5)
+        lingkarKiri.physicsBody = SKPhysicsBody(texture: kiriTexture, size: kiriSize)
+        
+        
+        let kananTexture = SKTexture(imageNamed: "ring_kanan")
+        lingkarKanan.position = CGPoint(x: lingkarBawah.position.x + rad/2 + 8, y: lingkarBawah.position.y + 7)
+        let kananSize = CGSize(width: lingkarKanan.size.width * 0.5, height: lingkarKanan.size.height * 0.5)
+        lingkarKanan.physicsBody = SKPhysicsBody(texture: kananTexture, size: kananSize)
+
+        
+        lingkarAtas.position = CGPoint(x: lingkarBawah.position.x, y: lingkarBawah.position.y + lingkarKiri.size.height - 2)
+      
+        
+        let jaringKananTexture = SKTexture(imageNamed: "ring_jaring_kanan")
+        jaringKanan.position = CGPoint(x: lingkarBawah.position.x + rad/2 + 4,
+                                       y: lingkarBawah.position.y - lingkarBawah.size.height - 20)
+        let jaringKananSize = CGSize(width: jaringKanan.size.width * 0.5, height: jaringKanan.size.height * 0.5)
+        jaringKanan.physicsBody = SKPhysicsBody(texture: jaringKananTexture, size: jaringKananSize)
+
+        
+        let jaringKiriTexture = SKTexture(imageNamed: "ring_jaring_kiri")
+        jaringKiri.position = CGPoint(x: lingkarBawah.position.x - rad/2 + 2,
+                                      y: lingkarBawah.position.y - lingkarBawah.size.height - 20)
+        let jaringKiriSize = CGSize(width: jaringKiri.size.width * 0.5, height: jaringKiri.size.height * 0.5)
+        jaringKiri.physicsBody = SKPhysicsBody(texture: jaringKiriTexture, size: jaringKiriSize)
+
+        
+        jaringTengah.position = CGPoint(x: lingkarBawah.position.x + 3,
+                                        y: lingkarBawah.position.y - lingkarBawah.size.height - 20)
+        jaringTengah.zPosition = 1
+
+        
+        tiang.position = CGPoint(x: lingkarKanan.position.x + lingkarKanan.size.width, y: lingkarKanan.position.y - tiang.size.height/2)
+        let tiangTexture = SKTexture(imageNamed: "tiang")
+        let tiangSize = CGSize(width: tiang.size.width * 0.5, height: tiang.size.height * 0.5)
+        tiang.physicsBody = SKPhysicsBody(texture: tiangTexture, size: tiangSize)
+        
+        for part in setRing {
+            part.physicsBody?.isDynamic = false
+            part.physicsBody?.affectedByGravity = false
+        }
+        
+        sensor.position = CGPoint(x: jaringTengah.position.x, y: jaringTengah.position.y - 15)
+        
+        
+    }
+    
+    func addRing() {
+        let setRing = [lingkarKiri, lingkarBawah, lingkarAtas,
+                       lingkarKanan, jaringKiri, jaringKanan, jaringTengah,tiang]
+        for part in setRing {
+            addChild(part)
+        }
+    }
+    
+    func setupSensorRing() {
+        sensor.position = CGPoint(x: jaringTengah.position.x, y: jaringTengah.position.y - 15)
+        sensor.strokeColor = .blue
+        sensor.physicsBody = SKPhysicsBody(circleOfRadius: 10)
         sensor.physicsBody?.isDynamic = false
         sensor.physicsBody?.affectedByGravity = false
         sensor.physicsBody?.allowsRotation = false
@@ -311,7 +367,6 @@ class GerakParabolaScene: SKScene {
         sensor.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
         sensor.physicsBody?.collisionBitMask = PhysicsCategory.none
         sensor.physicsBody?.usesPreciseCollisionDetection = true
-
         addChild(sensor)
     }
     
@@ -346,14 +401,6 @@ class GerakParabolaScene: SKScene {
 
 
 // MARK: - Tumbukan kawan~
-struct PhysicsCategory {
-    static let none         : UInt32 = 0b1 << 0
-    static let all          : UInt32 = UInt32.max
-    static let tembok       : UInt32 = 0b1 << 1      // 1
-    static let sensor       : UInt32 = 0b1 << 2//2
-    static let projectile   : UInt32 = 0b1 << 3 //3
-}
-
 extension GerakParabolaScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         // 1
@@ -386,12 +433,6 @@ extension GerakParabolaScene: SKPhysicsContactDelegate {
         print("Hit")
         projectile.physicsBody?.velocity = .zero
         projectile.removeAllChildren()
-        
-        //        if monstersDestroyed > 30 {
-        //            let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
-        //            let gameOverScene = GameOverScene(size: self.size, won: true)
-        //            view?.presentScene(gameOverScene, transition: reveal)
-        //        }
     }
 }
 

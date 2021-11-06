@@ -30,10 +30,10 @@ class ExperimentDetailController: UIViewController {
         var title: String
         
         if experimentVM.check == .Eksplorasi {
-            experimentDetails = experimentVM.experiments.getEksplorasiDetail()
+            experimentDetails = experimentVM.experiment.getEksplorasiDetail()
             title = "Mode Eksplorasi"
         } else {
-            experimentDetails = experimentVM.experiments.getMisiDetail()
+            experimentDetails = experimentVM.experiment.getMisiDetail()
             title = "Mode Misi"
         }
         
@@ -74,7 +74,8 @@ class ExperimentDetailController: UIViewController {
     
     @IBAction func labButton(_ sender: UIButton) {
         let vc = UIStoryboard.init(name: "VirtualLab", bundle: Bundle.main).instantiateViewController(withIdentifier: "virtualLab") as! VirtualLabController
-        vc.experimentVM = self.experimentVM
+//        vc.experimentVM = self.experimentVM
+        vc.virtualLabVM = VirtualLabViewModel(check: experimentVM.check, experiment: experimentVM.experiment)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

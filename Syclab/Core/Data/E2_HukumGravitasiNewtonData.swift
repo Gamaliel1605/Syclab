@@ -32,4 +32,6 @@ struct E2_HukumGravitasiNewtonData {
                                     ExperimentOption(title: .Kuis,
                                                       desc: "Kerjakan kuis untuk uji pemahanamu",
                                                       imgName: "modeplaceholder")]
+    
+    static let missions = ["sssss", "asdda"]
 }

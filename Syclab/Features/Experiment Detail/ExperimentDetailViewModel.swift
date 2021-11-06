@@ -10,12 +10,12 @@ import UIKit
 
 class ExperimentDetailViewModel {
     
-    let experiments: Experiments
+    let experiment: Experiments
     let navTitle: String
     let check: modeOption
     
     init(experiments: Experiments, check: modeOption) {
-        self.experiments = experiments
+        self.experiment = experiments
         self.navTitle = experiments.getExpTitle()
         self.check = check
     }
