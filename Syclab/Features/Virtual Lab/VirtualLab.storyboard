@@ -355,6 +355,7 @@
                     <connections>
                         <outlet property="descMissionLabel" destination="DOa-uT-RH5" id="RmH-wO-Hzo"/>
                         <outlet property="gravitationButton" destination="W0d-qv-4me" id="UQw-mG-ChZ"/>
+                        <outlet property="gravitationLbl" destination="jC6-Nw-3yK" id="7bf-Mi-jz3"/>
                         <outlet property="infoButton" destination="yW6-yU-TZN" id="Kru-Xo-76E"/>
                         <outlet property="kecepatanLbl" destination="kML-Me-bXa" id="r9O-9k-6Qg"/>
                         <outlet property="kecepatanSlider" destination="hFt-J2-WGU" id="OUQ-j5-7cN"/>

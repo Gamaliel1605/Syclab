@@ -11,11 +11,12 @@ import SpriteKit
 
 
 
-class VirtualLabController: UIViewController, GravityPopoverDelegate {
+class VirtualLabController: UIViewController {
     
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var theoryButton: UIButton!
     @IBOutlet weak var gravitationButton: UIButton!
+    @IBOutlet weak var gravitationLbl: UILabel!
     @IBOutlet weak var playButton: DesignableButton!
     @IBOutlet weak var resetButton: DesignableButton!
     @IBOutlet weak var sudutLbl: UILabel!
@@ -186,13 +187,16 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     
     // MARK: - SETUP UI
     
+    //        override var prefersStatusBarHidden: Bool {
+    //            return true
+    //        }
+    //
+    
     func setupSpriteView() {
         spriteScene = GerakParabolaScene(isMission: virtualLabVM?.isMission ?? false, size: spriteView.bounds.size)
         spriteScene.delegate = self
         spriteView.delegate = self
         spriteView.presentScene(spriteScene)
-        
-        
     }
     
     func setupScene() {
@@ -233,6 +237,7 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     
     func setupSliders() {
         if virtualLabVM?.isMission ?? false {
+            
             switch virtualLabVM?.experiment {
             case .E1_GerakParabola:
                 guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
@@ -267,12 +272,11 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
         }
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
     func setupMissionView() {
         if virtualLabVM?.isMission ?? false {
+            gravitationButton.isEnabled = false
+            gravitationLbl.isEnabled = false
+            
             switch virtualLabVM?.experiment {
             case .E1_GerakParabola:
                 guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
@@ -288,13 +292,17 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
                     if slider == .Sudut {
                         sudutSlider.isEnabled = true
                         sudutTxtField.isEnabled = true
+                        sudutLbl.isEnabled = true
                         kecepatanSlider.isEnabled = false
                         kecepatanTxtField.isEnabled = false
+                        kecepatanLbl.isEnabled = false
                     }
                     if slider == .Kecepatan {
                         kecepatanSlider.isEnabled = true
                         kecepatanTxtField.isEnabled = true
+                        kecepatanLbl.isEnabled = true
                         sudutSlider.isEnabled = false
+                        sudutTxtField.isEnabled = false
                         sudutTxtField.isEnabled = false
                     }
                 }
@@ -355,15 +363,15 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     func setupTheoryButton () {
         //        theoryButton.layer.cornerRadius = 8
     }
-    
-    
-    // MARK: - PROTOCOL
+}
+// MARK: - PROTOCOL
+extension VirtualLabController: GravityPopoverDelegate {
     func chooseGravity(chosenValue planet: Planet) {
         gravitationButton.setTitle(planet.rawValue + " \(planet.getGravityValue()) m/s²", for: .normal)
-        print("juancog")
+        guard let scene = spriteView.scene as? GerakParabolaScene else {return}
+        scene.gravitasiVektor = (Float(-planet.getGravityValue()))
     }
 }
-
 
 extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
     func update(_ currentTime: TimeInterval, for scene: SKScene) {
