@@ -101,8 +101,6 @@
 		981D5BA8273528D800EB1BB5 /* GerakParabolaMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerakParabolaMission.swift; sourceTree = "<group>"; };
 		982CEA57273670C6004469DA /* masuk_ring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = masuk_ring.mp3; sourceTree = "<group>"; };
 		982CEA58273670C6004469DA /* lempar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lempar.mp3; sourceTree = "<group>"; };
-		982CEA5B27367585004469DA /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
-		982CEA5C27367585004469DA /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		98562DED2730FF0400D1C619 /* EngineGerakParabola.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineGerakParabola.swift; sourceTree = "<group>"; };
 		98562DEF2730FFCA00D1C619 /* MathFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFunctions.swift; sourceTree = "<group>"; };
 		98562DF1273101D500D1C619 /* GerakParabolaScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerakParabolaScene.swift; sourceTree = "<group>"; };
@@ -227,8 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				982CEA58273670C6004469DA /* lempar.mp3 */,
-				982CEA5B27367585004469DA /* background-music-aac.caf */,
-				982CEA5C27367585004469DA /* pew-pew-lei.caf */,
 				982CEA57273670C6004469DA /* masuk_ring.mp3 */,
 			);
 			path = Sounds;
