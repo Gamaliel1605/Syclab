@@ -102,7 +102,7 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
                 guard let scene = spriteView.scene as? GerakParabolaScene else {return}
                 scene.sudutTembakScene = Double(mission.sudutValue)
                 scene.kecAwalScene = mission.kecepatanValue
-                scene.repositioningRing(xRelatif: mission.xRelatif , yRelatif: mission.yRelatif)
+                scene.repositioningRing(xRelatif: mission.xRelatif)
             case .E2_HukumGravitasiNewton:
                 print("omg belom jadi")
             case .none:

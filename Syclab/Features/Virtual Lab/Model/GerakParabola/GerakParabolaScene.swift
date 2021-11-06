@@ -7,10 +7,15 @@
 
 import UIKit
 import SpriteKit
+import AudioToolbox
+
+
 
 class GerakParabolaScene: SKScene {
+    
+    var sound: SystemSoundID = 0
 //    Initializing the player node
-    let player          = SKSpriteNode(imageNamed: "pocong")
+    let player          = SKSpriteNode(imageNamed: "man_body")
 //    Initializing the ring nodes
     let lingkarKanan    = SKSpriteNode(imageNamed: "ring_kanan")
     let lingkarKiri     = SKSpriteNode(imageNamed: "ring_kiri")
@@ -21,8 +26,8 @@ class GerakParabolaScene: SKScene {
     let jaringTengah    = SKSpriteNode(imageNamed: "ring_jaring")
     let tiang           = SKSpriteNode(imageNamed: "tiang")
     let sensor = SKShapeNode(circleOfRadius: 10)
-//    let bg = SKSpriteNode(imageNamed: "background")
-//    let roda = SKSpriteNode(imageNamed: "roda")
+    let bg = SKSpriteNode(imageNamed: "bg_tanpatiang")
+    let lenganUtuh = SKSpriteNode(imageNamed: "lengan_utuh")
 //    Initializing the projectiles
     let projectile = SKSpriteNode(imageNamed: "bola")
     let projectile1 = SKSpriteNode(imageNamed: "bola")
@@ -117,7 +122,7 @@ class GerakParabolaScene: SKScene {
 //        currentProjectile?.addChild(vectorX)
 //        currentProjectile?.addChild(vectorY)
         
-        player.zRotation = CGFloat(sudutTembakScene)/55 + 30.15
+//        player.zRotation = CGFloat(sudutTembakScene)/55 + 30.15
         
         
         if lineActive == true {
@@ -182,35 +187,24 @@ class GerakParabolaScene: SKScene {
         physicsWorld.speed = 0.3
         
         initialX = size.width * 0.1
-        initialY = size.height * 0.2
+        initialY = size.height * 0.1
+        
+        var sound: SystemSoundID = 0
+        
+        
         player.position = CGPoint(x: initialX, y: initialY)
         
         setupUI()
-//        bg.position = CGPoint(x: size.width * 0.5, y: size.height * 0.5)
-//        bg.zPosition = -1
-//        addChild(bg)
-
         
-        player.anchorPoint = CGPoint(x: 0.45, y: 0.3)
-        player.zPosition = 0.5
-//        roda.zPosition = 1
-//        player.addChild(roda)
-        
-//        player.anchorPoint = CGPoint(x: 0.0, y: 0.0)
-        addChild(player)
-        janganDihapusArray.append(player)
+       
         
         backgroundColor = SKColor.white // Set the background color
-        
-
-        
+    
         projectileArray = [projectile, projectile1, projectile2, projectile3, projectile4, projectile5, projectile6,
                            projectile7, projectile8, projectile9, projectile10]
         for projectile in projectileArray {
             projectile.scale(to: CGSize(width: 40, height: 40))
         }
-        
-//        physicsBody = SKPhysicsBody(edgeLoopFrom: frame.inset(by: UIEdgeInsets(top: 210, left: 0, bottom: 0, right: 0)))
         
         totalWaktuEngine = engineSK.waktuUntukJarakTerjauhEngine(kecepatanAwal: kecAwalScene, sudutTembak: sudutTembakScene, gravitasi: gravitasiVektor, ketinggian: ketinggianEngine )
         totalWaktuReal = engineSK.waktuUntukJarakTerjauhReal(kecepatanAwal: kecAwalScene, sudutTembak: sudutTembakScene, gravitasi: gravitasiVektor, ketinggian: ketinggianReal)
@@ -253,6 +247,10 @@ class GerakParabolaScene: SKScene {
         currentProjectile?.physicsBody?.collisionBitMask = PhysicsCategory.tembok
         currentProjectile?.physicsBody?.usesPreciseCollisionDetection = true
         currentProjectile?.physicsBody?.velocity = CGVector(dx: engineSK.kecepatanXAwalEngine(sudutTembak: sudutTembakScene, kecepatanAwal: kecAwalScene), dy: engineSK.kecepatanYAwalEngine(sudutTembak: sudutTembakScene, kecepatanAwal: kecAwalScene))
+//        run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
+        let url = Bundle.main.url(forResource: "lempar", withExtension: "mp3")!
+        AudioServicesCreateSystemSoundID(url as CFURL, &sound)
+        AudioServicesPlaySystemSound(sound)
         
         addChild(currentProjectile ?? projectile)
         
@@ -272,7 +270,15 @@ class GerakParabolaScene: SKScene {
         if isMission {
             setupRing()
         }
+        setupBG()
         setupLantai()
+        setupPlayer()
+    }
+    func setupBG() {
+        bg.position = CGPoint(x: frame.midX, y: frame.midY)
+        bg.size = CGSize(width: size.width, height: size.height)
+        bg.zPosition = -1
+        addChild(bg)
     }
     
     func setupRing() {
@@ -280,6 +286,27 @@ class GerakParabolaScene: SKScene {
         repositioningRing()
         addRing()
         setupSensorRing()
+    }
+    
+    func setupPlayer() {
+        let playerPart = [player]
+        for part in playerPart {
+            part.setScale(0.08)
+        }
+        lenganUtuh.setScale(0.5)
+        
+        player.anchorPoint = CGPoint(x: 0.45, y: 0.3)
+        player.zPosition = 0.5
+        lenganUtuh.zPosition = 1
+        lenganUtuh.position = CGPoint(x: frame.midX, y: frame.midY)
+        
+//        addChild(lenganUtuh)
+        player.addChild(lenganUtuh)
+        
+        
+        addChild(player)
+        janganDihapusArray.append(player)
+        janganDihapusArray.append(lenganUtuh)
     }
     
     func scallingRing() {
@@ -290,12 +317,12 @@ class GerakParabolaScene: SKScene {
         }
     }
     
-    func repositioningRing(xRelatif: CGFloat = 0.8, yRelatif: CGFloat = 0.5) {
+    func repositioningRing(xRelatif: CGFloat = 0.8) {
         let setRing = [lingkarKiri, lingkarBawah, lingkarAtas,
                        lingkarKanan, jaringKiri, jaringKanan, jaringTengah,tiang]
         
         let rad = lingkarBawah.size.width
-        lingkarBawah.position = CGPoint(x: size.width * xRelatif, y: size.height * yRelatif)
+        lingkarBawah.position = CGPoint(x: size.width * xRelatif, y: size.height * 0.42)
         lingkarBawah.zPosition = 1
        
         
@@ -358,7 +385,7 @@ class GerakParabolaScene: SKScene {
     
     func setupSensorRing() {
         sensor.position = CGPoint(x: jaringTengah.position.x, y: jaringTengah.position.y - 15)
-        sensor.strokeColor = .blue
+        sensor.strokeColor = .clear
         sensor.physicsBody = SKPhysicsBody(circleOfRadius: 10)
         sensor.physicsBody?.isDynamic = false
         sensor.physicsBody?.affectedByGravity = false
@@ -381,7 +408,7 @@ class GerakParabolaScene: SKScene {
     }
 
     func setupLantai() {
-        let lantai = SKSpriteNode(color: SKColor.red, size: CGSize(width: 3000, height: 10))
+        let lantai = SKSpriteNode(color: SKColor.clear, size: CGSize(width: 3000, height: 10))
         lantai.position = CGPoint(x: initialX, y: initialY - 50)
         lantai.zPosition = 0.3
         lantai.physicsBody = SKPhysicsBody(rectangleOf: lantai.size)
@@ -426,6 +453,10 @@ extension GerakParabolaScene: SKPhysicsContactDelegate {
         if ((firstBody.categoryBitMask & PhysicsCategory.sensor != 0) &&
             (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
                 isFinish = true
+//                run(SKAction.playSoundFileNamed("masuk_ring.mp3", waitForCompletion: false))
+            let url = Bundle.main.url(forResource: "masuk_ring", withExtension: "mp3")!
+            AudioServicesCreateSystemSoundID(url as CFURL, &sound)
+            AudioServicesPlaySystemSound(sound)
         }
     }
     
