@@ -24,15 +24,19 @@ class FinishQuiz: UIViewController {
     
     weak var delegate: QuizAlertProtocol?
     
+    var quizVM: QuizViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         quizView.layer.cornerRadius = 17
-        quizScore.text = "Score: \("")"
+        quizScore.text = "Score: \(quizVM.quizScore)"
         quizLabel_3.text = "menyelesaikan kuis materi \("")!"
     }
     
     @IBAction func keluarTapped(_ sender: Any) {
+        quizVM.quizScore = 0
+        
         self.dismiss(animated: true, completion: nil)
         delegate?.onTapKeluarQuiz()
     }
