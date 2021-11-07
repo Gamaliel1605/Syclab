@@ -22,6 +22,8 @@
 		142498FC272793C60050F18D /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498FB272793C60050F18D /* AttributedString.swift */; };
 		14B4053527337EA300E17BDB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4053427337EA300E17BDB /* Protocols.swift */; };
 		981D5BA9273528D800EB1BB5 /* GerakParabolaMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D5BA8273528D800EB1BB5 /* GerakParabolaMission.swift */; };
+		982CEA59273670C6004469DA /* masuk_ring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 982CEA57273670C6004469DA /* masuk_ring.mp3 */; };
+		982CEA5A273670C6004469DA /* lempar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 982CEA58273670C6004469DA /* lempar.mp3 */; };
 		98562DEE2730FF0400D1C619 /* EngineGerakParabola.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98562DED2730FF0400D1C619 /* EngineGerakParabola.swift */; };
 		98562DF02730FFCA00D1C619 /* MathFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98562DEF2730FFCA00D1C619 /* MathFunctions.swift */; };
 		98562DF2273101D500D1C619 /* GerakParabolaScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98562DF1273101D500D1C619 /* GerakParabolaScene.swift */; };
@@ -97,6 +99,8 @@
 		142498FB272793C60050F18D /* AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
 		14B4053427337EA300E17BDB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		981D5BA8273528D800EB1BB5 /* GerakParabolaMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerakParabolaMission.swift; sourceTree = "<group>"; };
+		982CEA57273670C6004469DA /* masuk_ring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = masuk_ring.mp3; sourceTree = "<group>"; };
+		982CEA58273670C6004469DA /* lempar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lempar.mp3; sourceTree = "<group>"; };
 		98562DED2730FF0400D1C619 /* EngineGerakParabola.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineGerakParabola.swift; sourceTree = "<group>"; };
 		98562DEF2730FFCA00D1C619 /* MathFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFunctions.swift; sourceTree = "<group>"; };
 		98562DF1273101D500D1C619 /* GerakParabolaScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerakParabolaScene.swift; sourceTree = "<group>"; };
@@ -217,6 +221,15 @@
 			path = "Experiment Detail Data Store";
 			sourceTree = "<group>";
 		};
+		982CEA5627367046004469DA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				982CEA58273670C6004469DA /* lempar.mp3 */,
+				982CEA57273670C6004469DA /* masuk_ring.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		98562DEC2730FEEF00D1C619 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,6 +298,7 @@
 				EABCDE76271EED9D00CA2677 /* Features */,
 				EABCDE75271EED9000CA2677 /* Application */,
 				EABCDE72271EED7C00CA2677 /* Helpers */,
+				982CEA5627367046004469DA /* Sounds */,
 				EABCDE71271EED6200CA2677 /* Resource */,
 				EABCDE6E271EED3D00CA2677 /* Core */,
 				EABCDE5E271EED1B00CA2677 /* ViewController.swift */,
@@ -532,6 +546,7 @@
 				EABCDE80271EEE8200CA2677 /* VirtualLab.storyboard in Resources */,
 				EA1BD2A72731575500B879A0 /* FinishMission.xib in Resources */,
 				98FD8C6727281A55006ECB8A /* GravityPopoverViewController.xib in Resources */,
+				982CEA59273670C6004469DA /* masuk_ring.mp3 in Resources */,
 				EABCDE64271EED1C00CA2677 /* Assets.xcassets in Resources */,
 				EABCDE62271EED1B00CA2677 /* Main.storyboard in Resources */,
 				EABCDE87271EEEE100CA2677 /* ExperimentDetail.storyboard in Resources */,
@@ -541,6 +556,7 @@
 				EAA2984D27316A6B00B5E303 /* EveryMission.xib in Resources */,
 				EABCDE95271EEF9F00CA2677 /* Home.storyboard in Resources */,
 				141DA6482732C9B0007E8DAF /* LabInstructions.xib in Resources */,
+				982CEA5A273670C6004469DA /* lempar.mp3 in Resources */,
 				EA6E764D273160CF00FFC46C /* FinishQuiz.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

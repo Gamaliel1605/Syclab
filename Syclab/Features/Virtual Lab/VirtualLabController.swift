@@ -7,11 +7,16 @@
 
 import UIKit
 import SpriteKit
-class VirtualLabController: UIViewController, GravityPopoverDelegate {
+
+
+
+
+class VirtualLabController: UIViewController {
     
     @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var theoryButton: UIButton!
     @IBOutlet weak var gravitationButton: UIButton!
+    @IBOutlet weak var gravitationLbl: UILabel!
     @IBOutlet weak var playButton: DesignableButton!
     @IBOutlet weak var resetButton: DesignableButton!
     @IBOutlet weak var sudutLbl: UILabel!
@@ -36,13 +41,63 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
         setupSpriteView()
         setupScene()
         setupControlPanel()
+        
+        self.navigationItem.hidesBackButton = true 
+        let newBackButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.back(sender:)))
+        self.navigationItem.leftBarButtonItem = newBackButton
     }
     // MARK: - Pressed Button Function
     
-    //    @objc func playButtonPressed(sender: UIButton!) {
-    //        guard let gameScene = spriteView.scene as? GerakParabolaScene else {return}
-    //        gameScene.shootStraight()
-    //    }
+    @objc func back(sender: UIBarButtonItem) {
+        let exitAlert = Exit()
+        exitAlert.delegate = self
+        self.present(exitAlert, animated: true, completion: nil)
+
+        }
+    
+    @IBAction func instructionButtonPressed(_ sender: Any) {
+        let labInstructionsView = LabInstructions(frame: CGRect(x: self.view.bounds.width - (367+20),
+                                                                y: 40,
+                                                                width: 367,
+                                                                height: 527)
+        )
+        labInstructionsView.delegate = self
+        labInstructionsView.tag = 100
+        self.view.addSubview(labInstructionsView)
+        
+        let labInstructionsContentView = UIView()
+        labInstructionsView.scrollView.addSubview(labInstructionsContentView)
+        labInstructionsContentView.translatesAutoresizingMaskIntoConstraints = false
+        labInstructionsContentView.topAnchor.constraint(equalTo: labInstructionsView.scrollView.topAnchor).isActive = true
+        labInstructionsContentView.leadingAnchor.constraint(equalTo: labInstructionsView.scrollView.leadingAnchor).isActive = true
+        labInstructionsContentView.trailingAnchor.constraint(equalTo: labInstructionsView.scrollView.trailingAnchor).isActive = true
+        labInstructionsContentView.bottomAnchor.constraint(equalTo: labInstructionsView.scrollView.bottomAnchor).isActive = true
+        labInstructionsContentView.widthAnchor.constraint(equalTo: labInstructionsView.scrollView.widthAnchor).isActive = true
+        
+        var elements = [UIView]()
+        
+        guard let experiment = virtualLabVM?.experiment else {return}
+        let labInstructionsContents = experiment.getLabInstructions().labInstructions
+        for (index, labInstructionsContent) in labInstructionsContents.enumerated() {
+            if(labInstructionsContent is ContentImage) {
+                let imageView = (labInstructionsContent as! ContentImage).create(
+                    elementsContainer: labInstructionsContentView,
+                    elementIndex: index,
+                    elements: elements,
+                    lastElementIndex: labInstructionsContents.endIndex - 1
+                )
+                elements.append(imageView)
+            } else if (labInstructionsContent is ContentLabel) {
+                let label = (labInstructionsContent as! ContentLabel).create(
+                    elementsContainer: labInstructionsContentView,
+                    elementIndex: index,
+                    elements: elements,
+                    lastElementIndex: labInstructionsContents.endIndex - 1
+                )
+                elements.append(label)
+            }
+        }
+    }
     
     @IBAction func resetButtonPressed(_ sender: Any) {
         guard let scene = spriteScene as? GerakParabolaScene else {return}
@@ -80,18 +135,68 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
         gameScene.shootStraight()
     }
     @IBAction func theoryButtonPressed(_ sender: Any) {
+        let backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
+        backgroundView.backgroundColor = .black.withAlphaComponent(0.3)
+        backgroundView.tag = 100
+        self.view.addSubview(backgroundView)
+        
+        let conceptTheoryView = ConceptTheory(frame: CGRect(x: self.view.center.x - (843/2),
+                                                            y: self.view.center.y - (620/2),
+                                                            width: 843,
+                                                            height: 620)
+        )
+        conceptTheoryView.delegate = self
+        
+        backgroundView.addSubview(conceptTheoryView)
+        
+        let conceptTheoryContentView = UIView()
+        conceptTheoryView.scrollView.addSubview(conceptTheoryContentView)
+        conceptTheoryContentView.translatesAutoresizingMaskIntoConstraints = false
+        conceptTheoryContentView.topAnchor.constraint(equalTo: conceptTheoryView.scrollView.topAnchor).isActive = true
+        conceptTheoryContentView.leadingAnchor.constraint(equalTo: conceptTheoryView.scrollView.leadingAnchor).isActive = true
+        conceptTheoryContentView.trailingAnchor.constraint(equalTo: conceptTheoryView.scrollView.trailingAnchor).isActive = true
+        conceptTheoryContentView.bottomAnchor.constraint(equalTo: conceptTheoryView.scrollView.bottomAnchor).isActive = true
+        conceptTheoryContentView.widthAnchor.constraint(equalTo: conceptTheoryView.scrollView.widthAnchor).isActive = true
+        
+        var elements = [UIView]()
+        
+        guard let experiment = virtualLabVM?.experiment else {return}
+        let conceptTheoryContents = experiment.getConceptTheory().conceptTheory
+        for (index, conceptTheoryContent) in conceptTheoryContents.enumerated() {
+            if (conceptTheoryContent is ContentImage) {
+                let imageView = (conceptTheoryContent as! ContentImage).create(
+                    elementsContainer: conceptTheoryContentView,
+                    elementIndex: index,
+                    elements: elements,
+                    lastElementIndex: conceptTheoryContents.endIndex - 1
+                )
+                elements.append(imageView)
+            } else if (conceptTheoryContent is ContentLabel) {
+                let label = (conceptTheoryContent as! ContentLabel).create(
+                    elementsContainer: conceptTheoryContentView,
+                    elementIndex: index,
+                    elements: elements,
+                    lastElementIndex: conceptTheoryContents.endIndex - 1
+                )
+                elements.append(label)
+            }
+        }
+
         
     }
     
     // MARK: - SETUP UI
+    
+    //        override var prefersStatusBarHidden: Bool {
+    //            return true
+    //        }
+    //
     
     func setupSpriteView() {
         spriteScene = GerakParabolaScene(isMission: virtualLabVM?.isMission ?? false, size: spriteView.bounds.size)
         spriteScene.delegate = self
         spriteView.delegate = self
         spriteView.presentScene(spriteScene)
-        
-        
     }
     
     func setupScene() {
@@ -102,7 +207,7 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
                 guard let scene = spriteView.scene as? GerakParabolaScene else {return}
                 scene.sudutTembakScene = Double(mission.sudutValue)
                 scene.kecAwalScene = mission.kecepatanValue
-                scene.repositioningRing(xRelatif: mission.xRelatif , yRelatif: mission.yRelatif)
+                scene.repositioningRing(xRelatif: mission.xRelatif)
             case .E2_HukumGravitasiNewton:
                 print("omg belom jadi")
             case .none:
@@ -132,6 +237,7 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     
     func setupSliders() {
         if virtualLabVM?.isMission ?? false {
+            
             switch virtualLabVM?.experiment {
             case .E1_GerakParabola:
                 guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
@@ -166,12 +272,11 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
         }
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
     func setupMissionView() {
         if virtualLabVM?.isMission ?? false {
+            gravitationButton.isEnabled = false
+            gravitationLbl.isEnabled = false
+            
             switch virtualLabVM?.experiment {
             case .E1_GerakParabola:
                 guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
@@ -187,13 +292,17 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
                     if slider == .Sudut {
                         sudutSlider.isEnabled = true
                         sudutTxtField.isEnabled = true
+                        sudutLbl.isEnabled = true
                         kecepatanSlider.isEnabled = false
                         kecepatanTxtField.isEnabled = false
+                        kecepatanLbl.isEnabled = false
                     }
                     if slider == .Kecepatan {
                         kecepatanSlider.isEnabled = true
                         kecepatanTxtField.isEnabled = true
+                        kecepatanLbl.isEnabled = true
                         sudutSlider.isEnabled = false
+                        sudutTxtField.isEnabled = false
                         sudutTxtField.isEnabled = false
                     }
                 }
@@ -254,15 +363,15 @@ class VirtualLabController: UIViewController, GravityPopoverDelegate {
     func setupTheoryButton () {
         //        theoryButton.layer.cornerRadius = 8
     }
-    
-    
-    // MARK: - PROTOCOL
+}
+// MARK: - PROTOCOL
+extension VirtualLabController: GravityPopoverDelegate {
     func chooseGravity(chosenValue planet: Planet) {
         gravitationButton.setTitle(planet.rawValue + " \(planet.getGravityValue()) m/s²", for: .normal)
-        print("juancog")
+        guard let scene = spriteView.scene as? GerakParabolaScene else {return}
+        scene.gravitasiVektor = (Float(-planet.getGravityValue()))
     }
 }
-
 
 extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
     func update(_ currentTime: TimeInterval, for scene: SKScene) {
@@ -328,6 +437,18 @@ extension VirtualLabController: FinishAlertProtocol {
     func onTapToQuiz() {
         print("kuis belom jadi")
     }
-    
-    
+}
+
+extension VirtualLabController: ExitAlertProtocol {
+    func onTapKeluar() {
+        self.navigationController?.popViewController(animated: true)
+    }
+}
+
+extension VirtualLabController: DismissProtocol {
+    func dismissView() {
+        if let viewWithTag = self.view.viewWithTag(100) {
+            viewWithTag.removeFromSuperview()
+        }
+    }
 }

@@ -168,7 +168,7 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                                                 enabledVariables: [.Sudut],
                                                 sudut: 30,
                                                 kecepatan: 25),
-                           GerakParabolaMission(xRelatif: 0.8,
+                           GerakParabolaMission(xRelatif: 0.76,
                                                 yRelatif: 0.5,
                                                 mission: "Atur sudut yang tepat agar bola masuk ke dalam ring 2",
                                                 enabledVariables: [.Sudut],
