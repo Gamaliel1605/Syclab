@@ -25,9 +25,10 @@ class GerakParabolaScene: SKScene {
     let jaringKiri      = SKSpriteNode(imageNamed: "ring_jaring_kiri")
     let jaringTengah    = SKSpriteNode(imageNamed: "ring_jaring")
     let tiang           = SKSpriteNode(imageNamed: "tiang")
-    let sensor = SKShapeNode(circleOfRadius: 10)
-    let bg = SKSpriteNode(imageNamed: "bg_tanpatiang")
-    let lenganUtuh = SKSpriteNode(imageNamed: "lengan_utuh")
+    let sensor          = SKShapeNode(circleOfRadius: 10)
+    let bg              = SKSpriteNode(imageNamed: "bg_tanpatiang")
+    let lenganUtuh      = SKSpriteNode(imageNamed: "lengan_utuh_resize2")
+    let lenganBayangan  = SKSpriteNode(imageNamed: "lengan_shadow_resize2")
 //    Initializing the projectiles
     let projectile = SKSpriteNode(imageNamed: "bola")
     let projectile1 = SKSpriteNode(imageNamed: "bola")
@@ -122,7 +123,8 @@ class GerakParabolaScene: SKScene {
 //        currentProjectile?.addChild(vectorX)
 //        currentProjectile?.addChild(vectorY)
         
-//        player.zRotation = CGFloat(sudutTembakScene)/55 + 30.15
+//        lenganUtuh.zRotation = CGFloat(sudutTembakScene)/55
+//        + 30.15
         
         
         if lineActive == true {
@@ -187,9 +189,9 @@ class GerakParabolaScene: SKScene {
         physicsWorld.speed = 0.3
         
         initialX = size.width * 0.1
-        initialY = size.height * 0.1
+        initialY = size.height * 0.15
         
-        var sound: SystemSoundID = 0
+        
         
         
         player.position = CGPoint(x: initialX, y: initialY)
@@ -295,11 +297,11 @@ class GerakParabolaScene: SKScene {
         }
         lenganUtuh.setScale(0.5)
         
-        player.anchorPoint = CGPoint(x: 0.45, y: 0.3)
+//        player.anchorPoint = CGPoint(x: 0.45, y: 0.3)
         player.zPosition = 0.5
         lenganUtuh.zPosition = 1
-        lenganUtuh.position = CGPoint(x: frame.midX, y: frame.midY)
-        
+        lenganUtuh.position = CGPoint(x: -player.size.width * 1.5, y: player.size.height * 3.4)
+        lenganUtuh.anchorPoint = CGPoint(x: 0, y: 1)
 //        addChild(lenganUtuh)
         player.addChild(lenganUtuh)
         
@@ -371,7 +373,9 @@ class GerakParabolaScene: SKScene {
         }
         
         sensor.position = CGPoint(x: jaringTengah.position.x, y: jaringTengah.position.y - 15)
-        
+        if !self.children.contains(where: { node in node == sensor}) {
+            addChild(sensor)
+        }
         
     }
     
@@ -394,7 +398,9 @@ class GerakParabolaScene: SKScene {
         sensor.physicsBody?.contactTestBitMask = PhysicsCategory.projectile
         sensor.physicsBody?.collisionBitMask = PhysicsCategory.none
         sensor.physicsBody?.usesPreciseCollisionDetection = true
-        addChild(sensor)
+        if !self.children.contains(where: { node in node == sensor}) {
+            addChild(sensor)
+        }
     }
     
     func setupScoreText() {
