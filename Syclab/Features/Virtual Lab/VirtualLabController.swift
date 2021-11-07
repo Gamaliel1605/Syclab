@@ -378,6 +378,7 @@ extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
         guard let scene = scene as? GerakParabolaScene else {return}
         if scene.isFinish {
             scene.isFinish = false
+            scene.sensor.removeFromParent()
             
             
             if virtualLabVM?.isMission ?? false {
@@ -415,7 +416,6 @@ extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
                         case .none:
                             fatalError("mampus experimentnya ilang")
                         }
-                        
                         scene.resetLab()
                     }
                 } else {
