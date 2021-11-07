@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HomeCellID" reuseIdentifier="homeCell" id="gTV-IL-0wX" customClass="HomeCell" customModule="Syclab" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="466" height="304"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="466" height="304"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ogf-3K-4R6">
+                        <rect key="frame" x="0.0" y="0.0" width="466" height="304"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Vus-MB-o2e">
+                                <rect key="frame" x="7" y="9" width="450" height="201"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="bHr-bT-j7s"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gerak Parabola" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuy-i5-J5K">
+                                <rect key="frame" x="73" y="242" width="320" height="39"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41176470588235292" green="0.60784313725490191" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uuy-i5-J5K" firstAttribute="leading" secondItem="Ogf-3K-4R6" secondAttribute="leading" constant="73" id="DQ8-nv-j9I"/>
+                            <constraint firstItem="Vus-MB-o2e" firstAttribute="top" secondItem="Ogf-3K-4R6" secondAttribute="top" constant="9" id="GK1-Uq-MUL"/>
+                            <constraint firstAttribute="trailing" secondItem="Vus-MB-o2e" secondAttribute="trailing" constant="9" id="JUS-lu-dYx"/>
+                            <constraint firstAttribute="trailing" secondItem="uuy-i5-J5K" secondAttribute="trailing" constant="73" id="MRa-ka-fIP"/>
+                            <constraint firstItem="uuy-i5-J5K" firstAttribute="top" secondItem="Vus-MB-o2e" secondAttribute="bottom" constant="32" id="l4v-hb-oaN"/>
+                            <constraint firstItem="Vus-MB-o2e" firstAttribute="leading" secondItem="Ogf-3K-4R6" secondAttribute="leading" constant="7" id="vAY-nO-nLp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ogf-3K-4R6" secondAttribute="bottom" id="Bl2-xt-Huy"/>
+                <constraint firstAttribute="trailing" secondItem="Ogf-3K-4R6" secondAttribute="trailing" id="JNG-9E-tdX"/>
+                <constraint firstItem="Ogf-3K-4R6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="VRn-xP-aNv"/>
+                <constraint firstItem="Ogf-3K-4R6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qaq-Qw-AKg"/>
+            </constraints>
+            <connections>
+                <outlet property="cardView" destination="Ogf-3K-4R6" id="28P-25-hD1"/>
+                <outlet property="expImageHome" destination="Vus-MB-o2e" id="lRh-hL-630"/>
+                <outlet property="expLabel" destination="uuy-i5-J5K" id="4J2-zs-pJ5"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="placeholder" width="453" height="208"/>
+    </resources>
+</document>

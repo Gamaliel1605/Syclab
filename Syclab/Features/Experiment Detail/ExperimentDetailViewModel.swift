@@ -10,4 +10,20 @@ import UIKit
 
 class ExperimentDetailViewModel {
     
+    let experiment: Experiments
+    let navTitle: String
+    let check: modeOption
+    
+    init(experiments: Experiments, check: modeOption) {
+        self.experiment = experiments
+        self.navTitle = experiments.getExpTitle()
+        self.check = check
+    }
+    
+}
+
+enum modeOption: String {
+    case Eksplorasi = "Eksplorasi",
+         Misi = "Misi",
+         Kuis = "Kuis"
 }

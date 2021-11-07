@@ -9,5 +9,6 @@ import Foundation
 import UIKit
 
 class HomeViewModel {
+    let expDatas = Experiments.getExpData()
     
 }
