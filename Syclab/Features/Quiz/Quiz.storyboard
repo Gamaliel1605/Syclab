@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bOv-BV-mId">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bOv-BV-mId">
     <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,6 @@
         <!--Quiz Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Y6W-OH-hqX" customClass="QuizController" customModule="Syclab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
@@ -211,6 +210,7 @@ x = vo² sin 2α x 1/g                    50 = vo²
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="536" y="198"/>
         </scene>
@@ -453,6 +453,20 @@ x = vo² sin 2α x 1/g                    50 = vo²
             <point key="canvasLocation" x="-406" y="5"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="PAG-OH-qBm">
+            <size key="intrinsicContentSize" width="170.5" height="43"/>
+        </designable>
+        <designable name="plk-bh-tpj">
+            <size key="intrinsicContentSize" width="206" height="43"/>
+        </designable>
+        <designable name="rgS-kj-Ddo">
+            <size key="intrinsicContentSize" width="169" height="43"/>
+        </designable>
+        <designable name="wxg-Qw-pcZ">
+            <size key="intrinsicContentSize" width="126" height="43"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Quiz_placeholder" width="452" height="221"/>
         <systemColor name="systemGreenColor">
