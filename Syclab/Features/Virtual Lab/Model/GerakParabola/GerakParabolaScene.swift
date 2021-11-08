@@ -10,11 +10,14 @@ import SpriteKit
 import AudioToolbox
 
 struct VerticalPosition {
-    
+    static let background   : CGFloat = -1
+    static let dotBola      : CGFloat = 0.05
+    static let player       : CGFloat = 0.06
+    static let bola         : CGFloat = 0.07
+    static let bolaPH       : CGFloat = 0.08
+    static let lenganKanan  : CGFloat = 0.09
+    static let setRing_luar : CGFloat = 1
 }
-
-
-
 
 class GerakParabolaScene: SKScene {
     
@@ -32,7 +35,7 @@ class GerakParabolaScene: SKScene {
     let tiang           = SKSpriteNode(imageNamed: "tiang")
     let sensor          = SKShapeNode(circleOfRadius: 10)
     let bg              = SKSpriteNode(imageNamed: "bg_tanpatiang")
-    let lenganUtuh      = SKSpriteNode(imageNamed: "Lengan_utuh_resize2")
+    let lenganKanan      = SKSpriteNode(imageNamed: "Lengan_utuh_resize2")
     let lenganBayangan  = SKSpriteNode(imageNamed: "Lengan_shadow_resize2")
 //    Initializing the projectiles
     let bolaPlaceholder = SKSpriteNode(imageNamed: "bola")
@@ -110,7 +113,7 @@ class GerakParabolaScene: SKScene {
     }
     override func didSimulatePhysics() {
         super.didSimulatePhysics()
-        player.position = CGPoint(x: initialX, y: initialY)
+//        player.position = CGPoint(x: initialX, y: initialY)
     }
     
     override func didApplyConstraints() {
@@ -135,25 +138,26 @@ class GerakParabolaScene: SKScene {
 //        + 30.15
         
         if lineActive == true {
-            //        guard let positionBuled = currentProjectile?.position else {return}
             for projectileSekarang in projectileArray {
                 if projectileSekarang.physicsBody?.velocity != nil && projectileSekarang.physicsBody?.velocity != .zero {
-                    let buled = SKShapeNode(circleOfRadius: 5)
-                    buled.setScale(5)
-                    buled.zPosition = 0.4
+                    let buled = SKShapeNode(circleOfRadius: (currentProjectile?.size.width)!/10)
+                    buled.zPosition = VerticalPosition.dotBola
                     buled.fillColor = SKColor.red
                     buled.position = projectileSekarang.position
                     guard indexBentol % 10 == 0 else {
                         indexBentol += 1
                         return
                     }
-                    if children.count > janganDihapusArray.count {
+                    print("ini children \(children.count + player.children.count + lenganKanan.children.count)")
+                    print(janganDihapusArray.count)
+
+                    if children.count + player.children.count > janganDihapusArray.count {
+
                         if buled.position.y != CGFloat(0) {
                             bolaPlaceholder.addChild(buled)
                             nodeArrayDeletable.append(buled)
                         }
                     }
-                    
                 }
             }
             indexBentol += 1
@@ -204,13 +208,6 @@ class GerakParabolaScene: SKScene {
         initialXBola = bolaPlaceholder.position.x
         initialYBola = bolaPlaceholder.position.y
         
-        
-        
-        
-    
-        
-       
-        
         backgroundColor = SKColor.white // Set the background color
     
         projectileArray = [projectile, projectile1, projectile2, projectile3, projectile4, projectile5, projectile6,
@@ -241,21 +238,24 @@ class GerakParabolaScene: SKScene {
  
         currentProjectile = projectileArray[index]
         currentProjectile?.position = CGPoint(x: 0, y: 0)
-        currentProjectile?.zPosition = 0.3
+        currentProjectile?.zPosition = VerticalPosition.bola//0.3
         currentProjectile?.physicsBody = SKPhysicsBody(circleOfRadius: currentProjectile!.size.width/2)
         currentProjectile?.physicsBody?.isDynamic = true
         currentProjectile?.physicsBody?.allowsRotation = false
         currentProjectile?.physicsBody?.linearDamping = 0
         currentProjectile?.physicsBody?.angularDamping = 0
-        currentProjectile?.physicsBody?.friction = 1
-        currentProjectile?.physicsBody?.restitution = 0
+//        currentProjectile?.physicsBody?.friction = 1
+        currentProjectile?.physicsBody?.restitution = 0.3
         currentProjectile?.physicsBody?.categoryBitMask = PhysicsCategory.projectile
         currentProjectile?.physicsBody?.contactTestBitMask = PhysicsCategory.tembok
-        currentProjectile?.physicsBody?.collisionBitMask = PhysicsCategory.tembok
+        currentProjectile?.physicsBody?.collisionBitMask = PhysicsCategory.tembok | PhysicsCategory.projectile
         currentProjectile?.physicsBody?.usesPreciseCollisionDetection = true
         currentProjectile?.physicsBody?.velocity = CGVector(dx: engineSK.kecepatanXAwalEngine(sudutTembak: sudutTembakScene, kecepatanAwal: kecAwalScene), dy: engineSK.kecepatanYAwalEngine(sudutTembak: sudutTembakScene, kecepatanAwal: kecAwalScene))
 //        currentProjectile?.scale(to: CGSize(width: 700, height: 700))
 //        run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
+        
+        print(kecAwalScene)
+        print(gravitasiVektor)
         let url = Bundle.main.url(forResource: "lempar", withExtension: "mp3")!
         AudioServicesCreateSystemSoundID(url as CFURL, &sound)
         AudioServicesPlaySystemSound(sound)
@@ -285,7 +285,7 @@ class GerakParabolaScene: SKScene {
     func setupBG() {
         bg.position = CGPoint(x: frame.midX, y: frame.midY)
         bg.size = CGSize(width: size.width, height: size.height)
-        bg.zPosition = -1
+        bg.zPosition = VerticalPosition.background
         addChild(bg)
     }
     
@@ -299,31 +299,28 @@ class GerakParabolaScene: SKScene {
     func setupPlayer() {
         let playerPart = [player]
         for part in playerPart {
-            part.setScale(0.08)
+            part.setScale(0.12)
         }
-        lenganUtuh.setScale(0.5)
+        lenganKanan.setScale(0.5)
         
 //        player.anchorPoint = CGPoint(x: 0.45, y: 0.3)
-        player.position = CGPoint(x: initialX, y: initialY)
-        player.zPosition = 0.5
-        lenganUtuh.zPosition = 1
-        lenganUtuh.anchorPoint = CGPoint(x: 0, y: 1)
-        player.addChild(lenganUtuh)
-        lenganUtuh.position = CGPoint(x: -player.size.width * 1.5, y: player.size.height * 3.4)
-//        lenganUtuh.zRotation = CGFloat(34)/55
-        
-        
+        player.position = CGPoint(x: initialX, y: initialY*1.3)
+        player.zPosition = VerticalPosition.player
+        lenganKanan.zPosition = VerticalPosition.lenganKanan
+        lenganKanan.anchorPoint = CGPoint(x: 0, y: 1)
+        player.addChild(lenganKanan)
+        lenganKanan.position = CGPoint(x: -player.size.width * 1.5, y: player.size.height * 2.5)
+        lenganKanan.zRotation = CGFloat(28)/55
 
-        bolaPlaceholder.zPosition = 0.4
-        
-        
-        lenganUtuh.addChild(bolaPlaceholder)
+        bolaPlaceholder.zPosition = VerticalPosition.bolaPH
+      
+        lenganKanan.addChild(bolaPlaceholder)
         bolaPlaceholder.scale(to: CGSize(width: 700, height: 700))
-        bolaPlaceholder.position = CGPoint(x: lenganUtuh.size.width*2, y: lenganUtuh.size.height*0.4)
+        bolaPlaceholder.position = CGPoint(x: lenganKanan.size.width*2, y: lenganKanan.size.height*0.4)
         addChild(player)
         
         janganDihapusArray.append(player)
-        janganDihapusArray.append(lenganUtuh)
+        janganDihapusArray.append(lenganKanan)
         janganDihapusArray.append(bolaPlaceholder)
     }
     
@@ -341,7 +338,7 @@ class GerakParabolaScene: SKScene {
         
         let rad = lingkarBawah.size.width
         lingkarBawah.position = CGPoint(x: size.width * xRelatif, y: size.height * 0.42)
-        lingkarBawah.zPosition = 2
+        lingkarBawah.zPosition = VerticalPosition.setRing_luar
        
         
         let kiriTexture = SKTexture(imageNamed: "ring_kiri")
@@ -375,12 +372,12 @@ class GerakParabolaScene: SKScene {
         
         jaringTengah.position = CGPoint(x: lingkarBawah.position.x + 3,
                                         y: lingkarBawah.position.y - lingkarBawah.size.height - 20)
-        jaringTengah.zPosition = 2
+        jaringTengah.zPosition = VerticalPosition.setRing_luar
 
         
         tiang.position = CGPoint(x: lingkarKanan.position.x + lingkarKanan.size.width, y: lingkarKanan.position.y - tiang.size.height/2)
         let tiangTexture = SKTexture(imageNamed: "tiang")
-        let tiangSize = CGSize(width: tiang.size.width * 0.5, height: tiang.size.height * 0.5)
+        let tiangSize = CGSize(width: tiang.size.width, height: tiang.size.height)
         tiang.physicsBody = SKPhysicsBody(texture: tiangTexture, size: tiangSize)
         
         for part in setRing {
@@ -430,9 +427,9 @@ class GerakParabolaScene: SKScene {
     }
 
     func setupLantai() {
-        let lantai = SKSpriteNode(color: SKColor.clear, size: CGSize(width: 3000, height: 10))
-        lantai.position = CGPoint(x: initialX, y: initialY - 50)
-        lantai.zPosition = 0.3
+        let lantai = SKSpriteNode(color: SKColor.clear, size: CGSize(width: size.width * 1.6, height: 10))
+        lantai.position = CGPoint(x: initialX, y: initialY*0.1)
+        lantai.zPosition = VerticalPosition.background
         lantai.physicsBody = SKPhysicsBody(rectangleOf: lantai.size)
         lantai.physicsBody!.isDynamic = false
         lantai.physicsBody?.allowsRotation = false
@@ -469,6 +466,7 @@ extension GerakParabolaScene: SKPhysicsContactDelegate {
             if let tembox = firstBody.node as? SKSpriteNode,
                let projectile = secondBody.node as? SKSpriteNode {
                 projectileDidCollideWithTembox(projectile: projectile, tembox: tembox)
+
             }
         }
         
@@ -480,12 +478,25 @@ extension GerakParabolaScene: SKPhysicsContactDelegate {
             AudioServicesCreateSystemSoundID(url as CFURL, &sound)
             AudioServicesPlaySystemSound(sound)
         }
+        
+//        if ((firstBody.categoryBitMask & PhysicsCategory.projectile != 0) &&
+//            (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
+//            firstBody.isDynamic = false
+//            secondBody.isDynamic = false
+//        }
     }
     
     func projectileDidCollideWithTembox(projectile: SKSpriteNode, tembox: SKSpriteNode) {
         print("Hit")
-        projectile.physicsBody?.velocity = .zero
+
         projectile.removeAllChildren()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
+            projectile.physicsBody?.isDynamic = false
+            projectile.physicsBody?.velocity = .zero
+            projectile.removeFromParent()
+        }
+        
     }
 }
 

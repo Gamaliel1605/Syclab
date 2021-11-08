@@ -49,9 +49,14 @@ class VirtualLabController: UIViewController {
     // MARK: - Pressed Button Function
     
     @objc func back(sender: UIBarButtonItem) {
-        let exitAlert = Exit()
-        exitAlert.delegate = self
-        self.present(exitAlert, animated: true, completion: nil)
+        if virtualLabVM?.check == .Kuis {
+            let exitAlert = Exit()
+            exitAlert.delegate = self
+            self.present(exitAlert, animated: true, completion: nil)
+        } else {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
 
         }
     
@@ -233,6 +238,8 @@ class VirtualLabController: UIViewController {
         kecepatanSlider.minimumValue = 10
         
         missionBox.layer.cornerRadius = 8
+        missionBox.layer.borderWidth = 1
+        missionBox.layer.borderColor = UIColor.darkGray.cgColor
     }
     
     func setupSliders() {
@@ -361,7 +368,8 @@ class VirtualLabController: UIViewController {
     }
     
     func setupTheoryButton () {
-        //        theoryButton.layer.cornerRadius = 8
+        theoryButton.tintColor = UIColor.mainColorButton
+        
     }
 }
 // MARK: - PROTOCOL
@@ -379,7 +387,6 @@ extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
         if scene.isFinish {
             scene.isFinish = false
             scene.sensor.removeFromParent()
-            
             
             if virtualLabVM?.isMission ?? false {
                 if virtualLabVM!.indexMission < (virtualLabVM?.missions!.count)! - 1 {
