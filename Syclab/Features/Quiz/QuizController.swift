@@ -34,11 +34,6 @@ class QuizController: UIViewController, QuizAlertProtocol {
         updateUI()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-//        UINavigationBar.appearance().shadowImage = UIImage()
-//    }
-    
     @IBAction func quizAnswerChosen(_ sender: UIButton) {
         //Button Disabling and Enabling
         quizOptionA_Button.isUserInteractionEnabled = false
@@ -105,6 +100,7 @@ class QuizController: UIViewController, QuizAlertProtocol {
             self.view.alpha = 0.5
            
             let quizAlert = FinishQuiz()
+            quizAlert.delegate = self
             self.present(quizAlert, animated: true, completion: nil)
             
             quizAlert.quizScore.text = "Score: \(quizVM.quizScore)"
@@ -120,12 +116,16 @@ class QuizController: UIViewController, QuizAlertProtocol {
     }
     
     func onTapKeluarQuiz() {
+        print("onTapKeluarKuis")
         
-        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "goToHome") as! HomeController
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.isNavigationBarHidden = false
+//        dismiss(animated: true, completion: nil)
         
-//        self.navigationController?.popToRootViewController(animated: true)
+//        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "goToHome") as! HomeController
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func updateUI() {
