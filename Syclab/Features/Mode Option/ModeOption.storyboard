@@ -4,8 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I4h-VY-pZs">
-                                <rect key="frame" x="40" y="64" width="1114" height="710"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rD7-ZP-eMz">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I4h-VY-pZs">
+                                <rect key="frame" x="80" y="64" width="1034" height="710"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="rD7-ZP-eMz">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="estimatedItemSize" width="295" height="560"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -45,10 +45,10 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColorTypography"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="I4h-VY-pZs" secondAttribute="trailing" constant="40" id="Hdc-UG-xX4"/>
-                            <constraint firstItem="I4h-VY-pZs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="MIs-Ou-GSJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="I4h-VY-pZs" secondAttribute="trailing" constant="80" id="Hdc-UG-xX4"/>
+                            <constraint firstItem="I4h-VY-pZs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="80" id="MIs-Ou-GSJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="I4h-VY-pZs" secondAttribute="bottom" constant="40" id="gNo-ir-qVT"/>
                             <constraint firstItem="I4h-VY-pZs" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="lyK-Vy-KUU"/>
                         </constraints>
@@ -63,8 +63,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="BackgroundColorTypography">
+            <color red="0.90200001001358032" green="0.91100001335144043" blue="0.83099997043609619" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

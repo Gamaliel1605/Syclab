@@ -17,6 +17,7 @@ class HomeCell: UICollectionViewCell {
         super.awakeFromNib()
         
         cardView.layer.cornerRadius = 11
+        expImageHome.layer.cornerRadius = 8
     }
 
 }
