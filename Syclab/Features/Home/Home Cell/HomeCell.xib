@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,27 +22,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="466" height="304"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Vus-MB-o2e">
-                                <rect key="frame" x="7" y="9" width="450" height="201"/>
+                                <rect key="frame" x="7" y="9" width="452" height="208"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="450" id="NDj-OI-iN5"/>
-                                    <constraint firstAttribute="height" constant="201" id="bHr-bT-j7s"/>
+                                    <constraint firstAttribute="width" constant="452" id="MWK-pn-oPx"/>
+                                    <constraint firstAttribute="height" constant="208" id="c8b-J5-Hkb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gerak Parabola" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuy-i5-J5K">
                                 <rect key="frame" x="73" y="242" width="320" height="39"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.41176470588235292" green="0.60784313725490191" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="MainColorButton"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vus-MB-o2e" secondAttribute="trailing" constant="7" id="39Y-Up-96z"/>
+                            <constraint firstItem="Vus-MB-o2e" firstAttribute="leading" secondItem="Ogf-3K-4R6" secondAttribute="leading" constant="7" id="51h-jK-ZXQ"/>
                             <constraint firstItem="uuy-i5-J5K" firstAttribute="leading" secondItem="Ogf-3K-4R6" secondAttribute="leading" constant="73" id="DQ8-nv-j9I"/>
-                            <constraint firstItem="Vus-MB-o2e" firstAttribute="top" secondItem="Ogf-3K-4R6" secondAttribute="top" constant="9" id="GK1-Uq-MUL"/>
-                            <constraint firstAttribute="trailing" secondItem="Vus-MB-o2e" secondAttribute="trailing" constant="9" id="JUS-lu-dYx"/>
+                            <constraint firstItem="uuy-i5-J5K" firstAttribute="top" secondItem="Vus-MB-o2e" secondAttribute="bottom" constant="25" id="LrS-zC-0DU"/>
                             <constraint firstAttribute="trailing" secondItem="uuy-i5-J5K" secondAttribute="trailing" constant="73" id="MRa-ka-fIP"/>
-                            <constraint firstItem="uuy-i5-J5K" firstAttribute="top" secondItem="Vus-MB-o2e" secondAttribute="bottom" constant="32" id="l4v-hb-oaN"/>
-                            <constraint firstItem="Vus-MB-o2e" firstAttribute="leading" secondItem="Ogf-3K-4R6" secondAttribute="leading" constant="7" id="vAY-nO-nLp"/>
+                            <constraint firstItem="Vus-MB-o2e" firstAttribute="top" secondItem="Ogf-3K-4R6" secondAttribute="top" constant="9" id="noU-PC-bSp"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -63,5 +64,8 @@
     </objects>
     <resources>
         <image name="placeholder" width="453" height="208"/>
+        <namedColor name="MainColorButton">
+            <color red="0.11999999731779099" green="0.21799999475479126" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

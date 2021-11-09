@@ -19,6 +19,7 @@ class ModeOptionCell: UICollectionViewCell {
         super.awakeFromNib()
         
         cardView.layer.cornerRadius = 11
+        modeImage.layer.cornerRadius = 8
     }
 
 }
