@@ -27,6 +27,7 @@ class QuizController: UIViewController {
     @IBOutlet weak var quizProceedButton: UIButton!
     
     var quizVM: QuizViewModel!
+    var titleCounter: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -165,26 +166,37 @@ class QuizController: UIViewController {
             quizVM.quizQuestionNumber += 1
         }
     }
+    func titleDeterminant() {
+        if quizVM.title == "Gerak Parabola" {
+            titleCounter = 0
+        } else {
+            titleCounter = 1
+        }
+    }
 }
 
 // MARK: - Extentions
+let homeVM = HomeViewModel()
 
 extension QuizController: QuizAlertProtocol {
     func onTapKeluarQuiz() {
         self.navigationController?.isNavigationBarHidden = false
-        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
+        
     }
 }
 
 extension QuizController: ExitAlertProtocol {
     func onTapKeluar() {
-        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     @objc func back(sender: UIBarButtonItem) {
-            let exitAlert = Exit()
-            exitAlert.delegate = self
-            self.present(exitAlert, animated: true, completion: nil)
-            }
+        let exitAlert = Exit()
+        exitAlert.delegate = self
+        self.present(exitAlert, animated: true, completion: nil)
+        
+        exitAlert.exitLabel_1.text = "Tinggalkan quiz?"
+    }
 }
 
 extension UIScrollView {
