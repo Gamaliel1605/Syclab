@@ -99,6 +99,12 @@ class GerakParabolaScene: SKScene {
     var isFinish: Bool = false
     var isMission: Bool = false
     
+    //sounds
+    let lemparUrl = Bundle.main.url(forResource: "lempar", withExtension: "mp3")!
+    let masukRingUrl = Bundle.main.url(forResource: "masuk_ring", withExtension: "mp3")!
+    
+    
+    
     
     init(isMission: Bool, size: CGSize) {
         self.isMission = isMission
@@ -257,8 +263,8 @@ class GerakParabolaScene: SKScene {
         
         print(kecAwalScene)
         print(gravitasiVektor)
-        let url = Bundle.main.url(forResource: "lempar", withExtension: "mp3")!
-        AudioServicesCreateSystemSoundID(url as CFURL, &sound)
+       
+        AudioServicesCreateSystemSoundID(lemparUrl as CFURL, &sound)
         AudioServicesPlaySystemSound(sound)
         
         bolaPlaceholder.addChild(currentProjectile ?? projectile)
@@ -482,9 +488,7 @@ extension GerakParabolaScene: SKPhysicsContactDelegate {
         if ((firstBody.categoryBitMask & PhysicsCategory.sensor != 0) &&
             (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
                 isFinish = true
-//                run(SKAction.playSoundFileNamed("masuk_ring.mp3", waitForCompletion: false))
-            let url = Bundle.main.url(forResource: "masuk_ring", withExtension: "mp3")!
-            AudioServicesCreateSystemSoundID(url as CFURL, &sound)
+            AudioServicesCreateSystemSoundID(masukRingUrl as CFURL, &sound)
             AudioServicesPlaySystemSound(sound)
         }
         

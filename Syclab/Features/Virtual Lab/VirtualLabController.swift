@@ -38,10 +38,7 @@ class VirtualLabController: UIViewController {
         setupSpriteView()
         setupScene()
         setupControlPanel()
-        
-        self.navigationItem.hidesBackButton = true 
-        let newBackButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.back(sender:)))
-        self.navigationItem.leftBarButtonItem = newBackButton
+        setupBackButton()
     }
     
     // MARK: - Pressed Button Function
@@ -133,6 +130,13 @@ class VirtualLabController: UIViewController {
     @IBAction func playButtonPressed(_ sender: Any) {
         guard let gameScene = spriteView.scene as? GerakParabolaScene else {return}
         gameScene.shoot()
+//        gameScene.bolaPlaceholder.removeFromParent()
+//        playButton.isEnabled = false
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) { [weak self] in
+//
+//            self?.playButton.isEnabled = true
+//            gameScene.lenganKanan.addChild(gameScene.bolaPlaceholder)
+//        }
     }
     @IBAction func theoryButtonPressed(_ sender: Any) {
         let backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
@@ -191,6 +195,31 @@ class VirtualLabController: UIViewController {
     //            return true
     //        }
     //
+    func setupBackButton() {
+
+        self.navigationItem.setHidesBackButton(true, animated:false)
+
+        //your custom view for back image with custom size
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 70, height: 700))
+        if let chevron = UIImage(systemName: "chevron.backward") {
+            imageView.image = chevron
+            imageView.tintColor = UIColor.mainColorButton
+        }
+        
+        let label = UILabel()
+        
+        if let title = virtualLabVM?.title {
+            label.text = " \(title)"
+            label.textColor = UIColor.mainColorButton
+            label.font = .boldSystemFont(ofSize: 20)
+        }
+        let view2 = UIStackView(arrangedSubviews: [imageView, label])
+        let backTap = UITapGestureRecognizer(target: self, action: #selector(back(sender:)))
+        view2.addGestureRecognizer(backTap)
+
+        let leftBarButtonItem = UIBarButtonItem(customView: view2 )
+        self.navigationItem.leftBarButtonItem = leftBarButtonItem
+    }
     
     func setupSpriteView() {
         spriteScene = GerakParabolaScene(isMission: virtualLabVM?.isMission ?? false, size: spriteView.bounds.size)
@@ -277,6 +306,7 @@ class VirtualLabController: UIViewController {
     func setupMissionView() {
         if virtualLabVM?.isMission ?? false {
             gravitationButton.isEnabled = false
+            gravitationButton.alpha = 0.5
             gravitationLbl.isEnabled = false
             
             switch virtualLabVM?.experiment {
