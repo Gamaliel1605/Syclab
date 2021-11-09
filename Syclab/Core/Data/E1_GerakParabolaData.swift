@@ -180,4 +180,49 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                                                 enabledVariables: [.Kecepatan],
                                                 sudut: 50,
                                                 kecepatan: 15)]
+    
+    static let quiz = [
+        ExperimentQuiz(
+            quizImage: "GerakParabola_QuizDesc_1", quizQuestion: "Berapakah sudut yang dibutuhkan agar proyektil dapat menempuh jarak maksimum?", quizOptionA: "A. 30⁰", quizOptionB: "B. 45⁰", quizOptionC: "C. 60⁰", quizOptionD: "D. 90⁰", quizAnswer: "B. 45⁰", quizExplanation: """
+            Rumus  untuk menghitung jarak maksimal dari proyektil adalah:
+            
+                                Xmax = v²₀/g sin 2θ
+            
+            Perhatikan bahwa nilai maksimal sin 2θ adalah 1, sehingga
+            
+                                sin 2 = 1
+                                2 = 90⁰
+                                θ = 45⁰
+            """
+        ),
+        ExperimentQuiz(
+            quizImage: "GerakParabola_QuizDesc_2", quizQuestion: "Berapakah sudut yang dibutuhkan agar proyektil dapat menempuh ketinggian maksimum?", quizOptionA: "A. 30⁰", quizOptionB: "B. 45⁰", quizOptionC: "C. 60⁰", quizOptionD: "D. 90⁰", quizAnswer: "D. 90⁰", quizExplanation: """
+            Rumus untuk menghitung ketinggian yang dapat ditempuh oleh proyektil adalah:
+            
+                                y = v₀ sin θ t - 1/2 gt²
+            
+            Perhatikan bahwa nilai maksimal sin θ adalah 1, sehingga θ harus bernilai 90⁰.
+            """
+        ),
+        ExperimentQuiz(
+            quizImage: "GerakParabola_QuizDesc_3", quizQuestion: "Berikut adalah hal yang mempengaruhi gerak parabola, kecuali?", quizOptionA: "A. Percepatan gravitasi", quizOptionB: "B. Kecepatan awal proyektil", quizOptionC: "C. Sudut elevasi", quizOptionD: "D. Massa proyektil", quizAnswer: "D. Massa proyektil", quizExplanation: """
+            Seberapa besar pun massa benda, selama kecepatan awal benda tersebut sama dengan kecepatan awal benda yang massanya jauh lebih kecil maka gerak parabola dari kedua benda tersebut akan sama (dengan asumsi tidak ada gaya gesek udara).
+            """
+        ),
+        ExperimentQuiz(
+            quizImage: "GerakParabola_QuizDesc_4", quizQuestion: "Pada gerak parabola, semakin besar kecepatan awal maka akan semakin besar pula…", quizOptionA: "A. Jarak tempuh proyektil", quizOptionB: "B. Massa proyektil", quizOptionC: "C. Bentuk proyektil", quizOptionD: "D. Sudut proyektil", quizAnswer: "A. Jarak tempuh proyektil", quizExplanation: """
+            Berdasarkan dua persamaan di bawah ini:
+            
+                                y = v₀ sin θ t - 1/2 gt²
+                                Xmax = v²₀/g sin 2θ
+            
+            Besar dari kecepatan awal proyektil berbanding lurus/eksponensial terhadap besar jarak tempuh dan ketinggian maksimum proyektil. Ketika nilai kecepatan awal meningkat maka nilai jarak tempuh dan ketinggian dari proyektil juga akan meningkat, begitu pula sebaliknya.
+            """
+        ),
+        ExperimentQuiz(
+            quizImage: "GerakParabola_QuizDesc_5", quizQuestion: "Faktor-faktor dibawah ini yang mempengaruhi gerak parabola adalah…", quizOptionA: "A. Percepatan gravitasi", quizOptionB: "B. Kecepatan awal", quizOptionC: "C. Sudut elevasi", quizOptionD: "D. Semua benar", quizAnswer: "D. Semua benar", quizExplanation: """
+            Sederhananya, karena percepatan gravitasi, kecepatan awal, dan sudut elevasi terkandung dalam persamaan-persamaan gerak parabola yang kita pelajari, dapat dikatakan bahwa ketiganya mempengaruhi gerak parabola.
+            """
+        )
+    ]
 }

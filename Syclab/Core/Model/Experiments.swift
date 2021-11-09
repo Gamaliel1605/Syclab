@@ -78,4 +78,13 @@ enum Experiments: String {
             return E2_HukumGravitasiNewtonData.missions
         }
     }
+    
+    func getQuiz() -> [ExperimentQuiz] {
+        switch self {
+        case .E1_GerakParabola:
+            return E1_GerakParabolaData.quiz
+        case .E2_HukumGravitasiNewton:
+            return E2_HukumGravitasiNewtonData.quiz
+        }
+    }
 }
