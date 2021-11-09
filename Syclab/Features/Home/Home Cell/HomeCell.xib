@@ -29,7 +29,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gerak Parabola" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuy-i5-J5K">
-                                <rect key="frame" x="73" y="242" width="320" height="39"/>
+                                <rect key="frame" x="50" y="242" width="366" height="39"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -39,9 +39,9 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Vus-MB-o2e" secondAttribute="trailing" constant="7" id="39Y-Up-96z"/>
                             <constraint firstItem="Vus-MB-o2e" firstAttribute="leading" secondItem="Ogf-3K-4R6" secondAttribute="leading" constant="7" id="51h-jK-ZXQ"/>
-                            <constraint firstItem="uuy-i5-J5K" firstAttribute="leading" secondItem="Ogf-3K-4R6" secondAttribute="leading" constant="73" id="DQ8-nv-j9I"/>
+                            <constraint firstItem="uuy-i5-J5K" firstAttribute="leading" secondItem="Ogf-3K-4R6" secondAttribute="leading" constant="50" id="DQ8-nv-j9I"/>
                             <constraint firstItem="uuy-i5-J5K" firstAttribute="top" secondItem="Vus-MB-o2e" secondAttribute="bottom" constant="25" id="LrS-zC-0DU"/>
-                            <constraint firstAttribute="trailing" secondItem="uuy-i5-J5K" secondAttribute="trailing" constant="73" id="MRa-ka-fIP"/>
+                            <constraint firstAttribute="trailing" secondItem="uuy-i5-J5K" secondAttribute="trailing" constant="50" id="MRa-ka-fIP"/>
                             <constraint firstItem="Vus-MB-o2e" firstAttribute="top" secondItem="Ogf-3K-4R6" secondAttribute="top" constant="9" id="noU-PC-bSp"/>
                         </constraints>
                     </view>
