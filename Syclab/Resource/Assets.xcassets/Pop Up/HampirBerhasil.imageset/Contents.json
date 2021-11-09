@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "man throw ball.png",
+      "filename" : "HampirBerhasil.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "man throw ball@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "man throw ball@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

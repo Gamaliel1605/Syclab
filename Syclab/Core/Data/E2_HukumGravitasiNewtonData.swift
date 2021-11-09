@@ -11,7 +11,7 @@ struct E2_HukumGravitasiNewtonData {
     
     static let experiment = Experiment(
         expTitle: "Hukum Gravitasi Newon",
-        expImage: "placeholder",
+        expImage: "HukumNewton",
         id: .E2_HukumGravitasiNewton
     )
     

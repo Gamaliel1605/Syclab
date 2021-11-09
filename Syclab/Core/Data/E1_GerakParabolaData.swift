@@ -9,7 +9,7 @@ import UIKit
 
 struct E1_GerakParabolaData {
     static let experiment = Experiment(expTitle: "Gerak Parabola",
-                                       expImage: "placeholder",
+                                       expImage: "GerakParabola",
                                        id: .E1_GerakParabola)
     
     static let eksplorasiDetail = ExperimentDetails(expDesc: """
@@ -35,13 +35,13 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
     
     static let experimentOptions = [ExperimentOption(title: .Eksplorasi,
                                                       desc: "Eksplor dan Coba Eksperimen",
-                                                      imgName: "modeplaceholder"),
+                                                      imgName: "ModeEksplorasi"),
                                     ExperimentOption(title: .Misi,
                                                       desc: "Selesaikan misi yang diberikan",
-                                                      imgName: "modeplaceholder"),
+                                                      imgName: "ModeMisi"),
                                     ExperimentOption(title: .Kuis,
                                                       desc: "Kerjakan kuis untuk uji pemahanamu",
-                                                      imgName: "modeplaceholder")]
+                                                      imgName: "ModeKuis")]
     
     
     

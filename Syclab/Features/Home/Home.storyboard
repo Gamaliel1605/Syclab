@@ -4,8 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,19 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KZ8-yx-xek">
-                                <rect key="frame" x="80" y="94" width="1034" height="720"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="10" id="4d1-et-iHq">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KZ8-yx-xek">
+                                <rect key="frame" x="70" y="94" width="1054" height="720"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4d1-et-iHq">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="estimatedItemSize" width="466" height="304"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="50"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="50"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeCell" id="NwX-Qf-ozh">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="20" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vuT-mV-Qah">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -45,11 +45,11 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColorTypography"/>
                         <constraints>
-                            <constraint firstItem="KZ8-yx-xek" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="80" id="0w2-cg-WQR"/>
+                            <constraint firstItem="KZ8-yx-xek" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="0w2-cg-WQR"/>
                             <constraint firstItem="KZ8-yx-xek" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="Yls-IS-ei3"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KZ8-yx-xek" secondAttribute="trailing" constant="80" id="byu-wp-Bh4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KZ8-yx-xek" secondAttribute="trailing" constant="70" id="byu-wp-Bh4"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="KZ8-yx-xek" secondAttribute="bottom" id="gxu-7w-tXl"/>
                         </constraints>
                     </view>
@@ -86,8 +86,8 @@
     </scenes>
     <color key="tintColor" red="0.086274509803921567" green="0.2196078431372549" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="BackgroundColorTypography">
+            <color red="0.90200001001358032" green="0.91100001335144043" blue="0.83099997043609619" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>
