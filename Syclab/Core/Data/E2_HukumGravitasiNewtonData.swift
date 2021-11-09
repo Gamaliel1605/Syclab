@@ -10,7 +10,7 @@ import Foundation
 struct E2_HukumGravitasiNewtonData {
     
     static let experiment = Experiment(
-        expTitle: "Hukum Gravitasi Newon",
+        expTitle: "Hukum Gravitasi Newton",
         expImage: "HukumNewton",
         id: .E2_HukumGravitasiNewton
     )
@@ -25,13 +25,13 @@ struct E2_HukumGravitasiNewtonData {
     
     static let experimentOptions = [ExperimentOption(title: .Eksplorasi,
                                                       desc: "Eksplor dan Coba Eksperimen",
-                                                      imgName: "modeplaceholder"),
+                                                      imgName: "ModeEksplorasi"),
                                     ExperimentOption(title: .Misi,
                                                       desc: "Selesaikan misi yang diberikan",
-                                                      imgName: "modeplaceholder"),
+                                                      imgName: "ModeMisi"),
                                     ExperimentOption(title: .Kuis,
                                                       desc: "Kerjakan kuis untuk uji pemahanamu",
-                                                      imgName: "modeplaceholder")]
+                                                      imgName: "ModeKuis")]
     
     static let missions = ["sssss", "asdda"]
     
