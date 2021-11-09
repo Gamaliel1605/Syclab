@@ -11,6 +11,7 @@ import AudioToolbox
 
 struct VerticalPosition {
     static let background   : CGFloat = -1
+    static let lenganKiri   : CGFloat = -0.5
     static let dotBola      : CGFloat = 0.05
     static let player       : CGFloat = 0.06
     static let bola         : CGFloat = 0.07
@@ -35,8 +36,8 @@ class GerakParabolaScene: SKScene {
     let tiang           = SKSpriteNode(imageNamed: "tiang")
     let sensor          = SKShapeNode(circleOfRadius: 10)
     let bg              = SKSpriteNode(imageNamed: "bg_tanpatiang")
-    let lenganKanan      = SKSpriteNode(imageNamed: "Lengan_utuh_resize2")
-    let lenganBayangan  = SKSpriteNode(imageNamed: "Lengan_shadow_resize2")
+    let lenganKanan     = SKSpriteNode(imageNamed: "Lengan_utuh_resize2")
+    let lenganKiri  = SKSpriteNode(imageNamed: "Lengan_shadow_resize2")
 //    Initializing the projectiles
     let bolaPlaceholder = SKSpriteNode(imageNamed: "bola")
     let projectile = SKSpriteNode(imageNamed: "bola")
@@ -306,21 +307,29 @@ class GerakParabolaScene: SKScene {
 //        player.anchorPoint = CGPoint(x: 0.45, y: 0.3)
         player.position = CGPoint(x: initialX, y: initialY*1.3)
         player.zPosition = VerticalPosition.player
+        addChild(player)
+        
+        
         lenganKanan.zPosition = VerticalPosition.lenganKanan
         lenganKanan.anchorPoint = CGPoint(x: 0, y: 1)
-        player.addChild(lenganKanan)
         lenganKanan.position = CGPoint(x: -player.size.width * 1.5, y: player.size.height * 2.5)
         lenganKanan.zRotation = CGFloat(28)/55
-
+        player.addChild(lenganKanan)
+        
+        lenganKiri.zPosition = VerticalPosition.lenganKiri
+        lenganKiri.anchorPoint = CGPoint(x: 0, y: 1)
+        lenganKiri.position = CGPoint(x: -player.size.width * 1, y: player.size.height * 2.8)
+        lenganKiri.zRotation = CGFloat(28)/55
+        player.addChild(lenganKiri)
+        
         bolaPlaceholder.zPosition = VerticalPosition.bolaPH
-      
-        lenganKanan.addChild(bolaPlaceholder)
         bolaPlaceholder.scale(to: CGSize(width: 700, height: 700))
         bolaPlaceholder.position = CGPoint(x: lenganKanan.size.width*2, y: lenganKanan.size.height*0.4)
-        addChild(player)
+        lenganKanan.addChild(bolaPlaceholder)
         
         janganDihapusArray.append(player)
         janganDihapusArray.append(lenganKanan)
+        janganDihapusArray.append(lenganKiri)
         janganDihapusArray.append(bolaPlaceholder)
     }
     

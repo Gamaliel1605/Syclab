@@ -8,9 +8,6 @@
 import UIKit
 import SpriteKit
 
-
-
-
 class VirtualLabController: UIViewController {
     
     @IBOutlet weak var infoButton: UIButton!
@@ -46,8 +43,8 @@ class VirtualLabController: UIViewController {
         let newBackButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.back(sender:)))
         self.navigationItem.leftBarButtonItem = newBackButton
     }
-    // MARK: - Pressed Button Function
     
+    // MARK: - Pressed Button Function
     @objc func back(sender: UIBarButtonItem) {
         if virtualLabVM?.check == .Kuis {
             let exitAlert = Exit()
@@ -56,9 +53,7 @@ class VirtualLabController: UIViewController {
         } else {
             self.navigationController?.popViewController(animated: true)
         }
-        
-
-        }
+    }
     
     @IBAction func instructionButtonPressed(_ sender: Any) {
         let labInstructionsView = LabInstructions(frame: CGRect(x: self.view.bounds.width - (367+20),
