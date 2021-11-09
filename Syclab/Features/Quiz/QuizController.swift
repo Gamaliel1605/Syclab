@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuizController: UIViewController, QuizAlertProtocol {
+class QuizController: UIViewController {
 
     @IBOutlet weak var quizScrollView: UIScrollView!
     
@@ -32,6 +32,10 @@ class QuizController: UIViewController, QuizAlertProtocol {
         super.viewDidLoad()
         
         updateUI()
+        
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.back(sender:)))
+        self.navigationItem.leftBarButtonItem = newBackButton
     }
     
     @IBAction func quizAnswerChosen(_ sender: UIButton) {
@@ -115,19 +119,6 @@ class QuizController: UIViewController, QuizAlertProtocol {
         }
     }
     
-    func onTapKeluarQuiz() {
-        print("onTapKeluarKuis")
-        
-        self.navigationController?.isNavigationBarHidden = false
-//        dismiss(animated: true, completion: nil)
-        
-//        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "goToHome") as! HomeController
-//        self.navigationController?.pushViewController(vc, animated: true)
-        
-        self.navigationController?.popToRootViewController(animated: true)
-    }
-    
     func updateUI() {
         quizQuestionImage.image = UIImage(named: quizVM.quizData[quizVM.quizQuestionNumber].quizImage)
 
@@ -177,6 +168,24 @@ class QuizController: UIViewController, QuizAlertProtocol {
 }
 
 // MARK: - Extentions
+
+extension QuizController: QuizAlertProtocol {
+    func onTapKeluarQuiz() {
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+}
+
+extension QuizController: ExitAlertProtocol {
+    func onTapKeluar() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    @objc func back(sender: UIBarButtonItem) {
+            let exitAlert = Exit()
+            exitAlert.delegate = self
+            self.present(exitAlert, animated: true, completion: nil)
+            }
+}
 
 extension UIScrollView {
     func scrollToTop() {
