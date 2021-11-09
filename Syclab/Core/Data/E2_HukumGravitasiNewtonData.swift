@@ -34,4 +34,22 @@ struct E2_HukumGravitasiNewtonData {
                                                       imgName: "modeplaceholder")]
     
     static let missions = ["sssss", "asdda"]
+    
+    static let quiz = [
+        ExperimentQuiz(
+            quizImage: "missionplaceholder", quizQuestion: "Content coming soon", quizOptionA: "Content coming soon", quizOptionB: "Content coming soon", quizOptionC: "Content coming soon", quizOptionD: "Content coming soon", quizAnswer: "Content coming soon", quizExplanation: "Content coming soon"
+        ),
+        ExperimentQuiz(
+            quizImage: "missionplaceholder", quizQuestion: "Content coming soon", quizOptionA: "Content coming soon", quizOptionB: "Content coming soon", quizOptionC: "Content coming soon", quizOptionD: "Content coming soon", quizAnswer: "Content coming soon", quizExplanation: "Content coming soon"
+        ),
+        ExperimentQuiz(
+            quizImage: "missionplaceholder", quizQuestion: "Content coming soon", quizOptionA: "Content coming soon", quizOptionB: "Content coming soon", quizOptionC: "Content coming soon", quizOptionD: "Content coming soon", quizAnswer: "Content coming soon", quizExplanation: "Content coming soon"
+        ),
+        ExperimentQuiz(
+            quizImage: "missionplaceholder", quizQuestion: "Content coming soon", quizOptionA: "Content coming soon", quizOptionB: "Content coming soon", quizOptionC: "Content coming soon", quizOptionD: "Content coming soon", quizAnswer: "Content coming soon", quizExplanation: "Content coming soon"
+        ),
+        ExperimentQuiz(
+            quizImage: "missionplaceholder", quizQuestion: "Content coming soon", quizOptionA: "Content coming soon", quizOptionB: "Content coming soon", quizOptionC: "Content coming soon", quizOptionD: "Content coming soon", quizAnswer: "Content coming soon", quizExplanation: "Content coming soon"
+        )
+    ]
 }
