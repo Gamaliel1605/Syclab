@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FinishQuiz" customModule="Syclab" customModuleProvider="target">
             <connections>
-                <outlet property="buttonKeluar" destination="FK7-VH-Bas" id="1Bi-AT-IUQ"/>
-                <outlet property="quizImage" destination="FyT-UQ-8iP" id="2WQ-yh-SNZ"/>
-                <outlet property="quizLabel_1" destination="RGW-2V-gvZ" id="UAm-OL-ZRs"/>
-                <outlet property="quizLabel_2" destination="7rd-ss-oBX" id="71s-rL-njC"/>
-                <outlet property="quizLabel_3" destination="bgd-vc-Qi6" id="4iT-64-auU"/>
-                <outlet property="quizScore" destination="A6t-Ui-XEF" id="cTE-HT-Ach"/>
-                <outlet property="quizView" destination="91U-BM-r67" id="bSm-Ng-Miz"/>
-                <outlet property="view" destination="iN0-l3-epB" id="IDq-uU-1DQ"/>
+                <outlet property="buttonKeluar" destination="FK7-VH-Bas" id="Ihv-ns-o5g"/>
+                <outlet property="quizImage" destination="FyT-UQ-8iP" id="Un3-ji-RQ8"/>
+                <outlet property="quizLabel_1" destination="RGW-2V-gvZ" id="U2W-7M-Tfq"/>
+                <outlet property="quizLabel_2" destination="7rd-ss-oBX" id="4b7-A3-UHg"/>
+                <outlet property="quizLabel_3" destination="bgd-vc-Qi6" id="760-KZ-gY5"/>
+                <outlet property="quizScore" destination="A6t-Ui-XEF" id="qeG-dA-bAk"/>
+                <outlet property="quizView" destination="91U-BM-r67" id="Bjk-f8-TFX"/>
+                <outlet property="view" destination="iN0-l3-epB" id="xMb-5h-bKV"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -28,26 +28,26 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="91U-BM-r67">
                     <rect key="frame" x="327" y="107" width="540" height="620"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertplaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="FyT-UQ-8iP">
-                            <rect key="frame" x="205" y="88" width="130" height="140"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QuizCompletion" translatesAutoresizingMaskIntoConstraints="NO" id="FyT-UQ-8iP">
+                            <rect key="frame" x="173" y="88" width="194" height="200"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="140" id="854-B4-QbM"/>
+                                <constraint firstAttribute="height" constant="200" id="854-B4-QbM"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kamu Berhasil!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGW-2V-gvZ">
-                            <rect key="frame" x="143" y="293" width="254" height="41"/>
+                            <rect key="frame" x="143" y="308" width="254" height="41"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selamat, kamu telah berhasil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rd-ss-oBX">
-                            <rect key="frame" x="86" y="425" width="368" height="21.5"/>
+                            <rect key="frame" x="86" y="440" width="368" height="21.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgd-vc-Qi6">
-                            <rect key="frame" x="86" y="446.5" width="368" height="22"/>
+                            <rect key="frame" x="50" y="461.5" width="440" height="22"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="22" id="o6b-1g-1vl"/>
                             </constraints>
@@ -56,7 +56,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FK7-VH-Bas" customClass="DesignableButton" customModule="Syclab" customModuleProvider="target">
-                            <rect key="frame" x="174" y="508.5" width="192" height="54"/>
+                            <rect key="frame" x="174" y="523.5" width="192" height="54"/>
                             <color key="backgroundColor" red="0.086274509799999996" green="0.21960784310000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="54" id="2h1-Mo-wGp"/>
@@ -64,18 +64,18 @@
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="Kerjakan Ke Menu"/>
+                            <state key="normal" title="Kembali Ke Menu"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="12"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="keluarTapped:" destination="-1" eventType="touchUpInside" id="Wi1-B3-zYw"/>
+                                <action selector="keluarTapped:" destination="-1" eventType="touchUpInside" id="Rc3-Nh-rzV"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6t-Ui-XEF">
-                            <rect key="frame" x="178" y="371" width="184" height="44"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6t-Ui-XEF">
+                            <rect key="frame" x="178" y="386" width="184" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="tCD-GH-AAT"/>
                             </constraints>
@@ -87,13 +87,13 @@
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90980392160000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="7rd-ss-oBX" firstAttribute="top" secondItem="A6t-Ui-XEF" secondAttribute="bottom" constant="10" id="2mG-aa-O5o"/>
-                        <constraint firstItem="bgd-vc-Qi6" firstAttribute="leading" secondItem="91U-BM-r67" secondAttribute="leading" constant="86" id="ACV-ad-ye9"/>
+                        <constraint firstItem="bgd-vc-Qi6" firstAttribute="leading" secondItem="91U-BM-r67" secondAttribute="leading" constant="50" id="ACV-ad-ye9"/>
                         <constraint firstAttribute="trailing" secondItem="A6t-Ui-XEF" secondAttribute="trailing" constant="178" id="Djq-lL-zPo"/>
                         <constraint firstItem="RGW-2V-gvZ" firstAttribute="leading" secondItem="91U-BM-r67" secondAttribute="leading" constant="143" id="EQn-pB-LlU"/>
-                        <constraint firstItem="FyT-UQ-8iP" firstAttribute="leading" secondItem="91U-BM-r67" secondAttribute="leading" constant="205" id="Emv-wX-chX"/>
+                        <constraint firstItem="FyT-UQ-8iP" firstAttribute="leading" secondItem="91U-BM-r67" secondAttribute="leading" constant="173" id="Emv-wX-chX"/>
                         <constraint firstItem="FK7-VH-Bas" firstAttribute="leading" secondItem="91U-BM-r67" secondAttribute="leading" constant="174" id="F3D-tX-fNb"/>
                         <constraint firstItem="bgd-vc-Qi6" firstAttribute="top" secondItem="7rd-ss-oBX" secondAttribute="bottom" id="I8I-x0-NZp"/>
-                        <constraint firstAttribute="trailing" secondItem="FyT-UQ-8iP" secondAttribute="trailing" constant="205" id="JeB-TY-Z64"/>
+                        <constraint firstAttribute="trailing" secondItem="FyT-UQ-8iP" secondAttribute="trailing" constant="173" id="JeB-TY-Z64"/>
                         <constraint firstItem="7rd-ss-oBX" firstAttribute="leading" secondItem="91U-BM-r67" secondAttribute="leading" constant="86" id="R19-uB-TRc"/>
                         <constraint firstAttribute="trailing" secondItem="FK7-VH-Bas" secondAttribute="trailing" constant="174" id="RYG-fQ-U83"/>
                         <constraint firstAttribute="trailing" secondItem="7rd-ss-oBX" secondAttribute="trailing" constant="86" id="SmK-Va-6Xe"/>
@@ -101,9 +101,9 @@
                         <constraint firstItem="A6t-Ui-XEF" firstAttribute="top" secondItem="RGW-2V-gvZ" secondAttribute="bottom" constant="37" id="Wek-Nr-ah2"/>
                         <constraint firstItem="FyT-UQ-8iP" firstAttribute="top" secondItem="91U-BM-r67" secondAttribute="top" constant="88" id="ZVh-h7-RPF"/>
                         <constraint firstAttribute="trailing" secondItem="RGW-2V-gvZ" secondAttribute="trailing" constant="143" id="hRv-dh-52d"/>
-                        <constraint firstAttribute="trailing" secondItem="bgd-vc-Qi6" secondAttribute="trailing" constant="86" id="n3s-0H-eT1"/>
+                        <constraint firstAttribute="trailing" secondItem="bgd-vc-Qi6" secondAttribute="trailing" constant="50" id="n3s-0H-eT1"/>
                         <constraint firstAttribute="width" constant="540" id="pch-D2-CaH"/>
-                        <constraint firstItem="RGW-2V-gvZ" firstAttribute="top" secondItem="FyT-UQ-8iP" secondAttribute="bottom" constant="65" id="rqs-Uh-y4a"/>
+                        <constraint firstItem="RGW-2V-gvZ" firstAttribute="top" secondItem="FyT-UQ-8iP" secondAttribute="bottom" constant="20" id="rqs-Uh-y4a"/>
                         <constraint firstItem="A6t-Ui-XEF" firstAttribute="leading" secondItem="91U-BM-r67" secondAttribute="leading" constant="178" id="vxX-x4-YdZ"/>
                         <constraint firstItem="FK7-VH-Bas" firstAttribute="top" secondItem="bgd-vc-Qi6" secondAttribute="bottom" constant="40" id="wMp-ch-bzo"/>
                     </constraints>
@@ -120,10 +120,10 @@
     </objects>
     <designables>
         <designable name="FK7-VH-Bas">
-            <size key="intrinsicContentSize" width="145" height="33"/>
+            <size key="intrinsicContentSize" width="140" height="33"/>
         </designable>
     </designables>
     <resources>
-        <image name="alertplaceholder" width="120" height="123"/>
+        <image name="QuizCompletion" width="587" height="694"/>
     </resources>
 </document>
