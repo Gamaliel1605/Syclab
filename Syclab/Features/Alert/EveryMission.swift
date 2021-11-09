@@ -25,6 +25,6 @@ class EveryMission: UIViewController {
         super.viewDidLoad()
         
         everyMissionView.layer.cornerRadius = 17
-        everyMissionView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+//        everyMissionView.backgroundColor = UIColor(white: 0, alpha: 0.5)
     }
 }

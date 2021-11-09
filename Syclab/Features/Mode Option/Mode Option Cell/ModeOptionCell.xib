@@ -21,8 +21,12 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noP-IM-Sio">
                         <rect key="frame" x="0.0" y="0.0" width="295" height="560"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modeplaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="QwM-QS-IXN">
-                                <rect key="frame" x="8" y="10" width="279" height="486"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modeplaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="QwM-QS-IXN">
+                                <rect key="frame" x="8" y="10" width="279" height="460"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="460" id="9SW-4Z-5mP"/>
+                                    <constraint firstAttribute="width" constant="279" id="suw-fA-cf9"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2m-pL-NPf">
                                 <rect key="frame" x="22" y="480" width="251" height="37"/>
