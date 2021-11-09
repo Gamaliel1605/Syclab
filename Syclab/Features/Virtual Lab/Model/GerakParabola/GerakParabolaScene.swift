@@ -229,7 +229,7 @@ class GerakParabolaScene: SKScene {
         index = 0
     }
     
-    func shootStraight() {
+    func shoot() {
         
         lineActive = true
         jarakXMaxReal = 0

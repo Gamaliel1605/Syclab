@@ -46,7 +46,7 @@ class VirtualLabController: UIViewController {
     
     // MARK: - Pressed Button Function
     @objc func back(sender: UIBarButtonItem) {
-        if virtualLabVM?.check == .Kuis {
+        if virtualLabVM?.check == .Misi {
             let exitAlert = Exit()
             exitAlert.delegate = self
             self.present(exitAlert, animated: true, completion: nil)
@@ -132,7 +132,7 @@ class VirtualLabController: UIViewController {
     
     @IBAction func playButtonPressed(_ sender: Any) {
         guard let gameScene = spriteView.scene as? GerakParabolaScene else {return}
-        gameScene.shootStraight()
+        gameScene.shoot()
     }
     @IBAction func theoryButtonPressed(_ sender: Any) {
         let backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
