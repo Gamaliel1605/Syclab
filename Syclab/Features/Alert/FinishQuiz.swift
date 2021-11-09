@@ -30,14 +30,13 @@ class FinishQuiz: UIViewController {
         super.viewDidLoad()
         
         quizView.layer.cornerRadius = 17
-        quizScore.text = "Score: \(quizVM.quizScore)"
+        quizScore.text = "Score: \("")"
         quizLabel_3.text = "menyelesaikan kuis materi \("")!"
     }
     
     @IBAction func keluarTapped(_ sender: Any) {
-        quizVM.quizScore = 0
         
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
         delegate?.onTapKeluarQuiz()
     }
     

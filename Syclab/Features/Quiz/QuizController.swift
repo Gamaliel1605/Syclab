@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuizController: UIViewController {
+class QuizController: UIViewController, QuizAlertProtocol {
 
     @IBOutlet weak var quizScrollView: UIScrollView!
     
@@ -30,13 +30,14 @@ class QuizController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        var getQuizData = QuizViewModel(experiment: quizVM.experiment)
         
         updateUI()
-        
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+//        UINavigationBar.appearance().shadowImage = UIImage()
+//    }
     
     @IBAction func quizAnswerChosen(_ sender: UIButton) {
         //Button Disabling and Enabling
@@ -75,12 +76,12 @@ class QuizController: UIViewController {
             }
         }
 
-        quizProceedButton.titleLabel?.font = .systemFont(ofSize: 25, weight: .bold) //not working
         if quizVM.quizQuestionNumber == ((quizVM.quizData.count) - 1) {
             quizProceedButton.setTitle("Selesai", for: .normal)
         } else {
-            quizProceedButton.setTitle("Lanjutkan", for: .normal)
+            quizProceedButton.setTitle("Lanjut", for: .normal)
         }
+        quizProceedButton.titleLabel?.font = .systemFont(ofSize: 25, weight: .bold) //not working
 
         quizAnswerLabel.attributedText = NSMutableAttributedString()
             .normal("Jawaban:    ")
@@ -97,8 +98,21 @@ class QuizController: UIViewController {
         if quizVM.quizQuestionNumber == ((quizVM.quizData.count) - 1) {
             //where the Quiz (and other variables) restarts
             quizVM.quizQuestionNumber = 0
+            
             //quizViewModel.quizScore = 0 (in alert; after dismissal) -> transition to alert
-            quizFinishedAlert()
+//            self.navigationItem.setHidesBackButton(true, animated: false)
+            self.navigationController?.isNavigationBarHidden = true
+            quizScrollView.isScrollEnabled = false
+            quizProceedButton.isUserInteractionEnabled = false
+           
+            self.view.alpha = 0.5
+           
+            let quizAlert = FinishQuiz()
+            self.present(quizAlert, animated: true, completion: nil)
+            
+            quizAlert.quizScore.text = "Score: \(quizVM.quizScore)"
+            quizAlert.quizLabel_3.text = "menyelesaikan kuis materi \(quizVM.title)!"
+            
         } else {
             //automated top scroll
             quizScrollView.scrollToTop()
@@ -106,6 +120,14 @@ class QuizController: UIViewController {
             nextQuestion()
             updateUI()
         }
+    }
+    
+    func onTapKeluarQuiz() {
+        
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "goToHome") as! HomeController
+//        vc.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func updateUI() {
@@ -123,7 +145,7 @@ class QuizController: UIViewController {
 
         quizQuestionTrackerLabel.text = "Soal \(quizVM.quizQuestionNumber + 1) dari \(quizVM.quizData.count)"
 
-        quizProceedButton.setTitle("Lanjutkan", for: .disabled)
+        quizProceedButton.setTitle("Lanjut", for: .disabled)
         quizProceedButton.alpha = 0
         quizDynamicView.alpha = 0
 
@@ -138,12 +160,6 @@ class QuizController: UIViewController {
         quizOptionB_Button.tintColor = UIColor(hexString: "16384E")
         quizOptionC_Button.tintColor = UIColor(hexString: "16384E")
         quizOptionD_Button.tintColor = UIColor(hexString: "16384E")
-    }
-    
-    func quizFinishedAlert() {
-        let destinationVC = UIViewController(nibName: "FinishQuiz", bundle: nil)
-        self.navigationController?.pushViewController(destinationVC, animated: true)
-        
     }
     
     func checkAnswer(_ userAnswer: String) -> Bool {
@@ -217,3 +233,4 @@ extension NSMutableAttributedString {
         return self
     }
 }
+

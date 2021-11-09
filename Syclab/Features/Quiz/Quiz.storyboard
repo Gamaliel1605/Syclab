@@ -195,19 +195,19 @@ x = vo² sin 2α x 1/g                    50 = vo²
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPu-vY-4GT">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrt-Fx-PxD">
                                         <rect key="frame" x="700" y="0.0" width="140" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="6FE-YH-1Cm"/>
-                                            <constraint firstAttribute="height" constant="30" id="d1S-6Y-hcU"/>
+                                            <constraint firstAttribute="width" constant="140" id="MAJ-CF-jv7"/>
+                                            <constraint firstAttribute="height" constant="30" id="Nsj-9i-qxq"/>
                                         </constraints>
                                         <color key="tintColor" red="0.1236296818" green="0.22598102689999999" blue="0.29804891350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Lanjutkan">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Lanjut">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="quizProceeded:" destination="bOv-BV-mId" eventType="touchUpInside" id="Tkp-Nn-vOK"/>
+                                            <action selector="quizProceeded:" destination="bOv-BV-mId" eventType="touchUpInside" id="Jvx-jh-tcB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -228,6 +228,7 @@ x = vo² sin 2α x 1/g                    50 = vo²
                             <constraint firstItem="Ga7-L0-uHy" firstAttribute="centerX" secondItem="mVK-0y-YZ3" secondAttribute="centerX" id="tnI-LX-yYY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Xfa-5N-H2e"/>
                     <connections>
                         <outlet property="quizAnswerExplanationLabel" destination="rHk-iQ-snG" id="QBs-gk-LaL"/>
                         <outlet property="quizAnswerLabel" destination="YEq-rn-CiE" id="CKO-Oz-DaZ"/>
@@ -236,7 +237,7 @@ x = vo² sin 2α x 1/g                    50 = vo²
                         <outlet property="quizOptionB_Button" destination="wxg-Qw-pcZ" id="zKs-Sk-a0g"/>
                         <outlet property="quizOptionC_Button" destination="rgS-kj-Ddo" id="SuR-3M-9ts"/>
                         <outlet property="quizOptionD_Button" destination="PAG-OH-qBm" id="Hfh-sV-xRH"/>
-                        <outlet property="quizProceedButton" destination="YPu-vY-4GT" id="cyF-8M-UM2"/>
+                        <outlet property="quizProceedButton" destination="wrt-Fx-PxD" id="gc4-3C-eA7"/>
                         <outlet property="quizQuestionImage" destination="7cU-vL-nst" id="3XQ-Gh-Dqm"/>
                         <outlet property="quizQuestionLabel" destination="KvA-e1-X5H" id="Drp-cT-5z4"/>
                         <outlet property="quizQuestionTrackerLabel" destination="hMC-tM-5bx" id="gtZ-3r-C6n"/>
@@ -245,7 +246,7 @@ x = vo² sin 2α x 1/g                    50 = vo²
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ww-2Y-hF3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-406" y="5"/>
+            <point key="canvasLocation" x="287.70131771595896" y="4.6875"/>
         </scene>
     </scenes>
     <designables>

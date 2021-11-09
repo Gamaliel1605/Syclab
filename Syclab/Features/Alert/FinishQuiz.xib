@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FinishQuiz" customModule="Syclab" customModuleProvider="target">
             <connections>
-                <outlet property="buttonKeluar" destination="FK7-VH-Bas" id="1Bi-AT-IUQ"/>
-                <outlet property="quizImage" destination="FyT-UQ-8iP" id="2WQ-yh-SNZ"/>
-                <outlet property="quizLabel_1" destination="RGW-2V-gvZ" id="UAm-OL-ZRs"/>
-                <outlet property="quizLabel_2" destination="7rd-ss-oBX" id="71s-rL-njC"/>
-                <outlet property="quizLabel_3" destination="bgd-vc-Qi6" id="4iT-64-auU"/>
-                <outlet property="quizScore" destination="A6t-Ui-XEF" id="cTE-HT-Ach"/>
-                <outlet property="quizView" destination="91U-BM-r67" id="bSm-Ng-Miz"/>
-                <outlet property="view" destination="iN0-l3-epB" id="IDq-uU-1DQ"/>
+                <outlet property="buttonKeluar" destination="FK7-VH-Bas" id="Ihv-ns-o5g"/>
+                <outlet property="quizImage" destination="FyT-UQ-8iP" id="Un3-ji-RQ8"/>
+                <outlet property="quizLabel_1" destination="RGW-2V-gvZ" id="U2W-7M-Tfq"/>
+                <outlet property="quizLabel_2" destination="7rd-ss-oBX" id="4b7-A3-UHg"/>
+                <outlet property="quizLabel_3" destination="bgd-vc-Qi6" id="760-KZ-gY5"/>
+                <outlet property="quizScore" destination="A6t-Ui-XEF" id="qeG-dA-bAk"/>
+                <outlet property="quizView" destination="91U-BM-r67" id="Bjk-f8-TFX"/>
+                <outlet property="view" destination="iN0-l3-epB" id="xMb-5h-bKV"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -28,7 +28,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="91U-BM-r67">
                     <rect key="frame" x="327" y="107" width="540" height="620"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertplaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="FyT-UQ-8iP">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QuizCompletion" translatesAutoresizingMaskIntoConstraints="NO" id="FyT-UQ-8iP">
                             <rect key="frame" x="205" y="88" width="130" height="140"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="140" id="854-B4-QbM"/>
@@ -64,17 +64,17 @@
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="Kerjakan Ke Menu"/>
+                            <state key="normal" title="Kembali Ke Menu"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="12"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="keluarTapped:" destination="-1" eventType="touchUpInside" id="Wi1-B3-zYw"/>
+                                <action selector="keluarTapped:" destination="-1" eventType="touchUpInside" id="CGD-Fd-naz"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6t-Ui-XEF">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6t-Ui-XEF">
                             <rect key="frame" x="178" y="371" width="184" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="tCD-GH-AAT"/>
@@ -120,10 +120,10 @@
     </objects>
     <designables>
         <designable name="FK7-VH-Bas">
-            <size key="intrinsicContentSize" width="145" height="33"/>
+            <size key="intrinsicContentSize" width="140" height="33"/>
         </designable>
     </designables>
     <resources>
-        <image name="alertplaceholder" width="120" height="123"/>
+        <image name="QuizCompletion" width="587" height="694"/>
     </resources>
 </document>

@@ -54,6 +54,7 @@ extension ModeOptionController: UICollectionViewDelegate, UICollectionViewDataSo
         else {
             let storyboard = UIStoryboard(name: "Quiz", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "quiz") as! QuizController
+            viewController.quizVM = QuizViewModel(experiment: modeOptionVM.experiment)
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
