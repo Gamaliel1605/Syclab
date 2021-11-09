@@ -96,15 +96,12 @@ class QuizController: UIViewController, QuizAlertProtocol {
     
     @IBAction func quizProceeded(_ sender: UIButton) {
         if quizVM.quizQuestionNumber == ((quizVM.quizData.count) - 1) {
-            //where the Quiz (and other variables) restarts
+            //where the Quiz (and other variables) restarts -> transition to alert
             quizVM.quizQuestionNumber = 0
             
-            //quizViewModel.quizScore = 0 (in alert; after dismissal) -> transition to alert
-//            self.navigationItem.setHidesBackButton(true, animated: false)
             self.navigationController?.isNavigationBarHidden = true
             quizScrollView.isScrollEnabled = false
             quizProceedButton.isUserInteractionEnabled = false
-           
             self.view.alpha = 0.5
            
             let quizAlert = FinishQuiz()
@@ -125,9 +122,10 @@ class QuizController: UIViewController, QuizAlertProtocol {
     func onTapKeluarQuiz() {
         
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "goToHome") as! HomeController
-//        vc.navigationItem.setHidesBackButton(true, animated: false)
+        let vc = storyboard.instantiateViewController(withIdentifier: "goToHome") as! HomeController
         self.navigationController?.pushViewController(vc, animated: true)
+        
+//        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func updateUI() {

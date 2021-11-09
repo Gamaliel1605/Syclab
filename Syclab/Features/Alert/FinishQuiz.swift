@@ -20,7 +20,7 @@ class FinishQuiz: UIViewController {
     @IBOutlet weak var quizScore: UILabel!
     @IBOutlet weak var quizLabel_2: UILabel!
     @IBOutlet weak var quizLabel_3: UILabel!
-    @IBOutlet weak var buttonKeluar: DesignableButton!
+    @IBOutlet weak var buttonKeluar: UIButton!
     
     weak var delegate: QuizAlertProtocol?
     
@@ -34,9 +34,9 @@ class FinishQuiz: UIViewController {
         quizLabel_3.text = "menyelesaikan kuis materi \("")!"
     }
     
-    @IBAction func keluarTapped(_ sender: Any) {
+    @IBAction func keluarTapped(_ sender: UIButton) {
         
-//        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
         delegate?.onTapKeluarQuiz()
     }
     
