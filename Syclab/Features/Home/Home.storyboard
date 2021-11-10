@@ -21,7 +21,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KZ8-yx-xek">
                                 <rect key="frame" x="70" y="94" width="1054" height="720"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="50" id="4d1-et-iHq">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4d1-et-iHq">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="estimatedItemSize" width="466" height="304"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
