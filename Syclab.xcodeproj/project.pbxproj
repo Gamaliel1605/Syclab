@@ -21,6 +21,8 @@
 		142498FA272776760050F18D /* ColorHexConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F9272776760050F18D /* ColorHexConversion.swift */; };
 		142498FC272793C60050F18D /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498FB272793C60050F18D /* AttributedString.swift */; };
 		14B4053527337EA300E17BDB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4053427337EA300E17BDB /* Protocols.swift */; };
+		981B8C1F27399956006B2735 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981B8C1E27399956006B2735 /* Colors.xcassets */; };
+		981B8C2327399B5C006B2735 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981B8C2227399B5C006B2735 /* ExtensionUIColor.swift */; };
 		981D5BA9273528D800EB1BB5 /* GerakParabolaMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D5BA8273528D800EB1BB5 /* GerakParabolaMission.swift */; };
 		982CEA59273670C6004469DA /* masuk_ring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 982CEA57273670C6004469DA /* masuk_ring.mp3 */; };
 		982CEA5A273670C6004469DA /* lempar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 982CEA58273670C6004469DA /* lempar.mp3 */; };
@@ -44,6 +46,8 @@
 		EA1BD2A92731575F00B879A0 /* FinishMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1BD2A82731575F00B879A0 /* FinishMission.swift */; };
 		EA6E764D273160CF00FFC46C /* FinishQuiz.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6E764C273160CF00FFC46C /* FinishQuiz.xib */; };
 		EA6E764F273160ED00FFC46C /* FinishQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6E764E273160ED00FFC46C /* FinishQuiz.swift */; };
+		EA7E3F05273B6454006BC2B0 /* FailedMission.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA7E3F04273B6454006BC2B0 /* FailedMission.xib */; };
+		EA7E3F07273B646E006BC2B0 /* FailedMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7E3F06273B646E006BC2B0 /* FailedMission.swift */; };
 		EAA2984D27316A6B00B5E303 /* EveryMission.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA2984C27316A6B00B5E303 /* EveryMission.xib */; };
 		EAA2984F27316A7F00B5E303 /* EveryMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2984E27316A7F00B5E303 /* EveryMission.swift */; };
 		EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCDE5A271EED1B00CA2677 /* AppDelegate.swift */; };
@@ -98,6 +102,8 @@
 		142498F9272776760050F18D /* ColorHexConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexConversion.swift; sourceTree = "<group>"; };
 		142498FB272793C60050F18D /* AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
 		14B4053427337EA300E17BDB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		981B8C1E27399956006B2735 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		981B8C2227399B5C006B2735 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		981D5BA8273528D800EB1BB5 /* GerakParabolaMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerakParabolaMission.swift; sourceTree = "<group>"; };
 		982CEA57273670C6004469DA /* masuk_ring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = masuk_ring.mp3; sourceTree = "<group>"; };
 		982CEA58273670C6004469DA /* lempar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lempar.mp3; sourceTree = "<group>"; };
@@ -121,6 +127,8 @@
 		EA1BD2A82731575F00B879A0 /* FinishMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishMission.swift; sourceTree = "<group>"; };
 		EA6E764C273160CF00FFC46C /* FinishQuiz.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishQuiz.xib; sourceTree = "<group>"; };
 		EA6E764E273160ED00FFC46C /* FinishQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishQuiz.swift; sourceTree = "<group>"; };
+		EA7E3F04273B6454006BC2B0 /* FailedMission.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FailedMission.xib; sourceTree = "<group>"; };
+		EA7E3F06273B646E006BC2B0 /* FailedMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedMission.swift; sourceTree = "<group>"; };
 		EAA2984C27316A6B00B5E303 /* EveryMission.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EveryMission.xib; sourceTree = "<group>"; };
 		EAA2984E27316A7F00B5E303 /* EveryMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveryMission.swift; sourceTree = "<group>"; };
 		EABCDE57271EED1B00CA2677 /* Syclab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Syclab.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -322,6 +330,7 @@
 			children = (
 				EABCDE63271EED1C00CA2677 /* Assets.xcassets */,
 				EABCDE65271EED1C00CA2677 /* LaunchScreen.storyboard */,
+				981B8C1E27399956006B2735 /* Colors.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -428,6 +437,8 @@
 				EA6E764C273160CF00FFC46C /* FinishQuiz.xib */,
 				EAA2984E27316A7F00B5E303 /* EveryMission.swift */,
 				EAA2984C27316A6B00B5E303 /* EveryMission.xib */,
+				EA7E3F06273B646E006BC2B0 /* FailedMission.swift */,
+				EA7E3F04273B6454006BC2B0 /* FailedMission.xib */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -471,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				98BADE4627291304009EE9D1 /* Extension+UIButton.swift */,
+				981B8C2227399B5C006B2735 /* ExtensionUIColor.swift */,
 				142498FB272793C60050F18D /* AttributedString.swift */,
 				142498F9272776760050F18D /* ColorHexConversion.swift */,
 				EADBE49E272D808600E8607D /* ViewExtension.swift */,
@@ -550,9 +562,11 @@
 				EABCDE64271EED1C00CA2677 /* Assets.xcassets in Resources */,
 				EABCDE62271EED1B00CA2677 /* Main.storyboard in Resources */,
 				EABCDE87271EEEE100CA2677 /* ExperimentDetail.storyboard in Resources */,
+				981B8C1F27399956006B2735 /* Colors.xcassets in Resources */,
 				EA0C37932725D3430038BF88 /* ModeOptionCell.xib in Resources */,
 				1408134B27304B1D00C8A482 /* ConceptTheory.xib in Resources */,
 				EABCDE79271EEDB500CA2677 /* Quiz.storyboard in Resources */,
+				EA7E3F05273B6454006BC2B0 /* FailedMission.xib in Resources */,
 				EAA2984D27316A6B00B5E303 /* EveryMission.xib in Resources */,
 				EABCDE95271EEF9F00CA2677 /* Home.storyboard in Resources */,
 				141DA6482732C9B0007E8DAF /* LabInstructions.xib in Resources */,
@@ -579,6 +593,7 @@
 				14B4053527337EA300E17BDB /* Protocols.swift in Sources */,
 				142498FA272776760050F18D /* ColorHexConversion.swift in Sources */,
 				EABCDE5B271EED1B00CA2677 /* AppDelegate.swift in Sources */,
+				EA7E3F07273B646E006BC2B0 /* FailedMission.swift in Sources */,
 				EADBE49D272D800D00E8607D /* ContentLabel.swift in Sources */,
 				EA0C37892723EECC0038BF88 /* HomeCell.swift in Sources */,
 				EABCDE97271EEFBC00CA2677 /* HomeController.swift in Sources */,
@@ -617,6 +632,7 @@
 				EABCDE84271EEE9C00CA2677 /* VirtualLabViewModel.swift in Sources */,
 				EAA2984F27316A7F00B5E303 /* EveryMission.swift in Sources */,
 				EABCDE99271EEFC700CA2677 /* HomeViewModel.swift in Sources */,
+				981B8C2327399B5C006B2735 /* ExtensionUIColor.swift in Sources */,
 				EADBE49F272D808600E8607D /* ViewExtension.swift in Sources */,
 				98BADE4727291304009EE9D1 /* Extension+UIButton.swift in Sources */,
 				EABCDE82271EEE9000CA2677 /* VirtualLabController.swift in Sources */,

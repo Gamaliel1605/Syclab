@@ -10,211 +10,6 @@
     </dependencies>
     <scenes>
         <!--Quiz Controller-->
-        <scene sceneID="s0d-6b-0kx">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="Y6W-OH-hqX" customClass="QuizController" customModule="Syclab" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="7q9-hA-gSR">
-                                <rect key="frame" x="0.0" y="24" width="1366" height="878"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAH-e8-w6W">
-                                        <rect key="frame" x="183" y="0.0" width="1000" height="878"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quiz_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="zn4-DJ-raO">
-                                                <rect key="frame" x="273" y="78" width="454" height="221"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="454" id="3eG-LV-VWg"/>
-                                                    <constraint firstAttribute="height" constant="221" id="ZKd-zj-cGM"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpE-8U-FLm">
-                                                <rect key="frame" x="112" y="319" width="776" height="64.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="4cc-ZI-aqI"/>
-                                                    <constraint firstAttribute="width" constant="776" id="AL3-0W-Nc1"/>
-                                                </constraints>
-                                                <string key="text">Berikut adalah yang memengaruhi gerak parabola, kecuali…
-</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZV-Um-mbP">
-                                                <rect key="frame" x="80" y="413.5" width="840" height="150"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To3-Kz-Wdm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="59"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="59" id="G8a-pd-Jfq"/>
-                                                            <constraint firstAttribute="width" constant="393" id="rcO-ik-SdY"/>
-                                                        </constraints>
-                                                        <color key="tintColor" red="0.60609471800000003" green="0.110549219" blue="0.1215417162" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="A.   Gaya gravitasi">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
-                                                        </buttonConfiguration>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuU-W7-Lrq">
-                                                        <rect key="frame" x="0.0" y="91" width="393" height="59"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="59" id="NDg-Mo-MQL"/>
-                                                            <constraint firstAttribute="width" constant="393" id="isr-8r-QLg"/>
-                                                        </constraints>
-                                                        <color key="tintColor" red="0.086274509799999996" green="0.21960784310000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="C.   Hambatan">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
-                                                        </buttonConfiguration>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sh-1G-RCP">
-                                                        <rect key="frame" x="447" y="91" width="393" height="59"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="59" id="JWn-bW-Mkd"/>
-                                                            <constraint firstAttribute="width" constant="393" id="bO6-eD-VrN"/>
-                                                        </constraints>
-                                                        <color key="tintColor" systemColor="systemGreenColor"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="D.   Arah angin">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
-                                                        </buttonConfiguration>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzW-Oh-d5c">
-                                                        <rect key="frame" x="447" y="0.0" width="393" height="59"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="59" id="GAc-bv-7Hw"/>
-                                                            <constraint firstAttribute="width" constant="393" id="GYh-hR-417"/>
-                                                        </constraints>
-                                                        <color key="tintColor" red="0.086274509799999996" green="0.21960784310000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="B.   Benda">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
-                                                        </buttonConfiguration>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="yzW-Oh-d5c" secondAttribute="trailing" id="E5L-Eb-bew"/>
-                                                    <constraint firstItem="zuU-W7-Lrq" firstAttribute="leading" secondItem="qZV-Um-mbP" secondAttribute="leading" id="JcJ-q1-ICN"/>
-                                                    <constraint firstAttribute="bottom" secondItem="2Sh-1G-RCP" secondAttribute="bottom" id="S7S-ZV-UKd"/>
-                                                    <constraint firstAttribute="width" constant="840" id="Zwq-WG-4Vw"/>
-                                                    <constraint firstItem="To3-Kz-Wdm" firstAttribute="leading" secondItem="qZV-Um-mbP" secondAttribute="leading" id="euN-zW-VhX"/>
-                                                    <constraint firstAttribute="bottom" secondItem="zuU-W7-Lrq" secondAttribute="bottom" id="hjY-7F-KBr"/>
-                                                    <constraint firstAttribute="height" constant="150" id="ihA-NB-8Ff"/>
-                                                    <constraint firstItem="To3-Kz-Wdm" firstAttribute="top" secondItem="qZV-Um-mbP" secondAttribute="top" id="kcl-YI-zwM"/>
-                                                    <constraint firstItem="yzW-Oh-d5c" firstAttribute="top" secondItem="qZV-Um-mbP" secondAttribute="top" id="qTv-GB-T2J"/>
-                                                    <constraint firstAttribute="trailing" secondItem="2Sh-1G-RCP" secondAttribute="trailing" id="uKd-Na-PO8"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSz-Ex-g3t">
-                                                <rect key="frame" x="80" y="613.5" width="840" height="260"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URI-Dd-xa3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="40"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="ChW-7f-J1d"/>
-                                                            <constraint firstAttribute="height" constant="40" id="Pgx-XM-vAO"/>
-                                                        </constraints>
-                                                        <string key="text">Jawaban: D. Arah Angin
-</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0y9-jh-D29">
-                                                        <rect key="frame" x="0.0" y="60" width="840" height="200"/>
-                                                        <string key="text">Rumus menghitung kecepatan awal jika jarak diketahui …
-x = vo² sin 2α x 1/g                    50 = vo²
-5 = vo² sin (2×45) x 1/10         vo = √50
-5 = vo² sin 90 x 1/10                 vo = 5√2 m/s
-5 = vo² x 1 x 1/10</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="URI-Dd-xa3" firstAttribute="top" secondItem="iSz-Ex-g3t" secondAttribute="top" id="1Yn-SH-ZWw"/>
-                                                    <constraint firstItem="0y9-jh-D29" firstAttribute="leading" secondItem="iSz-Ex-g3t" secondAttribute="leading" id="82M-fI-YbW"/>
-                                                    <constraint firstItem="URI-Dd-xa3" firstAttribute="leading" secondItem="iSz-Ex-g3t" secondAttribute="leading" id="8da-gG-q4i"/>
-                                                    <constraint firstAttribute="width" constant="840" id="DEK-vW-SBx"/>
-                                                    <constraint firstAttribute="height" constant="260" id="eAV-qz-Fsb"/>
-                                                    <constraint firstAttribute="trailing" secondItem="0y9-jh-D29" secondAttribute="trailing" id="erJ-9C-MsL"/>
-                                                    <constraint firstAttribute="bottom" secondItem="0y9-jh-D29" secondAttribute="bottom" id="ik9-P4-Yqj"/>
-                                                    <constraint firstItem="0y9-jh-D29" firstAttribute="top" secondItem="URI-Dd-xa3" secondAttribute="bottom" constant="20" id="lCX-BT-UKm"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.90196078430000004" green="0.90980392160000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="iSz-Ex-g3t" firstAttribute="centerX" secondItem="CAH-e8-w6W" secondAttribute="centerX" id="6cf-2x-KMO"/>
-                                            <constraint firstAttribute="width" constant="1000" id="APB-Ea-NPh"/>
-                                            <constraint firstItem="qZV-Um-mbP" firstAttribute="top" secondItem="bpE-8U-FLm" secondAttribute="bottom" constant="30" id="J9E-Gf-6lN"/>
-                                            <constraint firstItem="iSz-Ex-g3t" firstAttribute="top" secondItem="qZV-Um-mbP" secondAttribute="bottom" constant="50" id="Npn-wW-QRA"/>
-                                            <constraint firstItem="bpE-8U-FLm" firstAttribute="top" secondItem="zn4-DJ-raO" secondAttribute="bottom" constant="20" id="SU8-Wi-dYd"/>
-                                            <constraint firstItem="zn4-DJ-raO" firstAttribute="centerX" secondItem="CAH-e8-w6W" secondAttribute="centerX" id="cxf-Ao-d72"/>
-                                            <constraint firstItem="bpE-8U-FLm" firstAttribute="centerX" secondItem="CAH-e8-w6W" secondAttribute="centerX" id="d3Q-aL-Iuq"/>
-                                            <constraint firstItem="zn4-DJ-raO" firstAttribute="top" secondItem="CAH-e8-w6W" secondAttribute="top" constant="78" id="eD9-gs-fU5"/>
-                                            <constraint firstItem="qZV-Um-mbP" firstAttribute="centerX" secondItem="CAH-e8-w6W" secondAttribute="centerX" id="th0-wT-fNq"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <viewLayoutGuide key="safeArea" id="L58-3p-Qs2"/>
-                                <constraints>
-                                    <constraint firstItem="CAH-e8-w6W" firstAttribute="top" secondItem="7q9-hA-gSR" secondAttribute="top" id="ddZ-cR-m7M"/>
-                                    <constraint firstItem="CAH-e8-w6W" firstAttribute="bottom" secondItem="L58-3p-Qs2" secondAttribute="bottom" id="hPK-75-FPh"/>
-                                    <constraint firstItem="CAH-e8-w6W" firstAttribute="centerX" secondItem="7q9-hA-gSR" secondAttribute="centerX" id="tm0-OK-1xE"/>
-                                </constraints>
-                            </scrollView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="581" translatesAutoresizingMaskIntoConstraints="NO" id="D0Q-PQ-oDr">
-                                <rect key="frame" x="262.5" y="910" width="841" height="30"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soal 1 dari 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tho-0Q-u3c">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="DgV-F6-1nr"/>
-                                            <constraint firstAttribute="width" constant="120" id="qwp-L5-1no"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2R-lC-9b7">
-                                        <rect key="frame" x="701" y="0.0" width="140" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="bt2-sJ-a9V"/>
-                                            <constraint firstAttribute="width" constant="140" id="lKY-Mv-vAJ"/>
-                                        </constraints>
-                                        <color key="tintColor" red="0.1236296818" green="0.22598102689999999" blue="0.29804891350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Lanjutkan">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="XOq-fp-7Xg"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="0.90196078430000004" green="0.90980392160000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="D0Q-PQ-oDr" firstAttribute="top" secondItem="7q9-hA-gSR" secondAttribute="bottom" constant="8" id="NMm-Eq-Kf5"/>
-                            <constraint firstItem="D0Q-PQ-oDr" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Z4Q-q5-R0G"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="D0Q-PQ-oDr" secondAttribute="bottom" constant="64" id="gD3-NE-QR7"/>
-                        </constraints>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="536" y="198"/>
-        </scene>
-        <!--Quiz Controller-->
         <scene sceneID="gh7-Ac-ZoY">
             <objects>
                 <viewController storyboardIdentifier="quiz" id="bOv-BV-mId" customClass="QuizController" customModule="Syclab" customModuleProvider="target" sceneMemberID="viewController">
@@ -453,6 +248,20 @@ x = vo² sin 2α x 1/g                    50 = vo²
             <point key="canvasLocation" x="-406" y="5"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="PAG-OH-qBm">
+            <size key="intrinsicContentSize" width="170.5" height="43"/>
+        </designable>
+        <designable name="plk-bh-tpj">
+            <size key="intrinsicContentSize" width="206" height="43"/>
+        </designable>
+        <designable name="rgS-kj-Ddo">
+            <size key="intrinsicContentSize" width="169" height="43"/>
+        </designable>
+        <designable name="wxg-Qw-pcZ">
+            <size key="intrinsicContentSize" width="126" height="43"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Quiz_placeholder" width="452" height="221"/>
         <systemColor name="systemGreenColor">

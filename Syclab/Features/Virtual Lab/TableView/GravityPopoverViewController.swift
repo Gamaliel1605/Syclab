@@ -49,6 +49,7 @@ class GravityPopoverViewController: UITableViewController {
         cell.textLabel?.text = planet.rawValue
         cell.detailTextLabel?.text = "\(planet.getGravityValue()) m/s²"
         cell.accessoryType = .none
+        cell.backgroundColor = UIColor.bgColorTypo
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

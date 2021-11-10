@@ -8,9 +8,6 @@
 import UIKit
 import SpriteKit
 
-
-
-
 class VirtualLabController: UIViewController {
     
     @IBOutlet weak var infoButton: UIButton!
@@ -41,19 +38,19 @@ class VirtualLabController: UIViewController {
         setupSpriteView()
         setupScene()
         setupControlPanel()
-        
-        self.navigationItem.hidesBackButton = true 
-        let newBackButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(self.back(sender:)))
-        self.navigationItem.leftBarButtonItem = newBackButton
+        setupBackButton()
     }
-    // MARK: - Pressed Button Function
     
+    // MARK: - Pressed Button Function
     @objc func back(sender: UIBarButtonItem) {
-        let exitAlert = Exit()
-        exitAlert.delegate = self
-        self.present(exitAlert, animated: true, completion: nil)
-
+        if virtualLabVM?.check == .Misi {
+            let exitAlert = Exit()
+            exitAlert.delegate = self
+            self.present(exitAlert, animated: true, completion: nil)
+        } else {
+            self.navigationController?.popViewController(animated: true)
         }
+    }
     
     @IBAction func instructionButtonPressed(_ sender: Any) {
         let labInstructionsView = LabInstructions(frame: CGRect(x: self.view.bounds.width - (367+20),
@@ -132,7 +129,14 @@ class VirtualLabController: UIViewController {
     
     @IBAction func playButtonPressed(_ sender: Any) {
         guard let gameScene = spriteView.scene as? GerakParabolaScene else {return}
-        gameScene.shootStraight()
+        gameScene.shoot()
+//        gameScene.bolaPlaceholder.removeFromParent()
+//        playButton.isEnabled = false
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) { [weak self] in
+//
+//            self?.playButton.isEnabled = true
+//            gameScene.lenganKanan.addChild(gameScene.bolaPlaceholder)
+//        }
     }
     @IBAction func theoryButtonPressed(_ sender: Any) {
         let backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
@@ -191,6 +195,31 @@ class VirtualLabController: UIViewController {
     //            return true
     //        }
     //
+    func setupBackButton() {
+
+        self.navigationItem.setHidesBackButton(true, animated:false)
+
+        //your custom view for back image with custom size
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 70, height: 700))
+        if let chevron = UIImage(systemName: "chevron.backward") {
+            imageView.image = chevron
+            imageView.tintColor = UIColor.mainColorButton
+        }
+        
+        let label = UILabel()
+        
+        if let title = virtualLabVM?.title {
+            label.text = " \(title)"
+            label.textColor = UIColor.mainColorButton
+            label.font = .boldSystemFont(ofSize: 20)
+        }
+        let view2 = UIStackView(arrangedSubviews: [imageView, label])
+        let backTap = UITapGestureRecognizer(target: self, action: #selector(back(sender:)))
+        view2.addGestureRecognizer(backTap)
+
+        let leftBarButtonItem = UIBarButtonItem(customView: view2 )
+        self.navigationItem.leftBarButtonItem = leftBarButtonItem
+    }
     
     func setupSpriteView() {
         spriteScene = GerakParabolaScene(isMission: virtualLabVM?.isMission ?? false, size: spriteView.bounds.size)
@@ -233,6 +262,8 @@ class VirtualLabController: UIViewController {
         kecepatanSlider.minimumValue = 10
         
         missionBox.layer.cornerRadius = 8
+        missionBox.layer.borderWidth = 1
+        missionBox.layer.borderColor = UIColor.darkGray.cgColor
     }
     
     func setupSliders() {
@@ -275,6 +306,7 @@ class VirtualLabController: UIViewController {
     func setupMissionView() {
         if virtualLabVM?.isMission ?? false {
             gravitationButton.isEnabled = false
+            gravitationButton.alpha = 0.5
             gravitationLbl.isEnabled = false
             
             switch virtualLabVM?.experiment {
@@ -361,7 +393,8 @@ class VirtualLabController: UIViewController {
     }
     
     func setupTheoryButton () {
-        //        theoryButton.layer.cornerRadius = 8
+        theoryButton.tintColor = UIColor.mainColorButton
+        
     }
 }
 // MARK: - PROTOCOL
@@ -379,7 +412,6 @@ extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
         if scene.isFinish {
             scene.isFinish = false
             scene.sensor.removeFromParent()
-            
             
             if virtualLabVM?.isMission ?? false {
                 if virtualLabVM!.indexMission < (virtualLabVM?.missions!.count)! - 1 {

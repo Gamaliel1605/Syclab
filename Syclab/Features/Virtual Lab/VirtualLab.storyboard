@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -105,9 +106,10 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <color key="tintColor" name="2ndOptionColorOnButton"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Ob-Bs-Vwl">
-                                        <rect key="frame" x="932.5" y="54" width="181" height="63"/>
+                                        <rect key="frame" x="932.5" y="54" width="181" height="66"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percepatan Gravitasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jC6-Nw-3yK">
                                                 <rect key="frame" x="0.0" y="0.0" width="181" height="24"/>
@@ -115,13 +117,35 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0d-qv-4me">
-                                                <rect key="frame" x="0.0" y="32" width="181" height="31"/>
-                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Bumi 10 m/s²">
-                                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </buttonConfiguration>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0d-qv-4me" customClass="DesignableButton" customModule="Syclab" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="32" width="181" height="34"/>
+                                                <color key="backgroundColor" name="MainColorButton"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Bumi 10 m/s²">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="-1" height="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="gravitationBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Jwe-o3-rTa"/>
                                                 </connections>
@@ -139,12 +163,12 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1K-1T-2Hf" customClass="DesignableButton" customModule="Syclab" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="72" height="73"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" name="MainColorButton"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="73" id="KsC-73-5IF"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="hnZ-Zk-nIB"/>
                                                         </constraints>
-                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal">
                                                             <color key="titleColor" systemColor="labelColor"/>
@@ -177,12 +201,12 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WlY-9x-mJU" customClass="DesignableButton" customModule="Syclab" customModuleProvider="target">
                                                         <rect key="frame" x="84" y="0.0" width="72" height="73"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" name="MainColorButton"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="73" id="6lH-19-wOT"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="wIW-l6-fFg"/>
                                                         </constraints>
-                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal">
                                                             <color key="titleColor" systemColor="labelColor"/>
@@ -217,13 +241,14 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0k-sy-Uer" userLabel="KonsepButton" customClass="DesignableButton" customModule="Syclab" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="86" width="156" height="65"/>
+                                                <color key="backgroundColor" name="MainColorButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="XTI-gh-roK"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Konsep Teori">
-                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                </buttonConfiguration>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="tintColor" name="MainColorButton"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Konsep Teori"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="8"/>
@@ -251,7 +276,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="BackgroundColorTypography"/>
                                 <constraints>
                                     <constraint firstItem="0ro-q1-lNY" firstAttribute="top" secondItem="X1o-YA-fBh" secondAttribute="top" constant="23" id="Bxu-Gt-MLM"/>
                                     <constraint firstItem="9Ob-Bs-Vwl" firstAttribute="top" secondItem="X1o-YA-fBh" secondAttribute="top" constant="54" id="a1z-Za-ACj"/>
@@ -266,12 +291,12 @@
                             </skView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yW6-yU-TZN" customClass="DesignableButton" customModule="Syclab" customModuleProvider="target">
                                 <rect key="frame" x="1107" y="53" width="50" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="MainColorButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="J7N-04-1Kb"/>
                                     <constraint firstAttribute="width" constant="50" id="jT7-hy-cN3"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="labelColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <color key="titleColor" systemColor="labelColor"/>
@@ -318,7 +343,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="IllustrationAccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="DOa-uT-RH5" secondAttribute="bottom" constant="15" id="FfE-BB-ew6"/>
                                     <constraint firstItem="zIm-eb-w0q" firstAttribute="centerX" secondItem="Qrk-Cp-iUR" secondAttribute="centerX" id="WMr-ai-uNy"/>
@@ -382,11 +407,14 @@
         <designable name="B1K-1T-2Hf">
             <size key="intrinsicContentSize" width="26.5" height="22"/>
         </designable>
+        <designable name="W0d-qv-4me">
+            <size key="intrinsicContentSize" width="104" height="34"/>
+        </designable>
         <designable name="WlY-9x-mJU">
             <size key="intrinsicContentSize" width="18.5" height="22"/>
         </designable>
         <designable name="q0k-sy-Uer">
-            <size key="intrinsicContentSize" width="127" height="34.5"/>
+            <size key="intrinsicContentSize" width="103" height="33"/>
         </designable>
         <designable name="yW6-yU-TZN">
             <size key="intrinsicContentSize" width="25" height="24"/>
@@ -396,6 +424,18 @@
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="repeat" catalog="system" width="128" height="98"/>
+        <namedColor name="2ndOptionColorOnButton">
+            <color red="0.31901428100000001" green="0.41440892219999997" blue="0.49020659919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="BackgroundColorTypography">
+            <color red="0.90157353880000002" green="0.91088193660000005" blue="0.83136206869999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="IllustrationAccentColor">
+            <color red="0.93104606869999995" green="0.722014606" blue="0.246899128" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="MainColorButton">
+            <color red="0.1195720509" green="0.2181599736" blue="0.29804924129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

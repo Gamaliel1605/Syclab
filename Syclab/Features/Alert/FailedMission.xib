@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FailedMission" customModule="Syclab" customModuleProvider="target">
+            <connections>
+                <outlet property="failedView" destination="Z88-U0-QU4" id="hQ3-1W-lkU"/>
+                <outlet property="imageFailed" destination="BxE-Jg-gVm" id="0wS-Sc-sfS"/>
+                <outlet property="labelFailed" destination="5Qe-Ab-3Ys" id="Ja3-A8-mP0"/>
+                <outlet property="view" destination="iN0-l3-epB" id="x6Q-R5-XkW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z88-U0-QU4">
+                    <rect key="frame" x="373.5" y="325" width="447" height="184"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="BxE-Jg-gVm">
+                            <rect key="frame" x="30" y="52" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="edR-Sh-OIJ"/>
+                                <constraint firstAttribute="width" constant="80" id="rE1-Vx-XQG"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gaya tarik gravitasi terlalu kecil sehingga matahari dan bumi terlepas dari orbit!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qe-Ab-3Ys">
+                            <rect key="frame" x="118" y="49.5" width="309" height="85"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="85" id="Ee0-pF-7c1"/>
+                                <constraint firstAttribute="width" constant="309" id="gBx-sw-hxb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="BackgroundColorTypography"/>
+                    <constraints>
+                        <constraint firstItem="BxE-Jg-gVm" firstAttribute="centerY" secondItem="Z88-U0-QU4" secondAttribute="centerY" id="MLK-Bp-uoP"/>
+                        <constraint firstItem="5Qe-Ab-3Ys" firstAttribute="top" secondItem="Z88-U0-QU4" secondAttribute="top" constant="49.5" id="QW0-nT-ixF"/>
+                        <constraint firstItem="BxE-Jg-gVm" firstAttribute="leading" secondItem="Z88-U0-QU4" secondAttribute="leading" constant="30" id="Vgg-Dj-uYo"/>
+                        <constraint firstItem="5Qe-Ab-3Ys" firstAttribute="centerY" secondItem="Z88-U0-QU4" secondAttribute="centerY" id="c1p-IE-6nG"/>
+                        <constraint firstAttribute="width" constant="447" id="dIF-P9-J08"/>
+                        <constraint firstItem="BxE-Jg-gVm" firstAttribute="top" secondItem="Z88-U0-QU4" secondAttribute="top" constant="52" id="k4i-BL-Svc"/>
+                        <constraint firstAttribute="height" constant="184" id="wrb-aN-iSQ"/>
+                        <constraint firstItem="5Qe-Ab-3Ys" firstAttribute="leading" secondItem="BxE-Jg-gVm" secondAttribute="trailing" constant="8" id="xoL-Ec-6NA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="Z88-U0-QU4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MN5-pU-pbX"/>
+                <constraint firstItem="Z88-U0-QU4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="N8F-mg-wE8"/>
+            </constraints>
+            <point key="canvasLocation" x="138.69346733668343" y="89.928057553956847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="warning" width="74" height="69"/>
+        <namedColor name="BackgroundColorTypography">
+            <color red="0.90200001001358032" green="0.91100001335144043" blue="0.83099997043609619" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
