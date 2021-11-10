@@ -67,7 +67,7 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                 ),
                 ContentImage(
                     imageDetails: ["TeoriKonsep1", "Teori"],
-                    padding: UIEdgeInsets(top: 25, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 25, left: 120, bottom: 0, right: 30),
                     size: CGSize(width: 558, height: 127)
                 ),
                 ContentLabel(
@@ -83,13 +83,13 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                 ),
                 ContentImage(
                     imageDetails: ["teori_sumbux", "Rumus Sumbu X"],
-                    padding: UIEdgeInsets(top: 45, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 45, left: 210, bottom: 0, right: 30),
                     
                     size: CGSize(width: 368, height: 202)
                 ),
                 ContentImage(
                     imageDetails: ["TeoriKonsep2","Teori"],
-                    padding: UIEdgeInsets(top: 34, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 34, left: 105, bottom: 0, right: 30),
                     size: CGSize(width: 589.53, height: 194)
                 ),
                 ContentLabel(
@@ -104,12 +104,12 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                     padding: UIEdgeInsets(top: 15, left: 30, bottom: 0, right: 30)),
                 ContentImage(
                     imageDetails: ["teori_sumbuy","Rumus sumbu Y"],
-                    padding: UIEdgeInsets(top: 34, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 34, left: 210, bottom: 0, right: 30),
                     size: CGSize(width: 369.3, height: 202)
                 ),
                 ContentImage(
                     imageDetails: ["TeoriKonsep3","Teori"],
-                    padding: UIEdgeInsets(top: 34, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 34, left: 105, bottom: 0, right: 30),
                     size: CGSize(width: 589.53, height: 194)
                 ),
                 ContentLabel(
@@ -129,7 +129,7 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                 ),
                 ContentImage(
                     imageDetails: ["tinggimaksimum", "Tinggi"],
-                    padding: UIEdgeInsets(top: 20, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 20, left: 220, bottom: 0, right: 30),
                     size: CGSize(width: 353.27, height: 170)
                 ),
                 ContentLabel(
@@ -139,7 +139,7 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                 ),
                 ContentImage(
                     imageDetails: ["Rumus1", "Rumus"],
-                    padding: UIEdgeInsets(top: 20, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 20, left: 235, bottom: 0, right: 30),
                     size: CGSize(width: 326, height: 177)
                 ),
                 ContentLabel(
@@ -149,7 +149,7 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                 ),
                 ContentImage(
                     imageDetails: ["Rumus2", "Rumus"],
-                    padding: UIEdgeInsets(top: 20, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 20, left: 235, bottom: 0, right: 30),
                     size: CGSize(width: 326, height: 139)
                 ),
                 ContentLabel(
@@ -159,7 +159,7 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                 ),
                 ContentImage(
                     imageDetails: ["Rumus3", "Rumus"],
-                    padding: UIEdgeInsets(top: 20, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 20, left: 260, bottom: 0, right: 30),
                     size: CGSize(width: 267, height: 106)
                 ),
                 ContentLabel(
@@ -170,7 +170,7 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                 ),
                 ContentImage(
                     imageDetails: ["jarakmaksimum", "Jarak"],
-                    padding: UIEdgeInsets(top: 20, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 20, left: 220, bottom: 0, right: 30),
                     size: CGSize(width: 353.27, height: 170)
                 ),
                 ContentLabel(
@@ -180,7 +180,7 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                 ),
                 ContentImage(
                     imageDetails: ["Rumus4", "Rumus"],
-                    padding: UIEdgeInsets(top: 20, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 20, left: 235, bottom: 0, right: 30),
                     size: CGSize(width: 326, height: 177)
                 ),
                 ContentLabel(
@@ -190,12 +190,12 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                 ),
                 ContentImage(
                     imageDetails: ["Rumus5", "Rumus"],
-                    padding: UIEdgeInsets(top: 20, left: 30, bottom: 0, right: 30),
+                    padding: UIEdgeInsets(top: 20, left: 235, bottom: 0, right: 30),
                     size: CGSize(width: 326, height: 139)
                 ),
                 ContentImage(
                     imageDetails: ["Rumus6", "Rumus"],
-                    padding: UIEdgeInsets(top: 20, left: 30, bottom: 30, right: 30),
+                    padding: UIEdgeInsets(top: 20, left: 235, bottom: 30, right: 30),
                     size: CGSize(width: 326, height: 139)
                 ),
             ]
