@@ -467,7 +467,13 @@ extension VirtualLabController: FinishAlertProtocol {
     }
     
     func onTapToQuiz() {
-        print("kuis belom jadi")
+        let storyboard = UIStoryboard(name: "Quiz", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "quiz") as! QuizController
+        if let experiment = virtualLabVM?.experiment {
+            viewController.quizVM = QuizViewModel(experiment: experiment)
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+        
     }
 }
 
