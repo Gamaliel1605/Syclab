@@ -67,7 +67,6 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="puW-Fw-W28" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NNQ-n7-KCB"/>
                 <constraint firstItem="puW-Fw-W28" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="O3l-Wb-dfR"/>
