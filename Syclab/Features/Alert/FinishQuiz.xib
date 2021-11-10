@@ -110,7 +110,6 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="91U-BM-r67" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="66h-ZT-UUZ"/>
                 <constraint firstItem="91U-BM-r67" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="zop-Z1-YGS"/>
