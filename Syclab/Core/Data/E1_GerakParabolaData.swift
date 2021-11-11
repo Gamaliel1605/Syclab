@@ -44,8 +44,6 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                                                       imgName: "ModeKuis")]
     
     
-    
-    
     static let experimentConcept = ExperimentConcept(
         conceptTheory:
             [
