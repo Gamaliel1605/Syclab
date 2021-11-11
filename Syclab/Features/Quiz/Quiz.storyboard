@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -44,62 +43,62 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXz-yB-mKB">
                                                 <rect key="frame" x="263" y="425.5" width="840" height="150"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plk-bh-tpj" customClass="DesignableButton" customModule="Syclab" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plk-bh-tpj">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="59"/>
+                                                        <color key="backgroundColor" red="0.60609471800000003" green="0.110549219" blue="0.1215417162" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="393" id="2CH-sJ-uma"/>
                                                             <constraint firstAttribute="height" constant="59" id="5ss-pf-bhY"/>
                                                         </constraints>
-                                                        <color key="tintColor" red="0.60609471800000003" green="0.110549219" blue="0.1215417162" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="A.   Gaya gravitasi">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
-                                                        </buttonConfiguration>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="A.   Gaya gravitasi"/>
                                                         <connections>
                                                             <action selector="quizAnswerChosen:" destination="bOv-BV-mId" eventType="touchUpInside" id="Jpz-vD-KcF"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgS-kj-Ddo" customClass="DesignableButton" customModule="Syclab" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgS-kj-Ddo">
                                                         <rect key="frame" x="0.0" y="91" width="393" height="59"/>
+                                                        <color key="backgroundColor" red="0.086274509803921567" green="0.2196078431372549" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="393" id="dho-mt-qwt"/>
                                                             <constraint firstAttribute="height" constant="59" id="qeb-4p-4Zv"/>
                                                         </constraints>
-                                                        <color key="tintColor" red="0.086274509799999996" green="0.21960784310000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="C.   Hambatan">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
-                                                        </buttonConfiguration>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="C.   Hambatan"/>
                                                         <connections>
                                                             <action selector="quizAnswerChosen:" destination="bOv-BV-mId" eventType="touchUpInside" id="U4x-l1-QnT"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAG-OH-qBm" customClass="DesignableButton" customModule="Syclab" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAG-OH-qBm">
                                                         <rect key="frame" x="447" y="91" width="393" height="59"/>
+                                                        <color key="backgroundColor" red="0.35294117650000001" green="0.72156862749999995" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="393" id="Jmi-yR-PjJ"/>
                                                             <constraint firstAttribute="height" constant="59" id="dA4-4t-V46"/>
                                                         </constraints>
-                                                        <color key="tintColor" systemColor="systemGreenColor"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="D.   Arah angin">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
-                                                        </buttonConfiguration>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="D.   Arah angin"/>
                                                         <connections>
                                                             <action selector="quizAnswerChosen:" destination="bOv-BV-mId" eventType="touchUpInside" id="A63-v2-tsH"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxg-Qw-pcZ" customClass="DesignableButton" customModule="Syclab" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxg-Qw-pcZ">
                                                         <rect key="frame" x="447" y="0.0" width="393" height="59"/>
+                                                        <color key="backgroundColor" red="0.086274509803921567" green="0.2196078431372549" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="59" id="v0I-Bo-qn5"/>
                                                             <constraint firstAttribute="width" constant="393" id="wVV-sf-o4d"/>
                                                         </constraints>
-                                                        <color key="tintColor" red="0.086274509799999996" green="0.21960784310000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="B.   Benda">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
-                                                        </buttonConfiguration>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="B.   Benda"/>
                                                         <connections>
                                                             <action selector="quizAnswerChosen:" destination="bOv-BV-mId" eventType="touchUpInside" id="28w-Ks-e6r"/>
                                                         </connections>
@@ -201,11 +200,10 @@ x = vo² sin 2α x 1/g                    50 = vo²
                                             <constraint firstAttribute="width" constant="140" id="6FE-YH-1Cm"/>
                                             <constraint firstAttribute="height" constant="30" id="d1S-6Y-hcU"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" red="0.1236296818" green="0.22598102689999999" blue="0.29804891350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Lanjutkan">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Lanjutkan"/>
                                         <connections>
                                             <action selector="quizProceeded:" destination="bOv-BV-mId" eventType="touchUpInside" id="Tkp-Nn-vOK"/>
                                         </connections>
@@ -248,24 +246,7 @@ x = vo² sin 2α x 1/g                    50 = vo²
             <point key="canvasLocation" x="-406" y="5"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="PAG-OH-qBm">
-            <size key="intrinsicContentSize" width="170.5" height="43"/>
-        </designable>
-        <designable name="plk-bh-tpj">
-            <size key="intrinsicContentSize" width="206" height="43"/>
-        </designable>
-        <designable name="rgS-kj-Ddo">
-            <size key="intrinsicContentSize" width="169" height="43"/>
-        </designable>
-        <designable name="wxg-Qw-pcZ">
-            <size key="intrinsicContentSize" width="126" height="43"/>
-        </designable>
-    </designables>
     <resources>
         <image name="Quiz_placeholder" width="452" height="221"/>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
