@@ -16,13 +16,25 @@ struct E2_HukumGravitasiNewtonData {
         id: .E2_HukumGravitasiNewton
     )
     
-    static let eksplorasiDetail = ExperimentDetails(expDesc: "ini eksploras",
-                                                    expImage_1: "GerakParabola_description_1",
-                                                    expImage_2: "GerakParabola_description_2")
+    static let eksplorasiDetail = ExperimentDetails(expDesc: """
+                                            Gaya gravitasi adalah salah satu jenis gaya yang dipengaruhi oleh gaya tarik sebuah benda ke pusat benda tersebut.
+                                            
+                                            Pada mode ini, dapat secara bebas mengeksplor gerak parabola untuk memahami konsepnya.
+                                            
+                                            Di sini, kamu akan melihat matahari dan bumi, dua benda dari tata surya kita. Hasilkan gaya tarik gravitasi antara dua benda tersebut dengan berbagai cara!
+                                            """,
+                                                    expImage_1: "DetailHukumNewton1",
+                                                    expImage_2: "DetailHukumNewton2")
     
-    static let misiDetail = ExperimentDetails(expDesc: "ini misi",
-                                                    expImage_1: "GerakParabola_description_1",
-                                                    expImage_2: "GerakParabola_description_2")
+    static let misiDetail = ExperimentDetails(expDesc: """
+                                        Gaya gravitasi adalah salah satu jenis gaya yang dipengaruhi oleh gaya tarik sebuah benda ke pusat benda tersebut.
+                                        
+                                        Pada mode ini, kamu akan diberikan misi untuk diselesaikan.
+                                        
+                                        Di sini, kamu akan melihat Matahari dan Bumi kita. Pahami hal-hal yang mempengaruhi besar gaya tarik gravitasi antara kedua benda di tata surya tersebut dengan menyelesaikan misi!
+                                        """,
+                                                    expImage_1: "DetailHukumNewton1",
+                                                    expImage_2: "DetailHukumNewton2")
     
     static let experimentOptions = [ExperimentOption(title: .Eksplorasi,
                                                       desc: "Eksplor dan Coba Eksperimen",
@@ -113,4 +125,29 @@ struct E2_HukumGravitasiNewtonData {
             ]
         )
     
+    static let labInstructions = ExperimentLab(
+        labInstructions:
+            [
+                ContentLabel(
+                    text: "Slider Massa Bola digunakan untuk mengatur Massa Bola agar lebih besar atau lebih kecil.",
+                    fontsize: 17,
+                    padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10)
+                ),
+                ContentImage(
+                    imageDetails: ["Instructions1", "Petunjuk lab"],
+                    padding: UIEdgeInsets(top: 20, left: 30, bottom: 0, right: 10),
+                    size: CGSize(width: 269.62, height: 59)
+                ),
+                ContentLabel(
+                    text: "Perubahan warna bola menjadi lebih gelap menandakan Massa bertambah dan warna bola menjadi lebih terang menandakan Massa berkurang.",
+                    fontsize: 17,
+                    padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10)
+                ),
+                ContentImage(
+                    imageDetails: ["Instructions2","Petunjuk lab"],
+                    padding: UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 10),
+                    size: CGSize(width: 295, height: 83)
+                )
+            ]
+        )
 }
