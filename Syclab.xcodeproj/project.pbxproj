@@ -20,6 +20,11 @@
 		142498F62727716E0050F18D /* ExperimentDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F52727716E0050F18D /* ExperimentDetailRepository.swift */; };
 		142498FA272776760050F18D /* ColorHexConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498F9272776760050F18D /* ColorHexConversion.swift */; };
 		142498FC272793C60050F18D /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142498FB272793C60050F18D /* AttributedString.swift */; };
+		14661629274025620067AF96 /* VirtualLabHukumNewton.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14661628274025620067AF96 /* VirtualLabHukumNewton.storyboard */; };
+		1466162B2740258E0067AF96 /* VirtualLabHukumNewtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466162A2740258E0067AF96 /* VirtualLabHukumNewtonViewController.swift */; };
+		1466162D2740DB1B0067AF96 /* HukumNewtonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466162C2740DB1A0067AF96 /* HukumNewtonScene.swift */; };
+		146616302740F72A0067AF96 /* HukumNewtonDashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466162F2740F72A0067AF96 /* HukumNewtonDashboardModel.swift */; };
+		14661632274114040067AF96 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14661631274114040067AF96 /* CGFloatExtension.swift */; };
 		14B4053527337EA300E17BDB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4053427337EA300E17BDB /* Protocols.swift */; };
 		981B8C1F27399956006B2735 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981B8C1E27399956006B2735 /* Colors.xcassets */; };
 		981B8C2327399B5C006B2735 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981B8C2227399B5C006B2735 /* ExtensionUIColor.swift */; };
@@ -101,6 +106,11 @@
 		142498F52727716E0050F18D /* ExperimentDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentDetailRepository.swift; sourceTree = "<group>"; };
 		142498F9272776760050F18D /* ColorHexConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexConversion.swift; sourceTree = "<group>"; };
 		142498FB272793C60050F18D /* AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
+		14661628274025620067AF96 /* VirtualLabHukumNewton.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VirtualLabHukumNewton.storyboard; sourceTree = "<group>"; };
+		1466162A2740258E0067AF96 /* VirtualLabHukumNewtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualLabHukumNewtonViewController.swift; sourceTree = "<group>"; };
+		1466162C2740DB1A0067AF96 /* HukumNewtonScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HukumNewtonScene.swift; sourceTree = "<group>"; };
+		1466162F2740F72A0067AF96 /* HukumNewtonDashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HukumNewtonDashboardModel.swift; sourceTree = "<group>"; };
+		14661631274114040067AF96 /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 		14B4053427337EA300E17BDB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		981B8C1E27399956006B2735 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		981B8C2227399B5C006B2735 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
@@ -227,6 +237,25 @@
 				142498F52727716E0050F18D /* ExperimentDetailRepository.swift */,
 			);
 			path = "Experiment Detail Data Store";
+			sourceTree = "<group>";
+		};
+		146616272740254F0067AF96 /* Hukum Newton */ = {
+			isa = PBXGroup;
+			children = (
+				1466162E2740F71B0067AF96 /* Model */,
+				14661628274025620067AF96 /* VirtualLabHukumNewton.storyboard */,
+				1466162A2740258E0067AF96 /* VirtualLabHukumNewtonViewController.swift */,
+				1466162C2740DB1A0067AF96 /* HukumNewtonScene.swift */,
+			);
+			path = "Hukum Newton";
+			sourceTree = "<group>";
+		};
+		1466162E2740F71B0067AF96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1466162F2740F72A0067AF96 /* HukumNewtonDashboardModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		982CEA5627367046004469DA /* Sounds */ = {
@@ -382,6 +411,7 @@
 		EABCDE7E271EEE4100CA2677 /* Virtual Lab */ = {
 			isa = PBXGroup;
 			children = (
+				146616272740254F0067AF96 /* Hukum Newton */,
 				98562DEC2730FEEF00D1C619 /* Model */,
 				141DA6462732C921007E8DAF /* Lab Instructions */,
 				1408134927304B0400C8A482 /* Concept Theory */,
@@ -487,6 +517,7 @@
 				142498F9272776760050F18D /* ColorHexConversion.swift */,
 				EADBE49E272D808600E8607D /* ViewExtension.swift */,
 				EADBE4A0272D80E900E8607D /* LabelExtension.swift */,
+				14661631274114040067AF96 /* CGFloatExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -553,6 +584,7 @@
 				140813502730C1E900C8A482 /* CobaConceptTheory.storyboard in Resources */,
 				EABCDE67271EED1C00CA2677 /* LaunchScreen.storyboard in Resources */,
 				EA0C378A2723EECC0038BF88 /* HomeCell.xib in Resources */,
+				14661629274025620067AF96 /* VirtualLabHukumNewton.storyboard in Resources */,
 				141DA64F2732CF38007E8DAF /* CobaLabInstructions.storyboard in Resources */,
 				EABCDE8E271EEF4700CA2677 /* ModeOption.storyboard in Resources */,
 				EABCDE80271EEE8200CA2677 /* VirtualLab.storyboard in Resources */,
@@ -588,6 +620,7 @@
 				EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */,
 				98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */,
 				EAD5BB1227314C6300E4D651 /* Exit.swift in Sources */,
+				1466162B2740258E0067AF96 /* VirtualLabHukumNewtonViewController.swift in Sources */,
 				EA0C378C2723F3970038BF88 /* RegisterNib.swift in Sources */,
 				981D5BA9273528D800EB1BB5 /* GerakParabolaMission.swift in Sources */,
 				14B4053527337EA300E17BDB /* Protocols.swift in Sources */,
@@ -605,6 +638,7 @@
 				EABCDE90271EEF5C00CA2677 /* ModeOptionController.swift in Sources */,
 				988B9978272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift in Sources */,
 				EADBE4A1272D80E900E8607D /* LabelExtension.swift in Sources */,
+				14661632274114040067AF96 /* CGFloatExtension.swift in Sources */,
 				98562DEE2730FF0400D1C619 /* EngineGerakParabola.swift in Sources */,
 				141DA64C2732C9F7007E8DAF /* LabInstructions.swift in Sources */,
 				EABCDE7D271EEDF600CA2677 /* QuizViewModel.swift in Sources */,
@@ -619,6 +653,7 @@
 				98562DF02730FFCA00D1C619 /* MathFunctions.swift in Sources */,
 				142498F227276DBD0050F18D /* ExperimentDetailModel.swift in Sources */,
 				EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */,
+				146616302740F72A0067AF96 /* HukumNewtonDashboardModel.swift in Sources */,
 				EAD92737272C55F800B1635B /* ExperimentQuiz.swift in Sources */,
 				142498F42727703F0050F18D /* ExperimentDetailDataStore.swift in Sources */,
 				EAD92735272C559B00B1635B /* ExperimentLab.swift in Sources */,
@@ -634,6 +669,7 @@
 				EABCDE99271EEFC700CA2677 /* HomeViewModel.swift in Sources */,
 				981B8C2327399B5C006B2735 /* ExtensionUIColor.swift in Sources */,
 				EADBE49F272D808600E8607D /* ViewExtension.swift in Sources */,
+				1466162D2740DB1B0067AF96 /* HukumNewtonScene.swift in Sources */,
 				98BADE4727291304009EE9D1 /* Extension+UIButton.swift in Sources */,
 				EABCDE82271EEE9000CA2677 /* VirtualLabController.swift in Sources */,
 				EADBE49C272D800D00E8607D /* ContentImage.swift in Sources */,
