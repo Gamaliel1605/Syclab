@@ -27,7 +27,6 @@ class QuizController: UIViewController {
     @IBOutlet weak var quizProceedButton: UIButton!
     
     var quizVM: QuizViewModel!
-    var titleCounter: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,23 +55,23 @@ class QuizController: UIViewController {
         print("\(quizVM.quizScore)")
 
         if userGotItRight {
-            sender.tintColor = UIColor(hexString: "5AB861")
+            sender.backgroundColor = UIColor(hexString: "5AB861")
             print("Benar")
         } else {
-            sender.tintColor = UIColor(hexString: "BF2727")
+            sender.backgroundColor = UIColor(hexString: "BF2727")
             print("Salah")
             //the correct button becomes green
             if userAnswer == quizVM.quizData[quizVM.quizQuestionNumber].quizOptionA {
-                quizOptionA_Button.tintColor = UIColor(hexString: "5AB861")
+                quizOptionA_Button.backgroundColor = UIColor(hexString: "5AB861")
             }
             if userAnswer == quizVM.quizData[quizVM.quizQuestionNumber].quizOptionB {
-                quizOptionB_Button.tintColor = UIColor(hexString: "5AB861")
+                quizOptionB_Button.backgroundColor = UIColor(hexString: "5AB861")
             }
             if userAnswer == quizVM.quizData[quizVM.quizQuestionNumber].quizOptionC {
-                quizOptionC_Button.tintColor = UIColor(hexString: "5AB861")
+                quizOptionC_Button.backgroundColor = UIColor(hexString: "5AB861")
             }
             if userAnswer == quizVM.quizData[quizVM.quizQuestionNumber].quizOptionD {
-                quizOptionD_Button.tintColor = UIColor(hexString: "5AB861")
+                quizOptionD_Button.backgroundColor = UIColor(hexString: "5AB861")
             }
         }
 
@@ -81,7 +80,7 @@ class QuizController: UIViewController {
         } else {
             quizProceedButton.setTitle("Lanjut", for: .normal)
         }
-        quizProceedButton.titleLabel?.font = .systemFont(ofSize: 25, weight: .bold) //not working
+        quizProceedButton.titleLabel?.font = .systemFont(ofSize: 25, weight: .bold)
 
         quizAnswerLabel.attributedText = NSMutableAttributedString()
             .normal("Jawaban:    ")
@@ -97,7 +96,7 @@ class QuizController: UIViewController {
     @IBAction func quizProceeded(_ sender: UIButton) {
         if quizVM.quizQuestionNumber == ((quizVM.quizData.count) - 1) {
             //where the Quiz (and other variables) restarts -> transition to alert
-            quizVM.quizQuestionNumber = 0
+            quizVM.quizQuestionNumber = 0 // Do not know how it restarts itself; this snippet does nothing
             
             self.navigationController?.isNavigationBarHidden = true
             quizScrollView.isScrollEnabled = false
@@ -110,6 +109,8 @@ class QuizController: UIViewController {
             
             quizAlert.quizScore.text = "Score: \(quizVM.quizScore)"
             quizAlert.quizLabel_3.text = "menyelesaikan kuis materi \(quizVM.title)!"
+            
+            quizVM.quizScore = 0 // Do not know how it restarts itself; this snippet does nothing
             
         } else {
             //automated top scroll
@@ -145,16 +146,33 @@ class QuizController: UIViewController {
         quizOptionC_Button.isUserInteractionEnabled = true
         quizOptionD_Button.isUserInteractionEnabled = true
 
+        //Button Corner Roudering
+        quizOptionA_Button.layer.cornerRadius = 10
+        quizOptionB_Button.layer.cornerRadius = 10
+        quizOptionC_Button.layer.cornerRadius = 10
+        quizOptionD_Button.layer.cornerRadius = 10
+        
+        //Button Edge Insets
+        quizOptionA_Button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        quizOptionB_Button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        quizOptionC_Button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        quizOptionD_Button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        
         //button colour reset
-        quizOptionA_Button.tintColor = UIColor(hexString: "16384E")
-        quizOptionB_Button.tintColor = UIColor(hexString: "16384E")
-        quizOptionC_Button.tintColor = UIColor(hexString: "16384E")
-        quizOptionD_Button.tintColor = UIColor(hexString: "16384E")
+        quizOptionA_Button.backgroundColor = UIColor(hexString: "16384E")
+        quizOptionB_Button.backgroundColor = UIColor(hexString: "16384E")
+        quizOptionC_Button.backgroundColor = UIColor(hexString: "16384E")
+        quizOptionD_Button.backgroundColor = UIColor(hexString: "16384E")
     }
     
     func checkAnswer(_ userAnswer: String) -> Bool {
+        let quizScoreIncrementDeterminant = (100 / quizVM.quizData.count)
         if userAnswer == quizVM.quizData[quizVM.quizQuestionNumber].quizAnswer {
-            quizVM.quizScore += 20
+            if quizVM.quizScore > 100 {
+                quizVM.quizScore = 100
+            } else {
+                quizVM.quizScore += quizScoreIncrementDeterminant
+            }
             return true
         } else {
             return false
@@ -166,17 +184,9 @@ class QuizController: UIViewController {
             quizVM.quizQuestionNumber += 1
         }
     }
-    func titleDeterminant() {
-        if quizVM.title == "Gerak Parabola" {
-            titleCounter = 0
-        } else {
-            titleCounter = 1
-        }
-    }
 }
 
 // MARK: - Extentions
-let homeVM = HomeViewModel()
 
 extension QuizController: QuizAlertProtocol {
     func onTapKeluarQuiz() {

@@ -57,7 +57,7 @@ enum Experiments: String {
         case .E1_GerakParabola:
             return E1_GerakParabolaData.experimentConcept
         case .E2_HukumGravitasiNewton:
-            return ExperimentConcept(conceptTheory: [])
+            return E2_HukumGravitasiNewtonData.experimentConcept
         }
     }
     
@@ -66,7 +66,7 @@ enum Experiments: String {
         case .E1_GerakParabola:
             return E1_GerakParabolaData.labInstructions
         case .E2_HukumGravitasiNewton:
-            return ExperimentLab(labInstructions: [])
+            return E2_HukumGravitasiNewtonData.labInstructions
         }
     }
     

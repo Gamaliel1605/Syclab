@@ -20,8 +20,8 @@ Pada mode ini, dapat secara bebas mengeksplor gerak parabola untuk memahami kons
 Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni melemparkan bola basketnya dengan berbagai macam cara!
 
 """.withBoldText(text: "suatu gerak dari objek yang membentuk lintasan melengkung karena pengaruh gravitasi.").string,
-                                                    expImage_1: "Detail1",
-                                                    expImage_2: "Detail2")
+                                                    expImage_1: "DetailGerakParabola1",
+                                                    expImage_2: "DetailGerakParabola2")
     
     static let misiDetail = ExperimentDetails(expDesc: """
                     Gerak parabola adalah suatu gerak dari objek yang membentuk lintasan melengkung karena pengaruh gravitasi.
@@ -30,8 +30,8 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
 
                     Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni melemparkan bola basketnya dengan menyelesaikan misi-misi yang diberikan!
                     """,
-                                                    expImage_1: "GerakParabola_description_1",
-                                                    expImage_2: "GerakParabola_description_2")
+                                                    expImage_1: "DetailGerakParabola1",
+                                                    expImage_2: "DetailGerakParabola2")
     
     static let experimentOptions = [ExperimentOption(title: .Eksplorasi,
                                                       desc: "Eksplor dan Coba Eksperimen",
@@ -42,8 +42,6 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                                     ExperimentOption(title: .Kuis,
                                                       desc: "Kerjakan kuis untuk uji pemahanamu",
                                                       imgName: "ModeKuis")]
-    
-    
     
     
     static let experimentConcept = ExperimentConcept(
