@@ -39,6 +39,7 @@ class VirtualLabController: UIViewController {
         setupScene()
         setupControlPanel()
         setupBackButton()
+        self.navigationController?.navigationBar.barTintColor?.withAlphaComponent(0)
     }
     
     // MARK: - Pressed Button Function
