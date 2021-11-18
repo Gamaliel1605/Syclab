@@ -37,25 +37,29 @@ class HukumNewtonScene: SKScene {
         let dashLine = SKShapeNode()
         dashLine.name = "dashLine"
         
-        let path = CGMutablePath()
-        path.addLines(between: [
-//            CGPoint(x: firstPlanet.position.x + (firstPlanet.size.width / 2), y: firstPlanet.position.y),
-//            CGPoint(x: secondPlanet.position.x - (secondPlanet.size.width / 2), y: secondPlanet.position.y)
-            CGPoint(x: firstPlanet.position.x, y: firstPlanet.position.y),
-            CGPoint(x: secondPlanet.position.x, y: secondPlanet.position.y)
-        ])
-        
-        let pattern: [CGFloat] = [15.0, 5.0]
-        dashLine.path = path.copy(dashingWithPhase: 1, lengths: pattern)
+        dashLine.path = setUpDashLinePath()
         dashLine.strokeColor = SKColor.white
         dashLine.lineWidth = 2
         addChild(dashLine)
     }
     
+    private func setUpDashLinePath() -> CGPath {
+        let path = CGMutablePath()
+        path.addLines(between: [
+            /*
+            CGPoint(x: firstPlanet.position.x + (firstPlanet.size.width / 2), y: firstPlanet.position.y),
+            CGPoint(x: secondPlanet.position.x - (secondPlanet.size.width / 2), y: secondPlanet.position.y)
+            */
+            CGPoint(x: firstPlanet.position.x, y: firstPlanet.position.y),
+            CGPoint(x: secondPlanet.position.x, y: secondPlanet.position.y)
+        ])
+        let pattern: [CGFloat] = [15.0, 5.0]
+        return path.copy(dashingWithPhase: 1, lengths: pattern)
+    }
+    
     func updateDashLine() {
         guard let dashLine = self.childNode(withName: "dashLine") else { return }
-        dashLine.run(SKAction.removeFromParent())
-        setUpDashLine()
+        (dashLine as! SKShapeNode).path = setUpDashLinePath()
     }
     
     func updateFirstPlanetMass(previous: Float, current: Float) {

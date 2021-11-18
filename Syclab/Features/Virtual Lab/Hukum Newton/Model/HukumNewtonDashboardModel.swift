@@ -14,7 +14,23 @@ protocol DashboardModel {
 }
 
 struct HukumNewtonDashboardModel: DashboardModel {
+    let gravity: Float = 6.67 * pow(10, -11)
+    
     var firstValue: Float
     var secondValue: Float
     var thirdValue: Float
+    
+    var firstMass: Float {
+        firstValue * 1000000
+    }
+    var secondMass: Float {
+        secondValue * 1000000
+    }
+    var distancePowerbyTwo: Float {
+        pow(thirdValue, 2)
+    }
+    
+    var calculatedForceResult: Float {
+        return (gravity * firstMass * secondMass) / distancePowerbyTwo
+    }
 }
