@@ -11,6 +11,9 @@
 		1408134D27304B3B00C8A482 /* ConceptTheory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1408134C27304B3B00C8A482 /* ConceptTheory.swift */; };
 		140813502730C1E900C8A482 /* CobaConceptTheory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1408134F2730C1E900C8A482 /* CobaConceptTheory.storyboard */; };
 		140813522730C2F000C8A482 /* CobaConceptTheoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140813512730C2F000C8A482 /* CobaConceptTheoryViewController.swift */; };
+		141305EA2746810E003CDABF /* HukumNewtonMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141305E92746810E003CDABF /* HukumNewtonMission.swift */; };
+		141305EC2746CBF6003CDABF /* NumberToWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141305EB2746CBF6003CDABF /* NumberToWord.swift */; };
+		141305EE27471E63003CDABF /* VirtualLabHukumNewtonViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141305ED27471E63003CDABF /* VirtualLabHukumNewtonViewControllerExtension.swift */; };
 		141DA6482732C9B0007E8DAF /* LabInstructions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 141DA6472732C9B0007E8DAF /* LabInstructions.xib */; };
 		141DA64C2732C9F7007E8DAF /* LabInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141DA64B2732C9F7007E8DAF /* LabInstructions.swift */; };
 		141DA64F2732CF38007E8DAF /* CobaLabInstructions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141DA64E2732CF38007E8DAF /* CobaLabInstructions.storyboard */; };
@@ -97,6 +100,9 @@
 		1408134C27304B3B00C8A482 /* ConceptTheory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConceptTheory.swift; sourceTree = "<group>"; };
 		1408134F2730C1E900C8A482 /* CobaConceptTheory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CobaConceptTheory.storyboard; sourceTree = "<group>"; };
 		140813512730C2F000C8A482 /* CobaConceptTheoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CobaConceptTheoryViewController.swift; sourceTree = "<group>"; };
+		141305E92746810E003CDABF /* HukumNewtonMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HukumNewtonMission.swift; sourceTree = "<group>"; };
+		141305EB2746CBF6003CDABF /* NumberToWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberToWord.swift; sourceTree = "<group>"; };
+		141305ED27471E63003CDABF /* VirtualLabHukumNewtonViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualLabHukumNewtonViewControllerExtension.swift; sourceTree = "<group>"; };
 		141DA6472732C9B0007E8DAF /* LabInstructions.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabInstructions.xib; sourceTree = "<group>"; };
 		141DA64B2732C9F7007E8DAF /* LabInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabInstructions.swift; sourceTree = "<group>"; };
 		141DA64E2732CF38007E8DAF /* CobaLabInstructions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CobaLabInstructions.storyboard; sourceTree = "<group>"; };
@@ -210,6 +216,14 @@
 			path = "Coba Concept Theory";
 			sourceTree = "<group>";
 		};
+		141305E827461CD8003CDABF /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				1466162C2740DB1A0067AF96 /* HukumNewtonScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		141DA6462732C921007E8DAF /* Lab Instructions */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,10 +256,11 @@
 		146616272740254F0067AF96 /* Hukum Newton */ = {
 			isa = PBXGroup;
 			children = (
+				141305E827461CD8003CDABF /* Scene */,
 				1466162E2740F71B0067AF96 /* Model */,
 				14661628274025620067AF96 /* VirtualLabHukumNewton.storyboard */,
 				1466162A2740258E0067AF96 /* VirtualLabHukumNewtonViewController.swift */,
-				1466162C2740DB1A0067AF96 /* HukumNewtonScene.swift */,
+				141305ED27471E63003CDABF /* VirtualLabHukumNewtonViewControllerExtension.swift */,
 			);
 			path = "Hukum Newton";
 			sourceTree = "<group>";
@@ -254,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				1466162F2740F72A0067AF96 /* HukumNewtonDashboardModel.swift */,
+				141305E92746810E003CDABF /* HukumNewtonMission.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -518,6 +534,7 @@
 				EADBE49E272D808600E8607D /* ViewExtension.swift */,
 				EADBE4A0272D80E900E8607D /* LabelExtension.swift */,
 				14661631274114040067AF96 /* CGFloatExtension.swift */,
+				141305EB2746CBF6003CDABF /* NumberToWord.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -616,6 +633,7 @@
 			files = (
 				EADBE49B272D800D00E8607D /* CustomConstraint.swift in Sources */,
 				98562DF2273101D500D1C619 /* GerakParabolaScene.swift in Sources */,
+				141305EA2746810E003CDABF /* HukumNewtonMission.swift in Sources */,
 				EADBE49A272D800D00E8607D /* LabelType.swift in Sources */,
 				EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */,
 				98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */,
@@ -633,6 +651,7 @@
 				EABCDE92271EEF6700CA2677 /* ModeOptionViewModel.swift in Sources */,
 				142498F62727716E0050F18D /* ExperimentDetailRepository.swift in Sources */,
 				EABCDE89271EEEFB00CA2677 /* ExperimentDetailController.swift in Sources */,
+				141305EE27471E63003CDABF /* VirtualLabHukumNewtonViewControllerExtension.swift in Sources */,
 				988B997A272E43E70024DAA6 /* ExperimentOption.swift in Sources */,
 				EAD92731272C542800B1635B /* ExperimentDetails.swift in Sources */,
 				EABCDE90271EEF5C00CA2677 /* ModeOptionController.swift in Sources */,
@@ -652,6 +671,7 @@
 				EABCDE8B271EEF0B00CA2677 /* ExperimentDetailViewModel.swift in Sources */,
 				98562DF02730FFCA00D1C619 /* MathFunctions.swift in Sources */,
 				142498F227276DBD0050F18D /* ExperimentDetailModel.swift in Sources */,
+				141305EC2746CBF6003CDABF /* NumberToWord.swift in Sources */,
 				EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */,
 				146616302740F72A0067AF96 /* HukumNewtonDashboardModel.swift in Sources */,
 				EAD92737272C55F800B1635B /* ExperimentQuiz.swift in Sources */,

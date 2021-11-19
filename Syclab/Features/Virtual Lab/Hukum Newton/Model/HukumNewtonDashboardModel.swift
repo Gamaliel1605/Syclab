@@ -7,30 +7,28 @@
 
 import UIKit
 
-protocol DashboardModel {
-    var firstValue: Float { get set }
-    var secondValue: Float { get set }
-    var thirdValue: Float { get set }
-}
-
-struct HukumNewtonDashboardModel: DashboardModel {
-    let gravity: Float = 6.67 * pow(10, -11)
+class HukumNewtonDashboardModel {
+    let gravity: Double = 6.67 * pow(10, -11)
+    let defaultValue: (first: Double, second: Double, third: Double) = (1, 1, 10)
+    var currentValue: (first: Double, second: Double, third: Double) = (1, 1, 10)
     
-    var firstValue: Float
-    var secondValue: Float
-    var thirdValue: Float
-    
-    var firstMass: Float {
-        firstValue * 1000000
+    var firstMass: Double {
+        currentValue.first * 1000000
     }
-    var secondMass: Float {
-        secondValue * 1000000
+    var secondMass: Double {
+        currentValue.second * 1000000
     }
-    var distancePowerbyTwo: Float {
-        pow(thirdValue, 2)
+    var distancePowerbyTwo: Double {
+        pow(currentValue.third, 2)
     }
     
-    var calculatedForceResult: Float {
+    var calculatedForceResult: Double {
         return (gravity * firstMass * secondMass) / distancePowerbyTwo
+    }
+    
+    static let shared = HukumNewtonDashboardModel()
+    
+    func reset() {
+        currentValue = defaultValue
     }
 }
