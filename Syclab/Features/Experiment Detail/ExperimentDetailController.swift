@@ -73,9 +73,15 @@ class ExperimentDetailController: UIViewController {
     
     
     @IBAction func labButton(_ sender: UIButton) {
-        let vc = UIStoryboard.init(name: "VirtualLab", bundle: Bundle.main).instantiateViewController(withIdentifier: "virtualLab") as! VirtualLabController
-//        vc.experimentVM = self.experimentVM
-        vc.virtualLabVM = VirtualLabViewModel(check: experimentVM.check, experiment: experimentVM.experiment)
-        self.navigationController?.pushViewController(vc, animated: true)
+        switch experimentVM.experiment {
+        case .E1_GerakParabola:
+            let VC = UIStoryboard.init(name: "VirtualLab", bundle: Bundle.main).instantiateViewController(withIdentifier: "virtualLab") as! VirtualLabController
+            VC.virtualLabVM = VirtualLabViewModel(check: experimentVM.check, experiment: experimentVM.experiment)
+            self.navigationController?.pushViewController(VC, animated: true)
+        case .E2_HukumGravitasiNewton:
+            let VC = UIStoryboard.init(name: "VirtualLabHukumNewton", bundle: Bundle.main).instantiateViewController(withIdentifier: "hukumNewton") as! VirtualLabHukumNewtonViewController
+            VC.virtualLabVM = VirtualLabViewModel(check: experimentVM.check, experiment: experimentVM.experiment)
+            self.navigationController?.pushViewController(VC, animated: true)
+        }
     }
 }
