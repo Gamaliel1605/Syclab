@@ -31,6 +31,7 @@ class QuizController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        randomQuizIdentifierGenerator()
         updateUI()
         
         self.navigationItem.hidesBackButton = true
@@ -49,9 +50,10 @@ class QuizController: UIViewController {
         let userGotItRight = checkAnswer(userAnswer)
 
         print("\(userAnswer)")
-        userAnswer = quizVM.quizData[quizVM.quizQuestionNumber].quizAnswer
+        // "redefining" userAnswer (to the correct one) for a more concise "button colouring" logic
+        userAnswer = quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizAnswer
 
-        print("\(quizVM.quizData[quizVM.quizQuestionNumber].quizAnswer)")
+        print("\(quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizAnswer)")
         print("\(quizVM.quizScore)")
 
         if userGotItRight {
@@ -61,20 +63,21 @@ class QuizController: UIViewController {
             sender.backgroundColor = UIColor(hexString: "BF2727")
             print("Salah")
             //the correct button becomes green
-            if userAnswer == quizVM.quizData[quizVM.quizQuestionNumber].quizOptionA {
+            if userAnswer == quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizOptionA {
                 quizOptionA_Button.backgroundColor = UIColor(hexString: "5AB861")
             }
-            if userAnswer == quizVM.quizData[quizVM.quizQuestionNumber].quizOptionB {
+            if userAnswer == quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizOptionB {
                 quizOptionB_Button.backgroundColor = UIColor(hexString: "5AB861")
             }
-            if userAnswer == quizVM.quizData[quizVM.quizQuestionNumber].quizOptionC {
+            if userAnswer == quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizOptionC {
                 quizOptionC_Button.backgroundColor = UIColor(hexString: "5AB861")
             }
-            if userAnswer == quizVM.quizData[quizVM.quizQuestionNumber].quizOptionD {
+            if userAnswer == quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizOptionD {
                 quizOptionD_Button.backgroundColor = UIColor(hexString: "5AB861")
             }
         }
 
+        // Quiz "Proceed" button UI
         if quizVM.quizQuestionNumber == ((quizVM.quizData.count) - 1) {
             quizProceedButton.setTitle("Selesai", for: .normal)
         } else {
@@ -84,8 +87,8 @@ class QuizController: UIViewController {
 
         quizAnswerLabel.attributedText = NSMutableAttributedString()
             .normal("Jawaban:    ")
-            .bold("\(quizVM.quizData[quizVM.quizQuestionNumber].quizAnswer)")
-        quizAnswerExplanationLabel.text = quizVM.quizData[quizVM.quizQuestionNumber].quizExplanation
+            .bold("\(quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizAnswer)")
+        quizAnswerExplanationLabel.text = quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizExplanation
         quizProceedButton.alpha = 1
         quizDynamicView.alpha = 1
 
@@ -107,7 +110,9 @@ class QuizController: UIViewController {
             quizAlert.delegate = self
             self.present(quizAlert, animated: true, completion: nil)
             
-            quizAlert.quizScore.text = "Score: \(quizVM.quizScore)"
+            quizAlert.quizLabel_1.text = "Selamat!"
+            quizAlert.quizScore.text = "Skor: \(quizVM.quizScore) dari \(quizVM.quizData.count)"
+            quizAlert.quizLabel_2.text = "Kamu telah berhasil"
             quizAlert.quizLabel_3.text = "menyelesaikan kuis materi \(quizVM.title)!"
             
             quizVM.quizScore = 0 // Do not know how it restarts itself; this snippet does nothing
@@ -122,17 +127,17 @@ class QuizController: UIViewController {
     }
     
     func updateUI() {
-        quizQuestionImage.image = UIImage(named: quizVM.quizData[quizVM.quizQuestionNumber].quizImage)
+        quizQuestionImage.image = UIImage(named: quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizImage)
 
-        quizQuestionLabel.text = quizVM.quizData[quizVM.quizQuestionNumber].quizQuestion
+        quizQuestionLabel.text = quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizQuestion
 
-        quizOptionA_Button.setTitle(quizVM.quizData[quizVM.quizQuestionNumber].quizOptionA, for: .normal)
+        quizOptionA_Button.setTitle(quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizOptionA, for: .normal)
 
-        quizOptionB_Button.setTitle(quizVM.quizData[quizVM.quizQuestionNumber].quizOptionB, for: .normal)
+        quizOptionB_Button.setTitle(quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizOptionB, for: .normal)
 
-        quizOptionC_Button.setTitle(quizVM.quizData[quizVM.quizQuestionNumber].quizOptionC, for: .normal)
+        quizOptionC_Button.setTitle(quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizOptionC, for: .normal)
 
-        quizOptionD_Button.setTitle(quizVM.quizData[quizVM.quizQuestionNumber].quizOptionD, for: .normal)
+        quizOptionD_Button.setTitle(quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizOptionD, for: .normal)
 
         quizQuestionTrackerLabel.text = "Soal \(quizVM.quizQuestionNumber + 1) dari \(quizVM.quizData.count)"
 
@@ -166,13 +171,9 @@ class QuizController: UIViewController {
     }
     
     func checkAnswer(_ userAnswer: String) -> Bool {
-        let quizScoreIncrementDeterminant = (100 / quizVM.quizData.count)
-        if userAnswer == quizVM.quizData[quizVM.quizQuestionNumber].quizAnswer {
-            if quizVM.quizScore > 100 {
-                quizVM.quizScore = 100
-            } else {
-                quizVM.quizScore += quizScoreIncrementDeterminant
-            }
+//        let quizScoreIncrementDeterminant = (100 / quizVM.quizData.count) -> Unused
+        if userAnswer == quizVM.quizData[quizVM.randomQuizIdentifier[quizVM.quizQuestionNumber]].quizAnswer {
+            quizVM.quizScore += 1
             return true
         } else {
             return false
@@ -183,6 +184,19 @@ class QuizController: UIViewController {
         if quizVM.quizQuestionNumber + 1 < quizVM.quizData.count {
             quizVM.quizQuestionNumber += 1
         }
+    }
+    
+    func randomQuizIdentifierGenerator() {
+        // a function for "dynamic" randomised array logic
+        var counter = 0
+        while counter < quizVM.quizData.count - 1 {
+            counter += 1
+            quizVM.randomQuizIdentifier.append(counter)
+        }
+
+        // shuffle once and iterate through the array using quizQuestionNumber (for avoiding repetition)
+        quizVM.randomQuizIdentifier.shuffle()
+        print(quizVM.randomQuizIdentifier)
     }
 }
 
