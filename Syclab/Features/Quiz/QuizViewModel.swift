@@ -28,4 +28,5 @@ class QuizViewModel {
     
     var quizQuestionNumber = 0
     var quizScore = 0
+    var randomQuizIdentifier = [0]
 }

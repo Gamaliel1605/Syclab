@@ -30,8 +30,8 @@ class FinishQuiz: UIViewController {
         super.viewDidLoad()
         
         quizView.layer.cornerRadius = 17
-        quizScore.text = "Score: \("")"
-        quizLabel_3.text = "menyelesaikan kuis materi \("")!"
+//        quizScore.text = "Score: \("")"
+//        quizLabel_3.text = "menyelesaikan kuis materi \("")!"
     }
     
     @IBAction func keluarTapped(_ sender: UIButton) {
