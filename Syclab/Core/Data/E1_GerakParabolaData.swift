@@ -13,13 +13,13 @@ struct E1_GerakParabolaData {
                                        id: .E1_GerakParabola)
     
     static let eksplorasiDetail = ExperimentDetails(expDesc: """
-Gerak parabola adalah suatu gerak dari objek yang membentuk lintasan melengkung karena pengaruh gravitasi.
+    Gerak parabola adalah suatu gerak dari objek yang membentuk lintasan melengkung karena pengaruh gravitasi.
 
-Pada mode ini, dapat secara bebas mengeksplor gerak parabola untuk memahami konsepnya.
+    Pada mode ini, dapat secara bebas mengeksplor gerak parabola untuk memahami konsepnya.
 
-Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni melemparkan bola basketnya dengan berbagai macam cara!
+    Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni melemparkan bola basketnya dengan berbagai macam cara!
 
-""".withBoldText(text: "suatu gerak dari objek yang membentuk lintasan melengkung karena pengaruh gravitasi.").string,
+    """.withBoldText(text: "suatu gerak dari objek yang membentuk lintasan melengkung karena pengaruh gravitasi.").string,
                                                     expImage_1: "DetailGerakParabola1",
                                                     expImage_2: "DetailGerakParabola2")
     
@@ -50,7 +50,7 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                 ContentLabel(
                     text: "Penjelasan Gerak Parabola",
                     alignment: .natural,
-                    fontsize: 24,
+                    fontsize: 25,
                     padding: UIEdgeInsets(top: 20, left: 30, bottom: 0, right: 30)
                 ),
                 ContentLabel(
@@ -71,7 +71,7 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                 ContentLabel(
                     text: "Gerak parabola terhadap sumbu X",
                     alignment: .natural,
-                    fontsize: 24,
+                    fontsize: 25,
                     padding: UIEdgeInsets(top: 40, left: 30, bottom: 0, right: 30)
                 ),
                 ContentLabel(
@@ -93,7 +93,7 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                 ContentLabel(
                     text: "Gerak parabola terhadap sumbu Y",
                     alignment: .natural,
-                    fontsize: 24,
+                    fontsize: 25,
                     padding: UIEdgeInsets(top: 40, left: 30, bottom: 0, right: 30)
                 ),
                 ContentLabel(
@@ -122,7 +122,7 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                 ContentLabel(
                     text: "Tinggi maksimum gerak parabola",
                     alignment: .natural,
-                    fontsize: 24,
+                    fontsize: 25,
                     padding: UIEdgeInsets(top: 30, left: 30, bottom: 0, right: 30)
                 ),
                 ContentImage(
@@ -163,7 +163,7 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
                 ContentLabel(
                     text: "Jarak maksimum gerak parabola",
                     alignment: .natural,
-                    fontsize: 24,
+                    fontsize: 25,
                     padding: UIEdgeInsets(top: 30, left: 30, bottom: 0, right: 30)
                 ),
                 ContentImage(
@@ -255,46 +255,105 @@ Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni
     
     static let quiz = [
         ExperimentQuiz(
-            quizImage: "Quiz1", quizQuestion: "Berapakah sudut yang dibutuhkan agar proyektil dapat menempuh jarak maksimum?", quizOptionA: "A. 30⁰", quizOptionB: "B. 45⁰", quizOptionC: "C. 60⁰", quizOptionD: "D. 90⁰", quizAnswer: "B. 45⁰", quizExplanation: """
-            Rumus  untuk menghitung jarak maksimal dari proyektil adalah:
-            
-                                Xmax = v²₀/g sin 2θ
-            
-            Perhatikan bahwa nilai maksimal sin 2θ adalah 1, sehingga
-            
-                                sin 2 = 1
-                                2 = 90⁰
-                                θ = 45⁰
-            """
+            quizImage: "Quiz1", quizQuestion: "Berapakah sudut yang dibutuhkan agar proyektil dapat menempuh jarak maksimum?", quizOptionA: "A. 30⁰", quizOptionB: "B. 45⁰", quizOptionC: "C. 60⁰", quizOptionD: "D. 90⁰", quizAnswer: "B. 45⁰",
+            quizExplanation: [
+                    ContentLabel(
+                        text: "Rumus  untuk menghitung jarak maksimal dari proyektil adalah:",
+                        fontsize: 25,
+                        padding: UIEdgeInsets(top: 45, left: 10, bottom: 0, right: 10)
+                    ),
+                    ContentImage(
+                        imageDetails: ["ParabolaNo1_1", "Rumus Parabola 1 bagian 1"],
+                        padding: UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 10),
+                        size: CGSize(width: 300, height: 100)
+                    ),
+                    ContentLabel(
+                        text: "Perhatikan bahwa nilai maksimal sin 2θ adalah 1, sehingga",
+                        fontsize: 25,
+                        padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                    ),
+                    ContentImage(
+                        imageDetails: ["ParabolaNo1_2", "Rumus Parabola 1 bagian 2"],
+                        padding: UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 10),
+                        size: CGSize(width: 300, height: 160)
+                    )
+                ]
         ),
         ExperimentQuiz(
-            quizImage: "Quiz2", quizQuestion: "Berapakah sudut yang dibutuhkan agar proyektil dapat menempuh ketinggian maksimum?", quizOptionA: "A. 30⁰", quizOptionB: "B. 45⁰", quizOptionC: "C. 60⁰", quizOptionD: "D. 90⁰", quizAnswer: "D. 90⁰", quizExplanation: """
-            Rumus untuk menghitung ketinggian yang dapat ditempuh oleh proyektil adalah:
-            
-                                y = v₀ sin θ t - 1/2 gt²
-            
-            Perhatikan bahwa nilai maksimal sin θ adalah 1, sehingga θ harus bernilai 90⁰.
-            """
+            quizImage: "Quiz2", quizQuestion: "Berapakah sudut yang dibutuhkan agar proyektil dapat menempuh ketinggian maksimum?", quizOptionA: "A. 30⁰", quizOptionB: "B. 45⁰", quizOptionC: "C. 60⁰", quizOptionD: "D. 90⁰", quizAnswer: "D. 90⁰", quizExplanation: [
+                ContentLabel(
+                    text: "Rumus untuk menghitung ketinggian yang dapat ditempuh oleh proyektil adalah:",
+                    fontsize: 25,
+                    padding: UIEdgeInsets(top: 45, left: 10, bottom: 0, right: 10)
+                ),
+                ContentImage(
+                    imageDetails: ["ParabolaNo2", "Rumus Parabola 2"],
+                    padding: UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 10),
+                    size: CGSize(width: 350, height: 100)
+                ),
+                ContentLabel(
+                    text: "Perhatikan bahwa nilai maksimal sin θ adalah 1, sehingga θ harus bernilai 90⁰.",
+                    fontsize: 25,
+                    padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                ),
+            ]
         ),
         ExperimentQuiz(
-            quizImage: "Quiz3", quizQuestion: "Berikut adalah hal yang mempengaruhi gerak parabola, kecuali?", quizOptionA: "A. Percepatan gravitasi", quizOptionB: "B. Kecepatan awal proyektil", quizOptionC: "C. Sudut elevasi", quizOptionD: "D. Massa proyektil", quizAnswer: "D. Massa proyektil", quizExplanation: """
-            Seberapa besar pun massa benda, selama kecepatan awal benda tersebut sama dengan kecepatan awal benda yang massanya jauh lebih kecil maka gerak parabola dari kedua benda tersebut akan sama (dengan asumsi tidak ada gaya gesek udara).
-            """
+            quizImage: "Quiz3", quizQuestion: "Berikut adalah hal yang mempengaruhi gerak parabola, kecuali?", quizOptionA: "A. Percepatan gravitasi", quizOptionB: "B. Kecepatan awal proyektil", quizOptionC: "C. Sudut elevasi", quizOptionD: "D. Massa proyektil", quizAnswer: "D. Massa proyektil", quizExplanation: [
+                ContentLabel(
+                    text: "Seberapa besar pun massa benda, selama kecepatan awal benda tersebut sama dengan kecepatan awal benda yang massanya jauh lebih kecil maka gerak parabola dari kedua benda tersebut akan sama (dengan asumsi tidak ada gaya gesek udara).",
+                    fontsize: 25,
+                    padding: UIEdgeInsets(top: 45, left: 10, bottom: 0, right: 10)
+                ),
+                ContentLabel(
+                    text: "",
+                    fontsize: 25,
+                    padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                ),
+                ContentLabel(
+                    text: "",
+                    fontsize: 25,
+                    padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                ),
+            ]
         ),
         ExperimentQuiz(
-            quizImage: "Quiz4", quizQuestion: "Pada gerak parabola, semakin besar kecepatan awal maka akan semakin besar pula…", quizOptionA: "A. Jarak tempuh proyektil", quizOptionB: "B. Massa proyektil", quizOptionC: "C. Bentuk proyektil", quizOptionD: "D. Sudut proyektil", quizAnswer: "A. Jarak tempuh proyektil", quizExplanation: """
-            Berdasarkan dua persamaan di bawah ini:
-            
-                                y = v₀ sin θ t - 1/2 gt²
-                                Xmax = v²₀/g sin 2θ
-            
-            Besar dari kecepatan awal proyektil berbanding lurus/eksponensial terhadap besar jarak tempuh dan ketinggian maksimum proyektil. Ketika nilai kecepatan awal meningkat maka nilai jarak tempuh dan ketinggian dari proyektil juga akan meningkat, begitu pula sebaliknya.
-            """
+            quizImage: "Quiz4", quizQuestion: "Pada gerak parabola, semakin besar kecepatan awal maka akan semakin besar pula…", quizOptionA: "A. Jarak tempuh proyektil", quizOptionB: "B. Massa proyektil", quizOptionC: "C. Bentuk proyektil", quizOptionD: "D. Sudut proyektil", quizAnswer: "A. Jarak tempuh proyektil", quizExplanation: [
+                ContentLabel(
+                    text: "Berdasarkan dua persamaan di bawah ini:",
+                    fontsize: 25,
+                    padding: UIEdgeInsets(top: 45, left: 10, bottom: 0, right: 10)
+                ),
+                ContentImage(
+                    imageDetails: ["ParabolaNo4", "Rumus Parabola 4"],
+                    padding: UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 10),
+                    size: CGSize(width: 300, height: 120)
+                ),
+                ContentLabel(
+                    text: "Besar dari kecepatan awal proyektil berbanding lurus/eksponensial terhadap besar jarak tempuh dan ketinggian maksimum proyektil. Ketika nilai kecepatan awal meningkat maka nilai jarak tempuh dan ketinggian dari proyektil juga akan meningkat, begitu pula sebaliknya.",
+                    fontsize: 25,
+                    padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                ),
+            ]
         ),
         ExperimentQuiz(
-            quizImage: "Quiz5", quizQuestion: "Faktor-faktor dibawah ini yang mempengaruhi gerak parabola adalah…", quizOptionA: "A. Percepatan gravitasi", quizOptionB: "B. Kecepatan awal", quizOptionC: "C. Sudut elevasi", quizOptionD: "D. Semua benar", quizAnswer: "D. Semua benar", quizExplanation: """
-            Sederhananya, karena percepatan gravitasi, kecepatan awal, dan sudut elevasi terkandung dalam persamaan-persamaan gerak parabola yang kita pelajari, dapat dikatakan bahwa ketiganya mempengaruhi gerak parabola.
-            """
+            quizImage: "Quiz5", quizQuestion: "Faktor-faktor dibawah ini yang mempengaruhi gerak parabola adalah…", quizOptionA: "A. Percepatan gravitasi", quizOptionB: "B. Kecepatan awal", quizOptionC: "C. Sudut elevasi", quizOptionD: "D. Semua benar", quizAnswer: "D. Semua benar", quizExplanation: [
+                ContentLabel(
+                    text: "Sederhananya, karena percepatan gravitasi, kecepatan awal, dan sudut elevasi terkandung dalam persamaan-persamaan gerak parabola yang kita pelajari, dapat dikatakan bahwa ketiganya mempengaruhi gerak parabola.",
+                    fontsize: 25,
+                    padding: UIEdgeInsets(top: 45, left: 10, bottom: 0, right: 10)
+                ),
+                ContentLabel(
+                    text: "",
+                    fontsize: 25,
+                    padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                ),
+                ContentLabel(
+                    text: "",
+                    fontsize: 25,
+                    padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                ),
+            ]
         )
     ]
 }
