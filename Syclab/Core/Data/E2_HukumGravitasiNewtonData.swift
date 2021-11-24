@@ -59,24 +59,6 @@ struct E2_HukumGravitasiNewtonData {
         )
     ]
     
-    static let quiz = [
-        ExperimentQuiz(
-            quizImage: "missionplaceholder", quizQuestion: "Content coming soon", quizOptionA: "Content coming soon", quizOptionB: "Content coming soon", quizOptionC: "Content coming soon", quizOptionD: "Content coming soon", quizAnswer: "Content coming soon", quizExplanation: "Content coming soon"
-        ),
-        ExperimentQuiz(
-            quizImage: "missionplaceholder", quizQuestion: "Content coming soon", quizOptionA: "Content coming soon", quizOptionB: "Content coming soon", quizOptionC: "Content coming soon", quizOptionD: "Content coming soon", quizAnswer: "Content coming soon", quizExplanation: "Content coming soon"
-        ),
-        ExperimentQuiz(
-            quizImage: "missionplaceholder", quizQuestion: "Content coming soon", quizOptionA: "Content coming soon", quizOptionB: "Content coming soon", quizOptionC: "Content coming soon", quizOptionD: "Content coming soon", quizAnswer: "Content coming soon", quizExplanation: "Content coming soon"
-        ),
-        ExperimentQuiz(
-            quizImage: "missionplaceholder", quizQuestion: "Content coming soon", quizOptionA: "Content coming soon", quizOptionB: "Content coming soon", quizOptionC: "Content coming soon", quizOptionD: "Content coming soon", quizAnswer: "Content coming soon", quizExplanation: "Content coming soon"
-        ),
-        ExperimentQuiz(
-            quizImage: "missionplaceholder", quizQuestion: "Content coming soon", quizOptionA: "Content coming soon", quizOptionB: "Content coming soon", quizOptionC: "Content coming soon", quizOptionD: "Content coming soon", quizAnswer: "Content coming soon", quizExplanation: "Content coming soon"
-        )
-    ]
-    
     static let experimentConcept = ExperimentConcept(
         conceptTheory:
             [
@@ -161,4 +143,112 @@ struct E2_HukumGravitasiNewtonData {
                 )
             ]
         )
+    
+    static let quiz = [
+        ExperimentQuiz(
+            quizImage: "missionplaceholder", quizQuestion: "Faktor-faktor di bawah ini yang mempengaruhi besar gravitasi pada Hukum Gravitasi Newton adalah?", quizOptionA: "A. Konstanta gravitasi", quizOptionB: "B. Ukuran benda", quizOptionC: "C. Bentuk benda", quizOptionD: "D. Semua salah", quizAnswer: "A. Konstanta gravitasi", quizExplanation: [
+                    ContentLabel(
+                        text: "Rumus untuk menghitung besar gravitasi pada Hukum Gravitasi Newton adalah:",
+                        fontsize: 25,
+                        padding: UIEdgeInsets(top: 45, left: 10, bottom: 0, right: 10)
+                    ),
+                    ContentImage(
+                        imageDetails: ["GravitasiNo1", "Rumus Gravitasi 1"],
+                        padding: UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 10),
+                        size: CGSize(width: 300, height: 100)
+                    ),
+                    ContentLabel(
+                        text: "Perhatikan bahwa yang mempengaruhi besar gravitasi hanyalah konstanta gravitasi G, massa benda pertama  m₁, massa benda kedua m², dan kuadrat jarak kedua benda r².",
+                        fontsize: 25,
+                        padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                    ),
+                ]
+        ),
+        ExperimentQuiz(
+            quizImage: "missionplaceholder", quizQuestion: "Besar gravitasi berbanding _____ terhadap besar jarak kedua benda. Yang artinya semakin besar jarak kedua benda, maka besar gravitasi akan mengecil secara eksponensial", quizOptionA: "A. Eksponensial Lurus", quizOptionB: "B. Lurus", quizOptionC: "C. Terbalik", quizOptionD: "D. Eksponensial Terbalik", quizAnswer: "D. Eksponensial Terbalik", quizExplanation: [
+                    ContentLabel(
+                        text: "Rumus untuk menghitung besar gravitasi pada Hukum Gravitasi Newton adalah:",
+                        fontsize: 25,
+                        padding: UIEdgeInsets(top: 45, left: 10, bottom: 0, right: 10)
+                    ),
+                    ContentImage(
+                        imageDetails: ["GravitasiNo2_1", "Rumus Gravitasi 2 bagian 1"],
+                        padding: UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 10),
+                        size: CGSize(width: 300, height: 100)
+                    ),
+                    ContentLabel(
+                        text: "Apabila kita anggap G m₁m₂ bernilai konstan maka persamaannya menjadi:",
+                        fontsize: 25,
+                        padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                    ),
+                    ContentImage(
+                        imageDetails: ["GravitasiNo2_2","Rumus Gravitasi 2 bagian 2"],
+                        padding: UIEdgeInsets(top: 10, left: 20, bottom: 0, right: 10),
+                        size: CGSize(width: 300, height: 120)
+                    ),
+                    ContentLabel(
+                        text: "Sehingga dapat disimpulkan bahwa gaya gravitasi berbanding eksponensial lurus terhadap jarak kedua benda atau berbanding lurus terhadap kuadrat jarak kedua benda.",
+                        fontsize: 25,
+                        padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                    ),
+                ]
+        ),
+        ExperimentQuiz(
+            quizImage: "missionplaceholder", quizQuestion: "Pada Hukum Gravitasi Newton, semakin besar massa salah satu massa benda maka akan semakin besar pula _____", quizOptionA: "A. Konstanta gravitasi", quizOptionB: "B. Jarak kedua benda", quizOptionC: "C. Gaya gravitasi", quizOptionD: "D. Massa benda yang lainnya", quizAnswer: "C. Gaya gravitasi", quizExplanation: [
+                    ContentLabel(
+                        text: "Konstanta gravitasi bersifat konstan yang berarti nilainya tidak akan berubah. Selain itu apabila diperhatikan kembali, berdasarkan rumus Hukum Gravitasi Newton:",
+                        fontsize: 25,
+                        padding: UIEdgeInsets(top: 45, left: 10, bottom: 0, right: 10)
+                    ),
+                    ContentImage(
+                        imageDetails: ["GravitasiNo3", "Rumus Gravitasi 3"],
+                        padding: UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 10),
+                        size: CGSize(width: 300, height: 120)
+                    ),
+                    ContentLabel(
+                        text: "Mengindikasikan bahwa besar gaya gravitasi berbanding lurus dengan besar massa salah satu benda, dengan kata lain semakin besar massa salah satu benda maka akan semakin besar pula gaya gravitasinya.",
+                        fontsize: 25,
+                        padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                    ),
+                ]
+        ),
+        ExperimentQuiz(
+            quizImage: "missionplaceholder", quizQuestion: "Apa yang menyebabkan gaya gravitasi antara dua benda bermassa sehari-hari (piring, payung, bola) nilainya relatif sangat kecil dibandingkan gaya pada umumnya?", quizOptionA: "A. Ukuran benda terlalu besar", quizOptionB: "B. Permukaan benda yang tidak rata", quizOptionC: "C. Angin yang kencang", quizOptionD: "D. Nilai konstanta gravitasi yang sangat kecil", quizAnswer: "D. Nilai konstanta gravitasi yang sangat kecil", quizExplanation: [
+                    ContentLabel(
+                        text: "Nilai dari konstanta gravitasi adalah 6,67 x 10⁻¹¹ N∙m²/kg², sangat kecil sehingga menyebabkan gaya gravitasi yang terjadi antara piring-payung ataupun bola-payung relatif sangat kecil bahkan tidak terasa.",
+                        fontsize: 25,
+                        padding: UIEdgeInsets(top: 45, left: 10, bottom: 0, right: 10)
+                    ),
+                    ContentLabel(
+                        text: "",
+                        fontsize: 25,
+                        padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                    ),
+                    ContentLabel(
+                        text: "",
+                        fontsize: 25,
+                        padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                    ),
+                ]
+        ),
+        ExperimentQuiz(
+            quizImage: "missionplaceholder", quizQuestion: "Untuk memperbesar gaya gravitasi, kita perlu _____", quizOptionA: "A. Meningkatkan massa benda pertama", quizOptionB: "B. Meningkatkan massa benda kedua", quizOptionC: "C. Mengurangi jarak kedua benda", quizOptionD: "D. Semuanya benar", quizAnswer: "D. Semuanya benar", quizExplanation: [
+                    ContentLabel(
+                        text: "Berdasarkan persamaan Hukum Gravitasi Newton:",
+                        fontsize: 25,
+                        padding: UIEdgeInsets(top: 45, left: 10, bottom: 0, right: 10)
+                    ),
+                    ContentImage(
+                        imageDetails: ["GravitasiNo5", "Rumus Gravitasi 5"],
+                        padding: UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 10),
+                        size: CGSize(width: 300, height: 100)
+                    ),
+                    ContentLabel(
+                        text: "Untuk memperbesar gaya gravitasi kita perlu meningkatkan nilai massa benda pertama m₁, massa benda kedua m₂, dan jarak antar benda r.",
+                        fontsize: 25,
+                        padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                    ),
+                ]
+        )
+    ]
 }
