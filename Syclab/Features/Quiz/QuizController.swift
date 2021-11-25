@@ -208,6 +208,12 @@ class QuizController: UIViewController {
         quizOptionB_Button.backgroundColor = UIColor(hexString: "16384E")
         quizOptionC_Button.backgroundColor = UIColor(hexString: "16384E")
         quizOptionD_Button.backgroundColor = UIColor(hexString: "16384E")
+        
+        //autoshrink text
+        quizOptionA_Button.titleLabel?.adjustsFontSizeToFitWidth = true
+        quizOptionB_Button.titleLabel?.adjustsFontSizeToFitWidth = true
+        quizOptionC_Button.titleLabel?.adjustsFontSizeToFitWidth = true
+        quizOptionD_Button.titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
     func checkAnswer(_ userAnswer: String) -> Bool {
