@@ -146,7 +146,7 @@ struct E2_HukumGravitasiNewtonData {
     
     static let quiz = [
         ExperimentQuiz(
-            quizImage: "missionplaceholder", quizQuestion: "Faktor-faktor di bawah ini yang mempengaruhi besar gravitasi pada Hukum Gravitasi Newton adalah?", quizOptionA: "A. Konstanta gravitasi", quizOptionB: "B. Ukuran benda", quizOptionC: "C. Bentuk benda", quizOptionD: "D. Semua salah", quizAnswer: "A. Konstanta gravitasi", quizExplanation: [
+            quizImage: "QuizGravitasi1", quizQuestion: "Faktor-faktor di bawah ini yang mempengaruhi besar gravitasi pada Hukum Gravitasi Newton adalah?", quizOptionA: "A. Konstanta gravitasi", quizOptionB: "B. Ukuran benda", quizOptionC: "C. Bentuk benda", quizOptionD: "D. Semua salah", quizAnswer: "A. Konstanta gravitasi", quizExplanation: [
                     ContentLabel(
                         text: "Rumus untuk menghitung besar gravitasi pada Hukum Gravitasi Newton adalah:",
                         fontsize: 25,
@@ -165,7 +165,7 @@ struct E2_HukumGravitasiNewtonData {
                 ]
         ),
         ExperimentQuiz(
-            quizImage: "missionplaceholder", quizQuestion: "Besar gravitasi berbanding _____ terhadap besar jarak kedua benda. Yang artinya semakin besar jarak kedua benda, maka besar gravitasi akan mengecil secara eksponensial", quizOptionA: "A. Eksponensial Lurus", quizOptionB: "B. Lurus", quizOptionC: "C. Terbalik", quizOptionD: "D. Eksponensial Terbalik", quizAnswer: "D. Eksponensial Terbalik", quizExplanation: [
+            quizImage: "QuizGravitasi2", quizQuestion: "Besar gravitasi berbanding _____ terhadap besar jarak kedua benda. Yang artinya semakin besar jarak kedua benda, maka besar gravitasi akan mengecil secara eksponensial", quizOptionA: "A. Eksponensial Lurus", quizOptionB: "B. Lurus", quizOptionC: "C. Terbalik", quizOptionD: "D. Eksponensial Terbalik", quizAnswer: "D. Eksponensial Terbalik", quizExplanation: [
                     ContentLabel(
                         text: "Rumus untuk menghitung besar gravitasi pada Hukum Gravitasi Newton adalah:",
                         fontsize: 25,
@@ -194,7 +194,7 @@ struct E2_HukumGravitasiNewtonData {
                 ]
         ),
         ExperimentQuiz(
-            quizImage: "missionplaceholder", quizQuestion: "Pada Hukum Gravitasi Newton, semakin besar massa salah satu massa benda maka akan semakin besar pula _____", quizOptionA: "A. Konstanta gravitasi", quizOptionB: "B. Jarak kedua benda", quizOptionC: "C. Gaya gravitasi", quizOptionD: "D. Massa benda yang lainnya", quizAnswer: "C. Gaya gravitasi", quizExplanation: [
+            quizImage: "QuizGravitasi3", quizQuestion: "Pada Hukum Gravitasi Newton, semakin besar massa salah satu massa benda maka akan semakin besar pula _____", quizOptionA: "A. Konstanta gravitasi", quizOptionB: "B. Jarak kedua benda", quizOptionC: "C. Gaya gravitasi", quizOptionD: "D. Massa benda yang lainnya", quizAnswer: "C. Gaya gravitasi", quizExplanation: [
                     ContentLabel(
                         text: "Konstanta gravitasi bersifat konstan yang berarti nilainya tidak akan berubah. Selain itu apabila diperhatikan kembali, berdasarkan rumus Hukum Gravitasi Newton:",
                         fontsize: 25,
@@ -213,7 +213,7 @@ struct E2_HukumGravitasiNewtonData {
                 ]
         ),
         ExperimentQuiz(
-            quizImage: "missionplaceholder", quizQuestion: "Apa yang menyebabkan gaya gravitasi antara dua benda bermassa sehari-hari (piring, payung, bola) nilainya relatif sangat kecil dibandingkan gaya pada umumnya?", quizOptionA: "A. Ukuran benda terlalu besar", quizOptionB: "B. Permukaan benda yang tidak rata", quizOptionC: "C. Angin yang kencang", quizOptionD: "D. Nilai konstanta gravitasi yang sangat kecil", quizAnswer: "D. Nilai konstanta gravitasi yang sangat kecil", quizExplanation: [
+            quizImage: "QuizGravitasi4", quizQuestion: "Apa yang menyebabkan gaya gravitasi antara dua benda bermassa sehari-hari (piring, payung, bola) nilainya relatif sangat kecil dibandingkan gaya pada umumnya?", quizOptionA: "A. Ukuran benda terlalu besar", quizOptionB: "B. Permukaan benda yang tidak rata", quizOptionC: "C. Angin yang kencang", quizOptionD: "D. Nilai konstanta gravitasi yang sangat kecil", quizAnswer: "D. Nilai konstanta gravitasi yang sangat kecil", quizExplanation: [
                     ContentLabel(
                         text: "Nilai dari konstanta gravitasi adalah 6,67 x 10⁻¹¹ N∙m²/kg², sangat kecil sehingga menyebabkan gaya gravitasi yang terjadi antara piring-payung ataupun bola-payung relatif sangat kecil bahkan tidak terasa.",
                         fontsize: 25,
@@ -232,7 +232,7 @@ struct E2_HukumGravitasiNewtonData {
                 ]
         ),
         ExperimentQuiz(
-            quizImage: "missionplaceholder", quizQuestion: "Untuk memperbesar gaya gravitasi, kita perlu _____", quizOptionA: "A. Meningkatkan massa benda pertama", quizOptionB: "B. Meningkatkan massa benda kedua", quizOptionC: "C. Mengurangi jarak kedua benda", quizOptionD: "D. Semuanya benar", quizAnswer: "D. Semuanya benar", quizExplanation: [
+            quizImage: "QuizGravitasi5", quizQuestion: "Untuk memperbesar gaya gravitasi, kita perlu _____", quizOptionA: "A. Meningkatkan massa benda pertama", quizOptionB: "B. Meningkatkan massa benda kedua", quizOptionC: "C. Mengurangi jarak kedua benda", quizOptionD: "D. Semuanya benar", quizAnswer: "D. Semuanya benar", quizExplanation: [
                     ContentLabel(
                         text: "Berdasarkan persamaan Hukum Gravitasi Newton:",
                         fontsize: 25,
