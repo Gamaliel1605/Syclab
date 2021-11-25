@@ -198,10 +198,10 @@ class QuizController: UIViewController {
         quizOptionD_Button.layer.cornerRadius = 10
         
         //Button Edge Insets
-        quizOptionA_Button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
-        quizOptionB_Button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
-        quizOptionC_Button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
-        quizOptionD_Button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        quizOptionA_Button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        quizOptionB_Button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        quizOptionC_Button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        quizOptionD_Button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         
         //button colour reset
         quizOptionA_Button.backgroundColor = UIColor(hexString: "16384E")
