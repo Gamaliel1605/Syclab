@@ -17,9 +17,9 @@ class ExperimentQuiz {
     var quizOptionC: String
     var quizOptionD: String
     var quizAnswer: String
-    var quizExplanation: String
+    var quizExplanation: [Any]
     
-    init(quizImage: String, quizQuestion: String, quizOptionA: String, quizOptionB: String, quizOptionC: String, quizOptionD: String, quizAnswer: String, quizExplanation: String) {
+    init(quizImage: String, quizQuestion: String, quizOptionA: String, quizOptionB: String, quizOptionC: String, quizOptionD: String, quizAnswer: String, quizExplanation: [Any]) {
         self.quizImage = quizImage
         self.quizQuestion = quizQuestion
         self.quizOptionA = quizOptionA
