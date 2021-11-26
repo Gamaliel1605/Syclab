@@ -14,15 +14,24 @@ class GerakParabolaMission {
     let enabledVariables: [ParabolaVariables]
     let sudutValue: Float
     let kecepatanValue: Float
+    let explainationText: String
+    let explainationImage: UIImage
     
     init(xRelatif: CGFloat, yRelatif: CGFloat, mission: String,
-         enabledVariables: [ParabolaVariables], sudut: Float, kecepatan: Float) {
+         enabledVariables: [ParabolaVariables], sudut: Float,
+         kecepatan: Float, explainationText: String, explainationImgString: String ) {
         self.xRelatif = xRelatif
         self.yRelatif = yRelatif
         self.missionText = mission
         self.enabledVariables = enabledVariables
         self.sudutValue = sudut
         self.kecepatanValue = kecepatan
+        self.explainationText = explainationText
+        if let img = UIImage(named: explainationImgString) {
+            self.explainationImage = img
+        } else {
+            self.explainationImage = UIImage()
+        }
     }
 }
 
