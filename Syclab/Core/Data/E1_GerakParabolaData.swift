@@ -237,22 +237,30 @@ struct E1_GerakParabolaData {
     
     static let missions = [GerakParabolaMission(xRelatif: 0.5,
                                                 yRelatif: 0.5,
-                                                mission: "Atur sudut yang tepat agar bola masuk ke dalam ring 1",
+                                                mission: "Atur sudut yang tepat agar bola masuk ke dalam ring. Kamu bisa menggunakan sudut yang bernilai dibawah ataupun diatas 45⁰!",
                                                 enabledVariables: [.Sudut],
                                                 sudut: 30,
-                                                kecepatan: 20),
+                                                kecepatan: 20,
+                                                explainationText: "Berdasarkan rumus diatas, xmaks (jarak tempuh maksimal benda) dipengaruhi nilai sudut elevasi melalui sin 2θ.  Oleh karena itu sebenarnya kamu dapat memasukan bola ke ring basket menggunakan dua sudut berbeda, sudut diatas ataupun dibawah 45⁰ ",
+                                                explainationImgString: "Rumus5"),
+                           
                            GerakParabolaMission(xRelatif: 0.76,
                                                 yRelatif: 0.5,
-                                                mission: "Atur sudut yang tepat agar bola masuk ke dalam ring 2",
+                                                mission: "Atur sudut yang tepat agar bola masuk ke dalam ring. Kamu bisa menggunakan sudut yang bernilai dibawah ataupun diatas 45⁰!",
                                                 enabledVariables: [.Sudut],
                                                 sudut: 30,
-                                                kecepatan: 23),
+                                                kecepatan: 23,
+                                                explainationText: "Perhatikan bahwa dengan mengubah sudut, kamu dapat meningkatkan dan menurunkan nilai dari xmax (jarak tempuh maksimal benda) sesuai dengan rumus diatas. Perhatikan bahwa sin 2θ memiliki nilai maksimum 1 yang hanya dapat diraih dengan sudut sebesar 45⁰!",
+                                                explainationImgString: "Rumus5"),
+                           
                            GerakParabolaMission(xRelatif: 0.6,
                                                 yRelatif: 0.5,
-                                                mission: "Atur sudut yang tepat agar bola masuk ke dalam ring 3",
+                                                mission: "Atur kecepatan yang tepat agar bola masuk ke dalam ring. Perhatikan apa yang terjadi ketika kamu mengganti kecepatannya!",
                                                 enabledVariables: [.Kecepatan],
                                                 sudut: 50,
-                                                kecepatan: 15)]
+                                                kecepatan: 15,
+                                                explainationText: "Berdasarkan apa yang telah kamu lakukan dan rumus diatas, kita dapat menyimpulkan bahwa besar nilai xmaks (jarak tempuh maksimal benda) berbanding lurus dengan besar maksimal. Semakin besar nilai kecepatan bola, maka akan semakin besar pula nilai xmaks/jarak tempuh bola.",
+                                                explainationImgString: "Rumus5")]
     
     static let quiz = [
         ExperimentQuiz(
