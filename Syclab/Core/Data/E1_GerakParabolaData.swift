@@ -14,22 +14,23 @@ struct E1_GerakParabolaData {
     
     static let eksplorasiDetail = ExperimentDetails(expDesc: """
     Gerak parabola adalah suatu gerak dari objek yang membentuk lintasan melengkung karena pengaruh gravitasi.
+    Tahukah kamu, bahwa gerak parabola dipengaruhi oleh kecepatan dan sudut?
 
-    Pada mode ini, dapat secara bebas mengeksplor gerak parabola untuk memahami konsepnya.
+    Pada mode kali ini, kamu dapat secara bebas mengubah kecepatan dan sudut mengeksplor gerak parabola agar dapat memahami konsepnya.
 
-    Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni melemparkan bola basketnya dengan berbagai macam cara!
-
-    """.withBoldText(text: "suatu gerak dari objek yang membentuk lintasan melengkung karena pengaruh gravitasi.").string,
+    Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Penasaran dengan lintasan melengkung pada parabola seperti apa? yuk, tekan mulai untuk mencoba eksplorasi!
+    """.withBoldText(text: "Tahukah kamu, bahwa gerak parabola dipengaruhi oleh kecepatan dan sudut?").string,
                                                     expImage_1: "DetailGerakParabola1",
                                                     expImage_2: "DetailGerakParabola2")
     
     static let misiDetail = ExperimentDetails(expDesc: """
                     Gerak parabola adalah suatu gerak dari objek yang membentuk lintasan melengkung karena pengaruh gravitasi.
+                    Tahukah kamu bahwa gerak parabola dipengaruhi oleh kecepatan dan sudut?
 
-                    Pada mode ini, kamu akan diberikan misi untuk diselesaikan.
+                    Kecepatan diperoleh dari velocity (v) dan sudut diwakilkan oleh teta (θ). Keduanya akan berpengaruh sesuai dengan lemparan kamu nih kawan syclab.
 
-                    Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Bantu Doni melemparkan bola basketnya dengan menyelesaikan misi-misi yang diberikan!
-                    """,
+                    Agar semakin paham, disini kamu akan ditantang untuk mengubah sesuai dengan perintah yang ada. Selamat mencoba!
+                    """.withBoldText(text: "Tahukah kamu bahwa gerak parabola dipengaruhi oleh kecepatan dan sudut?").string,
                                                     expImage_1: "DetailGerakParabola1",
                                                     expImage_2: "DetailGerakParabola2")
     
