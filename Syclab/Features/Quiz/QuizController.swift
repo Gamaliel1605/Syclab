@@ -144,9 +144,15 @@ class QuizController: UIViewController {
             quizAlert.delegate = self
             self.present(quizAlert, animated: true, completion: nil)
             
-            quizAlert.quizLabel_1.text = "Selamat!"
+            // Quiz "Completion Alert" UI
+            if Float(quizVM.quizScore)/Float(quizVM.quizData.count) < 0.5 {
+                quizAlert.quizLabel_1.text = "Ayo coba lagi!"
+                quizAlert.quizLabel_2.text = "Kamu bisa mencoba lagi"
+            } else {
+                quizAlert.quizLabel_1.text = "Selamat!"
+                quizAlert.quizLabel_2.text = "Kamu telah berhasil"
+            }
             quizAlert.quizScore.text = "Skor: \(quizVM.quizScore) dari \(quizVM.quizData.count)"
-            quizAlert.quizLabel_2.text = "Kamu telah berhasil"
             quizAlert.quizLabel_3.text = "menyelesaikan kuis materi \(quizVM.title)!"
             
             quizVM.quizScore = 0 // Do not know how it restarts itself; this snippet does nothing
