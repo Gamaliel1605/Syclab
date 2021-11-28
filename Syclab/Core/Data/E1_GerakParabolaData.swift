@@ -19,7 +19,7 @@ struct E1_GerakParabolaData {
     Pada mode kali ini, kamu dapat secara bebas mengubah kecepatan dan sudut mengeksplor gerak parabola agar dapat memahami konsepnya.
 
     Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Penasaran dengan lintasan melengkung pada parabola seperti apa? yuk, tekan mulai untuk mencoba eksplorasi!
-    """.withBoldText(text: "Tahukah kamu, bahwa gerak parabola dipengaruhi oleh kecepatan dan sudut?"),
+    """.withBoldText(text: "Tahukah kamu, bahwa gerak parabola dipengaruhi oleh kecepatan dan sudut?", font: UIFont.systemFont(ofSize: 21)),
                                                     expImage_1: "DetailGerakParabola1",
                                                     expImage_2: "DetailGerakParabola2")
     
@@ -30,7 +30,7 @@ struct E1_GerakParabolaData {
                     Kecepatan diperoleh dari velocity (v) dan sudut diwakilkan oleh teta (θ). Keduanya akan berpengaruh sesuai dengan lemparan kamu nih kawan syclab.
 
                     Agar semakin paham, disini kamu akan ditantang untuk mengubah sesuai dengan perintah yang ada. Selamat mencoba!
-                    """.withBoldText(text: "Tahukah kamu bahwa gerak parabola dipengaruhi oleh kecepatan dan sudut?"),
+                    """.withBoldText(text: "Tahukah kamu bahwa gerak parabola dipengaruhi oleh kecepatan dan sudut?", font: UIFont.systemFont(ofSize: 21)),
                                                     expImage_1: "DetailGerakParabola1",
                                                     expImage_2: "DetailGerakParabola2")
     

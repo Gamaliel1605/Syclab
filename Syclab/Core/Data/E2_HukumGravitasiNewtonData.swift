@@ -22,7 +22,7 @@ struct E2_HukumGravitasiNewtonData {
 
                                             Pada mode eksplorasi kali ini, kamu akan melihat dua benda yang terdapat pada tata surya kita yaitu matahari dan bumi. Keduanya akan memiliki gaya tarik yang berbeda tergantung kamu mencoba mengubah variabel tersebut nih kawan syclab. 
                                             Penasaran dengan apa yang terjadi jika kamu mengubah massa dan jarak antar kedua benda? Yuk, kita mulai eksplorasi!
-                                            """.withBoldText(text: "Tahukah kamu, bahwa gaya gravitasi dipengaruhi oleh massa benda dan jarak antar benda?"),
+                                            """.withBoldText(text: "Tahukah kamu, bahwa gaya gravitasi dipengaruhi oleh massa benda dan jarak antar benda?", font: UIFont.systemFont(ofSize: 21)),
                                                     expImage_1: "DetailHukumNewton1",
                                                     expImage_2: "DetailHukumNewton2")
     
@@ -33,7 +33,7 @@ struct E2_HukumGravitasiNewtonData {
                                         Massa tiap benda memiliki satuan kilogram (kg) dan jarak antar benda yaitu kilometer (km). Disini, kamu akan menemukan adanya matahari dan bumi. Keduanya akan berpengaruh terhadap bagaimana kedua benda ini melintasi orbit.
 
                                         Agar semakin paham, disini kamu akan ditantang untuk menjalankan misi. Penasaran seperti apa misinya? Selamat mencoba!
-                                        """.withBoldText(text: "Oleh karena itu, sudah paham bukan bahwa gaya gravitasi berkaitan dengan massa antar benda dan juga jarak?"),
+                                        """.withBoldText(text: "Oleh karena itu, sudah paham bukan bahwa gaya gravitasi berkaitan dengan massa antar benda dan juga jarak?", font: UIFont.systemFont(ofSize: 21)),
                                                     expImage_1: "DetailHukumNewton1",
                                                     expImage_2: "DetailHukumNewton2")
     
