@@ -68,6 +68,7 @@ class VirtualLabHukumNewtonViewController: UIViewController {
         resetButton.layer.cornerRadius = 20
         playButton.layer.cornerRadius = 20
         conceptTheoryButton.layer.cornerRadius = 20
+        conceptTheoryButton.titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
     private func setUpSKView() {
