@@ -73,6 +73,7 @@ class VirtualLabHukumNewtonViewController: UIViewController {
     private func setUpSKView() {
         let scene = HukumNewtonScene(size: HukumNewtonSKView.bounds.size)
         scene.scaleMode = .aspectFill
+        scene.modeOption = virtualLabVM.check
         HukumNewtonSKView.presentScene(scene)
         currentVLab = scene
     }
@@ -186,11 +187,17 @@ class VirtualLabHukumNewtonViewController: UIViewController {
                     (successView as! EveryMission).everyMissionLabel_2.text = "Lanjut Misi \(virtualLabVM.indexMission + 2)"
                 }
             } else if customRound(dashboardModel.calculatedForceResult) < currentMission.forceValue {
+                self.view.isUserInteractionEnabled = false
                 (currentVLab as! HukumNewtonScene).lepasOrbit()
-                showFailView(text: "Gaya tarik gravitasi terlalu kecil sehingga matahari dan bumi terlepas dari orbit!")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+                    showFailView(text: "Gaya tarik gravitasi terlalu kecil sehingga matahari dan bumi terlepas dari orbit!")
+                }
             } else {
+                self.view.isUserInteractionEnabled = false
                 (currentVLab as! HukumNewtonScene).bertabrakan()
-                showFailView(text: "Gaya tarik gravitasi terlalu besar sehingga matahari dan bumi bertabrakan!")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+                    showFailView(text: "Gaya tarik gravitasi terlalu besar sehingga matahari dan bumi bertabrakan!")
+                }
             }
         }
         
@@ -204,6 +211,7 @@ class VirtualLabHukumNewtonViewController: UIViewController {
                 failView.dismiss(animated: true, completion: nil)
                 (currentVLab as! HukumNewtonScene).reset()
                 setUpMission()
+                self.view.isUserInteractionEnabled = true
             }
         }
         failView.labelFailed.text = text

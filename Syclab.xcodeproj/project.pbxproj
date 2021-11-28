@@ -29,6 +29,10 @@
 		146616302740F72A0067AF96 /* HukumNewtonDashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466162F2740F72A0067AF96 /* HukumNewtonDashboardModel.swift */; };
 		14661632274114040067AF96 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14661631274114040067AF96 /* CGFloatExtension.swift */; };
 		14B4053527337EA300E17BDB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4053427337EA300E17BDB /* Protocols.swift */; };
+		14C0564327527A2800E6F47D /* tabrak1s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14C0564227527A2800E6F47D /* tabrak1s.mp3 */; };
+		14C056452752F0E300E6F47D /* HukumNewtonPhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C056442752F0E300E6F47D /* HukumNewtonPhysicsCategory.swift */; };
+		14C056472752F63300E6F47D /* jalan1s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14C056462752F63300E6F47D /* jalan1s.mp3 */; };
+		14C056492752F81800E6F47D /* HukumNewtonSceneExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C056482752F81800E6F47D /* HukumNewtonSceneExtension.swift */; };
 		981B8C1F27399956006B2735 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981B8C1E27399956006B2735 /* Colors.xcassets */; };
 		981B8C2327399B5C006B2735 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981B8C2227399B5C006B2735 /* ExtensionUIColor.swift */; };
 		981D5BA9273528D800EB1BB5 /* GerakParabolaMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D5BA8273528D800EB1BB5 /* GerakParabolaMission.swift */; };
@@ -118,6 +122,10 @@
 		1466162F2740F72A0067AF96 /* HukumNewtonDashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HukumNewtonDashboardModel.swift; sourceTree = "<group>"; };
 		14661631274114040067AF96 /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 		14B4053427337EA300E17BDB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		14C0564227527A2800E6F47D /* tabrak1s.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tabrak1s.mp3; sourceTree = "<group>"; };
+		14C056442752F0E300E6F47D /* HukumNewtonPhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HukumNewtonPhysicsCategory.swift; sourceTree = "<group>"; };
+		14C056462752F63300E6F47D /* jalan1s.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jalan1s.mp3; sourceTree = "<group>"; };
+		14C056482752F81800E6F47D /* HukumNewtonSceneExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HukumNewtonSceneExtension.swift; sourceTree = "<group>"; };
 		981B8C1E27399956006B2735 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		981B8C2227399B5C006B2735 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		981D5BA8273528D800EB1BB5 /* GerakParabolaMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerakParabolaMission.swift; sourceTree = "<group>"; };
@@ -220,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				1466162C2740DB1A0067AF96 /* HukumNewtonScene.swift */,
+				14C056482752F81800E6F47D /* HukumNewtonSceneExtension.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -256,6 +265,7 @@
 		146616272740254F0067AF96 /* Hukum Newton */ = {
 			isa = PBXGroup;
 			children = (
+				14C0563F275278F600E6F47D /* Sounds */,
 				141305E827461CD8003CDABF /* Scene */,
 				1466162E2740F71B0067AF96 /* Model */,
 				14661628274025620067AF96 /* VirtualLabHukumNewton.storyboard */,
@@ -268,10 +278,20 @@
 		1466162E2740F71B0067AF96 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				14C056442752F0E300E6F47D /* HukumNewtonPhysicsCategory.swift */,
 				1466162F2740F72A0067AF96 /* HukumNewtonDashboardModel.swift */,
 				141305E92746810E003CDABF /* HukumNewtonMission.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		14C0563F275278F600E6F47D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				14C056462752F63300E6F47D /* jalan1s.mp3 */,
+				14C0564227527A2800E6F47D /* tabrak1s.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		982CEA5627367046004469DA /* Sounds */ = {
@@ -602,12 +622,14 @@
 				EABCDE67271EED1C00CA2677 /* LaunchScreen.storyboard in Resources */,
 				EA0C378A2723EECC0038BF88 /* HomeCell.xib in Resources */,
 				14661629274025620067AF96 /* VirtualLabHukumNewton.storyboard in Resources */,
+				14C056472752F63300E6F47D /* jalan1s.mp3 in Resources */,
 				141DA64F2732CF38007E8DAF /* CobaLabInstructions.storyboard in Resources */,
 				EABCDE8E271EEF4700CA2677 /* ModeOption.storyboard in Resources */,
 				EABCDE80271EEE8200CA2677 /* VirtualLab.storyboard in Resources */,
 				EA1BD2A72731575500B879A0 /* FinishMission.xib in Resources */,
 				98FD8C6727281A55006ECB8A /* GravityPopoverViewController.xib in Resources */,
 				982CEA59273670C6004469DA /* masuk_ring.mp3 in Resources */,
+				14C0564327527A2800E6F47D /* tabrak1s.mp3 in Resources */,
 				EABCDE64271EED1C00CA2677 /* Assets.xcassets in Resources */,
 				EABCDE62271EED1B00CA2677 /* Main.storyboard in Resources */,
 				EABCDE87271EEEE100CA2677 /* ExperimentDetail.storyboard in Resources */,
@@ -662,6 +684,7 @@
 				141DA64C2732C9F7007E8DAF /* LabInstructions.swift in Sources */,
 				EABCDE7D271EEDF600CA2677 /* QuizViewModel.swift in Sources */,
 				EABCDE7B271EEDE700CA2677 /* QuizController.swift in Sources */,
+				14C056452752F0E300E6F47D /* HukumNewtonPhysicsCategory.swift in Sources */,
 				EA0C37922725D3430038BF88 /* ModeOptionCell.swift in Sources */,
 				EA1BD2A92731575F00B879A0 /* FinishMission.swift in Sources */,
 				98DF1B962733FA9A00D7BB2E /* PhysicsCategory.swift in Sources */,
@@ -672,6 +695,7 @@
 				98562DF02730FFCA00D1C619 /* MathFunctions.swift in Sources */,
 				142498F227276DBD0050F18D /* ExperimentDetailModel.swift in Sources */,
 				141305EC2746CBF6003CDABF /* NumberToWord.swift in Sources */,
+				14C056492752F81800E6F47D /* HukumNewtonSceneExtension.swift in Sources */,
 				EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */,
 				146616302740F72A0067AF96 /* HukumNewtonDashboardModel.swift in Sources */,
 				EAD92737272C55F800B1635B /* ExperimentQuiz.swift in Sources */,
