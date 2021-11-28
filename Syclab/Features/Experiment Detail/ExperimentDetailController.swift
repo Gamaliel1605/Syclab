@@ -41,7 +41,8 @@ class ExperimentDetailController: UIViewController {
         
         experimentDetailLabel.numberOfLines = 0
         experimentDetailLabel.attributedText = experimentDetails.expDesc
-        
+        experimentDetailLabel.adjustsFontSizeToFitWidth = true
+        experimentDetailLabel.lineBreakMode = .byTruncatingTail
         
         experimentDetailFirstImageView.image = UIImage(named: experimentDetails.expImage_1)
         experimentDetailFirstImageView.contentMode = .scaleToFill
