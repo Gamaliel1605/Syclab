@@ -28,11 +28,13 @@
 		1466162D2740DB1B0067AF96 /* HukumNewtonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466162C2740DB1A0067AF96 /* HukumNewtonScene.swift */; };
 		146616302740F72A0067AF96 /* HukumNewtonDashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1466162F2740F72A0067AF96 /* HukumNewtonDashboardModel.swift */; };
 		14661632274114040067AF96 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14661631274114040067AF96 /* CGFloatExtension.swift */; };
+		14A2FFB127531FC6004ECAAF /* UIResponderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2FFB027531FC6004ECAAF /* UIResponderExtension.swift */; };
 		14B4053527337EA300E17BDB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B4053427337EA300E17BDB /* Protocols.swift */; };
 		14C0564327527A2800E6F47D /* tabrak1s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14C0564227527A2800E6F47D /* tabrak1s.mp3 */; };
 		14C056452752F0E300E6F47D /* HukumNewtonPhysicsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C056442752F0E300E6F47D /* HukumNewtonPhysicsCategory.swift */; };
 		14C056472752F63300E6F47D /* jalan1s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 14C056462752F63300E6F47D /* jalan1s.mp3 */; };
 		14C056492752F81800E6F47D /* HukumNewtonSceneExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C056482752F81800E6F47D /* HukumNewtonSceneExtension.swift */; };
+		14D40C9227531E1B00239201 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D40C9127531E1B00239201 /* UIViewControllerExtension.swift */; };
 		981B8C1F27399956006B2735 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981B8C1E27399956006B2735 /* Colors.xcassets */; };
 		981B8C2327399B5C006B2735 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981B8C2227399B5C006B2735 /* ExtensionUIColor.swift */; };
 		981D5BA9273528D800EB1BB5 /* GerakParabolaMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981D5BA8273528D800EB1BB5 /* GerakParabolaMission.swift */; };
@@ -121,11 +123,13 @@
 		1466162C2740DB1A0067AF96 /* HukumNewtonScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HukumNewtonScene.swift; sourceTree = "<group>"; };
 		1466162F2740F72A0067AF96 /* HukumNewtonDashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HukumNewtonDashboardModel.swift; sourceTree = "<group>"; };
 		14661631274114040067AF96 /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
+		14A2FFB027531FC6004ECAAF /* UIResponderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderExtension.swift; sourceTree = "<group>"; };
 		14B4053427337EA300E17BDB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		14C0564227527A2800E6F47D /* tabrak1s.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tabrak1s.mp3; sourceTree = "<group>"; };
 		14C056442752F0E300E6F47D /* HukumNewtonPhysicsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HukumNewtonPhysicsCategory.swift; sourceTree = "<group>"; };
 		14C056462752F63300E6F47D /* jalan1s.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jalan1s.mp3; sourceTree = "<group>"; };
 		14C056482752F81800E6F47D /* HukumNewtonSceneExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HukumNewtonSceneExtension.swift; sourceTree = "<group>"; };
+		14D40C9127531E1B00239201 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		981B8C1E27399956006B2735 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		981B8C2227399B5C006B2735 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		981D5BA8273528D800EB1BB5 /* GerakParabolaMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerakParabolaMission.swift; sourceTree = "<group>"; };
@@ -555,6 +559,8 @@
 				EADBE4A0272D80E900E8607D /* LabelExtension.swift */,
 				14661631274114040067AF96 /* CGFloatExtension.swift */,
 				141305EB2746CBF6003CDABF /* NumberToWord.swift */,
+				14D40C9127531E1B00239201 /* UIViewControllerExtension.swift */,
+				14A2FFB027531FC6004ECAAF /* UIResponderExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -675,6 +681,7 @@
 				EABCDE89271EEEFB00CA2677 /* ExperimentDetailController.swift in Sources */,
 				141305EE27471E63003CDABF /* VirtualLabHukumNewtonViewControllerExtension.swift in Sources */,
 				988B997A272E43E70024DAA6 /* ExperimentOption.swift in Sources */,
+				14D40C9227531E1B00239201 /* UIViewControllerExtension.swift in Sources */,
 				EAD92731272C542800B1635B /* ExperimentDetails.swift in Sources */,
 				EABCDE90271EEF5C00CA2677 /* ModeOptionController.swift in Sources */,
 				988B9978272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift in Sources */,
@@ -698,6 +705,7 @@
 				14C056492752F81800E6F47D /* HukumNewtonSceneExtension.swift in Sources */,
 				EABCDE5D271EED1B00CA2677 /* SceneDelegate.swift in Sources */,
 				146616302740F72A0067AF96 /* HukumNewtonDashboardModel.swift in Sources */,
+				14A2FFB127531FC6004ECAAF /* UIResponderExtension.swift in Sources */,
 				EAD92737272C55F800B1635B /* ExperimentQuiz.swift in Sources */,
 				142498F42727703F0050F18D /* ExperimentDetailDataStore.swift in Sources */,
 				EAD92735272C559B00B1635B /* ExperimentLab.swift in Sources */,
@@ -865,7 +873,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HMMWHN78KV;
+				DEVELOPMENT_TEAM = K68C8FXJ5T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Syclab/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -896,7 +904,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HMMWHN78KV;
+				DEVELOPMENT_TEAM = K68C8FXJ5T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Syclab/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

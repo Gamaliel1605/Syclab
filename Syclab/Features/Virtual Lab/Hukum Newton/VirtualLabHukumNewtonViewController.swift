@@ -51,8 +51,13 @@ class VirtualLabHukumNewtonViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.addKeyboardObserver()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         resetVLab(self)
+        self.removeKeyboardObserver()
     }
     
     private func setUpDasboardView() {
@@ -330,13 +335,5 @@ class VirtualLabHukumNewtonViewController: UIViewController {
         (currentVLab as! HukumNewtonScene).updateDistance(previous: dashboardModel.currentValue.third, current: Double(roundedValue))
         dashboardModel.currentValue.third = Double(roundedValue)
         distanceTextField.text = String(format: "%.0f", roundedValue)
-    }
-}
-
-extension VirtualLabHukumNewtonViewController: DismissProtocol {
-    func dismissView() {
-        if let viewWithTag = self.view.viewWithTag(100) {
-            viewWithTag.removeFromSuperview()
-        }
     }
 }
