@@ -18,21 +18,22 @@ struct E2_HukumGravitasiNewtonData {
     
     static let eksplorasiDetail = ExperimentDetails(expDesc: """
                                             Gaya gravitasi adalah salah satu jenis gaya yang dipengaruhi oleh gaya tarik sebuah benda ke pusat benda tersebut.
-                                            
-                                            Pada mode ini, dapat secara bebas mengeksplor gerak parabola untuk memahami konsepnya.
-                                            
-                                            Di sini, kamu akan melihat matahari dan bumi, dua benda dari tata surya kita. Hasilkan gaya tarik gravitasi antara dua benda tersebut dengan berbagai cara!
-                                            """,
+                                            Tahukah kamu, bahwa gaya gravitasi dipengaruhi oleh massa benda dan jarak antar benda?
+
+                                            Pada mode eksplorasi kali ini, kamu akan melihat dua benda yang terdapat pada tata surya kita yaitu matahari dan bumi. Keduanya akan memiliki gaya tarik yang berbeda tergantung kamu mencoba mengubah variabel tersebut nih kawan syclab. 
+                                            Penasaran dengan apa yang terjadi jika kamu mengubah massa dan jarak antar kedua benda? Yuk, kita mulai eksplorasi!
+                                            """.withBoldText(text: "Tahukah kamu, bahwa gaya gravitasi dipengaruhi oleh massa benda dan jarak antar benda?", font: UIFont.systemFont(ofSize: 21)),
                                                     expImage_1: "DetailHukumNewton1",
                                                     expImage_2: "DetailHukumNewton2")
     
     static let misiDetail = ExperimentDetails(expDesc: """
                                         Gaya gravitasi adalah salah satu jenis gaya yang dipengaruhi oleh gaya tarik sebuah benda ke pusat benda tersebut.
-                                        
-                                        Pada mode ini, kamu akan diberikan misi untuk diselesaikan.
-                                        
-                                        Di sini, kamu akan melihat Matahari dan Bumi kita. Pahami hal-hal yang mempengaruhi besar gaya tarik gravitasi antara kedua benda di tata surya tersebut dengan menyelesaikan misi!
-                                        """,
+                                        Oleh karena itu, sudah paham bukan bahwa gaya gravitasi berkaitan dengan massa antar benda dan juga jarak?
+
+                                        Massa tiap benda memiliki satuan kilogram (kg) dan jarak antar benda yaitu kilometer (km). Disini, kamu akan menemukan adanya matahari dan bumi. Keduanya akan berpengaruh terhadap bagaimana kedua benda ini melintasi orbit.
+
+                                        Agar semakin paham, disini kamu akan ditantang untuk menjalankan misi. Penasaran seperti apa misinya? Selamat mencoba!
+                                        """.withBoldText(text: "Oleh karena itu, sudah paham bukan bahwa gaya gravitasi berkaitan dengan massa antar benda dan juga jarak?", font: UIFont.systemFont(ofSize: 21)),
                                                     expImage_1: "DetailHukumNewton1",
                                                     expImage_2: "DetailHukumNewton2")
     

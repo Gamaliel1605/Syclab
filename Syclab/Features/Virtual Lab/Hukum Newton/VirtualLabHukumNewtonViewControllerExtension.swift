@@ -7,6 +7,14 @@
 
 import UIKit
 
+extension VirtualLabHukumNewtonViewController: DismissProtocol {
+    func dismissView() {
+        if let viewWithTag = self.view.viewWithTag(100) {
+            viewWithTag.removeFromSuperview()
+        }
+    }
+}
+
 extension VirtualLabHukumNewtonViewController: FinishAlertProtocol {
     func onTapKeluarFinish() {
         self.navigationController?.popViewController(animated: true)
