@@ -51,8 +51,13 @@ class VirtualLabHukumNewtonViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.addKeyboardObserver()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         resetVLab(self)
+        self.removeKeyboardObserver()
     }
     
     private func setUpDasboardView() {
@@ -68,11 +73,13 @@ class VirtualLabHukumNewtonViewController: UIViewController {
         resetButton.layer.cornerRadius = 20
         playButton.layer.cornerRadius = 20
         conceptTheoryButton.layer.cornerRadius = 20
+        conceptTheoryButton.titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
     private func setUpSKView() {
         let scene = HukumNewtonScene(size: HukumNewtonSKView.bounds.size)
         scene.scaleMode = .aspectFill
+        scene.modeOption = virtualLabVM.check
         HukumNewtonSKView.presentScene(scene)
         currentVLab = scene
     }
@@ -186,11 +193,17 @@ class VirtualLabHukumNewtonViewController: UIViewController {
                     (successView as! EveryMission).everyMissionLabel_2.text = "Lanjut Misi \(virtualLabVM.indexMission + 2)"
                 }
             } else if customRound(dashboardModel.calculatedForceResult) < currentMission.forceValue {
+                self.view.isUserInteractionEnabled = false
                 (currentVLab as! HukumNewtonScene).lepasOrbit()
-                showFailView(text: "Gaya tarik gravitasi terlalu kecil sehingga matahari dan bumi terlepas dari orbit!")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+                    showFailView(text: "Gaya tarik gravitasi terlalu kecil sehingga matahari dan bumi terlepas dari orbit!")
+                }
             } else {
+                self.view.isUserInteractionEnabled = false
                 (currentVLab as! HukumNewtonScene).bertabrakan()
-                showFailView(text: "Gaya tarik gravitasi terlalu besar sehingga matahari dan bumi bertabrakan!")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+                    showFailView(text: "Gaya tarik gravitasi terlalu besar sehingga matahari dan bumi bertabrakan!")
+                }
             }
         }
         
@@ -204,6 +217,7 @@ class VirtualLabHukumNewtonViewController: UIViewController {
                 failView.dismiss(animated: true, completion: nil)
                 (currentVLab as! HukumNewtonScene).reset()
                 setUpMission()
+                self.view.isUserInteractionEnabled = true
             }
         }
         failView.labelFailed.text = text
@@ -321,13 +335,5 @@ class VirtualLabHukumNewtonViewController: UIViewController {
         (currentVLab as! HukumNewtonScene).updateDistance(previous: dashboardModel.currentValue.third, current: Double(roundedValue))
         dashboardModel.currentValue.third = Double(roundedValue)
         distanceTextField.text = String(format: "%.0f", roundedValue)
-    }
-}
-
-extension VirtualLabHukumNewtonViewController: DismissProtocol {
-    func dismissView() {
-        if let viewWithTag = self.view.viewWithTag(100) {
-            viewWithTag.removeFromSuperview()
-        }
     }
 }

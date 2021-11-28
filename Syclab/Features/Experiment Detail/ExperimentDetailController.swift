@@ -40,8 +40,9 @@ class ExperimentDetailController: UIViewController {
         experimentDetailTitle.text = title
         
         experimentDetailLabel.numberOfLines = 0
-        experimentDetailLabel.text = experimentDetails.expDesc
-        
+        experimentDetailLabel.attributedText = experimentDetails.expDesc
+        experimentDetailLabel.adjustsFontSizeToFitWidth = true
+        experimentDetailLabel.lineBreakMode = .byTruncatingTail
         
         experimentDetailFirstImageView.image = UIImage(named: experimentDetails.expImage_1)
         experimentDetailFirstImageView.contentMode = .scaleToFill
@@ -78,6 +79,7 @@ class ExperimentDetailController: UIViewController {
             let VC = UIStoryboard.init(name: "VirtualLab", bundle: Bundle.main).instantiateViewController(withIdentifier: "virtualLab") as! VirtualLabController
             VC.virtualLabVM = VirtualLabViewModel(check: experimentVM.check, experiment: experimentVM.experiment)
             self.navigationController?.pushViewController(VC, animated: true)
+            
         case .E2_HukumGravitasiNewton:
             let VC = UIStoryboard.init(name: "VirtualLabHukumNewton", bundle: Bundle.main).instantiateViewController(withIdentifier: "hukumNewton") as! VirtualLabHukumNewtonViewController
             VC.virtualLabVM = VirtualLabViewModel(check: experimentVM.check, experiment: experimentVM.experiment)
