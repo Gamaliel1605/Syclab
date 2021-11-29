@@ -247,13 +247,16 @@ class VirtualLabController: UIViewController {
     }
     
     func setupControlPanel() {
-        //        setupMissionBox()
+        setupTextField()
         setupGravitationButton()
-        //        setupPlayButton()
         setupTheoryButton()
-        //        setupSliders()
         initView()
         setupMissionView()
+    }
+    
+    func setupTextField() {
+        kecepatanTxtField.isUserInteractionEnabled = false
+        sudutTxtField.isUserInteractionEnabled = false
     }
     
     func initView() {
@@ -269,7 +272,6 @@ class VirtualLabController: UIViewController {
     
     func setupSliders() {
         if virtualLabVM?.isMission ?? false {
-            
             switch virtualLabVM?.experiment {
             case .E1_GerakParabola:
                 guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
