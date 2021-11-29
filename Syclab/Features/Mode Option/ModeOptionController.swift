@@ -41,6 +41,7 @@ extension ModeOptionController: UICollectionViewDelegate, UICollectionViewDataSo
         cell.modeLabel.text = option.optionTitle.rawValue
         cell.descLabel.text = option.optionDesc
         cell.modeImage.image = UIImage(named: option.optionImgStr)
+        
         return cell
     }
     
@@ -57,5 +58,11 @@ extension ModeOptionController: UICollectionViewDelegate, UICollectionViewDataSo
             viewController.quizVM = QuizViewModel(experiment: modeOptionVM.experiment)
             self.navigationController?.pushViewController(viewController, animated: true)
         }
+    }
+}
+
+extension ModeOptionController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.bounds.width/4, height: view.bounds.height/1.5)
     }
 }
