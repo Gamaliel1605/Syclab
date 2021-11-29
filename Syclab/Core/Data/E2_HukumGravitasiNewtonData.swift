@@ -49,9 +49,9 @@ struct E2_HukumGravitasiNewtonData {
     
     static let missions = [
         HukumNewtonMission(
-            missionText: "Matahari dan Bumi terlalu jauh! Atur massa Matahari dan Bumi sehingga besar gaya tarik gravitasi antara kedua benda tersebut adalah sebesar 30 N agar mereka tidak terlepas dan keluar dari orbit",
+            missionText: "Matahari dan Bumi terlalu jauh! Atur massa Matahari dan Bumi sehingga besar gaya tarik gravitasi antara kedua benda tersebut adalah sebesar 33.4 N agar mereka tidak terlepas dan keluar dari orbit",
             variables: [.firstMass, .secondMass],
-            forceValue: 30
+            forceValue: 33.4
         ),
         HukumNewtonMission(
             missionText: "Matahari dan Bumi terlalu dekat! Atur jarak dan massa Matahari sehingga besar gaya tarik gravitasi antara kedua benda tersebut adalah sebesar 33.4 N agar mereka stabil dan tidak bertabrakan ataupun lepas dari orbit!",
