@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -328,16 +328,16 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qrk-Cp-iUR">
-                                <rect key="frame" x="829" y="52.5" width="255" height="101.5"/>
+                                <rect key="frame" x="773.5" y="52.5" width="310.5" height="101.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Misi 1 dari 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIm-eb-w0q">
-                                        <rect key="frame" x="80" y="15" width="95.5" height="20.5"/>
+                                        <rect key="frame" x="107.5" y="15" width="95.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atur sudut yang tepat agar bola masuk ke dalam ring" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOa-uT-RH5">
-                                        <rect key="frame" x="15" y="45.5" width="225" height="41"/>
+                                        <rect key="frame" x="15" y="45.5" width="280.5" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -362,13 +362,13 @@
                             <constraint firstItem="X1o-YA-fBh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="5Zl-cq-yCI"/>
                             <constraint firstItem="yW6-yU-TZN" firstAttribute="leading" secondItem="Qrk-Cp-iUR" secondAttribute="trailing" constant="23" id="Be7-5A-yEQ"/>
                             <constraint firstAttribute="trailing" secondItem="yW6-yU-TZN" secondAttribute="trailing" constant="37" id="CNp-NK-I1P"/>
-                            <constraint firstItem="Qrk-Cp-iUR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="829" id="MWb-8D-bEK"/>
                             <constraint firstItem="Qrk-Cp-iUR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="52.5" id="Pmv-Ic-Rdj"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QTe-Yl-lgM" secondAttribute="trailing" id="XmP-lH-fcT"/>
                             <constraint firstItem="X1o-YA-fBh" firstAttribute="top" secondItem="QTe-Yl-lgM" secondAttribute="bottom" id="eQo-1m-TiA"/>
                             <constraint firstItem="X1o-YA-fBh" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="eYd-fv-bwD"/>
                             <constraint firstItem="X1o-YA-fBh" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.284173" id="fVz-Ab-SJR"/>
                             <constraint firstItem="X1o-YA-fBh" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="jat-ll-zrg"/>
+                            <constraint firstItem="Qrk-Cp-iUR" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.260134" id="liU-FT-2RG"/>
                             <constraint firstItem="QTe-Yl-lgM" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="llP-ZR-aak"/>
                             <constraint firstItem="X1o-YA-fBh" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="lz0-Yv-9so"/>
                             <constraint firstItem="C6t-UO-qdX" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="muA-38-hsq"/>
@@ -425,16 +425,16 @@
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="repeat" catalog="system" width="128" height="98"/>
         <namedColor name="2ndOptionColorOnButton">
-            <color red="0.31901428100000001" green="0.41440892219999997" blue="0.49020659919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.3190000057220459" green="0.414000004529953" blue="0.49000000953674316" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="BackgroundColorTypography">
-            <color red="0.90157353880000002" green="0.91088193660000005" blue="0.83136206869999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.90200001001358032" green="0.91100001335144043" blue="0.83099997043609619" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="IllustrationAccentColor">
-            <color red="0.93104606869999995" green="0.722014606" blue="0.246899128" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.9309999942779541" green="0.72200000286102295" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="MainColorButton">
-            <color red="0.1195720509" green="0.2181599736" blue="0.29804924129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.11999999731779099" green="0.21799999475479126" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
