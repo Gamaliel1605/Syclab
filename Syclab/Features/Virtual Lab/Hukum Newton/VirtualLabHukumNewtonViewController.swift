@@ -40,6 +40,7 @@ class VirtualLabHukumNewtonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpBackButton()
         setUpDasboardView()
         setUpSKView()
         
@@ -58,6 +59,26 @@ class VirtualLabHukumNewtonViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         resetVLab(self)
         self.removeKeyboardObserver()
+    }
+    
+    private func setUpBackButton() {
+        let myButton = UIButton(type: .system)
+        myButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        myButton.setTitle("  Hukum Gravitasi Newton", for: .normal)
+        myButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        myButton.sizeToFit()
+        myButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: myButton)
+    }
+    
+    @objc private func goBack() {
+        if virtualLabVM.check == .Misi {
+            let exitAlert = Exit()
+            exitAlert.delegate = self
+            self.present(exitAlert, animated: true, completion: nil)
+        } else {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     private func setUpDasboardView() {
