@@ -24,7 +24,7 @@ class HukumNewtonScene: SKScene {
         
         firstPlanet.position = CGPoint(x: size.width * 0.2, y: size.height * 0.3)
         firstPlanet.size = CGSize(width: size.width * 0.15, height: size.width * 0.15)
-        firstPlanet.physicsBody = SKPhysicsBody(circleOfRadius: firstPlanet.size.width/2)
+        firstPlanet.physicsBody = SKPhysicsBody(circleOfRadius: firstPlanet.size.width/7)
         firstPlanet.physicsBody?.categoryBitMask = HukumNewtonPhysicsCategory.firstPlanet
         firstPlanet.physicsBody?.contactTestBitMask = HukumNewtonPhysicsCategory.secondPlanet
         firstPlanet.physicsBody?.collisionBitMask = HukumNewtonPhysicsCategory.none
@@ -32,7 +32,7 @@ class HukumNewtonScene: SKScene {
         
         secondPlanet.position = CGPoint(x: size.width - (size.width * 0.2), y: size.height * 0.3)
         secondPlanet.size = CGSize(width: size.width * 0.15, height: size.width * 0.15)
-        secondPlanet.physicsBody = SKPhysicsBody(circleOfRadius: secondPlanet.size.width/2)
+        secondPlanet.physicsBody = SKPhysicsBody(circleOfRadius: secondPlanet.size.width/7)
         secondPlanet.physicsBody?.categoryBitMask = HukumNewtonPhysicsCategory.secondPlanet
         secondPlanet.physicsBody?.contactTestBitMask = HukumNewtonPhysicsCategory.firstPlanet
         secondPlanet.physicsBody?.collisionBitMask = HukumNewtonPhysicsCategory.none
@@ -50,9 +50,10 @@ class HukumNewtonScene: SKScene {
     func reset() {
         firstPlanet.position = previousPostition.firstPlanet
         secondPlanet.position = previousPostition.SecondPlanet
+        setUpDashLine()
+        modeOption = .Eksplorasi
         guard let crash = self.childNode(withName: "crash") else { return }
         crash.run(SKAction.removeFromParent())
-        setUpDashLine()
     }
     
     func rotation(_ node: SKSpriteNode) {
@@ -95,19 +96,8 @@ class HukumNewtonScene: SKScene {
         dashLine.run(SKAction.removeFromParent())
     }
     
-    func blinkDashLine() {
-        guard let dashLine = self.childNode(withName: "dashLine") else { return }
-        dashLine.run(SKAction.repeat(
-            SKAction.sequence([
-                SKAction.run(deleteDashLine),
-                SKAction.run(setUpDashLine),
-                SKAction.run(deleteDashLine)
-            ]), count: 2)
-        )
-    }
-    
     func lepasOrbit() {
-        blinkDashLine()
+        deleteDashLine()
         previousPostition = (firstPlanet.position, secondPlanet.position)
         run(SKAction.playSoundFileNamed("jalan1s.mp3", waitForCompletion: false))
         
@@ -119,7 +109,7 @@ class HukumNewtonScene: SKScene {
     }
     
     func bertabrakan() {
-        blinkDashLine()
+        deleteDashLine()
         previousPostition = (firstPlanet.position, secondPlanet.position)
         run(SKAction.playSoundFileNamed("jalan1s.mp3", waitForCompletion: false))
         

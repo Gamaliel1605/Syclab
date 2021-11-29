@@ -79,7 +79,6 @@ class VirtualLabHukumNewtonViewController: UIViewController {
     private func setUpSKView() {
         let scene = HukumNewtonScene(size: HukumNewtonSKView.bounds.size)
         scene.scaleMode = .aspectFill
-        scene.modeOption = virtualLabVM.check
         HukumNewtonSKView.presentScene(scene)
         currentVLab = scene
     }
@@ -137,13 +136,13 @@ class VirtualLabHukumNewtonViewController: UIViewController {
     }
     
     private func calculateForce() {
-        forceLabel.text = String(format: "%.0f", dashboardModel.calculatedForceResult)
+        forceLabel.text = String(format: "%.1f", customRound(dashboardModel.calculatedForceResult))
     }
     
     private func customRound(_ value: Double) -> Double {
         var result = value
-        
-        for i in stride(from: 5, through: 1, by: -1) {
+        let count: Int = String(value).count - 2
+        for i in stride(from: count, through: 1, by: -1) {
             let multiplier: Double = pow(10.0, Double(i))
             result = round(result * multiplier) / multiplier
         }
@@ -200,6 +199,7 @@ class VirtualLabHukumNewtonViewController: UIViewController {
                 }
             } else {
                 self.view.isUserInteractionEnabled = false
+                (currentVLab as! HukumNewtonScene).modeOption = virtualLabVM.check
                 (currentVLab as! HukumNewtonScene).bertabrakan()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
                     showFailView(text: "Gaya tarik gravitasi terlalu besar sehingga matahari dan bumi bertabrakan!")
@@ -214,8 +214,8 @@ class VirtualLabHukumNewtonViewController: UIViewController {
         let failView = FailedMission()
         self.present(failView, animated: true) { [self] in
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                failView.dismiss(animated: true, completion: nil)
                 (currentVLab as! HukumNewtonScene).reset()
+                failView.dismiss(animated: true, completion: nil)
                 setUpMission()
                 self.view.isUserInteractionEnabled = true
             }
