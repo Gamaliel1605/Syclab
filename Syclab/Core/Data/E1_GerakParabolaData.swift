@@ -15,9 +15,9 @@ struct E1_GerakParabolaData {
     static let eksplorasiDetail = ExperimentDetails(expDesc: """
     Gerak parabola adalah suatu gerak dari objek yang membentuk lintasan melengkung karena pengaruh gravitasi.
     Tahukah kamu, bahwa gerak parabola dipengaruhi oleh kecepatan dan sudut?
-
+    
     Pada mode kali ini, kamu dapat secara bebas mengubah kecepatan dan sudut mengeksplor gerak parabola agar dapat memahami konsepnya.
-
+    
     Di sini, kamu akan bertemu Doni yang merupakan seorang pemain basket. Penasaran dengan lintasan melengkung pada parabola seperti apa? yuk, tekan mulai untuk mencoba eksplorasi!
     """.withBoldText(text: "Tahukah kamu, bahwa gerak parabola dipengaruhi oleh kecepatan dan sudut?", font: UIFont.systemFont(ofSize: 21)),
                                                     expImage_1: "DetailGerakParabola1",
@@ -26,23 +26,23 @@ struct E1_GerakParabolaData {
     static let misiDetail = ExperimentDetails(expDesc: """
                     Gerak parabola adalah suatu gerak dari objek yang membentuk lintasan melengkung karena pengaruh gravitasi.
                     Tahukah kamu bahwa gerak parabola dipengaruhi oleh kecepatan dan sudut?
-
+                    
                     Kecepatan diperoleh dari velocity (v) dan sudut diwakilkan oleh teta (θ). Keduanya akan berpengaruh sesuai dengan lemparan kamu nih kawan syclab.
-
+                    
                     Agar semakin paham, disini kamu akan ditantang untuk mengubah sesuai dengan perintah yang ada. Selamat mencoba!
                     """.withBoldText(text: "Tahukah kamu bahwa gerak parabola dipengaruhi oleh kecepatan dan sudut?", font: UIFont.systemFont(ofSize: 21)),
-                                                    expImage_1: "DetailGerakParabola1",
-                                                    expImage_2: "DetailGerakParabola2")
+                                              expImage_1: "DetailGerakParabola1",
+                                              expImage_2: "DetailGerakParabola2")
     
     static let experimentOptions = [ExperimentOption(title: .Eksplorasi,
-                                                      desc: "Eksplor dan Coba Eksperimen",
-                                                      imgName: "ModeEksplorasi"),
+                                                     desc: "Eksplor dan Coba Eksperimen",
+                                                     imgName: "ModeEksplorasi"),
                                     ExperimentOption(title: .Misi,
-                                                      desc: "Selesaikan misi yang diberikan",
-                                                      imgName: "ModeMisi"),
+                                                     desc: "Selesaikan misi yang diberikan",
+                                                     imgName: "ModeMisi"),
                                     ExperimentOption(title: .Kuis,
-                                                      desc: "Kerjakan kuis untuk uji pemahanamu",
-                                                      imgName: "ModeKuis")]
+                                                     desc: "Kerjakan kuis untuk uji pemahanamu",
+                                                     imgName: "ModeKuis")]
     
     
     static let experimentConcept = ExperimentConcept(
@@ -198,37 +198,136 @@ struct E1_GerakParabolaData {
                     size: CGSize(width: 326, height: 139)
                 ),
             ]
-        )
+    )
     
-    static let labInstructions = ExperimentLab (
+    static let explorationLabInstructions = ExperimentLab (
         labInstructions: [
+            ContentLabel(
+                text: "Apa itu mode Eksplorasi?",
+                type: .bold,
+                targetText: ["Apa itu mode Eksplorasi?"],
+                fontsize: 17,
+                padding: UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
+            ),
+            ContentLabel(
+                text: "Pada mode ini, kamu diberikan kebebasan untuk mengeksplorasi dan memvisualisasi konsep fisika dengan peraga di lab ini.",
+                fontsize: 17,
+                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+            ),
             ContentImage(
-                imageDetails: ["GerakParabola_LabInstructions_1", "GerakParabola_LabInstructions_1"],
+                imageDetails: ["PetunjukLabParabola1", "PetunjukLabParabola1"],
                 padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
                 size: CGSize(width: 245.81, height: 92)
             ),
             ContentLabel(
-                text: "Kamu dapat mengubah besar sudut dan kecepatan lemparan bola basket",
+                text: "Slider Sudut digunakan untuk mengatur sudut lempar bola agar lebih besar atau lebih kecil.",
                 fontsize: 17,
                 padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
             ),
             ContentImage(
-                imageDetails: ["GerakParabola_LabInstructions_2", "GerakParabola_LabInstructions_2"],
+                imageDetails: ["PetunjukLabParabola2", "PetunjukLabParabola2"],
                 padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
-                size: CGSize(width: 90.72, height: 71)
+                size: CGSize(width: 245.81, height: 92)
             ),
             ContentLabel(
-                text: "Semakin tinggi sudut, semakin  tinggi pula arah lemparan bola",
+                text: "Slider kecepatan digunakan untuk mengatur kecepatan lemparan bola.",
                 fontsize: 17,
                 padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
             ),
             ContentImage(
-                imageDetails: ["GerakParabola_LabInstructions_3", "GerakParabola_LabInstructions_3"],
+                imageDetails: ["PetunjukLab3", "PetunjukLab3"],
                 padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
-                size: CGSize(width: 69.59, height: 40)
+                size: CGSize(width: 62, height: 62)
             ),
             ContentLabel(
-                text: "Tekan tombol Jalankan untuk melempar bola.",
+                text: "Tombol Play digunakan untuk menjalankan peraga setelah mengatur variabel Massa atau Jarak.",
+                fontsize: 17,
+                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+            ),
+            ContentImage(
+                imageDetails: ["PetunjukLab4", "PetunjukLab4"],
+                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                size: CGSize(width: 62, height: 62)
+            ),
+            ContentLabel(
+                text: "Tombol Undo digunakan untuk mengembalikan variabel dan peraga seperti semula.",
+                fontsize: 17,
+                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+            ),
+            ContentImage(
+                imageDetails: ["PetunjukLab5", "PetunjukLab5"],
+                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                size: CGSize(width: 92, height: 41)
+            ),
+            ContentLabel(
+                text: "Tombol Konsep Teori digunakan untuk melihat teori terkait materi di dalam Lab.",
+                fontsize: 17,
+                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+            )
+        ]
+    )
+    
+    static let missionLabInstructions = ExperimentLab (
+        labInstructions: [
+            ContentLabel(
+                text: "Apa itu mode Misi?",
+                type: .bold,
+                targetText: ["Apa itu mode Misi?"],
+                fontsize: 17,
+                padding: UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
+            ),
+            ContentLabel(
+                text: "Pada mode ini, kamu akan ditantang untuk menyelesaikan misi dengan cara mengubah beberapa variabel.",
+                fontsize: 17,
+                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+            ),
+            ContentImage(
+                imageDetails: ["PetunjukLabParabola1", "PetunjukLabParabola1"],
+                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                size: CGSize(width: 245.81, height: 92)
+            ),
+            ContentLabel(
+                text: "Slider Sudut digunakan untuk mengatur sudut lempar bola agar lebih besar atau lebih kecil.",
+                fontsize: 17,
+                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+            ),
+            ContentImage(
+                imageDetails: ["PetunjukLabParabola2", "PetunjukLabParabola2"],
+                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                size: CGSize(width: 245.81, height: 92)
+            ),
+            ContentLabel(
+                text: "Slider kecepatan digunakan untuk mengatur kecepatan lemparan bola.",
+                fontsize: 17,
+                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+            ),
+            ContentImage(
+                imageDetails: ["PetunjukLab3", "PetunjukLab3"],
+                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                size: CGSize(width: 62, height: 62)
+            ),
+            ContentLabel(
+                text: "Tombol Play digunakan untuk menjalankan peraga setelah mengatur variabel Massa atau Jarak.",
+                fontsize: 17,
+                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+            ),
+            ContentImage(
+                imageDetails: ["PetunjukLab4", "PetunjukLab4"],
+                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                size: CGSize(width: 62, height: 62)
+            ),
+            ContentLabel(
+                text: "Tombol Undo digunakan untuk mengembalikan variabel dan peraga seperti semula.",
+                fontsize: 17,
+                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+            ),
+            ContentImage(
+                imageDetails: ["PetunjukLab5", "PetunjukLab5"],
+                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                size: CGSize(width: 92, height: 41)
+            ),
+            ContentLabel(
+                text: "Tombol Konsep Teori digunakan untuk melihat teori terkait materi di dalam Lab.",
                 fontsize: 17,
                 padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
             )
@@ -266,27 +365,27 @@ struct E1_GerakParabolaData {
         ExperimentQuiz(
             quizImage: "Quiz1", quizQuestion: "Berapakah sudut yang dibutuhkan agar proyektil dapat menempuh jarak maksimum?", quizOptionA: "A. 30⁰", quizOptionB: "B. 45⁰", quizOptionC: "C. 60⁰", quizOptionD: "D. 90⁰", quizAnswer: "B. 45⁰",
             quizExplanation: [
-                    ContentLabel(
-                        text: "Rumus  untuk menghitung jarak maksimal dari proyektil adalah:",
-                        fontsize: 25,
-                        padding: UIEdgeInsets(top: 45, left: 10, bottom: 0, right: 10)
-                    ),
-                    ContentImage(
-                        imageDetails: ["ParabolaNo1_1", "Rumus Parabola 1 bagian 1"],
-                        padding: UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 10),
-                        size: CGSize(width: 300, height: 100)
-                    ),
-                    ContentLabel(
-                        text: "Perhatikan bahwa nilai maksimal sin 2θ adalah 1, sehingga",
-                        fontsize: 25,
-                        padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
-                    ),
-                    ContentImage(
-                        imageDetails: ["ParabolaNo1_2", "Rumus Parabola 1 bagian 2"],
-                        padding: UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 10),
-                        size: CGSize(width: 300, height: 160)
-                    )
-                ]
+                ContentLabel(
+                    text: "Rumus  untuk menghitung jarak maksimal dari proyektil adalah:",
+                    fontsize: 25,
+                    padding: UIEdgeInsets(top: 45, left: 10, bottom: 0, right: 10)
+                ),
+                ContentImage(
+                    imageDetails: ["ParabolaNo1_1", "Rumus Parabola 1 bagian 1"],
+                    padding: UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 10),
+                    size: CGSize(width: 300, height: 100)
+                ),
+                ContentLabel(
+                    text: "Perhatikan bahwa nilai maksimal sin 2θ adalah 1, sehingga",
+                    fontsize: 25,
+                    padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                ),
+                ContentImage(
+                    imageDetails: ["ParabolaNo1_2", "Rumus Parabola 1 bagian 2"],
+                    padding: UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 10),
+                    size: CGSize(width: 300, height: 160)
+                )
+            ]
         ),
         ExperimentQuiz(
             quizImage: "Quiz2", quizQuestion: "Berapakah sudut yang dibutuhkan agar proyektil dapat menempuh ketinggian maksimum?", quizOptionA: "A. 30⁰", quizOptionB: "B. 45⁰", quizOptionC: "C. 60⁰", quizOptionD: "D. 90⁰", quizAnswer: "D. 90⁰", quizExplanation: [

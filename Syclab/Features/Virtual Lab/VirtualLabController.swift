@@ -75,7 +75,17 @@ class VirtualLabController: UIViewController {
         var elements = [UIView]()
         
         guard let experiment = virtualLabVM?.experiment else {return}
-        let labInstructionsContents = experiment.getLabInstructions().labInstructions
+        var labInstructionsContents: [Any] = []
+        
+        switch virtualLabVM?.check {
+        case .Eksplorasi:
+            labInstructionsContents = experiment.getExplorationLabInstruction().labInstructions
+        case .Misi:
+            labInstructionsContents = experiment.getMissionLabInstruction().labInstructions
+        default:
+            ()
+        }
+        
         for (index, labInstructionsContent) in labInstructionsContents.enumerated() {
             if(labInstructionsContent is ContentImage) {
                 let imageView = (labInstructionsContent as! ContentImage).create(

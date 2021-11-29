@@ -9,7 +9,7 @@ import UIKit
 
 class CobaLabInstructionsViewController: UIViewController {
     
-    let experiment: Experiments = .E1_GerakParabola
+    let virtualLabVM: VirtualLabViewModel = VirtualLabViewModel(check: .Eksplorasi, experiment: .E1_GerakParabola)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,18 @@ class CobaLabInstructionsViewController: UIViewController {
         
         var elements = [UIView]()
         
-        let labInstructionsContents = experiment.getLabInstructions().labInstructions
+        let experiment = virtualLabVM.experiment
+        var labInstructionsContents: [Any] = []
+        
+        switch virtualLabVM.check {
+        case .Eksplorasi:
+            labInstructionsContents = experiment.getExplorationLabInstruction().labInstructions
+        case .Misi:
+            labInstructionsContents = experiment.getMissionLabInstruction().labInstructions
+        default:
+            ()
+        }
+        
         for (index, labInstructionsContent) in labInstructionsContents.enumerated() {
             if(labInstructionsContent is ContentImage) {
                 let imageView = (labInstructionsContent as! ContentImage).create(
