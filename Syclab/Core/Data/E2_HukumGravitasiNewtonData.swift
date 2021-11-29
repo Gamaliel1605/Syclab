@@ -126,62 +126,62 @@ struct E2_HukumGravitasiNewtonData {
                 type: .bold,
                 targetText: ["Apa itu mode Eksplorasi?"],
                 fontsize: 17,
-                padding: UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
+                padding: UIEdgeInsets(top: 40, left: 10, bottom: 0, right: 10)
             ),
             ContentLabel(
                 text: "Pada mode ini, kamu diberikan kebebasan untuk mengeksplorasi dan memvisualisasi konsep fisika dengan peraga di lab ini.",
                 fontsize: 17,
-                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                padding: UIEdgeInsets(top: 40, left: 10, bottom: 0, right: 10)
             ),
             ContentImage(
                 imageDetails: ["PetunjukLabGravitasi1", "PetunjukLabGravitasi1"],
-                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
-                size: CGSize(width: 245.81, height: 92)
+                padding: UIEdgeInsets(top: 40, left: 20, bottom: 0, right: 10),
+                size: CGSize(width: 281, height: 62)
             ),
             ContentLabel(
                 text: "Slider Massa Matahari dan Bumi digunakan untuk mengatur Massa kedua benda agar lebih besar atau lebih kecil.",
                 fontsize: 17,
-                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                padding: UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
             ),
             ContentImage(
                 imageDetails: ["PetunjukLabGravitasi2", "PetunjukLabGravitasi2"],
-                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
-                size: CGSize(width: 245.81, height: 92)
+                padding: UIEdgeInsets(top: 40, left: 20, bottom: 0, right: 10),
+                size: CGSize(width: 281, height: 62)
             ),
             ContentLabel(
                 text: "Slider jarak antar benda digunakan untuk mengatur jarak Matahari dan Bulan.",
                 fontsize: 17,
-                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                padding: UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
             ),
             ContentImage(
                 imageDetails: ["PetunjukLab3", "PetunjukLab3"],
-                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                padding: UIEdgeInsets(top: 40, left: 10, bottom: 0, right: 10),
                 size: CGSize(width: 62, height: 62)
             ),
             ContentLabel(
                 text: "Tombol Play digunakan untuk menjalankan peraga setelah mengatur variabel Massa atau Jarak.",
                 fontsize: 17,
-                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                padding: UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
             ),
             ContentImage(
                 imageDetails: ["PetunjukLab4", "PetunjukLab4"],
-                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                padding: UIEdgeInsets(top: 40, left: 10, bottom: 0, right: 10),
                 size: CGSize(width: 62, height: 62)
             ),
             ContentLabel(
                 text: "Tombol Undo digunakan untuk mengembalikan variabel dan peraga seperti semula.",
                 fontsize: 17,
-                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                padding: UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
             ),
             ContentImage(
                 imageDetails: ["PetunjukLab5", "PetunjukLab5"],
-                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                padding: UIEdgeInsets(top: 40, left: 10, bottom: 0, right: 10),
                 size: CGSize(width: 92, height: 41)
             ),
             ContentLabel(
                 text: "Tombol Konsep Teori digunakan untuk melihat teori terkait materi di dalam Lab.",
                 fontsize: 17,
-                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                padding: UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
             )
         ]
     )
@@ -193,62 +193,62 @@ struct E2_HukumGravitasiNewtonData {
                 type: .bold,
                 targetText: ["Apa itu mode Misi?"],
                 fontsize: 17,
-                padding: UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
+                padding: UIEdgeInsets(top: 40, left: 10, bottom: 0, right: 10)
             ),
             ContentLabel(
                 text: "Pada mode ini, kamu akan ditantang untuk menyelesaikan misi dengan cara mengubah beberapa variabel.",
                 fontsize: 17,
-                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                padding: UIEdgeInsets(top: 40, left: 10, bottom: 0, right: 10)
             ),
             ContentImage(
                 imageDetails: ["PetunjukLabGravitasi1", "PetunjukLabGravitasi1"],
-                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
-                size: CGSize(width: 245.81, height: 92)
+                padding: UIEdgeInsets(top: 40, left: 20, bottom: 0, right: 10),
+                size: CGSize(width: 281, height: 62)
             ),
             ContentLabel(
                 text: "Slider Massa Matahari dan Bumi digunakan untuk mengatur Massa kedua benda agar lebih besar atau lebih kecil.",
                 fontsize: 17,
-                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                padding: UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
             ),
             ContentImage(
-                imageDetails: ["PetunjukLabGravtasi2", "PetunjukLabGravtasi2"],
-                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
-                size: CGSize(width: 245.81, height: 92)
+                imageDetails: ["PetunjukLabGravitasi2", "PetunjukLabGravitasi2"],
+                padding: UIEdgeInsets(top: 40, left: 20, bottom: 0, right: 10),
+                size: CGSize(width: 281, height: 62)
             ),
             ContentLabel(
                 text: "Slider jarak antar benda digunakan untuk mengatur jarak Matahari dan Bulan.",
                 fontsize: 17,
-                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                padding: UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
             ),
             ContentImage(
                 imageDetails: ["PetunjukLab3", "PetunjukLab3"],
-                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                padding: UIEdgeInsets(top: 40, left: 10, bottom: 0, right: 10),
                 size: CGSize(width: 62, height: 62)
             ),
             ContentLabel(
                 text: "Tombol Play digunakan untuk menjalankan peraga setelah mengatur variabel Massa atau Jarak.",
                 fontsize: 17,
-                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                padding: UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
             ),
             ContentImage(
                 imageDetails: ["PetunjukLab4", "PetunjukLab4"],
-                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                padding: UIEdgeInsets(top: 40, left: 10, bottom: 0, right: 10),
                 size: CGSize(width: 62, height: 62)
             ),
             ContentLabel(
                 text: "Tombol Undo digunakan untuk mengembalikan variabel dan peraga seperti semula.",
                 fontsize: 17,
-                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                padding: UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
             ),
             ContentImage(
                 imageDetails: ["PetunjukLab5", "PetunjukLab5"],
-                padding: UIEdgeInsets(top: 30, left: 10, bottom: 0, right: 10),
+                padding: UIEdgeInsets(top: 40, left: 10, bottom: 0, right: 10),
                 size: CGSize(width: 92, height: 41)
             ),
             ContentLabel(
                 text: "Tombol Konsep Teori digunakan untuk melihat teori terkait materi di dalam Lab.",
                 fontsize: 17,
-                padding: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+                padding: UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
             )
         ]
     )

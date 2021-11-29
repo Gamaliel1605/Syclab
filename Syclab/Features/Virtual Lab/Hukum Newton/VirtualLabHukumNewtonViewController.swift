@@ -40,6 +40,7 @@ class VirtualLabHukumNewtonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpBackButton()
         setUpDasboardView()
         setUpSKView()
         
@@ -58,6 +59,26 @@ class VirtualLabHukumNewtonViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         resetVLab(self)
         self.removeKeyboardObserver()
+    }
+    
+    private func setUpBackButton() {
+        let myButton = UIButton(type: .system)
+        myButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        myButton.setTitle("  Hukum Gravitasi Newton", for: .normal)
+        myButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        myButton.sizeToFit()
+        myButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: myButton)
+    }
+    
+    @objc private func goBack() {
+        if virtualLabVM.check == .Misi {
+            let exitAlert = Exit()
+            exitAlert.delegate = self
+            self.present(exitAlert, animated: true, completion: nil)
+        } else {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     private func setUpDasboardView() {
@@ -99,17 +120,17 @@ class VirtualLabHukumNewtonViewController: UIViewController {
     private func disableAllVariables() {
         massa1_Slider.tintColor = .lightGray
         massa1_Slider.isUserInteractionEnabled = false
-        massa1_TextField.isUserInteractionEnabled = false
+//        massa1_TextField.isUserInteractionEnabled = false
         massa1_TextField.backgroundColor = UIColor.init(white: 1, alpha: 0.5)
         
         massa2_Slider.tintColor = .lightGray
         massa2_Slider.isUserInteractionEnabled = false
-        massa2_TextField.isUserInteractionEnabled = false
+//        massa2_TextField.isUserInteractionEnabled = false
         massa2_TextField.backgroundColor = UIColor.init(white: 1, alpha: 0.5)
         
         distanceSlider.tintColor = .lightGray
         distanceSlider.isUserInteractionEnabled = false
-        distanceTextField.isUserInteractionEnabled = false
+//        distanceTextField.isUserInteractionEnabled = false
         distanceTextField.backgroundColor = UIColor.init(white: 1, alpha: 0.5)
     }
     
@@ -119,17 +140,17 @@ class VirtualLabHukumNewtonViewController: UIViewController {
             case .firstMass:
                 massa1_Slider.tintColor = UIColor.init(hexString: "#16384E")
                 massa1_Slider.isUserInteractionEnabled = true
-                massa1_TextField.isUserInteractionEnabled = true
+//                massa1_TextField.isUserInteractionEnabled = true
                 massa1_TextField.backgroundColor = UIColor.white
             case .secondMass:
                 massa2_Slider.tintColor = UIColor.init(hexString: "#16384E")
                 massa2_Slider.isUserInteractionEnabled = true
-                massa2_TextField.isUserInteractionEnabled = true
+//                massa2_TextField.isUserInteractionEnabled = true
                 massa2_TextField.backgroundColor = UIColor.white
             case .distance:
                 distanceSlider.tintColor = UIColor.init(hexString: "#16384E")
                 distanceSlider.isUserInteractionEnabled = true
-                distanceTextField.isUserInteractionEnabled = true
+//                distanceTextField.isUserInteractionEnabled = true
                 distanceTextField.backgroundColor = UIColor.white
             }
         }
