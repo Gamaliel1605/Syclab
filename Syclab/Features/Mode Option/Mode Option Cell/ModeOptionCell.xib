@@ -21,14 +21,13 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noP-IM-Sio">
                         <rect key="frame" x="0.0" y="0.0" width="295" height="560"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="modeplaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="QwM-QS-IXN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="modeplaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="QwM-QS-IXN">
                                 <rect key="frame" x="8" y="10" width="279" height="460"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="460" id="9SW-4Z-5mP"/>
                                     <constraint firstAttribute="width" constant="279" id="suw-fA-cf9"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2m-pL-NPf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2m-pL-NPf">
                                 <rect key="frame" x="22" y="480" width="251" height="37"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="31"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,13 +42,15 @@
                         </subviews>
                         <color key="backgroundColor" name="MainColorButton"/>
                         <constraints>
-                            <constraint firstItem="SX8-9B-icO" firstAttribute="leading" secondItem="noP-IM-Sio" secondAttribute="leading" constant="22" id="1Sf-tP-ml2"/>
+                            <constraint firstItem="SX8-9B-icO" firstAttribute="leading" relation="lessThanOrEqual" secondItem="noP-IM-Sio" secondAttribute="leading" constant="22" id="1Sf-tP-ml2"/>
                             <constraint firstAttribute="trailing" secondItem="QwM-QS-IXN" secondAttribute="trailing" constant="8" id="Bbq-ss-My4"/>
                             <constraint firstItem="QwM-QS-IXN" firstAttribute="top" secondItem="noP-IM-Sio" secondAttribute="top" constant="10" id="Fkc-uL-6y4"/>
-                            <constraint firstAttribute="trailing" secondItem="SX8-9B-icO" secondAttribute="trailing" constant="22" id="IdL-3G-tMn"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="SX8-9B-icO" secondAttribute="trailing" constant="22" id="IdL-3G-tMn"/>
                             <constraint firstAttribute="trailing" secondItem="C2m-pL-NPf" secondAttribute="trailing" constant="22" id="Z0H-9L-Wd3"/>
+                            <constraint firstItem="QwM-QS-IXN" firstAttribute="height" relation="lessThanOrEqual" secondItem="noP-IM-Sio" secondAttribute="height" multiplier="0.821429" id="gkj-gy-ekK"/>
                             <constraint firstItem="C2m-pL-NPf" firstAttribute="leading" secondItem="noP-IM-Sio" secondAttribute="leading" constant="22" id="n5l-YY-7rg"/>
                             <constraint firstAttribute="bottom" secondItem="SX8-9B-icO" secondAttribute="bottom" constant="15" id="oeF-CU-dsH"/>
+                            <constraint firstItem="C2m-pL-NPf" firstAttribute="top" secondItem="QwM-QS-IXN" secondAttribute="bottom" constant="10" id="on4-2c-DwS"/>
                             <constraint firstItem="SX8-9B-icO" firstAttribute="top" secondItem="C2m-pL-NPf" secondAttribute="bottom" constant="10" id="vUM-di-iiP"/>
                             <constraint firstItem="QwM-QS-IXN" firstAttribute="leading" secondItem="noP-IM-Sio" secondAttribute="leading" constant="8" id="z6g-Dv-Uho"/>
                         </constraints>

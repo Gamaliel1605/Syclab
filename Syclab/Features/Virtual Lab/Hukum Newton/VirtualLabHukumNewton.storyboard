@@ -103,7 +103,7 @@
                                                                             <action selector="massa1_Changed:" destination="Y6W-OH-hqX" eventType="valueChanged" id="cv2-CT-IR6"/>
                                                                         </connections>
                                                                     </slider>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p1z-er-zVg">
+                                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p1z-er-zVg">
                                                                         <rect key="frame" x="148.5" y="0.0" width="61" height="30"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="30" id="IDC-0d-lrg"/>
@@ -144,7 +144,7 @@
                                                                             <action selector="massa2_Changed:" destination="Y6W-OH-hqX" eventType="valueChanged" id="kLy-8f-7Xn"/>
                                                                         </connections>
                                                                     </slider>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9T5-LF-OYC">
+                                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9T5-LF-OYC">
                                                                         <rect key="frame" x="148.5" y="0.0" width="61" height="30"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -189,7 +189,7 @@
                                                                             <action selector="distanceChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="fgx-lW-Pc4"/>
                                                                         </connections>
                                                                     </slider>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4G-b9-ZIw">
+                                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4G-b9-ZIw">
                                                                         <rect key="frame" x="148.5" y="0.0" width="61" height="30"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>

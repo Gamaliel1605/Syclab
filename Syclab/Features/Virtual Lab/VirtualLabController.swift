@@ -75,7 +75,17 @@ class VirtualLabController: UIViewController {
         var elements = [UIView]()
         
         guard let experiment = virtualLabVM?.experiment else {return}
-        let labInstructionsContents = experiment.getLabInstructions().labInstructions
+        var labInstructionsContents: [Any] = []
+        
+        switch virtualLabVM?.check {
+        case .Eksplorasi:
+            labInstructionsContents = experiment.getExplorationLabInstruction().labInstructions
+        case .Misi:
+            labInstructionsContents = experiment.getMissionLabInstruction().labInstructions
+        default:
+            ()
+        }
+        
         for (index, labInstructionsContent) in labInstructionsContents.enumerated() {
             if(labInstructionsContent is ContentImage) {
                 let imageView = (labInstructionsContent as! ContentImage).create(
@@ -247,13 +257,16 @@ class VirtualLabController: UIViewController {
     }
     
     func setupControlPanel() {
-        //        setupMissionBox()
+        setupTextField()
         setupGravitationButton()
-        //        setupPlayButton()
         setupTheoryButton()
-        //        setupSliders()
         initView()
         setupMissionView()
+    }
+    
+    func setupTextField() {
+        kecepatanTxtField.isUserInteractionEnabled = false
+        sudutTxtField.isUserInteractionEnabled = false
     }
     
     func initView() {
@@ -269,7 +282,6 @@ class VirtualLabController: UIViewController {
     
     func setupSliders() {
         if virtualLabVM?.isMission ?? false {
-            
             switch virtualLabVM?.experiment {
             case .E1_GerakParabola:
                 guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}

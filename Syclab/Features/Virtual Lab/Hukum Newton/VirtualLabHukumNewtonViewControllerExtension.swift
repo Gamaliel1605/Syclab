@@ -32,3 +32,9 @@ extension VirtualLabHukumNewtonViewController: FinishAlertProtocol {
         self.navigationController?.setViewControllers(VCArray!, animated: false)
     }
 }
+
+extension VirtualLabHukumNewtonViewController: ExitAlertProtocol {
+    func onTapKeluar() {
+        self.navigationController?.popViewController(animated: true)
+    }
+}

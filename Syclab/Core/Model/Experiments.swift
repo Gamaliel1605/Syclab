@@ -61,12 +61,21 @@ enum Experiments: String {
         }
     }
     
-    func getLabInstructions() -> ExperimentLab {
+    func getExplorationLabInstruction() -> ExperimentLab {
         switch self {
         case .E1_GerakParabola:
-            return E1_GerakParabolaData.labInstructions
+            return E1_GerakParabolaData.explorationLabInstructions
         case .E2_HukumGravitasiNewton:
-            return E2_HukumGravitasiNewtonData.labInstructions
+            return E2_HukumGravitasiNewtonData.explorationLabInstructions
+        }
+    }
+    
+    func getMissionLabInstruction() -> ExperimentLab {
+        switch self {
+        case .E1_GerakParabola:
+            return E1_GerakParabolaData.missionLabInstructions
+        case .E2_HukumGravitasiNewton:
+            return E2_HukumGravitasiNewtonData.MissionLabInstructions
         }
     }
     
