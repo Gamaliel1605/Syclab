@@ -9,7 +9,15 @@ import Foundation
 import UIKit
 
 class VirtualLabViewModel: NSObject {
-    let missions: [Any]?
+    let missions: [GerakParabolaMission]?
+    lazy var defaultMissions = GerakParabolaMission(xRelatif: 0.5,
+                                               yRelatif: 0.5,
+                                               mission: "Atur sudut yang tepat agar bola masuk ke dalam ring. Kamu bisa menggunakan sudut yang bernilai dibawah ataupun diatas 45⁰!",
+                                               enabledVariables: [.Sudut],
+                                               sudut: 30,
+                                               kecepatan: 20,
+                                               explainationText: "Berdasarkan rumus diatas, xmaks (jarak tempuh maksimal benda) dipengaruhi nilai sudut elevasi melalui sin 2θ.  Oleh karena itu sebenarnya kamu dapat memasukan bola ke ring basket menggunakan dua sudut berbeda, sudut diatas ataupun dibawah 45⁰ ",
+                                               explainationImgString: "Rumus5")
 
     let isMission: Bool
     let check: modeOption
@@ -24,7 +32,7 @@ class VirtualLabViewModel: NSObject {
         self.title = experiment.getExpTitle()
         
         if check == .Misi{
-            self.missions = experiment.getMissions()
+            self.missions = experiment.getMissions() as? [GerakParabolaMission]
             self.isMission = true
         } else {
             self.missions = []
@@ -32,20 +40,20 @@ class VirtualLabViewModel: NSObject {
         }
     }
     
-    func nextMission() -> Any {
+    func nextMission() -> GerakParabolaMission {
         if let missions = missions {
             if indexMission <= missions.count - 1 {
                 indexMission += 1
                 return missions[indexMission]
-            } else {return []}
-        } else {return []}
+            } else {return defaultMissions}
+        } else {return defaultMissions}
     }
     
-    func currentMission() -> Any {
+    func currentMission() -> GerakParabolaMission {
         if let missions = missions {
             if indexMission <= missions.count - 1 {
                 return missions[indexMission]
-            } else {return []}
-        } else {return []}
+            } else {return defaultMissions}
+        } else {return defaultMissions}
     }
 }

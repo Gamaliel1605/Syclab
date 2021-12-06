@@ -155,8 +155,6 @@ class GerakParabolaScene: SKScene {
                         indexBentol += 1
                         return
                     }
-                    print("ini children \(children.count + player.children.count + lenganKanan.children.count)")
-                    print(janganDihapusArray.count)
 
                     if children.count + player.children.count > janganDihapusArray.count {
 

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +14,9 @@
                 <outlet property="everyMissionImage" destination="D4a-Z7-h1B" id="sAQ-aF-B4b"/>
                 <outlet property="everyMissionLabel_1" destination="UA4-yi-ezf" id="dcZ-7u-hLZ"/>
                 <outlet property="everyMissionLabel_2" destination="1XS-QM-fh2" id="G8O-Xt-v2o"/>
+                <outlet property="everyMissionRumusImage" destination="bCR-cE-hnM" id="HsI-lO-eE0"/>
                 <outlet property="everyMissionView" destination="puW-Fw-W28" id="z9x-2B-nst"/>
+                <outlet property="nextMissionButton" destination="3Xb-Pl-tVB" id="Ao8-kK-lHO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="g6N-wf-WEe"/>
             </connections>
         </placeholder>
@@ -23,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="puW-Fw-W28">
-                    <rect key="frame" x="327" y="261" width="540" height="312"/>
+                    <rect key="frame" x="327" y="124" width="540" height="636"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missionplaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="D4a-Z7-h1B">
                             <rect key="frame" x="205" y="45" width="130" height="110"/>
@@ -31,7 +34,7 @@
                                 <constraint firstAttribute="height" constant="110" id="H5T-4g-86Q"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UA4-yi-ezf">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Misi Pertama Selesai" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UA4-yi-ezf">
                             <rect key="frame" x="81" y="190" width="378" height="41"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="41" id="Qnb-zj-NJx"/>
@@ -40,41 +43,84 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XS-QM-fh2">
-                            <rect key="frame" x="200" y="239" width="140" height="41"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="41" id="vlK-wy-Rb7"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label kecil" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XS-QM-fh2">
+                            <rect key="frame" x="86" y="397" width="368" height="133"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bCR-cE-hnM">
+                            <rect key="frame" x="70" y="252" width="400" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="128" id="Gkd-rY-7sU"/>
+                                <constraint firstAttribute="width" constant="400" id="rsV-nf-AMf"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xb-Pl-tVB" customClass="DesignableButton" customModule="Syclab" customModuleProvider="target">
+                            <rect key="frame" x="178" y="555" width="184.5" height="61"/>
+                            <color key="backgroundColor" name="MainColorButton"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="61" id="DaW-Qx-xMD"/>
+                                <constraint firstAttribute="width" constant="184.5" id="nk5-z0-NuD"/>
+                            </constraints>
+                            <color key="tintColor" name="BackgroundColorTypography"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Lanjut Misi 2">
+                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="28"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="nextMissionTapped:" destination="-1" eventType="touchUpInside" id="6uJ-Cg-7ag"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.90980392160000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="1XS-QM-fh2" secondAttribute="trailing" constant="200" id="1X7-vr-Nxi"/>
+                        <constraint firstItem="bCR-cE-hnM" firstAttribute="centerX" secondItem="3Xb-Pl-tVB" secondAttribute="centerX" id="0Hj-IP-5n5"/>
+                        <constraint firstAttribute="trailing" secondItem="1XS-QM-fh2" secondAttribute="trailing" constant="86" id="1X7-vr-Nxi"/>
+                        <constraint firstItem="1XS-QM-fh2" firstAttribute="top" secondItem="bCR-cE-hnM" secondAttribute="bottom" constant="17" id="4PA-Sf-VJq"/>
                         <constraint firstItem="UA4-yi-ezf" firstAttribute="top" secondItem="D4a-Z7-h1B" secondAttribute="bottom" constant="35" id="A6c-Vs-aK4"/>
+                        <constraint firstItem="1XS-QM-fh2" firstAttribute="top" relation="lessThanOrEqual" secondItem="bCR-cE-hnM" secondAttribute="bottom" constant="29" id="Ah7-Pp-6sU"/>
                         <constraint firstAttribute="trailing" secondItem="UA4-yi-ezf" secondAttribute="trailing" constant="81" id="DVf-dD-5AT"/>
                         <constraint firstItem="D4a-Z7-h1B" firstAttribute="top" secondItem="puW-Fw-W28" secondAttribute="top" constant="45" id="F04-T0-Q6l"/>
-                        <constraint firstAttribute="width" constant="540" id="Ub2-7X-UzZ"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="540" id="Ub2-7X-UzZ"/>
+                        <constraint firstItem="3Xb-Pl-tVB" firstAttribute="top" relation="lessThanOrEqual" secondItem="1XS-QM-fh2" secondAttribute="bottom" constant="25" id="a5e-RN-qGI"/>
                         <constraint firstItem="UA4-yi-ezf" firstAttribute="leading" secondItem="puW-Fw-W28" secondAttribute="leading" constant="81" id="amg-1U-N1o"/>
                         <constraint firstItem="D4a-Z7-h1B" firstAttribute="leading" secondItem="puW-Fw-W28" secondAttribute="leading" constant="205" id="azE-mX-q0T"/>
-                        <constraint firstAttribute="height" constant="312" id="diy-v0-8il"/>
-                        <constraint firstItem="1XS-QM-fh2" firstAttribute="leading" secondItem="puW-Fw-W28" secondAttribute="leading" constant="200" id="v12-Rb-jz9"/>
+                        <constraint firstItem="bCR-cE-hnM" firstAttribute="centerX" secondItem="1XS-QM-fh2" secondAttribute="centerX" id="bkX-4t-ZbH"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="750" id="diy-v0-8il"/>
+                        <constraint firstItem="bCR-cE-hnM" firstAttribute="top" relation="lessThanOrEqual" secondItem="UA4-yi-ezf" secondAttribute="bottom" constant="21" id="e01-Tf-CqB"/>
+                        <constraint firstAttribute="bottom" secondItem="3Xb-Pl-tVB" secondAttribute="bottom" constant="20" id="tjL-yA-SnO"/>
+                        <constraint firstItem="1XS-QM-fh2" firstAttribute="leading" secondItem="puW-Fw-W28" secondAttribute="leading" constant="86" id="v12-Rb-jz9"/>
                         <constraint firstAttribute="trailing" secondItem="D4a-Z7-h1B" secondAttribute="trailing" constant="205" id="v9q-yk-lHr"/>
-                        <constraint firstItem="1XS-QM-fh2" firstAttribute="top" secondItem="UA4-yi-ezf" secondAttribute="bottom" constant="8" id="wHo-5w-KNk"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <constraints>
                 <constraint firstItem="puW-Fw-W28" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NNQ-n7-KCB"/>
-                <constraint firstItem="puW-Fw-W28" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="O3l-Wb-dfR"/>
+                <constraint firstItem="puW-Fw-W28" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="25" id="O3l-Wb-dfR"/>
+                <constraint firstItem="puW-Fw-W28" firstAttribute="top" relation="lessThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="100" id="RQz-D4-USw"/>
             </constraints>
             <point key="canvasLocation" x="139" y="87"/>
         </view>
     </objects>
+    <designables>
+        <designable name="3Xb-Pl-tVB">
+            <size key="intrinsicContentSize" width="184.5" height="47.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="missionplaceholder" width="163" height="126"/>
+        <namedColor name="BackgroundColorTypography">
+            <color red="0.90200001001358032" green="0.91100001335144043" blue="0.83099997043609619" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="MainColorButton">
+            <color red="0.11999999731779099" green="0.21799999475479126" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>
