@@ -250,6 +250,10 @@ class VirtualLabController: UIViewController {
                 scene.repositioningRing(xRelatif: mission.xRelatif)
             case .E2_HukumGravitasiNewton:
                 print("omg belom jadi")
+            case .E3_GerakMelingkar:
+                print("omg belom jadi")
+            case .E4_FluidaStatis:
+                print("omg belom jadi")
             case .none:
                 fatalError("lah experimentnya ga ada")
             }
@@ -305,6 +309,10 @@ class VirtualLabController: UIViewController {
                 }
             case .E2_HukumGravitasiNewton:
                 print("belom ada euy")
+            case .E3_GerakMelingkar:
+                print("belom ada euy")
+            case .E4_FluidaStatis:
+                print("belom ada euy")
             case .none:
                 fatalError("lah ga ada experimentnya cug")
             }
@@ -353,6 +361,10 @@ class VirtualLabController: UIViewController {
                 }
             case .E2_HukumGravitasiNewton:
                 print("belom ada euy")
+            case .E3_GerakMelingkar:
+                print("belom ada euy")
+            case .E4_FluidaStatis:
+                print("belom ada euy")
             case .none:
                 fatalError("lah ga ada experimentnya cug")
             }
@@ -373,6 +385,10 @@ class VirtualLabController: UIViewController {
                 titleMissionLabel.text = "Misi \(virtualLabVM!.indexMission + 1) dari \(String(describing: virtualLabVM!.missions!.count))"
                 descMissionLabel.text = mission.missionText
             case .E2_HukumGravitasiNewton:
+                print("omg belom jadi")
+            case .E3_GerakMelingkar:
+                print("omg belom jadi")
+            case .E4_FluidaStatis:
                 print("omg belom jadi")
             case .none:
                 fatalError("lah experimentnya ga ada")
@@ -461,6 +477,10 @@ extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
                         setupMissionView()
                         setupScene()
                     case .E2_HukumGravitasiNewton:
+                        print("belom jadi")
+                    case .E3_GerakMelingkar:
+                        print("belom jadi")
+                    case .E4_FluidaStatis:
                         print("belom jadi")
                     case .none:
                         fatalError("mampus experimentnya ilang")

@@ -60,6 +60,10 @@
 		EA1BD2A92731575F00B879A0 /* FinishMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1BD2A82731575F00B879A0 /* FinishMission.swift */; };
 		EA6E764D273160CF00FFC46C /* FinishQuiz.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6E764C273160CF00FFC46C /* FinishQuiz.xib */; };
 		EA6E764F273160ED00FFC46C /* FinishQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6E764E273160ED00FFC46C /* FinishQuiz.swift */; };
+		EA6EA6EE2760454B0058B074 /* E3_GerakMelingkarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6EA6ED2760454B0058B074 /* E3_GerakMelingkarData.swift */; };
+		EA6EA6F027606E4A0058B074 /* OnDevelopment.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6EA6EF27606E4A0058B074 /* OnDevelopment.xib */; };
+		EA6EA6F227606E890058B074 /* OnDevelopment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6EA6F127606E890058B074 /* OnDevelopment.swift */; };
+		EA6EA6F427606F220058B074 /* E4_FluidaStatisData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6EA6F327606F220058B074 /* E4_FluidaStatisData.swift */; };
 		EA7E3F05273B6454006BC2B0 /* FailedMission.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA7E3F04273B6454006BC2B0 /* FailedMission.xib */; };
 		EA7E3F07273B646E006BC2B0 /* FailedMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7E3F06273B646E006BC2B0 /* FailedMission.swift */; };
 		EAA2984D27316A6B00B5E303 /* EveryMission.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA2984C27316A6B00B5E303 /* EveryMission.xib */; };
@@ -155,6 +159,10 @@
 		EA1BD2A82731575F00B879A0 /* FinishMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishMission.swift; sourceTree = "<group>"; };
 		EA6E764C273160CF00FFC46C /* FinishQuiz.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishQuiz.xib; sourceTree = "<group>"; };
 		EA6E764E273160ED00FFC46C /* FinishQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishQuiz.swift; sourceTree = "<group>"; };
+		EA6EA6ED2760454B0058B074 /* E3_GerakMelingkarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E3_GerakMelingkarData.swift; sourceTree = "<group>"; };
+		EA6EA6EF27606E4A0058B074 /* OnDevelopment.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnDevelopment.xib; sourceTree = "<group>"; };
+		EA6EA6F127606E890058B074 /* OnDevelopment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnDevelopment.swift; sourceTree = "<group>"; };
+		EA6EA6F327606F220058B074 /* E4_FluidaStatisData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E4_FluidaStatisData.swift; sourceTree = "<group>"; };
 		EA7E3F04273B6454006BC2B0 /* FailedMission.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FailedMission.xib; sourceTree = "<group>"; };
 		EA7E3F06273B646E006BC2B0 /* FailedMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedMission.swift; sourceTree = "<group>"; };
 		EAA2984C27316A6B00B5E303 /* EveryMission.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EveryMission.xib; sourceTree = "<group>"; };
@@ -509,6 +517,8 @@
 				EAA2984C27316A6B00B5E303 /* EveryMission.xib */,
 				EA7E3F06273B646E006BC2B0 /* FailedMission.swift */,
 				EA7E3F04273B6454006BC2B0 /* FailedMission.xib */,
+				EA6EA6F127606E890058B074 /* OnDevelopment.swift */,
+				EA6EA6EF27606E4A0058B074 /* OnDevelopment.xib */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -544,6 +554,8 @@
 				EADBE4A4272D82A100E8607D /* ExperimentDummy.swift */,
 				988B9975272E39120024DAA6 /* E1_GerakParabolaData.swift */,
 				988B9977272E3A710024DAA6 /* E2_HukumGravitasiNewtonData.swift */,
+				EA6EA6ED2760454B0058B074 /* E3_GerakMelingkarData.swift */,
+				EA6EA6F327606F220058B074 /* E4_FluidaStatisData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -636,6 +648,7 @@
 				98FD8C6727281A55006ECB8A /* GravityPopoverViewController.xib in Resources */,
 				982CEA59273670C6004469DA /* masuk_ring.mp3 in Resources */,
 				14C0564327527A2800E6F47D /* tabrak1s.mp3 in Resources */,
+				EA6EA6F027606E4A0058B074 /* OnDevelopment.xib in Resources */,
 				EABCDE64271EED1C00CA2677 /* Assets.xcassets in Resources */,
 				EABCDE62271EED1B00CA2677 /* Main.storyboard in Resources */,
 				EABCDE87271EEEE100CA2677 /* ExperimentDetail.storyboard in Resources */,
@@ -666,6 +679,7 @@
 				EABCDE5F271EED1B00CA2677 /* ViewController.swift in Sources */,
 				98FD8C6627281A55006ECB8A /* GravityPopoverViewController.swift in Sources */,
 				EAD5BB1227314C6300E4D651 /* Exit.swift in Sources */,
+				EA6EA6F427606F220058B074 /* E4_FluidaStatisData.swift in Sources */,
 				1466162B2740258E0067AF96 /* VirtualLabHukumNewtonViewController.swift in Sources */,
 				EA0C378C2723F3970038BF88 /* RegisterNib.swift in Sources */,
 				981D5BA9273528D800EB1BB5 /* GerakParabolaMission.swift in Sources */,
@@ -696,6 +710,7 @@
 				EA1BD2A92731575F00B879A0 /* FinishMission.swift in Sources */,
 				98DF1B962733FA9A00D7BB2E /* PhysicsCategory.swift in Sources */,
 				EADBE4A5272D82A100E8607D /* ExperimentDummy.swift in Sources */,
+				EA6EA6EE2760454B0058B074 /* E3_GerakMelingkarData.swift in Sources */,
 				988B9976272E39120024DAA6 /* E1_GerakParabolaData.swift in Sources */,
 				142498FC272793C60050F18D /* AttributedString.swift in Sources */,
 				EABCDE8B271EEF0B00CA2677 /* ExperimentDetailViewModel.swift in Sources */,
@@ -720,6 +735,7 @@
 				EAA2984F27316A7F00B5E303 /* EveryMission.swift in Sources */,
 				EABCDE99271EEFC700CA2677 /* HomeViewModel.swift in Sources */,
 				981B8C2327399B5C006B2735 /* ExtensionUIColor.swift in Sources */,
+				EA6EA6F227606E890058B074 /* OnDevelopment.swift in Sources */,
 				EADBE49F272D808600E8607D /* ViewExtension.swift in Sources */,
 				1466162D2740DB1B0067AF96 /* HukumNewtonScene.swift in Sources */,
 				98BADE4727291304009EE9D1 /* Extension+UIButton.swift in Sources */,
