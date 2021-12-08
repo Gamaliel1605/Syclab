@@ -522,7 +522,11 @@ extension VirtualLabController: FinishAlertProtocol {
         let viewController = storyboard.instantiateViewController(withIdentifier: "quiz") as! QuizController
         if let experiment = virtualLabVM?.experiment {
             viewController.quizVM = QuizViewModel(experiment: experiment)
-            self.navigationController?.pushViewController(viewController, animated: true)
+            let allControllers = self.navigationController?.viewControllers
+            let idx = allControllers!.count-2
+            let pusher = allControllers![idx]
+            self.navigationController?.popViewController(animated: false)
+            pusher.navigationController?.pushViewController(viewController, animated: false)
         }
         
     }
