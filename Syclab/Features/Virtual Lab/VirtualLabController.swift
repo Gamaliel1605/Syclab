@@ -243,7 +243,7 @@ class VirtualLabController: UIViewController {
         if (virtualLabVM?.isMission ?? false) {
             switch virtualLabVM?.experiment {
             case .E1_GerakParabola:
-                guard let mission = virtualLabVM?.currentMission() else {return}
+                guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
                 guard let scene = spriteView.scene as? GerakParabolaScene else {return}
                 scene.sudutTembakScene = Double(mission.sudutValue)
                 scene.kecAwalScene = mission.kecepatanValue
@@ -288,7 +288,7 @@ class VirtualLabController: UIViewController {
         if virtualLabVM?.isMission ?? false {
             switch virtualLabVM?.experiment {
             case .E1_GerakParabola:
-                guard let mission = virtualLabVM?.currentMission() else {return}
+                guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
                 kecepatanSlider.value = mission.kecepatanValue
                 sudutSlider.value = mission.sudutValue
                 kecepatanTxtField.text = "\(mission.kecepatanValue)"
@@ -332,7 +332,7 @@ class VirtualLabController: UIViewController {
             
             switch virtualLabVM?.experiment {
             case .E1_GerakParabola:
-                guard let mission = virtualLabVM?.currentMission() else {return}
+                guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
                 kecepatanSlider.value = mission.kecepatanValue
                 sudutSlider.value = mission.sudutValue
                 kecepatanTxtField.text = "\(mission.kecepatanValue)"
@@ -381,7 +381,7 @@ class VirtualLabController: UIViewController {
         if (virtualLabVM?.isMission ?? false) {
             switch virtualLabVM?.experiment {
             case .E1_GerakParabola:
-                guard let mission = virtualLabVM?.currentMission() else {return}
+                guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
                 titleMissionLabel.text = "Misi \(virtualLabVM!.indexMission + 1) dari \(String(describing: virtualLabVM!.missions!.count))"
                 descMissionLabel.text = mission.missionText
             case .E2_HukumGravitasiNewton:
@@ -462,8 +462,10 @@ extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
                 case .some(_):
                     print("offside")
                 }
-                finishAlert.everyMissionRumusImage.image = virtualLabVM?.currentMission().explainationImage
-                finishAlert.everyMissionLabel_2.text = virtualLabVM?.currentMission().explainationText
+                
+                guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
+                finishAlert.everyMissionRumusImage.image = mission.explainationImage
+                finishAlert.everyMissionLabel_2.text = mission.explainationText
                 
                 
                 if virtualLabVM!.indexMission < (virtualLabVM?.missions!.count)! - 1 {

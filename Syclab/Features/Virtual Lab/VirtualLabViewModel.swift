@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class VirtualLabViewModel: NSObject {
-    let missions: [GerakParabolaMission]?
+    let missions: [Any]?
     lazy var defaultMissions = GerakParabolaMission(xRelatif: 0.5,
                                                yRelatif: 0.5,
                                                mission: "Atur sudut yang tepat agar bola masuk ke dalam ring. Kamu bisa menggunakan sudut yang bernilai dibawah ataupun diatas 45⁰!",
@@ -32,7 +32,7 @@ class VirtualLabViewModel: NSObject {
         self.title = experiment.getExpTitle()
         
         if check == .Misi{
-            self.missions = experiment.getMissions() as? [GerakParabolaMission]
+            self.missions = experiment.getMissions()
             self.isMission = true
         } else {
             self.missions = []
@@ -40,7 +40,7 @@ class VirtualLabViewModel: NSObject {
         }
     }
     
-    func nextMission() -> GerakParabolaMission {
+    func nextMission() -> Any {
         if let missions = missions {
             if indexMission <= missions.count - 1 {
                 indexMission += 1
@@ -49,7 +49,7 @@ class VirtualLabViewModel: NSObject {
         } else {return defaultMissions}
     }
     
-    func currentMission() -> GerakParabolaMission {
+    func currentMission() -> Any {
         if let missions = missions {
             if indexMission <= missions.count - 1 {
                 return missions[indexMission]
