@@ -438,11 +438,23 @@ extension VirtualLabController: GravityPopoverDelegate {
 extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
     func update(_ currentTime: TimeInterval, for scene: SKScene) {
         guard let scene = scene as? GerakParabolaScene else {return}
+        
+        if scene.isOnAir {
+            playButton.isEnabled = false
+            playButton.isUserInteractionEnabled = false
+            scene.isOnAir = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                self.playButton.isEnabled = true
+                self.playButton.isUserInteractionEnabled = true
+            }
+        }
+        
         if scene.isFinish {
             scene.isFinish = false
             scene.sensor.removeFromParent()
             
             if virtualLabVM?.isMission ?? false {
+                
                 let finishAlert = EveryMission()
                 self.present(finishAlert, animated: true, completion: nil)
                 
