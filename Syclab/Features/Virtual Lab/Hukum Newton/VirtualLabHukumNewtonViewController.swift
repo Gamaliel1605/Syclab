@@ -73,6 +73,7 @@ class VirtualLabHukumNewtonViewController: UIViewController {
     
     @objc private func goBack() {
         if virtualLabVM.check == .Misi {
+            currentVLab.isPaused = true
             let exitAlert = Exit()
             exitAlert.delegate = self
             self.present(exitAlert, animated: true, completion: nil)

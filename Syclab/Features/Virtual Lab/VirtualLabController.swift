@@ -45,6 +45,8 @@ class VirtualLabController: UIViewController {
     // MARK: - Pressed Button Function
     @objc func back(sender: UIBarButtonItem) {
         if virtualLabVM?.check == .Misi {
+            guard let scene = spriteScene as? GerakParabolaScene else {return}
+            scene.isPaused = true
             let exitAlert = Exit()
             exitAlert.delegate = self
             self.present(exitAlert, animated: true, completion: nil)
@@ -535,6 +537,10 @@ extension VirtualLabController: FinishAlertProtocol {
 extension VirtualLabController: ExitAlertProtocol {
     func onTapKeluar() {
         self.navigationController?.popViewController(animated: true)
+    }
+    func onTapBatal() {
+        guard let scene = spriteScene as? GerakParabolaScene else {return}
+        scene.isPaused = false
     }
 }
 

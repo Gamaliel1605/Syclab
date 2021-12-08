@@ -263,6 +263,10 @@ extension QuizController: QuizAlertProtocol {
 }
 
 extension QuizController: ExitAlertProtocol {
+    func onTapBatal() {
+        print("ahaay")
+    }
+    
     func onTapKeluar() {
         self.navigationController?.popViewController(animated: true)
     }

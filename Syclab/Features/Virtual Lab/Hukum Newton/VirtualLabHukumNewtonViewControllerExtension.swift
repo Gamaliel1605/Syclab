@@ -34,6 +34,11 @@ extension VirtualLabHukumNewtonViewController: FinishAlertProtocol {
 }
 
 extension VirtualLabHukumNewtonViewController: ExitAlertProtocol {
+    func onTapBatal() {
+        print("ahaay")
+        currentVLab.isPaused = false
+    }
+    
     func onTapKeluar() {
         self.navigationController?.popViewController(animated: true)
     }
