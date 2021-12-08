@@ -10,6 +10,7 @@ import UIKit
 
 protocol ExitAlertProtocol: AnyObject{
     func onTapKeluar()
+    func onTapBatal()
 }
 
 class Exit: UIViewController {
@@ -29,6 +30,7 @@ class Exit: UIViewController {
     
     @IBAction func batalTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+        delegate?.onTapBatal()
     }
     
     @IBAction func keluarTapped(_ sender: UIButton) {

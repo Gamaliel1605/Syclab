@@ -45,6 +45,8 @@ class VirtualLabController: UIViewController {
     // MARK: - Pressed Button Function
     @objc func back(sender: UIBarButtonItem) {
         if virtualLabVM?.check == .Misi {
+            guard let scene = spriteScene as? GerakParabolaScene else {return}
+            scene.isPaused = true
             let exitAlert = Exit()
             exitAlert.delegate = self
             self.present(exitAlert, animated: true, completion: nil)
@@ -243,7 +245,7 @@ class VirtualLabController: UIViewController {
         if (virtualLabVM?.isMission ?? false) {
             switch virtualLabVM?.experiment {
             case .E1_GerakParabola:
-                guard let mission = virtualLabVM?.currentMission() else {return}
+                guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
                 guard let scene = spriteView.scene as? GerakParabolaScene else {return}
                 scene.sudutTembakScene = Double(mission.sudutValue)
                 scene.kecAwalScene = mission.kecepatanValue
@@ -288,7 +290,7 @@ class VirtualLabController: UIViewController {
         if virtualLabVM?.isMission ?? false {
             switch virtualLabVM?.experiment {
             case .E1_GerakParabola:
-                guard let mission = virtualLabVM?.currentMission() else {return}
+                guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
                 kecepatanSlider.value = mission.kecepatanValue
                 sudutSlider.value = mission.sudutValue
                 kecepatanTxtField.text = "\(mission.kecepatanValue)"
@@ -332,7 +334,7 @@ class VirtualLabController: UIViewController {
             
             switch virtualLabVM?.experiment {
             case .E1_GerakParabola:
-                guard let mission = virtualLabVM?.currentMission() else {return}
+                guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
                 kecepatanSlider.value = mission.kecepatanValue
                 sudutSlider.value = mission.sudutValue
                 kecepatanTxtField.text = "\(mission.kecepatanValue)"
@@ -381,7 +383,7 @@ class VirtualLabController: UIViewController {
         if (virtualLabVM?.isMission ?? false) {
             switch virtualLabVM?.experiment {
             case .E1_GerakParabola:
-                guard let mission = virtualLabVM?.currentMission() else {return}
+                guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
                 titleMissionLabel.text = "Misi \(virtualLabVM!.indexMission + 1) dari \(String(describing: virtualLabVM!.missions!.count))"
                 descMissionLabel.text = mission.missionText
             case .E2_HukumGravitasiNewton:
@@ -438,11 +440,23 @@ extension VirtualLabController: GravityPopoverDelegate {
 extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
     func update(_ currentTime: TimeInterval, for scene: SKScene) {
         guard let scene = scene as? GerakParabolaScene else {return}
+        
+        if scene.isOnAir {
+            playButton.isEnabled = false
+            playButton.isUserInteractionEnabled = false
+            scene.isOnAir = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                self.playButton.isEnabled = true
+                self.playButton.isUserInteractionEnabled = true
+            }
+        }
+        
         if scene.isFinish {
             scene.isFinish = false
             scene.sensor.removeFromParent()
             
             if virtualLabVM?.isMission ?? false {
+                
                 let finishAlert = EveryMission()
                 self.present(finishAlert, animated: true, completion: nil)
                 
@@ -462,8 +476,10 @@ extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
                 case .some(_):
                     print("offside")
                 }
-                finishAlert.everyMissionRumusImage.image = virtualLabVM?.currentMission().explainationImage
-                finishAlert.everyMissionLabel_2.text = virtualLabVM?.currentMission().explainationText
+                
+                guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
+                finishAlert.everyMissionRumusImage.image = mission.explainationImage
+                finishAlert.everyMissionLabel_2.text = mission.explainationText
                 
                 
                 if virtualLabVM!.indexMission < (virtualLabVM?.missions!.count)! - 1 {
@@ -508,7 +524,11 @@ extension VirtualLabController: FinishAlertProtocol {
         let viewController = storyboard.instantiateViewController(withIdentifier: "quiz") as! QuizController
         if let experiment = virtualLabVM?.experiment {
             viewController.quizVM = QuizViewModel(experiment: experiment)
-            self.navigationController?.pushViewController(viewController, animated: true)
+            let allControllers = self.navigationController?.viewControllers
+            let idx = allControllers!.count-2
+            let pusher = allControllers![idx]
+            self.navigationController?.popViewController(animated: false)
+            pusher.navigationController?.pushViewController(viewController, animated: false)
         }
         
     }
@@ -517,6 +537,10 @@ extension VirtualLabController: FinishAlertProtocol {
 extension VirtualLabController: ExitAlertProtocol {
     func onTapKeluar() {
         self.navigationController?.popViewController(animated: true)
+    }
+    func onTapBatal() {
+        guard let scene = spriteScene as? GerakParabolaScene else {return}
+        scene.isPaused = false
     }
 }
 
