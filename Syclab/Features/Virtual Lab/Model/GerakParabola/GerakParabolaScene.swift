@@ -204,7 +204,7 @@ class GerakParabolaScene: SKScene {
     override func didMove(to view: SKView) {
         physicsWorld.gravity = CGVector(dx: 0, dy: CGFloat(gravitasiVektor))
         physicsWorld.contactDelegate = self
-        physicsWorld.speed = 0.5
+        physicsWorld.speed = 0.4
         
         initialX = size.width * 0.1
         initialY = size.height * 0.15
