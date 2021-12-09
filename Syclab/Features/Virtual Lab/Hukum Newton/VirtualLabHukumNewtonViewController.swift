@@ -195,7 +195,7 @@ class VirtualLabHukumNewtonViewController: UIViewController {
             
             if customRound(dashboardModel.calculatedForceResult) == currentMission.forceValue {
                 let successView: UIViewController
-                let checkIndex: Bool = virtualLabVM.indexMission < missions.count - 1
+                let checkIndex: Bool = virtualLabVM.indexMission < missions.count
                 successView = checkIndex ? EveryMission() : FinishMission()
                 
                 if !checkIndex {
@@ -205,22 +205,31 @@ class VirtualLabHukumNewtonViewController: UIViewController {
                 self.present(successView, animated: true) {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
                         if checkIndex {
-                            successView.dismiss(animated: true) {
-                                playButton.isUserInteractionEnabled = true
-                            }
+//                            successView.dismiss(animated: true) {
+//                                playButton.isUserInteractionEnabled = true
+//                            }
+                            playButton.isUserInteractionEnabled = true
                             virtualLabVM.indexMission += 1
-                            setUpMission()
+                            if virtualLabVM.indexMission < missions.count {
+                                
+                                setUpMission()
+                            }
                         }
                     }
                 }
                 
                 if checkIndex {
                     let wordNumber = (virtualLabVM.indexMission + 1).convertToWord()
+                    (successView as! EveryMission).delegate = self
                     (successView as! EveryMission).everyMissionLabel_1.text = "MISI \(wordNumber) SELESAI"
-//                    (successView as! EveryMission).everyMissionLabel_2.text = "Lanjut Misi \(virtualLabVM.indexMission + 2)"
                     (successView as! EveryMission).everyMissionLabel_2.text = currentMission.explainationText
                     (successView as! EveryMission).everyMissionRumusImage.image = currentMission.explainationImage
-                    (successView as! EveryMission).nextMissionButton.setTitle("Lanjut misi \((virtualLabVM?.indexMission)! + 2)", for: .normal)
+                    if virtualLabVM.indexMission < missions.count - 1 {
+                        (successView as! EveryMission).nextMissionButton.setTitle("Lanjut misi \((virtualLabVM?.indexMission)! + 2)", for: .normal)
+                    } else {
+                        (successView as! EveryMission).nextMissionButton.setTitle("Lanjutkan", for: .normal)
+                    }
+                    
                 }
             } else if customRound(dashboardModel.calculatedForceResult) < currentMission.forceValue {
                 self.view.isUserInteractionEnabled = false
