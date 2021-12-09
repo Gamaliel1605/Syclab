@@ -41,10 +41,16 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyborad = UIStoryboard(name: "ModeOption", bundle: nil)
-        let viewController = storyborad.instantiateViewController(withIdentifier: "modeOption") as! ModeOptionController
-        viewController.modeOptionVM = ModeOptionViewModel(experiment: homeVM.expDatas[indexPath.row].id)
-        self.navigationController?.pushViewController(viewController, animated: true)
+        
+        if indexPath.row == 0 || indexPath.row == 1{
+            let storyborad = UIStoryboard(name: "ModeOption", bundle: nil)
+            let viewController = storyborad.instantiateViewController(withIdentifier: "modeOption") as! ModeOptionController
+            viewController.modeOptionVM = ModeOptionViewModel(experiment: homeVM.expDatas[indexPath.row].id)
+            self.navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            let comingSoonAlert = OnDevelopment()
+            self.present(comingSoonAlert, animated: true, completion: nil)
+        }
     }
     
 }

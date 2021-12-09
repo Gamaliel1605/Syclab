@@ -98,6 +98,7 @@ class GerakParabolaScene: SKScene {
     //variabel
     var isFinish: Bool = false
     var isMission: Bool = false
+    var isOnAir: Bool = false
     
     //sounds
     let lemparUrl = Bundle.main.url(forResource: "lempar", withExtension: "mp3")!
@@ -155,8 +156,6 @@ class GerakParabolaScene: SKScene {
                         indexBentol += 1
                         return
                     }
-                    print("ini children \(children.count + player.children.count + lenganKanan.children.count)")
-                    print(janganDihapusArray.count)
 
                     if children.count + player.children.count > janganDihapusArray.count {
 
@@ -205,7 +204,7 @@ class GerakParabolaScene: SKScene {
     override func didMove(to view: SKView) {
         physicsWorld.gravity = CGVector(dx: 0, dy: CGFloat(gravitasiVektor))
         physicsWorld.contactDelegate = self
-        physicsWorld.speed = 0.3
+        physicsWorld.speed = 0.5
         
         initialX = size.width * 0.1
         initialY = size.height * 0.15
@@ -233,16 +232,20 @@ class GerakParabolaScene: SKScene {
             projectileSekarang.physicsBody?.velocity = .zero
         }
         index = 0
+        isOnAir = false
     }
     
     func shoot() {
+        guard index < projectileArray.count else {
+            resetLab()
+            return
+        }
         
+        isOnAir = true
         lineActive = true
         jarakXMaxReal = 0
         jarakXRealtime = 0
-        
-        guard index < projectileArray.count else {return}
- 
+
         currentProjectile = projectileArray[index]
         currentProjectile?.position = CGPoint(x: 0, y: 0)
         currentProjectile?.zPosition = VerticalPosition.bola//0.3
@@ -260,10 +263,6 @@ class GerakParabolaScene: SKScene {
         currentProjectile?.physicsBody?.velocity = CGVector(dx: engineSK.kecepatanXAwalEngine(sudutTembak: sudutTembakScene, kecepatanAwal: kecAwalScene), dy: engineSK.kecepatanYAwalEngine(sudutTembak: sudutTembakScene, kecepatanAwal: kecAwalScene))
 //        currentProjectile?.scale(to: CGSize(width: 700, height: 700))
 //        run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
-        
-        print(kecAwalScene)
-        print(gravitasiVektor)
-       
         AudioServicesCreateSystemSoundID(lemparUrl as CFURL, &sound)
         AudioServicesPlaySystemSound(sound)
         
@@ -474,34 +473,28 @@ extension GerakParabolaScene: SKPhysicsContactDelegate {
             firstBody = contact.bodyB
             secondBody = contact.bodyA
         }
+        isOnAir = false
         
         // 2
         if ((firstBody.categoryBitMask & PhysicsCategory.tembok != 0) &&
-                (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
+            (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
+            
             if let tembox = firstBody.node as? SKSpriteNode,
                let projectile = secondBody.node as? SKSpriteNode {
                 projectileDidCollideWithTembox(projectile: projectile, tembox: tembox)
-
+//                isOnAir = false
             }
         }
         
         if ((firstBody.categoryBitMask & PhysicsCategory.sensor != 0) &&
             (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
                 isFinish = true
-            AudioServicesCreateSystemSoundID(masukRingUrl as CFURL, &sound)
-            AudioServicesPlaySystemSound(sound)
+                AudioServicesCreateSystemSoundID(masukRingUrl as CFURL, &sound)
+                AudioServicesPlaySystemSound(sound)
         }
-        
-//        if ((firstBody.categoryBitMask & PhysicsCategory.projectile != 0) &&
-//            (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
-//            firstBody.isDynamic = false
-//            secondBody.isDynamic = false
-//        }
     }
     
     func projectileDidCollideWithTembox(projectile: SKSpriteNode, tembox: SKSpriteNode) {
-        print("Hit")
-
         projectile.removeAllChildren()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {

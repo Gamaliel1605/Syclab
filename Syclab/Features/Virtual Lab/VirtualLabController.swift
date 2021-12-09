@@ -45,6 +45,8 @@ class VirtualLabController: UIViewController {
     // MARK: - Pressed Button Function
     @objc func back(sender: UIBarButtonItem) {
         if virtualLabVM?.check == .Misi {
+            guard let scene = spriteScene as? GerakParabolaScene else {return}
+            scene.isPaused = true
             let exitAlert = Exit()
             exitAlert.delegate = self
             self.present(exitAlert, animated: true, completion: nil)
@@ -250,6 +252,10 @@ class VirtualLabController: UIViewController {
                 scene.repositioningRing(xRelatif: mission.xRelatif)
             case .E2_HukumGravitasiNewton:
                 print("omg belom jadi")
+            case .E3_GerakMelingkar:
+                print("omg belom jadi")
+            case .E4_FluidaStatis:
+                print("omg belom jadi")
             case .none:
                 fatalError("lah experimentnya ga ada")
             }
@@ -305,6 +311,10 @@ class VirtualLabController: UIViewController {
                 }
             case .E2_HukumGravitasiNewton:
                 print("belom ada euy")
+            case .E3_GerakMelingkar:
+                print("belom ada euy")
+            case .E4_FluidaStatis:
+                print("belom ada euy")
             case .none:
                 fatalError("lah ga ada experimentnya cug")
             }
@@ -353,6 +363,10 @@ class VirtualLabController: UIViewController {
                 }
             case .E2_HukumGravitasiNewton:
                 print("belom ada euy")
+            case .E3_GerakMelingkar:
+                print("belom ada euy")
+            case .E4_FluidaStatis:
+                print("belom ada euy")
             case .none:
                 fatalError("lah ga ada experimentnya cug")
             }
@@ -373,6 +387,10 @@ class VirtualLabController: UIViewController {
                 titleMissionLabel.text = "Misi \(virtualLabVM!.indexMission + 1) dari \(String(describing: virtualLabVM!.missions!.count))"
                 descMissionLabel.text = mission.missionText
             case .E2_HukumGravitasiNewton:
+                print("omg belom jadi")
+            case .E3_GerakMelingkar:
+                print("omg belom jadi")
+            case .E4_FluidaStatis:
                 print("omg belom jadi")
             case .none:
                 fatalError("lah experimentnya ga ada")
@@ -422,51 +440,73 @@ extension VirtualLabController: GravityPopoverDelegate {
 extension VirtualLabController: SKSceneDelegate,SKViewDelegate {
     func update(_ currentTime: TimeInterval, for scene: SKScene) {
         guard let scene = scene as? GerakParabolaScene else {return}
+        
+        if scene.isOnAir {
+            playButton.isEnabled = false
+            playButton.isUserInteractionEnabled = false
+            scene.isOnAir = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+                self.playButton.isEnabled = true
+                self.playButton.isUserInteractionEnabled = true
+            }
+        }
+        
         if scene.isFinish {
             scene.isFinish = false
             scene.sensor.removeFromParent()
             
             if virtualLabVM?.isMission ?? false {
+                
+                let finishAlert = EveryMission()
+                self.present(finishAlert, animated: true, completion: nil)
+                
+                switch virtualLabVM?.indexMission {
+                case 0:
+                    finishAlert.everyMissionLabel_1.text = "Misi Pertama Selesai"
+                case 1:
+                    finishAlert.everyMissionLabel_1.text = "Misi Kedua Selesai"
+                case 2:
+                    finishAlert.everyMissionLabel_1.text = "Misi Ketiga Selesai"
+                case 3:
+                    finishAlert.everyMissionLabel_1.text = "Misi Keempat Selesai"
+                case 4:
+                    finishAlert.everyMissionLabel_1.text = "Misi Kelima Selesai"
+                case .none:
+                    print("lol")
+                case .some(_):
+                    print("offside")
+                }
+                
+                guard let mission = virtualLabVM?.currentMission() as? GerakParabolaMission else {return}
+                finishAlert.everyMissionRumusImage.image = mission.explainationImage
+                finishAlert.everyMissionLabel_2.text = mission.explainationText
+                
+                
                 if virtualLabVM!.indexMission < (virtualLabVM?.missions!.count)! - 1 {
-                    let finishAlert = EveryMission()
-                    self.present(finishAlert, animated: true, completion: nil)
-                    
-                    switch virtualLabVM?.indexMission {
-                    case 0:
-                        finishAlert.everyMissionLabel_1.text = "Misi Pertama Selesai"
-                    case 1:
-                        finishAlert.everyMissionLabel_1.text = "Misi Kedua Selesai"
-                    case 2:
-                        finishAlert.everyMissionLabel_1.text = "Misi Ketiga Selesai"
-                    case 3:
-                        finishAlert.everyMissionLabel_1.text = "Misi Keempat Selesai"
-                    case 4:
-                        finishAlert.everyMissionLabel_1.text = "Misi Kelima Selesai"
-                    case .none:
-                        print("lol")
-                    case .some(_):
-                        print("offside")
-                    }
-                    finishAlert.everyMissionLabel_2.text = "Lanjut misi \(virtualLabVM!.indexMission + 2)"
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [self] in
-                        finishAlert.dismiss(animated: true, completion: nil)
-                        switch virtualLabVM?.experiment {
-                        case .E1_GerakParabola:
-                            virtualLabVM?.indexMission += 1
-                            setupMissionView()
-                            setupScene()
-                        case .E2_HukumGravitasiNewton:
-                            print("belom jadi")
-                        case .none:
-                            fatalError("mampus experimentnya ilang")
-                        }
-                        scene.resetLab()
-                    }
-                } else {
-                    let finishAlert = FinishMission()
-                    self.present(finishAlert, animated: true, completion: nil)
+                    finishAlert.nextMissionButton.setTitle("Lanjut misi \((virtualLabVM?.indexMission)! + 2)", for: .normal)
+                    finishAlert.nextMissionButton.titleLabel?.font = .boldSystemFont(ofSize: 30)
                     finishAlert.delegate = self
+                    
+                    switch virtualLabVM?.experiment {
+                    case .E1_GerakParabola:
+                        virtualLabVM?.indexMission += 1
+                        setupMissionView()
+                        setupScene()
+                    case .E2_HukumGravitasiNewton:
+                        print("belom jadi")
+                    case .E3_GerakMelingkar:
+                        print("belom jadi")
+                    case .E4_FluidaStatis:
+                        print("belom jadi")
+                    case .none:
+                        fatalError("mampus experimentnya ilang")
+                    }
+                    scene.resetLab()
+                } else {
+                    finishAlert.nextMissionButton.setTitle("Berikutnya", for: .normal)
+                    finishAlert.nextMissionButton.titleLabel?.font = .boldSystemFont(ofSize: 30)
+                    finishAlert.delegate = self
+                    virtualLabVM?.indexMission += 1
                 }
             }
         }
@@ -484,7 +524,11 @@ extension VirtualLabController: FinishAlertProtocol {
         let viewController = storyboard.instantiateViewController(withIdentifier: "quiz") as! QuizController
         if let experiment = virtualLabVM?.experiment {
             viewController.quizVM = QuizViewModel(experiment: experiment)
-            self.navigationController?.pushViewController(viewController, animated: true)
+            let allControllers = self.navigationController?.viewControllers
+            let idx = allControllers!.count-2
+            let pusher = allControllers![idx]
+            self.navigationController?.popViewController(animated: false)
+            pusher.navigationController?.pushViewController(viewController, animated: false)
         }
         
     }
@@ -494,6 +538,10 @@ extension VirtualLabController: ExitAlertProtocol {
     func onTapKeluar() {
         self.navigationController?.popViewController(animated: true)
     }
+    func onTapBatal() {
+        guard let scene = spriteScene as? GerakParabolaScene else {return}
+        scene.isPaused = false
+    }
 }
 
 extension VirtualLabController: DismissProtocol {
@@ -502,4 +550,20 @@ extension VirtualLabController: DismissProtocol {
             viewWithTag.removeFromSuperview()
         }
     }
+}
+
+extension VirtualLabController: EveryMissionAlertProtocol {
+    func onTapNextMission() {
+        if virtualLabVM!.indexMission < (virtualLabVM?.missions!.count)!  {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+            let finishAlert = FinishMission()
+            self.present(finishAlert, animated: true, completion: nil)
+            finishAlert.delegate = self
+        }
+        
+    }
+    
+    
 }

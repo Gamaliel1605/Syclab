@@ -84,6 +84,17 @@ class ExperimentDetailController: UIViewController {
             let VC = UIStoryboard.init(name: "VirtualLabHukumNewton", bundle: Bundle.main).instantiateViewController(withIdentifier: "hukumNewton") as! VirtualLabHukumNewtonViewController
             VC.virtualLabVM = VirtualLabViewModel(check: experimentVM.check, experiment: experimentVM.experiment)
             self.navigationController?.pushViewController(VC, animated: true)
+        
+        case .E3_GerakMelingkar:
+            let VC = UIStoryboard.init(name: "VirtualLab", bundle: Bundle.main).instantiateViewController(withIdentifier: "virtualLab") as! VirtualLabController
+            VC.virtualLabVM = VirtualLabViewModel(check: experimentVM.check, experiment: experimentVM.experiment)
+            self.navigationController?.pushViewController(VC, animated: true)
+        
+        case .E4_FluidaStatis:
+            let VC = UIStoryboard.init(name: "VirtualLab", bundle: Bundle.main).instantiateViewController(withIdentifier: "virtualLab") as! VirtualLabController
+            VC.virtualLabVM = VirtualLabViewModel(check: experimentVM.check, experiment: experimentVM.experiment)
+            self.navigationController?.pushViewController(VC, animated: true)
+            
         }
     }
 }
