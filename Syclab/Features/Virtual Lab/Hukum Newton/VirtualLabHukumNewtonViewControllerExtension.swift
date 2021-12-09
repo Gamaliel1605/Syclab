@@ -48,3 +48,18 @@ extension VirtualLabHukumNewtonViewController: ExitAlertProtocol {
         self.navigationController?.popViewController(animated: true)
     }
 }
+
+
+extension VirtualLabHukumNewtonViewController: EveryMissionAlertProtocol {
+    func onTapNextMission() {
+        if virtualLabVM!.indexMission < (virtualLabVM?.missions!.count)!  {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+            let finishAlert = FinishMission()
+            self.present(finishAlert, animated: true, completion: nil)
+            finishAlert.delegate = self
+        }
+        
+    }
+}
