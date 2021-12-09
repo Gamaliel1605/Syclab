@@ -51,12 +51,16 @@ struct E2_HukumGravitasiNewtonData {
         HukumNewtonMission(
             missionText: "Matahari dan Bumi terlalu jauh! Atur massa Matahari dan Bumi sehingga besar gaya tarik gravitasi antara kedua benda tersebut adalah sebesar 33.4 N agar mereka tidak terlepas dan keluar dari orbit",
             variables: [.firstMass, .secondMass],
-            forceValue: 33.4
+            forceValue: 33.4,
+            explainationText: "Perhatikan rumus di atas, besar nilai massa matahari (m1) dan massa bumi (m2) berbanding lurus dengan nilai dari gravitasi. Ketika besar nilai m1 atau m2 meningkat maka besar nilai gravitasi dari keduanya akan meningkat, begitu pula sebaliknya, ketika besar nilai m1 atau m2 mengecil maka besar nilai gravitasi dari keduanya juga akan mengecil",
+            explainationImage: "dummy_rumus_newton"
         ),
         HukumNewtonMission(
             missionText: "Matahari dan Bumi terlalu dekat! Atur jarak dan massa Matahari sehingga besar gaya tarik gravitasi antara kedua benda tersebut adalah sebesar 33.4 N agar mereka stabil dan tidak bertabrakan ataupun lepas dari orbit!",
             variables: [.distance, .firstMass],
-            forceValue: 33.4
+            forceValue: 33.4,
+            explainationText: "Perhatikan rumus di atas, besar nilai jarak kedua objek berbanding terbalik dengan nilai dari gravitasi. Ketika nilai jarak kedua objek membesar maka nilai gravitasi dari keduanya pun akan mengecil, begitu pula sebaliknya, apabila jarak keduanya mengecil maka nilai gravitasi keduanya pun akan membesar.",
+            explainationImage: "dummy_rumus_newton"
         )
     ]
     

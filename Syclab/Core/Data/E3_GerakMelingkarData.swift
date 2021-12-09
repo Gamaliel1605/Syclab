@@ -50,12 +50,16 @@ struct E3_GerakMelingkarData {
         HukumNewtonMission(
             missionText: "Matahari dan Bumi terlalu jauh! Atur massa Matahari dan Bumi sehingga besar gaya tarik gravitasi antara kedua benda tersebut adalah sebesar 33.4 N agar mereka tidak terlepas dan keluar dari orbit",
             variables: [.firstMass, .secondMass],
-            forceValue: 33.4
+            forceValue: 33.4,
+            explainationText: "",
+            explainationImage: ""
         ),
         HukumNewtonMission(
             missionText: "Matahari dan Bumi terlalu dekat! Atur jarak dan massa Matahari sehingga besar gaya tarik gravitasi antara kedua benda tersebut adalah sebesar 33.4 N agar mereka stabil dan tidak bertabrakan ataupun lepas dari orbit!",
             variables: [.distance, .firstMass],
-            forceValue: 33.4
+            forceValue: 33.4,
+            explainationText: "",
+            explainationImage: ""
         )
     ]
     

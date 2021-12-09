@@ -211,7 +211,10 @@ class VirtualLabHukumNewtonViewController: UIViewController {
                 if checkIndex {
                     let wordNumber = (virtualLabVM.indexMission + 1).convertToWord()
                     (successView as! EveryMission).everyMissionLabel_1.text = "MISI \(wordNumber) SELESAI"
-                    (successView as! EveryMission).everyMissionLabel_2.text = "Lanjut Misi \(virtualLabVM.indexMission + 2)"
+//                    (successView as! EveryMission).everyMissionLabel_2.text = "Lanjut Misi \(virtualLabVM.indexMission + 2)"
+                    (successView as! EveryMission).everyMissionLabel_2.text = currentMission.explainationText
+                    (successView as! EveryMission).everyMissionRumusImage.image = currentMission.explainationImage
+                    (successView as! EveryMission).nextMissionButton.setTitle("Lanjut misi \((virtualLabVM?.indexMission)! + 2)", for: .normal)
                 }
             } else if customRound(dashboardModel.calculatedForceResult) < currentMission.forceValue {
                 self.view.isUserInteractionEnabled = false
