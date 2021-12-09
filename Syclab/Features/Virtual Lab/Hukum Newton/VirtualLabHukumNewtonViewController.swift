@@ -216,6 +216,7 @@ class VirtualLabHukumNewtonViewController: UIViewController {
             } else if customRound(dashboardModel.calculatedForceResult) < currentMission.forceValue {
                 self.view.isUserInteractionEnabled = false
                 (currentVLab as! HukumNewtonScene).lepasOrbit()
+                navigationItem.leftBarButtonItem?.customView?.isUserInteractionEnabled = false
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
                     showFailView(text: "Gaya tarik gravitasi terlalu kecil sehingga matahari dan bumi terlepas dari orbit!")
                 }
@@ -223,6 +224,7 @@ class VirtualLabHukumNewtonViewController: UIViewController {
                 self.view.isUserInteractionEnabled = false
                 (currentVLab as! HukumNewtonScene).modeOption = virtualLabVM.check
                 (currentVLab as! HukumNewtonScene).bertabrakan()
+                navigationItem.leftBarButtonItem?.customView?.isUserInteractionEnabled = false
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
                     showFailView(text: "Gaya tarik gravitasi terlalu besar sehingga matahari dan bumi bertabrakan!")
                 }
@@ -240,6 +242,7 @@ class VirtualLabHukumNewtonViewController: UIViewController {
                 failView.dismiss(animated: true, completion: nil)
                 setUpMission()
                 self.view.isUserInteractionEnabled = true
+                navigationItem.leftBarButtonItem?.customView?.isUserInteractionEnabled = true
             }
         }
         failView.labelFailed.text = text
