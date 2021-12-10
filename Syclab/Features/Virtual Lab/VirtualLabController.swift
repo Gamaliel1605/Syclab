@@ -564,6 +564,4 @@ extension VirtualLabController: EveryMissionAlertProtocol {
         }
         
     }
-    
-    
 }

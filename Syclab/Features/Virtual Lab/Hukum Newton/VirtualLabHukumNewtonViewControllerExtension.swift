@@ -37,9 +37,29 @@ extension VirtualLabHukumNewtonViewController: ExitAlertProtocol {
     func onTapBatal() {
         print("ahaay")
         currentVLab.isPaused = false
+        flagCancelIsTrue = false
+        queue.resume()
     }
     
     func onTapKeluar() {
+        currentVLab.isPaused = false
+        flagCancelIsTrue = true
+        queue.resume()
         self.navigationController?.popViewController(animated: true)
+    }
+}
+
+
+extension VirtualLabHukumNewtonViewController: EveryMissionAlertProtocol {
+    func onTapNextMission() {
+        if virtualLabVM!.indexMission < (virtualLabVM?.missions!.count)!  {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+            let finishAlert = FinishMission()
+            self.present(finishAlert, animated: true, completion: nil)
+            finishAlert.delegate = self
+        }
+        
     }
 }

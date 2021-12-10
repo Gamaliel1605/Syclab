@@ -37,6 +37,8 @@ class VirtualLabHukumNewtonViewController: UIViewController {
     var dashboardModel = HukumNewtonDashboardModel.shared
     var currentVLab: SKScene!
     var virtualLabVM: VirtualLabViewModel!
+    let queue = DispatchQueue(label: "HukumNewtonQueue")
+    var flagCancelIsTrue = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +75,7 @@ class VirtualLabHukumNewtonViewController: UIViewController {
     
     @objc private func goBack() {
         if virtualLabVM.check == .Misi {
+            queue.suspend()
             currentVLab.isPaused = true
             let exitAlert = Exit()
             exitAlert.delegate = self
@@ -185,13 +188,14 @@ class VirtualLabHukumNewtonViewController: UIViewController {
     }
     
     @IBAction func playVLab(_ sender: Any) {
+        playButton.isUserInteractionEnabled = false
         if virtualLabVM.isMission {
             guard let missions = virtualLabVM.missions as? [HukumNewtonMission] else { return }
             let currentMission = missions[virtualLabVM.indexMission]
             
             if customRound(dashboardModel.calculatedForceResult) == currentMission.forceValue {
                 let successView: UIViewController
-                let checkIndex: Bool = virtualLabVM.indexMission < missions.count - 1
+                let checkIndex: Bool = virtualLabVM.indexMission < missions.count
                 successView = checkIndex ? EveryMission() : FinishMission()
                 
                 if !checkIndex {
@@ -201,30 +205,50 @@ class VirtualLabHukumNewtonViewController: UIViewController {
                 self.present(successView, animated: true) {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
                         if checkIndex {
-                            successView.dismiss(animated: true, completion: nil)
+//                            successView.dismiss(animated: true) {
+//                                playButton.isUserInteractionEnabled = true
+//                            }
+                            playButton.isUserInteractionEnabled = true
                             virtualLabVM.indexMission += 1
-                            setUpMission()
+                            if virtualLabVM.indexMission < missions.count {
+                                
+                                setUpMission()
+                            }
                         }
                     }
                 }
                 
                 if checkIndex {
                     let wordNumber = (virtualLabVM.indexMission + 1).convertToWord()
+                    (successView as! EveryMission).delegate = self
                     (successView as! EveryMission).everyMissionLabel_1.text = "MISI \(wordNumber) SELESAI"
-                    (successView as! EveryMission).everyMissionLabel_2.text = "Lanjut Misi \(virtualLabVM.indexMission + 2)"
+                    (successView as! EveryMission).everyMissionLabel_2.text = currentMission.explainationText
+                    (successView as! EveryMission).everyMissionRumusImage.image = currentMission.explainationImage
+                    if virtualLabVM.indexMission < missions.count - 1 {
+                        (successView as! EveryMission).nextMissionButton.setTitle("Lanjut misi \((virtualLabVM?.indexMission)! + 2)", for: .normal)
+                    } else {
+                        (successView as! EveryMission).nextMissionButton.setTitle("Lanjutkan", for: .normal)
+                    }
+                    
                 }
             } else if customRound(dashboardModel.calculatedForceResult) < currentMission.forceValue {
                 self.view.isUserInteractionEnabled = false
                 (currentVLab as! HukumNewtonScene).lepasOrbit()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
-                    showFailView(text: "Gaya tarik gravitasi terlalu kecil sehingga matahari dan bumi terlepas dari orbit!")
+
+                queue.async {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+                        showFailView(text: "Gaya tarik gravitasi terlalu kecil sehingga matahari dan bumi terlepas dari orbit!")
+                    }
                 }
             } else {
                 self.view.isUserInteractionEnabled = false
                 (currentVLab as! HukumNewtonScene).modeOption = virtualLabVM.check
                 (currentVLab as! HukumNewtonScene).bertabrakan()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
-                    showFailView(text: "Gaya tarik gravitasi terlalu besar sehingga matahari dan bumi bertabrakan!")
+
+                queue.async {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+                        showFailView(text: "Gaya tarik gravitasi terlalu besar sehingga matahari dan bumi bertabrakan!")
+                    }
                 }
             }
         }
@@ -234,15 +258,26 @@ class VirtualLabHukumNewtonViewController: UIViewController {
     
     private func showFailView(text: String) {
         let failView = FailedMission()
-        self.present(failView, animated: true) { [self] in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                (currentVLab as! HukumNewtonScene).reset()
-                failView.dismiss(animated: true, completion: nil)
-                setUpMission()
-                self.view.isUserInteractionEnabled = true
+        failView.text = text
+        
+        queue.async {
+            DispatchQueue.main.async {
+                if self.flagCancelIsTrue {
+                    
+                } else {
+                    self.present(failView, animated: true) { [self] in
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            (currentVLab as! HukumNewtonScene).reset()
+                            failView.dismiss(animated: true) {
+                                playButton.isUserInteractionEnabled = true
+                            }
+                            setUpMission()
+                            view.isUserInteractionEnabled = true
+                        }
+                    }
+                }
             }
         }
-        failView.labelFailed.text = text
     }
     
     @IBAction func showConceptTheory(_ sender: Any) {
